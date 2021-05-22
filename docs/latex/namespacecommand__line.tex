@@ -1,0 +1,605 @@
+\hypertarget{namespacecommand__line}{}\doxysubsection{command\+\_\+line Module Reference}
+\label{namespacecommand__line}\index{command\_line@{command\_line}}
+
+
+Functions to parse command line arguments.  
+
+
+\doxysubsubsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+type \mbox{\hyperlink{structcommand__line_1_1cmd__arg}{cmd\+\_\+arg}}
+\begin{DoxyCompactList}\small\item\em Type containing a key-\/value pair. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfacecommand__line_1_1get__arg}{get\+\_\+arg}}
+\begin{DoxyCompactList}\small\item\em Read arguments by name or number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \mbox{\hyperlink{namespacecommand__line_a734d8c49c0752d11e52d373ed52f0984}{parse\+\_\+args}} ()
+\begin{DoxyCompactList}\small\item\em Parse out command line args. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_a4ae5dc13ab70fe547ec96716c78661ce}{get\+\_\+arg\+\_\+num\+\_\+dbl}} (num, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by number for double precision values. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_a056beb72689ad177d8cff3485a2af17e}{get\+\_\+arg\+\_\+name\+\_\+dbl}} (name, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by name for double precision values. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_a872d4b2476ae5e01b305dddf46384626}{get\+\_\+arg\+\_\+num\+\_\+int}} (num, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by number for long integer values. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_a87beca9f40f3fed11a6f39dbaa3bdee9}{get\+\_\+arg\+\_\+name\+\_\+int}} (name, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by name for long integer values. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_a4576dfe53309da770c1715eb9677202b}{get\+\_\+arg\+\_\+num\+\_\+str}} (num, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by number for string/character values. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_ad432ee764eb632c9f2ad085eeefe96d2}{get\+\_\+arg\+\_\+name\+\_\+str}} (name, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by name for string values. \end{DoxyCompactList}\item 
+character(\mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{len}}=\mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{len}}) function \mbox{\hyperlink{namespacecommand__line_a30e7be0c5723a764917655765011f807}{get\+\_\+arg\+\_\+value}} (name, exists)
+\begin{DoxyCompactList}\small\item\em Lookup an argument by name and return the value as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+integer, parameter \mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{len}} = 30
+\begin{DoxyCompactList}\small\item\em Length of character value string. \end{DoxyCompactList}\item 
+type(\mbox{\hyperlink{structcommand__line_1_1cmd__arg}{cmd\+\_\+arg}}), dimension(\+:), allocatable, private \mbox{\hyperlink{namespacecommand__line_a09bf10da81dd9ce5f0320ed4d485d9b8}{all\+\_\+args}}
+\begin{DoxyCompactList}\small\item\em The argument list. \end{DoxyCompactList}\item 
+integer, private \mbox{\hyperlink{namespacecommand__line_a73ec8a02e21a89d84de52b1215e85573}{num\+\_\+args}} = 0
+\begin{DoxyCompactList}\small\item\em The number of arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions to parse command line arguments. 
+
+Module to read command line arguments to a program We assume they are of the form name=value. There must N\+OT be spaces around the \textquotesingle{}=\textquotesingle{} sign! Value can be extracted as a string, a long-\/integer or a double-\/precision real. Argument names are limited to 20 chars, and values to 30 chars as read.
+
+Note that the only functions you should call from outside are parse\+\_\+args, \mbox{\hyperlink{interfacecommand__line_1_1get__arg}{get\+\_\+arg}} and get\+\_\+arg\+\_\+value A complete example code is\+: 
+\begin{DoxyCodeInclude}{0}
+\end{DoxyCodeInclude}
+ \begin{DoxyAuthor}{Author}
+H Ratcliffe 
+\end{DoxyAuthor}
+
+
+\doxysubsubsection{Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{namespacecommand__line_a056beb72689ad177d8cff3485a2af17e}\label{namespacecommand__line_a056beb72689ad177d8cff3485a2af17e}} 
+\index{command\_line@{command\_line}!get\_arg\_name\_dbl@{get\_arg\_name\_dbl}}
+\index{get\_arg\_name\_dbl@{get\_arg\_name\_dbl}!command\_line@{command\_line}}
+\doxyparagraph{\texorpdfstring{get\_arg\_name\_dbl()}{get\_arg\_name\_dbl()}}
+{\footnotesize\ttfamily logical function command\+\_\+line\+::get\+\_\+arg\+\_\+name\+\_\+dbl (\begin{DoxyParamCaption}\item[{character(\mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{len}}=$\ast$), intent(in)}]{name,  }\item[{real(kind=real64), intent(out)}]{val,  }\item[{logical, intent(out), optional}]{exists }\end{DoxyParamCaption})}
+
+
+
+Read by name for double precision values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Argument name to look up \\
+\hline
+{\em val} & Value to read into \\
+\hline
+{\em exists} & Whether the name was found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the name is found and parsed, False otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 166 of file command\+\_\+line.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167     \textcolor{keywordtype}{LOGICAL} :: get\_arg\_name\_dbl}
+\DoxyCodeLine{168     \textcolor{keywordtype}{CHARACTER(LEN=*)}, \textcolor{keywordtype}{INTENT(IN)} :: name}
+\DoxyCodeLine{169 \textcolor{keywordtype}{    REAL}(KIND=real64), \textcolor{keywordtype}{INTENT(OUT)} :: val}
+\DoxyCodeLine{170     \textcolor{keywordtype}{INTEGER} :: i}
+\DoxyCodeLine{171     \textcolor{keywordtype}{LOGICAL}, \textcolor{keywordtype}{INTENT(OUT)}, \textcolor{keywordtype}{OPTIONAL} :: exists}
+\DoxyCodeLine{172     \textcolor{keywordtype}{LOGICAL} :: found}
+\DoxyCodeLine{173     \textcolor{keywordtype}{INTEGER} :: ierr}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175     found = .false.}
+\DoxyCodeLine{176     \textcolor{comment}{! Our cmd\_arg type is already initialised to the sentinel}}
+\DoxyCodeLine{177     \textcolor{keywordflow}{DO} i = 1, num\_args}
+\DoxyCodeLine{178       \textcolor{keywordflow}{IF}(all\_args(i)\%name == trim(adjustl(name))) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{179         found = .true.}
+\DoxyCodeLine{180         \textcolor{keyword}{READ}(all\_args(i)\%value, *, iostat=ierr) val}
+\DoxyCodeLine{181         \textcolor{keywordflow}{EXIT}}
+\DoxyCodeLine{182 \textcolor{keywordflow}{      END IF}}
+\DoxyCodeLine{183 \textcolor{keywordflow}{    END DO}}
+\DoxyCodeLine{184 }
+\DoxyCodeLine{185     \textcolor{keywordflow}{IF}(\textcolor{keyword}{PRESENT}(exists)) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{186       exists = found}
+\DoxyCodeLine{187 \textcolor{keywordflow}{    END IF}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189     \textcolor{comment}{! Return value is whether value is found and correctly parsed}}
+\DoxyCodeLine{190     get\_arg\_name\_dbl = (found .AND. (ierr == 0))}
+\DoxyCodeLine{191 }
+
+\end{DoxyCode}
+
+
+References all\+\_\+args, and num\+\_\+args.
+
+\mbox{\Hypertarget{namespacecommand__line_a87beca9f40f3fed11a6f39dbaa3bdee9}\label{namespacecommand__line_a87beca9f40f3fed11a6f39dbaa3bdee9}} 
+\index{command\_line@{command\_line}!get\_arg\_name\_int@{get\_arg\_name\_int}}
+\index{get\_arg\_name\_int@{get\_arg\_name\_int}!command\_line@{command\_line}}
+\doxyparagraph{\texorpdfstring{get\_arg\_name\_int()}{get\_arg\_name\_int()}}
+{\footnotesize\ttfamily logical function command\+\_\+line\+::get\+\_\+arg\+\_\+name\+\_\+int (\begin{DoxyParamCaption}\item[{character(\mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{len}}=$\ast$), intent(in)}]{name,  }\item[{integer(kind=int32), intent(out)}]{val,  }\item[{logical, intent(out), optional}]{exists }\end{DoxyParamCaption})}
+
+
+
+Read by name for long integer values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Argument name to look up \\
+\hline
+{\em val} & Value to read into \\
+\hline
+{\em exists} & Whether the name was found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the name is found and parsed, False otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file command\+\_\+line.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233     \textcolor{keywordtype}{LOGICAL} :: get\_arg\_name\_int}
+\DoxyCodeLine{234     \textcolor{keywordtype}{CHARACTER(LEN=*)}, \textcolor{keywordtype}{INTENT(IN)} :: name}
+\DoxyCodeLine{235     \textcolor{keywordtype}{INTEGER(KIND=INT32)}, \textcolor{keywordtype}{INTENT(OUT)} :: val}
+\DoxyCodeLine{236     \textcolor{keywordtype}{INTEGER} :: i}
+\DoxyCodeLine{237     \textcolor{keywordtype}{LOGICAL}, \textcolor{keywordtype}{INTENT(OUT)}, \textcolor{keywordtype}{OPTIONAL} :: exists}
+\DoxyCodeLine{238     \textcolor{keywordtype}{LOGICAL} :: found}
+\DoxyCodeLine{239     \textcolor{keywordtype}{INTEGER} :: ierr}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241     found = .false.}
+\DoxyCodeLine{242     \textcolor{comment}{! Our cmd\_arg type is already initialised to the sentinel}}
+\DoxyCodeLine{243     \textcolor{keywordflow}{DO} i = 1, num\_args}
+\DoxyCodeLine{244       \textcolor{keywordflow}{IF}(all\_args(i)\%name == trim(adjustl(name))) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{245         found = .true.}
+\DoxyCodeLine{246         \textcolor{keyword}{READ}(all\_args(i)\%value, *, iostat=ierr) val}
+\DoxyCodeLine{247         \textcolor{keywordflow}{EXIT}}
+\DoxyCodeLine{248 \textcolor{keywordflow}{      END IF}}
+\DoxyCodeLine{249 \textcolor{keywordflow}{    END DO}}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251     \textcolor{keywordflow}{IF}(\textcolor{keyword}{PRESENT}(exists)) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{252       exists = found}
+\DoxyCodeLine{253 \textcolor{keywordflow}{    END IF}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255     \textcolor{comment}{! Return value is whether value is found and correctly parsed}}
+\DoxyCodeLine{256     get\_arg\_name\_int = (found .AND. (ierr == 0))}
+\DoxyCodeLine{257 }
+
+\end{DoxyCode}
+
+
+References all\+\_\+args, and num\+\_\+args.
+
+\mbox{\Hypertarget{namespacecommand__line_ad432ee764eb632c9f2ad085eeefe96d2}\label{namespacecommand__line_ad432ee764eb632c9f2ad085eeefe96d2}} 
+\index{command\_line@{command\_line}!get\_arg\_name\_str@{get\_arg\_name\_str}}
+\index{get\_arg\_name\_str@{get\_arg\_name\_str}!command\_line@{command\_line}}
+\doxyparagraph{\texorpdfstring{get\_arg\_name\_str()}{get\_arg\_name\_str()}}
+{\footnotesize\ttfamily logical function command\+\_\+line\+::get\+\_\+arg\+\_\+name\+\_\+str (\begin{DoxyParamCaption}\item[{character(\mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{len}}=$\ast$), intent(in)}]{name,  }\item[{character(\mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{len}}=$\ast$), intent(out)}]{val,  }\item[{logical, intent(out), optional}]{exists }\end{DoxyParamCaption})}
+
+
+
+Read by name for string values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Argument name to look up \\
+\hline
+{\em val} & Value to read into \\
+\hline
+{\em exists} & Whether the name was found -\/ this is already contained in the return value, but is given for consistency with the other members \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the name is found and parsed, False otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 299 of file command\+\_\+line.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300     \textcolor{keywordtype}{LOGICAL} :: get\_arg\_name\_str}
+\DoxyCodeLine{301     \textcolor{keywordtype}{CHARACTER(LEN=*)}, \textcolor{keywordtype}{INTENT(IN)} :: name}
+\DoxyCodeLine{302     \textcolor{keywordtype}{CHARACTER(LEN=*)}, \textcolor{keywordtype}{INTENT(OUT)} :: val}
+\DoxyCodeLine{303     \textcolor{keywordtype}{INTEGER} :: i}
+\DoxyCodeLine{304     \textcolor{keywordtype}{LOGICAL}, \textcolor{keywordtype}{INTENT(OUT)}, \textcolor{keywordtype}{OPTIONAL} :: exists}
+\DoxyCodeLine{305     \textcolor{keywordtype}{LOGICAL} :: found}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{307     found = .false.}
+\DoxyCodeLine{308     \textcolor{comment}{! Our cmd\_arg type is already initialised to the sentinel}}
+\DoxyCodeLine{309     \textcolor{keywordflow}{DO} i = 1, num\_args}
+\DoxyCodeLine{310       \textcolor{keywordflow}{IF}(all\_args(i)\%name == trim(adjustl(name))) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{311         found = .true.}
+\DoxyCodeLine{312         val = all\_args(i)\%value}
+\DoxyCodeLine{313         \textcolor{keywordflow}{EXIT}}
+\DoxyCodeLine{314 \textcolor{keywordflow}{      END IF}}
+\DoxyCodeLine{315 \textcolor{keywordflow}{    END DO}}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{317     \textcolor{keywordflow}{IF}(\textcolor{keyword}{PRESENT}(exists)) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{318       exists = found}
+\DoxyCodeLine{319 \textcolor{keywordflow}{    END IF}}
+\DoxyCodeLine{320 }
+\DoxyCodeLine{321     \textcolor{comment}{! Return value is whether value is found and correctly parsed}}
+\DoxyCodeLine{322     get\_arg\_name\_str = found}
+\DoxyCodeLine{323 }
+
+\end{DoxyCode}
+
+
+References all\+\_\+args, and num\+\_\+args.
+
+\mbox{\Hypertarget{namespacecommand__line_a4ae5dc13ab70fe547ec96716c78661ce}\label{namespacecommand__line_a4ae5dc13ab70fe547ec96716c78661ce}} 
+\index{command\_line@{command\_line}!get\_arg\_num\_dbl@{get\_arg\_num\_dbl}}
+\index{get\_arg\_num\_dbl@{get\_arg\_num\_dbl}!command\_line@{command\_line}}
+\doxyparagraph{\texorpdfstring{get\_arg\_num\_dbl()}{get\_arg\_num\_dbl()}}
+{\footnotesize\ttfamily logical function command\+\_\+line\+::get\+\_\+arg\+\_\+num\+\_\+dbl (\begin{DoxyParamCaption}\item[{integer, intent(in)}]{num,  }\item[{real(kind=real64), intent(out)}]{val,  }\item[{logical, intent(out), optional}]{exists }\end{DoxyParamCaption})}
+
+
+
+Read by number for double precision values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Argument number to read \\
+\hline
+{\em val} & Value to read into \\
+\hline
+{\em exists} & Whether the name was found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the name is found and parsed, False otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 134 of file command\+\_\+line.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135     \textcolor{keywordtype}{LOGICAL} :: get\_arg\_num\_dbl}
+\DoxyCodeLine{136     \textcolor{keywordtype}{INTEGER}, \textcolor{keywordtype}{INTENT(IN)} :: num}
+\DoxyCodeLine{137 \textcolor{keywordtype}{    REAL}(KIND=real64), \textcolor{keywordtype}{INTENT(OUT)} :: val}
+\DoxyCodeLine{138     \textcolor{keywordtype}{LOGICAL}, \textcolor{keywordtype}{INTENT(OUT)}, \textcolor{keywordtype}{OPTIONAL} :: exists}
+\DoxyCodeLine{139     \textcolor{keywordtype}{LOGICAL} :: found}
+\DoxyCodeLine{140     \textcolor{keywordtype}{INTEGER} :: ierr}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     found = .false.}
+\DoxyCodeLine{143     \textcolor{comment}{! Check requested number is in range}}
+\DoxyCodeLine{144     \textcolor{keywordflow}{IF}(num <= num\_args .AND. num > 0) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{145       \textcolor{comment}{! READ it from string into value}}
+\DoxyCodeLine{146       \textcolor{comment}{! We don't need to specify the format in general}}
+\DoxyCodeLine{147       \textcolor{keyword}{READ}(all\_args(num)\%value, *, iostat=ierr) val}
+\DoxyCodeLine{148       found = .true.}
+\DoxyCodeLine{149 \textcolor{keywordflow}{    END IF}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151     \textcolor{keywordflow}{IF}(\textcolor{keyword}{PRESENT}(exists)) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{152       exists = found}
+\DoxyCodeLine{153 \textcolor{keywordflow}{    END IF}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155     \textcolor{comment}{! Return value is whether value is found and correctly parsed}}
+\DoxyCodeLine{156     get\_arg\_num\_dbl = (found .AND. (ierr == 0))}
+\DoxyCodeLine{157 }
+
+\end{DoxyCode}
+
+
+References all\+\_\+args, and num\+\_\+args.
+
+\mbox{\Hypertarget{namespacecommand__line_a872d4b2476ae5e01b305dddf46384626}\label{namespacecommand__line_a872d4b2476ae5e01b305dddf46384626}} 
+\index{command\_line@{command\_line}!get\_arg\_num\_int@{get\_arg\_num\_int}}
+\index{get\_arg\_num\_int@{get\_arg\_num\_int}!command\_line@{command\_line}}
+\doxyparagraph{\texorpdfstring{get\_arg\_num\_int()}{get\_arg\_num\_int()}}
+{\footnotesize\ttfamily logical function command\+\_\+line\+::get\+\_\+arg\+\_\+num\+\_\+int (\begin{DoxyParamCaption}\item[{integer, intent(in)}]{num,  }\item[{integer(kind=int32), intent(out)}]{val,  }\item[{logical, intent(out), optional}]{exists }\end{DoxyParamCaption})}
+
+
+
+Read by number for long integer values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Argument number to read \\
+\hline
+{\em val} & Value to read into \\
+\hline
+{\em exists} & Whether the name was found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the name is found and parsed, False otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file command\+\_\+line.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201     \textcolor{keywordtype}{LOGICAL} :: get\_arg\_num\_int}
+\DoxyCodeLine{202     \textcolor{keywordtype}{INTEGER}, \textcolor{keywordtype}{INTENT(IN)} :: num}
+\DoxyCodeLine{203     \textcolor{keywordtype}{INTEGER(KIND=INT32)}, \textcolor{keywordtype}{INTENT(OUT)} :: val}
+\DoxyCodeLine{204     \textcolor{keywordtype}{LOGICAL}, \textcolor{keywordtype}{INTENT(OUT)}, \textcolor{keywordtype}{OPTIONAL} :: exists}
+\DoxyCodeLine{205     \textcolor{keywordtype}{LOGICAL} :: found}
+\DoxyCodeLine{206     \textcolor{keywordtype}{INTEGER} :: ierr}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208     found = .false.}
+\DoxyCodeLine{209     \textcolor{comment}{! Check requested number is in range}}
+\DoxyCodeLine{210     \textcolor{keywordflow}{IF}(num <= num\_args .AND. num > 0) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{211       \textcolor{comment}{! READ it from string into value}}
+\DoxyCodeLine{212       \textcolor{comment}{! We don't need to specify the format in general}}
+\DoxyCodeLine{213       \textcolor{keyword}{READ}(all\_args(num)\%value, *, iostat=ierr) val}
+\DoxyCodeLine{214       found = .true.}
+\DoxyCodeLine{215 \textcolor{keywordflow}{    END IF}}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217     \textcolor{keywordflow}{IF}(\textcolor{keyword}{PRESENT}(exists)) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{218       exists = found}
+\DoxyCodeLine{219 \textcolor{keywordflow}{    END IF}}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221     \textcolor{comment}{! Return value is whether value is found and correctly parsed}}
+\DoxyCodeLine{222     get\_arg\_num\_int = (found .AND. (ierr == 0))}
+\DoxyCodeLine{223 }
+
+\end{DoxyCode}
+
+
+References all\+\_\+args, and num\+\_\+args.
+
+\mbox{\Hypertarget{namespacecommand__line_a4576dfe53309da770c1715eb9677202b}\label{namespacecommand__line_a4576dfe53309da770c1715eb9677202b}} 
+\index{command\_line@{command\_line}!get\_arg\_num\_str@{get\_arg\_num\_str}}
+\index{get\_arg\_num\_str@{get\_arg\_num\_str}!command\_line@{command\_line}}
+\doxyparagraph{\texorpdfstring{get\_arg\_num\_str()}{get\_arg\_num\_str()}}
+{\footnotesize\ttfamily logical function command\+\_\+line\+::get\+\_\+arg\+\_\+num\+\_\+str (\begin{DoxyParamCaption}\item[{integer, intent(in)}]{num,  }\item[{character(\mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{len}}=$\ast$), intent(out)}]{val,  }\item[{logical, intent(out), optional}]{exists }\end{DoxyParamCaption})}
+
+
+
+Read by number for string/character values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Argument number to read \\
+\hline
+{\em val} & Value to read into \\
+\hline
+{\em exists} & Whether the name was found -\/ this is already contained in the return value, but is given for consistency with the other members \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the name is found and parsed, False otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 267 of file command\+\_\+line.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268     \textcolor{keywordtype}{LOGICAL} :: get\_arg\_num\_str}
+\DoxyCodeLine{269     \textcolor{keywordtype}{INTEGER}, \textcolor{keywordtype}{INTENT(IN)} :: num}
+\DoxyCodeLine{270     \textcolor{keywordtype}{CHARACTER(LEN=*)}, \textcolor{keywordtype}{INTENT(OUT)} :: val}
+\DoxyCodeLine{271     \textcolor{keywordtype}{LOGICAL}, \textcolor{keywordtype}{INTENT(OUT)}, \textcolor{keywordtype}{OPTIONAL} :: exists}
+\DoxyCodeLine{272     \textcolor{keywordtype}{LOGICAL} :: found}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{274     found = .false.}
+\DoxyCodeLine{275     \textcolor{comment}{! Check requested number is in range}}
+\DoxyCodeLine{276     \textcolor{keywordflow}{IF}(num <= num\_args .AND. num > 0) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{277       \textcolor{comment}{! READ it from string into value}}
+\DoxyCodeLine{278       \textcolor{comment}{! We don't need to specify the format in general}}
+\DoxyCodeLine{279       val = all\_args(num)\%value}
+\DoxyCodeLine{280       found = .true.}
+\DoxyCodeLine{281 \textcolor{keywordflow}{    END IF}}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283     \textcolor{keywordflow}{IF}(\textcolor{keyword}{PRESENT}(exists)) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{284       exists = found}
+\DoxyCodeLine{285 \textcolor{keywordflow}{    END IF}}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{287     \textcolor{comment}{! Return value is whether value is found and correctly parsed}}
+\DoxyCodeLine{288     get\_arg\_num\_str = found}
+\DoxyCodeLine{289 }
+
+\end{DoxyCode}
+
+
+References all\+\_\+args, and num\+\_\+args.
+
+\mbox{\Hypertarget{namespacecommand__line_a30e7be0c5723a764917655765011f807}\label{namespacecommand__line_a30e7be0c5723a764917655765011f807}} 
+\index{command\_line@{command\_line}!get\_arg\_value@{get\_arg\_value}}
+\index{get\_arg\_value@{get\_arg\_value}!command\_line@{command\_line}}
+\doxyparagraph{\texorpdfstring{get\_arg\_value()}{get\_arg\_value()}}
+{\footnotesize\ttfamily character(\mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{len}}=\mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{len}}) function command\+\_\+line\+::get\+\_\+arg\+\_\+value (\begin{DoxyParamCaption}\item[{character(\mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{len}}=$\ast$), intent(in)}]{name,  }\item[{logical, intent(out), optional}]{exists }\end{DoxyParamCaption})}
+
+
+
+Lookup an argument by name and return the value as a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Argument name to look up \\
+\hline
+{\em exists} & Whether the name was found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string value associated with the given name 
+\end{DoxyReturn}
+
+
+Definition at line 336 of file command\+\_\+line.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{337     \textcolor{keywordtype}{CHARACTER(LEN=len)} :: get\_arg\_value}
+\DoxyCodeLine{338     \textcolor{keywordtype}{CHARACTER(LEN=*)}, \textcolor{keywordtype}{INTENT(IN)} :: name}
+\DoxyCodeLine{339     \textcolor{keywordtype}{LOGICAL}, \textcolor{keywordtype}{INTENT(OUT)}, \textcolor{keywordtype}{OPTIONAL} :: exists}
+\DoxyCodeLine{340     \textcolor{keywordtype}{TYPE}(cmd\_arg) :: tmp}
+\DoxyCodeLine{341     \textcolor{keywordtype}{INTEGER} :: i}
+\DoxyCodeLine{342     \textcolor{keywordtype}{LOGICAL} :: found}
+\DoxyCodeLine{343 }
+\DoxyCodeLine{344     \textcolor{comment}{! Initialise to the default value}}
+\DoxyCodeLine{345     \textcolor{comment}{! Use a temporary to get the default values}}
+\DoxyCodeLine{346     \textcolor{comment}{! This makes sure we match the expected sentinel}}
+\DoxyCodeLine{347     get\_arg\_value = tmp\%value}
+\DoxyCodeLine{348     found = .false.}
+\DoxyCodeLine{349 }
+\DoxyCodeLine{350     \textcolor{keywordflow}{DO} i = 1, num\_args}
+\DoxyCodeLine{351       \textcolor{keywordflow}{IF}(all\_args(i)\%name .EQ. trim(adjustl(name))) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{352         get\_arg\_value = all\_args(i)\%value}
+\DoxyCodeLine{353         found = .true.}
+\DoxyCodeLine{354         \textcolor{keywordflow}{EXIT}}
+\DoxyCodeLine{355 \textcolor{keywordflow}{      END IF}}
+\DoxyCodeLine{356 \textcolor{keywordflow}{    END DO}}
+\DoxyCodeLine{357 }
+\DoxyCodeLine{358     \textcolor{keywordflow}{IF}(\textcolor{keyword}{PRESENT}(exists)) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{359       exists = found}
+\DoxyCodeLine{360 \textcolor{keywordflow}{    END IF}}
+\DoxyCodeLine{361 }
+
+\end{DoxyCode}
+
+
+References all\+\_\+args, and num\+\_\+args.
+
+\mbox{\Hypertarget{namespacecommand__line_a734d8c49c0752d11e52d373ed52f0984}\label{namespacecommand__line_a734d8c49c0752d11e52d373ed52f0984}} 
+\index{command\_line@{command\_line}!parse\_args@{parse\_args}}
+\index{parse\_args@{parse\_args}!command\_line@{command\_line}}
+\doxyparagraph{\texorpdfstring{parse\_args()}{parse\_args()}}
+{\footnotesize\ttfamily subroutine command\+\_\+line\+::parse\+\_\+args}
+
+
+
+Parse out command line args. 
+
+
+
+Definition at line 84 of file command\+\_\+line.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{84     \textcolor{comment}{!Grab all command line args and store}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     \textcolor{comment}{! Strictly we can't be sure 50 chars is enough}}
+\DoxyCodeLine{87     \textcolor{comment}{! but for command-\/line args it's enough if we're sensible}}
+\DoxyCodeLine{88     \textcolor{comment}{! We wont overflow, but our strings may get truncated}}
+\DoxyCodeLine{89     \textcolor{keywordtype}{CHARACTER(LEN=51)} :: arg}
+\DoxyCodeLine{90     \textcolor{keywordtype}{INTEGER} :: i, indx}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     num\_args = command\_argument\_count()}
+\DoxyCodeLine{93     \textcolor{keywordflow}{IF}(num\_args > 0) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95       \textcolor{comment}{! If this is not the first call, all\_args may be already allocated}}
+\DoxyCodeLine{96       \textcolor{comment}{! Deallocate if needed, and allocate to correct size}}
+\DoxyCodeLine{97       \textcolor{keywordflow}{IF}(\textcolor{keyword}{ALLOCATED}(all\_args)) \textcolor{keyword}{DEALLOCATE}(all\_args)}
+\DoxyCodeLine{98       \textcolor{keyword}{ALLOCATE}(all\_args(num\_args))}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100       \textcolor{comment}{! Loop over all arguments}}
+\DoxyCodeLine{101       \textcolor{keywordflow}{DO} i = 1, num\_args}
+\DoxyCodeLine{102         \textcolor{keyword}{CALL }get\_command\_argument(i, arg)}
+\DoxyCodeLine{103         \textcolor{comment}{! Location of the '=' sign}}
+\DoxyCodeLine{104         \textcolor{comment}{! If not found, return value is 0}}
+\DoxyCodeLine{105         indx = index(arg, \textcolor{stringliteral}{'='})}
+\DoxyCodeLine{106         \textcolor{keywordflow}{IF}(indx > 1) \textcolor{keywordflow}{THEN}}
+\DoxyCodeLine{107           \textcolor{comment}{! All characters up to '=', not including it}}
+\DoxyCodeLine{108           \textcolor{comment}{! but with any leading spaces removed}}
+\DoxyCodeLine{109           all\_args(i)\%name = adjustl(arg(1:indx-\/1))}
+\DoxyCodeLine{110           \textcolor{comment}{! All characters after '='}}
+\DoxyCodeLine{111           all\_args(i)\%value= adjustl(arg(indx+1:))}
+\DoxyCodeLine{112        \textcolor{keywordflow}{ELSE}}
+\DoxyCodeLine{113           all\_args(i)\%name = trim(adjustl(arg))}
+\DoxyCodeLine{114           \textcolor{comment}{! Value already has a default value, so leave it alone}}
+\DoxyCodeLine{115 \textcolor{keywordflow}{        END IF}}
+\DoxyCodeLine{116 \textcolor{keywordflow}{      END DO}}
+\DoxyCodeLine{117 \textcolor{keywordflow}{    ENDIF}}
+\DoxyCodeLine{118 }
+
+\end{DoxyCode}
+
+
+References all\+\_\+args, and num\+\_\+args.
+
+
+
+Referenced by sweetener\+::parse().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacecommand__line_a734d8c49c0752d11e52d373ed52f0984_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacecommand__line_a09bf10da81dd9ce5f0320ed4d485d9b8}\label{namespacecommand__line_a09bf10da81dd9ce5f0320ed4d485d9b8}} 
+\index{command\_line@{command\_line}!all\_args@{all\_args}}
+\index{all\_args@{all\_args}!command\_line@{command\_line}}
+\doxyparagraph{\texorpdfstring{all\_args}{all\_args}}
+{\footnotesize\ttfamily type(\mbox{\hyperlink{structcommand__line_1_1cmd__arg}{cmd\+\_\+arg}}), dimension(\+:), allocatable, private command\+\_\+line\+::all\+\_\+args\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The argument list. 
+
+
+
+Definition at line 68 of file command\+\_\+line.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68   \textcolor{keywordtype}{TYPE}(cmd\_arg), \textcolor{keywordtype}{DIMENSION(:)}, \textcolor{keywordtype}{ALLOCATABLE} :: all\_args}
+
+\end{DoxyCode}
+
+
+Referenced by get\+\_\+arg\+\_\+name\+\_\+dbl(), get\+\_\+arg\+\_\+name\+\_\+int(), get\+\_\+arg\+\_\+name\+\_\+str(), get\+\_\+arg\+\_\+num\+\_\+dbl(), get\+\_\+arg\+\_\+num\+\_\+int(), get\+\_\+arg\+\_\+num\+\_\+str(), get\+\_\+arg\+\_\+value(), and parse\+\_\+args().
+
+\mbox{\Hypertarget{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}\label{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}} 
+\index{command\_line@{command\_line}!len@{len}}
+\index{len@{len}!command\_line@{command\_line}}
+\doxyparagraph{\texorpdfstring{len}{len}}
+{\footnotesize\ttfamily integer, parameter command\+\_\+line\+::len = 30}
+
+
+
+Length of character value string. 
+
+
+
+Definition at line 26 of file command\+\_\+line.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26   \textcolor{keywordtype}{INTEGER}, \textcolor{keywordtype}{PARAMETER} :: len = 30}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacecommand__line_a73ec8a02e21a89d84de52b1215e85573}\label{namespacecommand__line_a73ec8a02e21a89d84de52b1215e85573}} 
+\index{command\_line@{command\_line}!num\_args@{num\_args}}
+\index{num\_args@{num\_args}!command\_line@{command\_line}}
+\doxyparagraph{\texorpdfstring{num\_args}{num\_args}}
+{\footnotesize\ttfamily integer, private command\+\_\+line\+::num\+\_\+args = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The number of arguments. 
+
+
+
+Definition at line 70 of file command\+\_\+line.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70   \textcolor{keywordtype}{INTEGER} :: num\_args = 0}
+
+\end{DoxyCode}
+
+
+Referenced by get\+\_\+arg\+\_\+name\+\_\+dbl(), get\+\_\+arg\+\_\+name\+\_\+int(), get\+\_\+arg\+\_\+name\+\_\+str(), get\+\_\+arg\+\_\+num\+\_\+dbl(), get\+\_\+arg\+\_\+num\+\_\+int(), get\+\_\+arg\+\_\+num\+\_\+str(), get\+\_\+arg\+\_\+value(), and parse\+\_\+args().
+

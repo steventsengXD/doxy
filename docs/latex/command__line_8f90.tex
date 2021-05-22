@@ -1,0 +1,42 @@
+\hypertarget{command__line_8f90}{}\doxysubsection{command\+\_\+line.\+f90 File Reference}
+\label{command__line_8f90}\index{command\_line.f90@{command\_line.f90}}
+\doxysubsubsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+type \mbox{\hyperlink{structcommand__line_1_1cmd__arg}{command\+\_\+line\+::cmd\+\_\+arg}}
+\begin{DoxyCompactList}\small\item\em Type containing a key-\/value pair. \end{DoxyCompactList}\item 
+interface \mbox{\hyperlink{interfacecommand__line_1_1get__arg}{command\+\_\+line\+::get\+\_\+arg}}
+\begin{DoxyCompactList}\small\item\em Read arguments by name or number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+module \mbox{\hyperlink{namespacecommand__line}{command\+\_\+line}}
+\begin{DoxyCompactList}\small\item\em Functions to parse command line arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \mbox{\hyperlink{namespacecommand__line_a734d8c49c0752d11e52d373ed52f0984}{command\+\_\+line\+::parse\+\_\+args}} ()
+\begin{DoxyCompactList}\small\item\em Parse out command line args. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_a4ae5dc13ab70fe547ec96716c78661ce}{command\+\_\+line\+::get\+\_\+arg\+\_\+num\+\_\+dbl}} (num, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by number for double precision values. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_a056beb72689ad177d8cff3485a2af17e}{command\+\_\+line\+::get\+\_\+arg\+\_\+name\+\_\+dbl}} (name, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by name for double precision values. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_a872d4b2476ae5e01b305dddf46384626}{command\+\_\+line\+::get\+\_\+arg\+\_\+num\+\_\+int}} (num, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by number for long integer values. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_a87beca9f40f3fed11a6f39dbaa3bdee9}{command\+\_\+line\+::get\+\_\+arg\+\_\+name\+\_\+int}} (name, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by name for long integer values. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_a4576dfe53309da770c1715eb9677202b}{command\+\_\+line\+::get\+\_\+arg\+\_\+num\+\_\+str}} (num, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by number for string/character values. \end{DoxyCompactList}\item 
+logical function \mbox{\hyperlink{namespacecommand__line_ad432ee764eb632c9f2ad085eeefe96d2}{command\+\_\+line\+::get\+\_\+arg\+\_\+name\+\_\+str}} (name, val, exists)
+\begin{DoxyCompactList}\small\item\em Read by name for string values. \end{DoxyCompactList}\item 
+character(len=len) function \mbox{\hyperlink{namespacecommand__line_a30e7be0c5723a764917655765011f807}{command\+\_\+line\+::get\+\_\+arg\+\_\+value}} (name, exists)
+\begin{DoxyCompactList}\small\item\em Lookup an argument by name and return the value as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+integer, parameter \mbox{\hyperlink{namespacecommand__line_ac74234ab312faa29fceded3d229e9ac0}{command\+\_\+line\+::len}} = 30
+\begin{DoxyCompactList}\small\item\em Length of character value string. \end{DoxyCompactList}\item 
+type(cmd\+\_\+arg), dimension(\+:), allocatable, private \mbox{\hyperlink{namespacecommand__line_a09bf10da81dd9ce5f0320ed4d485d9b8}{command\+\_\+line\+::all\+\_\+args}}
+\begin{DoxyCompactList}\small\item\em The argument list. \end{DoxyCompactList}\item 
+integer, private \mbox{\hyperlink{namespacecommand__line_a73ec8a02e21a89d84de52b1215e85573}{command\+\_\+line\+::num\+\_\+args}} = 0
+\begin{DoxyCompactList}\small\item\em The number of arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
