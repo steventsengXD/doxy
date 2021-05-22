@@ -1,0 +1,1 @@
+repo for ising model
