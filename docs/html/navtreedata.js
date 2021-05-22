@@ -27,7 +27,8 @@ var NAVTREE =
       [ "Introduction", "index.html#Introduction", null ],
       [ "section1", "index.html#section1", null ],
       [ "section2", "index.html#section2", null ],
-      [ "section3", "index.html#section3", null ]
+      [ "section3", "index.html#section3", null ],
+      [ "section4", "index.html#section4", null ]
     ] ],
     [ "Tutorial Page", "tutorial_page.html", "tutorial_page" ],
     [ "Modules", "namespaces.html", [
