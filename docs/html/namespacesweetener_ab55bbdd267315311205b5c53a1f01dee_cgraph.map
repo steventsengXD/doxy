@@ -1,4 +1,0 @@
-<map id="sweetener::init_random" name="sweetener::init_random">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,181,32"/>
-<area shape="rect" id="node2" href="$namespacerandom__mod.html#adc2af8e28389fcb79332ea9439f1c369" title="Return the next random number Returns a single random number of type REAL64 Each call returns a new n..." alt="" coords="229,5,396,32"/>
-</map>

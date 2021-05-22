@@ -1,1 +1,1 @@
-repo for ising model
+repository 

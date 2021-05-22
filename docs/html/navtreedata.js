@@ -23,6 +23,10 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "PX 915 Project Title/Name Here", "index.html", [
+    [ "PX 915 Group B Documentation", "index.html", [
+      [ "Introduction", "index.html#Introduction", null ],
+      [ "section after intro", "index.html#Another", null ]
+    ] ],
     [ "Modules", "namespaces.html", [
       [ "Modules List", "namespaces.html", "namespaces_dup" ],
       [ "Module Members", "namespacemembers.html", [
@@ -35,8 +39,7 @@ var NAVTREE =
       [ "Data Types List", "annotated.html", "annotated_dup" ],
       [ "Data Fields", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions/Subroutines", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "Functions/Subroutines", "functions_func.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -51,7 +54,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"MCMC_8f90.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
