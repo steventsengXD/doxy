@@ -27,6 +27,7 @@ var NAVTREE =
       [ "Introduction", "index.html#Introduction", null ],
       [ "section after intro", "index.html#Another", null ]
     ] ],
+    [ "Tutorial Page", "tutorial_page.html", null ],
     [ "Modules", "namespaces.html", [
       [ "Modules List", "namespaces.html", "namespaces_dup" ],
       [ "Module Members", "namespacemembers.html", [
