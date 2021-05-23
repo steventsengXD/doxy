@@ -11,8 +11,8 @@ var namespaces_dup =
     [ "mcmc", "namespacemcmc.html", null ],
     [ "param_search", "namespaceparam__search.html", null ],
     [ "PX915_plotting", "namespacePX915__plotting.html", null ],
+    [ "read_data", "namespaceread__data.html", null ],
     [ "shared_constants", "namespaceshared__constants.html", null ],
     [ "square", "namespacesquare.html", null ],
-    [ "use", "namespaceuse.html", null ],
     [ "write_file", "namespacewrite__file.html", null ]
 ];

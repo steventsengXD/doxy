@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PX 915 Project Title/Name Here: read_data.f90 Source File</title>
+<title>PX 915 Project Title/Name Here: read_data Module Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,28 +60,51 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('read__data_8f90_source.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('namespaceread__data.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions/Subroutines</a>  </div>
   <div class="headertitle">
-<div class="title">read_data.f90</div>  </div>
+<div class="title">read_data Module Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="read__data_8f90.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespaceread__data.html">    3</a></span>&#160;<span class="keyword">MODULE</span> <a class="code" href="namespaceread__data.html">read_data</a></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">USE </span><a class="code" href="namespaceshared__constants.html">shared_constants</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">IMPLICIT NONE</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">CONTAINS</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">SUBROUTINE </span><a class="code" href="namespaceread__data.html#a2d5a7705c84c6c4c99737e5ecaa68406">readtxt</a>(filename)</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespaceread__data.html#a2d5a7705c84c6c4c99737e5ecaa68406">   17</a></span>&#160; </div>
+
+<p>A module to read inputs from files and get data into fortran.  
+<a href="namespaceread__data.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions/Subroutines</h2></td></tr>
+<tr class="memitem:a2d5a7705c84c6c4c99737e5ecaa68406"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread__data.html#a2d5a7705c84c6c4c99737e5ecaa68406">readtxt</a> (filename)</td></tr>
+<tr class="memdesc:a2d5a7705c84c6c4c99737e5ecaa68406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in data from a text file.  <a href="namespaceread__data.html#a2d5a7705c84c6c4c99737e5ecaa68406">More...</a><br /></td></tr>
+<tr class="separator:a2d5a7705c84c6c4c99737e5ecaa68406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A module to read inputs from files and get data into fortran. </p>
+</div><h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a id="a2d5a7705c84c6c4c99737e5ecaa68406"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5a7705c84c6c4c99737e5ecaa68406">&#9670;&nbsp;</a></span>readtxt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">subroutine read_data::readtxt </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read in data from a text file. </p>
+<p>This module reads txt, csv files line by line The implementation is basic but makes it certain that each line is taken in </p>
+
+<p class="definition">Definition at line <a class="el" href="read__data_8f90_source.html#l00017">17</a> of file <a class="el" href="read__data_8f90_source.html">read_data.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    char(len=20) :: filename</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">    REAL</span> :: x, y, z</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">    REAL</span>, <span class="keywordtype">dimension(2,3)</span> :: atoms</div>
@@ -110,19 +133,16 @@ $(document).ready(function(){initNavTree('read__data_8f90_source.html',''); init
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    print *, atoms(1,:)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    print *, atoms(2,:)</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">END SUBROUTINE </span><a class="code" href="namespaceread__data.html#a2d5a7705c84c6c4c99737e5ecaa68406">readtxt</a></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">END MODULE </span><a class="code" href="namespaceread__data.html">read_data</a></div>
-</div><!-- fragment --></div><!-- contents -->
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespaceread__data_html_a2d5a7705c84c6c4c99737e5ecaa68406"><div class="ttname"><a href="namespaceread__data.html#a2d5a7705c84c6c4c99737e5ecaa68406">read_data::readtxt</a></div><div class="ttdeci">subroutine readtxt(filename)</div><div class="ttdoc">Read in data from a text file.</div><div class="ttdef"><b>Definition:</b> <a href="read__data_8f90_source.html#l00017">read_data.f90:17</a></div></div>
-<div class="ttc" id="anamespaceread__data_html"><div class="ttname"><a href="namespaceread__data.html">read_data</a></div><div class="ttdoc">A module to read inputs from files and get data into fortran.</div><div class="ttdef"><b>Definition:</b> <a href="read__data_8f90_source.html#l00003">read_data.f90:3</a></div></div>
-<div class="ttc" id="anamespaceshared__constants_html"><div class="ttname"><a href="namespaceshared__constants.html">shared_constants</a></div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00001">constants.f90:1</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_ecf6256b7f19e30d22b098c6b27f6455.html">sf_Desktop</a></li><li class="navelem"><a class="el" href="dir_f04eb6ac6ecf87e95a8c575289d4ada4.html">projets</a></li><li class="navelem"><a class="el" href="dir_c24274383734fabf3aaa47f5abba2a55.html">PX915_2021_B</a></li><li class="navelem"><a class="el" href="read__data_8f90.html">read_data.f90</a></li>
-    <li class="footer">Generated on Sat May 22 2021 21:30:59 for PX 915 Project Title/Name Here by
+    <li class="navelem"><a class="el" href="namespaceread__data.html">read_data</a></li>
+    <li class="footer">Generated on Sat May 22 2021 21:31:01 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
