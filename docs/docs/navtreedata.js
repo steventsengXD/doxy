@@ -23,14 +23,6 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "PX 915 Project Title/Name Here", "index.html", [
-    [ "PX 915 Group B Documentation", "index.html", [
-      [ "Introduction", "index.html#Introduction", null ],
-      [ "Section 1 title", "index.html#section1", null ],
-      [ "Section 2 title", "index.html#section2", null ],
-      [ "Section 3 title", "index.html#section3", null ],
-      [ "Section 4 title", "index.html#section4", null ]
-    ] ],
-    [ "Tutorial Page", "tutorial_page.html", "tutorial_page" ],
     [ "Packages", "namespaces.html", [
       [ "Packages", "namespaces.html", "namespaces_dup" ],
       [ "Package Functions", "namespacemembers.html", [
@@ -39,26 +31,15 @@ var NAVTREE =
         [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
-    [ "Data Types List", "annotated.html", [
-      [ "Data Types List", "annotated.html", "annotated_dup" ],
-      [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions/Subroutines", "functions_func.html", null ]
-      ] ]
-    ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions/Subroutines", "globals_func.html", null ]
-      ] ]
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"MCMC_8f90.html"
+"PX915__plotting_8py.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
