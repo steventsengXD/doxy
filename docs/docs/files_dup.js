@@ -17,7 +17,7 @@ var files_dup =
     [ "MCMC_test_driver.f90", "MCMC__test__driver_8f90.html", "MCMC__test__driver_8f90" ],
     [ "param_search.f90", "param__search_8f90.html", "param__search_8f90" ],
     [ "PX915_plotting.py", "PX915__plotting_8py.html", "PX915__plotting_8py" ],
-    [ "readtxt.f90", "readtxt_8f90.html", "readtxt_8f90" ],
+    [ "read_data.f90", "read__data_8f90.html", "read__data_8f90" ],
     [ "wavefunc_results.f90", "wavefunc__results_8f90.html", "wavefunc__results_8f90" ],
     [ "write_file.f90", "write__file_8f90.html", "write__file_8f90" ]
 ];
