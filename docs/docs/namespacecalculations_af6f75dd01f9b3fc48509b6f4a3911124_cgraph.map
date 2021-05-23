@@ -1,5 +1,5 @@
 <map id="calculations::wavefunction" name="calculations::wavefunction">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,201,107"/>
+<area shape="rect" id="node1" title="This function outputs an array of the wavefunction evaluated on a grid." alt="" coords="5,81,201,107"/>
 <area shape="rect" id="node2" href="$namespacebasis__functions.html#a1f59f9576cb02ba4361bf7dc5046ce5d" title=" " alt="" coords="249,44,416,85"/>
 <area shape="rect" id="node7" href="$namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d" title=" " alt="" coords="464,103,631,144"/>
 <area shape="rect" id="node3" href="$namespacecomponent__functions.html#a87166a18e7df3188b4ac3f123e39a3d7" title=" " alt="" coords="466,37,629,79"/>
