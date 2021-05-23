@@ -1,5 +1,5 @@
 <map id="calculations::hamiltonian" name="calculations::hamiltonian">
-<area shape="rect" id="node1" title=" " alt="" coords="5,54,192,81"/>
+<area shape="rect" id="node1" title="Function calculating the reduced Hamiltonian based." alt="" coords="5,54,192,81"/>
 <area shape="rect" id="node2" href="$namespacebasis__functions.html#acea41a868e0e1522cb6d3e3ed1b52d66" title=" " alt="" coords="240,9,429,51"/>
 <area shape="rect" id="node4" href="$namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f" title=" " alt="" coords="243,79,426,120"/>
 <area shape="rect" id="node3" href="$namespacebasis__functions.html#a3aa2ed47c325e9955b40da5b344fd31a" title=" " alt="" coords="477,5,660,47"/>
