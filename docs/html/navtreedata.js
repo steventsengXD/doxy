@@ -25,10 +25,10 @@ var NAVTREE =
   [ "PX 915 Project Title/Name Here", "index.html", [
     [ "PX 915 Group B Documentation", "index.html", [
       [ "Introduction", "index.html#Introduction", null ],
-      [ "section1", "index.html#section1", null ],
-      [ "section2", "index.html#section2", null ],
-      [ "section3", "index.html#section3", null ],
-      [ "section4", "index.html#section4", null ]
+      [ "Section 1 title", "index.html#section1", null ],
+      [ "Section 2 title", "index.html#section2", null ],
+      [ "Section 3 title", "index.html#section3", null ],
+      [ "Section 4 title", "index.html#section4", null ]
     ] ],
     [ "Tutorial Page", "tutorial_page.html", "tutorial_page" ],
     [ "Modules", "namespaces.html", [
