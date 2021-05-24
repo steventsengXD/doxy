@@ -78,63 +78,49 @@ $(document).ready(function(){initNavTree('read__data_8f90_source.html',''); init
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">CONTAINS</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">SUBROUTINE </span><a class="code" href="namespaceread__data.html#adde5e6a441305be5cfe9f4a3cc9c5345">readtxt</a>(filename,atoms_,p1_,p2_,p3_,p4_,p5_)</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespaceread__data.html#adde5e6a441305be5cfe9f4a3cc9c5345">   16</a></span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">SUBROUTINE </span><a class="code" href="namespaceread__data.html#a319a6d1baa1199c340b9a94eb028054d">readtxt</a>(filename, p1, p2, p3, p4, p5)</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespaceread__data.html#a319a6d1baa1199c340b9a94eb028054d">   16</a></span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">CHARACTER(LEN=20)</span> :: filename</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">INTEGER</span> :: p1_, p2_, p4_, p5_</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">INTEGER</span> :: p1, p2, p4, p5</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">    REAL</span>(dp) :: p3, p3_</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">allocatable</span>, <span class="keywordtype">dimension(:,:)</span> :: atoms, atoms_</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">INTEGER</span> :: i</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">OPEN</span>(unit = 7, file = filename)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">! Read in lines contanining only one value (lines 3-5)</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">READ</span>(7,*) p1</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">READ</span>(7,*) p2</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">READ</span>(7,*) p3</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">READ</span>(7,*) p4</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">READ</span>(7,*) p5</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">! Can use this but prob more suitable if there&#39;s a lot of lines</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">! DO i = 1, 2</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">!   READ(7,*) atoms(i,1), atoms(i,2), atoms(i,3)</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">! END DO</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">INTEGER</span> :: p1, p2, p4, p5</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">    REAL</span>(dp) :: p3</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">OPEN</span>(unit = 7, file = filename)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">! Read in lines contanining only one value (lines 3-5)</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">READ</span>(7,*) p1</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">READ</span>(7,*) p2</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">READ</span>(7,*) p3</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">READ</span>(7,*) p4</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">READ</span>(7,*) p5</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">READ</span>(7,*) p6</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">READ</span>(7,*) p7</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">READ</span>(7,*) p8</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">READ</span>(7,*) p9</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">READ</span>(7,*) p10</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">READ</span>(7,*) p11</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">CLOSE</span>(7)</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">! Read in atom coordinates (first two lines)</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">allocate</span>(atoms(3,p2))</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">READ</span>(7,*) atoms(1,1), atoms(2,1), atoms(3,1)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">READ</span>(7,*) atoms(1,2), atoms(2,2), atoms(3,2)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">! Print to see if data was properly read into fortran</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">! PRINT *, p1</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">! PRINT *, p2</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">! PRINT *, p3</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">! PRINT *, p4</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">! PRINT *, p5</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">! PRINT *, atoms(:,1)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">! PRINT *, atoms(:,2)</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    p1_ = p1</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    p2_ = p2</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    p3_ = p3</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    p4_ = p4</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    p5_ = p5</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    atoms_ = atoms</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">END SUBROUTINE </span><a class="code" href="namespaceread__data.html#adde5e6a441305be5cfe9f4a3cc9c5345">readtxt</a></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">END MODULE </span><a class="code" href="namespaceread__data.html">read_data</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="comment">! Print to see if data was properly read into fortran</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    print *, p1</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    print *, p2</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    print *, p3</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    print *, p4</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    print *, p5</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">END SUBROUTINE </span><a class="code" href="namespaceread__data.html#a319a6d1baa1199c340b9a94eb028054d">readtxt</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">END MODULE </span><a class="code" href="namespaceread__data.html">read_data</a></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespaceread__data_html"><div class="ttname"><a href="namespaceread__data.html">read_data</a></div><div class="ttdoc">Subroutines to read files and transfer user inputs into fortran.</div><div class="ttdef"><b>Definition:</b> <a href="read__data_8f90_source.html#l00002">read_data.f90:2</a></div></div>
-<div class="ttc" id="anamespaceread__data_html_adde5e6a441305be5cfe9f4a3cc9c5345"><div class="ttname"><a href="namespaceread__data.html#adde5e6a441305be5cfe9f4a3cc9c5345">read_data::readtxt</a></div><div class="ttdeci">subroutine readtxt(filename, atoms_, p1_, p2_, p3_, p4_, p5_)</div><div class="ttdoc">Read in data from a text file.</div><div class="ttdef"><b>Definition:</b> <a href="read__data_8f90_source.html#l00016">read_data.f90:16</a></div></div>
+<div class="ttc" id="anamespaceread__data_html_a319a6d1baa1199c340b9a94eb028054d"><div class="ttname"><a href="namespaceread__data.html#a319a6d1baa1199c340b9a94eb028054d">read_data::readtxt</a></div><div class="ttdeci">subroutine readtxt(filename, p1, p2, p3, p4, p5)</div><div class="ttdoc">Read in data from a text file.</div><div class="ttdef"><b>Definition:</b> <a href="read__data_8f90_source.html#l00016">read_data.f90:16</a></div></div>
 <div class="ttc" id="anamespaceshared__constants_html"><div class="ttname"><a href="namespaceshared__constants.html">shared_constants</a></div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00001">constants.f90:1</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="read__data_8f90.html">read_data.f90</a></li>
-    <li class="footer">Generated on Mon May 24 2021 06:35:20 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Mon May 24 2021 13:01:36 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

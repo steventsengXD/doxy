@@ -80,24 +80,24 @@ $(document).ready(function(){initNavTree('wavefunc__results_8f90_source.html',''
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">CONTAINS</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">FUNCTION </span><a class="code" href="namespacecalculations.html#af6f75dd01f9b3fc48509b6f4a3911124">wavefunction</a>(dof, l_bound, u_bound, basis)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">FUNCTION </span><a class="code" href="namespacebasis__functions.html#aa4aedd530fac6b0abca6d3f24c1eb173">wavefunction</a>(dof, l_bound, u_bound, basis)</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespacecalculations.html#af6f75dd01f9b3fc48509b6f4a3911124">   24</a></span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">IMPLICIT NONE</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">! Input variables</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">INTEGER</span>, <span class="keywordtype">PARAMETER</span> :: dp=kind(1.0d0)</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">INTEGER</span>, <span class="keywordtype">INTENT(IN)</span> :: l_bound, u_bound, basis</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">DIMENSION(4)</span>, <span class="keywordtype">INTENT(IN)</span> :: dof</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">DIMENSION(4)</span>, <span class="keywordtype">INTENT(IN)</span> :: <a class="code" href="namespacebasis__functions.html#a2df1599c3b4bc12542d1d7327b7d3045">dof</a></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">! Loop variables</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">INTEGER</span> :: array_len, track, i, j, k</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">    REAL</span>(dp) :: a, b, c</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">! Our output result array</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">DIMENSION(:)</span>, <span class="keywordtype">ALLOCATABLE</span> :: <a class="code" href="namespacecalculations.html#af6f75dd01f9b3fc48509b6f4a3911124">wavefunction</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">DIMENSION(:)</span>, <span class="keywordtype">ALLOCATABLE</span> :: <a class="code" href="namespacebasis__functions.html#aa4aedd530fac6b0abca6d3f24c1eb173">wavefunction</a></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">! Defines the length of the array from calculating how many grid points there are</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    array_len = (abs(l_bound) + abs(u_bound) + 1)**3</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">ALLOCATE</span>(<a class="code" href="namespacecalculations.html#af6f75dd01f9b3fc48509b6f4a3911124">wavefunction</a>(array_len))</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">ALLOCATE</span>(<a class="code" href="namespacebasis__functions.html#aa4aedd530fac6b0abca6d3f24c1eb173">wavefunction</a>(array_len))</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    track = 0</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
@@ -113,7 +113,7 @@ $(document).ready(function(){initNavTree('wavefunc__results_8f90_source.html',''
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            b =  real(j) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            c =  real(k) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="namespacecalculations.html#af6f75dd01f9b3fc48509b6f4a3911124">wavefunction</a>(track) = <a class="code" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d">wave_function_slater_1s</a>([a,b,c], dof)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="namespacebasis__functions.html#aa4aedd530fac6b0abca6d3f24c1eb173">wavefunction</a>(track) = <a class="code" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d">wave_function_slater_1s</a>([a,b,c], <a class="code" href="namespacebasis__functions.html#a2df1599c3b4bc12542d1d7327b7d3045">dof</a>)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordflow">          END DO</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordflow">        END DO</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordflow">      END DO</span></div>
@@ -132,7 +132,7 @@ $(document).ready(function(){initNavTree('wavefunc__results_8f90_source.html',''
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            b =  real(j) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            c =  real(k) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="namespacecalculations.html#af6f75dd01f9b3fc48509b6f4a3911124">wavefunction</a>(track) = <a class="code" href="namespacebasis__functions.html#a1f59f9576cb02ba4361bf7dc5046ce5d">wave_function_2_electrons</a>([a,b,c], dof)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="namespacebasis__functions.html#aa4aedd530fac6b0abca6d3f24c1eb173">wavefunction</a>(track) = <a class="code" href="namespacebasis__functions.html#a1f59f9576cb02ba4361bf7dc5046ce5d">wave_function_2_electrons</a>([a,b,c], <a class="code" href="namespacebasis__functions.html#a2df1599c3b4bc12542d1d7327b7d3045">dof</a>)</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordflow">          END DO</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keywordflow">        END DO</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordflow">      END DO</span></div>
@@ -149,13 +149,13 @@ $(document).ready(function(){initNavTree('wavefunc__results_8f90_source.html',''
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            b =  real(j) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            c =  real(k) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="namespacecalculations.html#af6f75dd01f9b3fc48509b6f4a3911124">wavefunction</a>(track) = wave_function_sto3g([a,b,c], dof)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <a class="code" href="namespacebasis__functions.html#aa4aedd530fac6b0abca6d3f24c1eb173">wavefunction</a>(track) = wave_function_sto3g([a,b,c], <a class="code" href="namespacebasis__functions.html#a2df1599c3b4bc12542d1d7327b7d3045">dof</a>)</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordflow">          END DO</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordflow">        END DO</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordflow">      END DO</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordflow">    END IF</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">END FUNCTION </span><a class="code" href="namespacecalculations.html#af6f75dd01f9b3fc48509b6f4a3911124">wavefunction</a></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">END FUNCTION </span><a class="code" href="namespacebasis__functions.html#aa4aedd530fac6b0abca6d3f24c1eb173">wavefunction</a></div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
@@ -166,7 +166,7 @@ $(document).ready(function(){initNavTree('wavefunc__results_8f90_source.html',''
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">! Input variables</span></div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">INTEGER</span>, <span class="keywordtype">PARAMETER</span> :: dp=kind(1.0d0)</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">INTEGER</span>, <span class="keywordtype">INTENT(IN)</span> :: l_bound, u_bound, basis</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">DIMENSION(4)</span>, <span class="keywordtype">INTENT(IN)</span> :: dof</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">DIMENSION(4)</span>, <span class="keywordtype">INTENT(IN)</span> :: <a class="code" href="namespacebasis__functions.html#a2df1599c3b4bc12542d1d7327b7d3045">dof</a></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">! Loop variables</span></div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">INTEGER</span> :: array_len, track, i, j, k</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keywordtype">    REAL</span>(dp) :: a, b, c</div>
@@ -192,7 +192,7 @@ $(document).ready(function(){initNavTree('wavefunc__results_8f90_source.html',''
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            b =  real(j) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            c =  real(k) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <a class="code" href="namespacecalculations.html#a8c3dcb7746bf56fb97cbd49c3feed7ea">hamiltonian</a>(track) = <a class="code" href="namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f">reduced_hamiltonian_slater_1s</a>([a,b,c], dof)</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <a class="code" href="namespacecalculations.html#a8c3dcb7746bf56fb97cbd49c3feed7ea">hamiltonian</a>(track) = <a class="code" href="namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f">reduced_hamiltonian_slater_1s</a>([a,b,c], <a class="code" href="namespacebasis__functions.html#a2df1599c3b4bc12542d1d7327b7d3045">dof</a>)</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordflow">          END DO</span></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keywordflow">        END DO</span></div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keywordflow">      END DO</span></div>
@@ -211,7 +211,7 @@ $(document).ready(function(){initNavTree('wavefunc__results_8f90_source.html',''
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            b =  real(j) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            c =  real(k) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <a class="code" href="namespacecalculations.html#a8c3dcb7746bf56fb97cbd49c3feed7ea">hamiltonian</a>(track) = <a class="code" href="namespacebasis__functions.html#acea41a868e0e1522cb6d3e3ed1b52d66">reduced_hamiltonian_2_electrons</a>([a,b,c], dof)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <a class="code" href="namespacecalculations.html#a8c3dcb7746bf56fb97cbd49c3feed7ea">hamiltonian</a>(track) = <a class="code" href="namespacebasis__functions.html#acea41a868e0e1522cb6d3e3ed1b52d66">reduced_hamiltonian_2_electrons</a>([a,b,c], <a class="code" href="namespacebasis__functions.html#a2df1599c3b4bc12542d1d7327b7d3045">dof</a>)</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keywordflow">          END DO</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keywordflow">        END DO</span></div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keywordflow">      END DO</span></div>
@@ -228,7 +228,7 @@ $(document).ready(function(){initNavTree('wavefunc__results_8f90_source.html',''
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            b =  real(j) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            c =  real(k) / (abs(l_bound) + abs(u_bound))</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <a class="code" href="namespacecalculations.html#a8c3dcb7746bf56fb97cbd49c3feed7ea">hamiltonian</a>(track) = reduced_hamiltonian_sto3g([a,b,c], dof)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <a class="code" href="namespacecalculations.html#a8c3dcb7746bf56fb97cbd49c3feed7ea">hamiltonian</a>(track) = reduced_hamiltonian_sto3g([a,b,c], <a class="code" href="namespacebasis__functions.html#a2df1599c3b4bc12542d1d7327b7d3045">dof</a>)</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keywordflow">          END DO</span></div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keywordflow">        END DO</span></div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keywordflow">      END DO</span></div>
@@ -241,18 +241,19 @@ $(document).ready(function(){initNavTree('wavefunc__results_8f90_source.html',''
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacecomponent__functions_html"><div class="ttname"><a href="namespacecomponent__functions.html">component_functions</a></div><div class="ttdef"><b>Definition:</b> <a href="component__functions_8f90_source.html#l00001">component_functions.f90:1</a></div></div>
 <div class="ttc" id="anamespacebasis__functions_html"><div class="ttname"><a href="namespacebasis__functions.html">basis_functions</a></div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00001">basis_functions.f90:1</a></div></div>
-<div class="ttc" id="anamespacebasis__functions_html_a1f59f9576cb02ba4361bf7dc5046ce5d"><div class="ttname"><a href="namespacebasis__functions.html#a1f59f9576cb02ba4361bf7dc5046ce5d">basis_functions::wave_function_2_electrons</a></div><div class="ttdeci">real(dp) function wave_function_2_electrons(position, dof_coefficients)</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00347">basis_functions.f90:347</a></div></div>
+<div class="ttc" id="anamespacebasis__functions_html_a1f59f9576cb02ba4361bf7dc5046ce5d"><div class="ttname"><a href="namespacebasis__functions.html#a1f59f9576cb02ba4361bf7dc5046ce5d">basis_functions::wave_function_2_electrons</a></div><div class="ttdeci">real(dp) function wave_function_2_electrons(position, dof_coefficients)</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00346">basis_functions.f90:346</a></div></div>
 <div class="ttc" id="anamespacecalculations_html"><div class="ttname"><a href="namespacecalculations.html">calculations</a></div><div class="ttdoc">Contains 2 functions to calculate the wavefunction.</div><div class="ttdef"><b>Definition:</b> <a href="wavefunc__results_8f90_source.html#l00005">wavefunc_results.f90:5</a></div></div>
-<div class="ttc" id="anamespacecalculations_html_af6f75dd01f9b3fc48509b6f4a3911124"><div class="ttname"><a href="namespacecalculations.html#af6f75dd01f9b3fc48509b6f4a3911124">calculations::wavefunction</a></div><div class="ttdeci">real(dp) function, dimension(:), allocatable wavefunction(dof, l_bound, u_bound, basis)</div><div class="ttdoc">This function outputs an array of the wavefunction evaluated on a grid.</div><div class="ttdef"><b>Definition:</b> <a href="wavefunc__results_8f90_source.html#l00024">wavefunc_results.f90:24</a></div></div>
-<div class="ttc" id="anamespacebasis__functions_html_a341dddb966f7d491ad3ffa90d862156f"><div class="ttname"><a href="namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f">basis_functions::reduced_hamiltonian_slater_1s</a></div><div class="ttdeci">real(dp) function reduced_hamiltonian_slater_1s(position, dof_coefficients)</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00256">basis_functions.f90:256</a></div></div>
-<div class="ttc" id="anamespacebasis__functions_html_ac9aa926890ee9ca588ab8439095de68d"><div class="ttname"><a href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d">basis_functions::wave_function_slater_1s</a></div><div class="ttdeci">real(dp) function wave_function_slater_1s(position, dof_coefficients)</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00220">basis_functions.f90:220</a></div></div>
-<div class="ttc" id="anamespacebasis__functions_html_acea41a868e0e1522cb6d3e3ed1b52d66"><div class="ttname"><a href="namespacebasis__functions.html#acea41a868e0e1522cb6d3e3ed1b52d66">basis_functions::reduced_hamiltonian_2_electrons</a></div><div class="ttdeci">real(dp) function reduced_hamiltonian_2_electrons(position, dof_coefficients)</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00379">basis_functions.f90:379</a></div></div>
+<div class="ttc" id="anamespacebasis__functions_html_aa4aedd530fac6b0abca6d3f24c1eb173"><div class="ttname"><a href="namespacebasis__functions.html#aa4aedd530fac6b0abca6d3f24c1eb173">basis_functions::wavefunction</a></div><div class="ttdeci">integer, protected wavefunction</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00033">basis_functions.f90:33</a></div></div>
+<div class="ttc" id="anamespacebasis__functions_html_a341dddb966f7d491ad3ffa90d862156f"><div class="ttname"><a href="namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f">basis_functions::reduced_hamiltonian_slater_1s</a></div><div class="ttdeci">real(dp) function reduced_hamiltonian_slater_1s(position, dof_coefficients)</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00255">basis_functions.f90:255</a></div></div>
+<div class="ttc" id="anamespacebasis__functions_html_ac9aa926890ee9ca588ab8439095de68d"><div class="ttname"><a href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d">basis_functions::wave_function_slater_1s</a></div><div class="ttdeci">real(dp) function wave_function_slater_1s(position, dof_coefficients)</div><div class="ttdoc">Single Electron Functions.</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00219">basis_functions.f90:219</a></div></div>
+<div class="ttc" id="anamespacebasis__functions_html_acea41a868e0e1522cb6d3e3ed1b52d66"><div class="ttname"><a href="namespacebasis__functions.html#acea41a868e0e1522cb6d3e3ed1b52d66">basis_functions::reduced_hamiltonian_2_electrons</a></div><div class="ttdeci">real(dp) function reduced_hamiltonian_2_electrons(position, dof_coefficients)</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00380">basis_functions.f90:380</a></div></div>
 <div class="ttc" id="anamespacecalculations_html_a8c3dcb7746bf56fb97cbd49c3feed7ea"><div class="ttname"><a href="namespacecalculations.html#a8c3dcb7746bf56fb97cbd49c3feed7ea">calculations::hamiltonian</a></div><div class="ttdeci">real(dp) function, dimension(:), allocatable hamiltonian(dof, l_bound, u_bound, basis)</div><div class="ttdoc">Function calculating the reduced Hamiltonian based.</div><div class="ttdef"><b>Definition:</b> <a href="wavefunc__results_8f90_source.html#l00104">wavefunc_results.f90:104</a></div></div>
+<div class="ttc" id="anamespacebasis__functions_html_a2df1599c3b4bc12542d1d7327b7d3045"><div class="ttname"><a href="namespacebasis__functions.html#a2df1599c3b4bc12542d1d7327b7d3045">basis_functions::dof</a></div><div class="ttdeci">real(dp), dimension(:,:), allocatable, protected dof</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00044">basis_functions.f90:44</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="wavefunc__results_8f90.html">wavefunc_results.f90</a></li>
-    <li class="footer">Generated on Mon May 24 2021 06:35:20 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Mon May 24 2021 13:01:36 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

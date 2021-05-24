@@ -59,7 +59,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"MCMC_8f90.html"
+"MCMC_8f90.html",
+"param__search_8f90.html#a04262aed0a917d0a5e07a7213aba7cf0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

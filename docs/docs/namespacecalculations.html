@@ -205,7 +205,7 @@ Functions/Subroutines</h2></td></tr>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keywordflow">    END IF</span></div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="basis__functions_8f90_source.html#l00379">basis_functions::reduced_hamiltonian_2_electrons()</a>, and <a class="el" href="basis__functions_8f90_source.html#l00256">basis_functions::reduced_hamiltonian_slater_1s()</a>.</p>
+<p class="reference">References <a class="el" href="basis__functions_8f90_source.html#l00044">basis_functions::dof</a>, <a class="el" href="basis__functions_8f90_source.html#l00380">basis_functions::reduced_hamiltonian_2_electrons()</a>, and <a class="el" href="basis__functions_8f90_source.html#l00255">basis_functions::reduced_hamiltonian_slater_1s()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="loop__test_8f90_source.html#l00021">loop_test()</a>.</p>
 <div class="dynheader">
@@ -216,9 +216,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="Function calculating the reduced Hamiltonian based." alt="" coords="5,54,192,81"/>
 <area shape="rect" href="namespacebasis__functions.html#acea41a868e0e1522cb6d3e3ed1b52d66" title=" " alt="" coords="240,9,429,51"/>
 <area shape="rect" href="namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f" title=" " alt="" coords="243,79,426,120"/>
-<area shape="rect" href="namespacebasis__functions.html#a3aa2ed47c325e9955b40da5b344fd31a" title=" " alt="" coords="477,5,660,47"/>
+<area shape="rect" href="namespacebasis__functions.html#a3aa2ed47c325e9955b40da5b344fd31a" title="Two Electron Functions." alt="" coords="477,5,660,47"/>
 <area shape="rect" href="namespacecomponent__functions.html#ae432b45b9b8516a44e035e4394e7d75c" title=" " alt="" coords="487,71,650,127"/>
-<area shape="rect" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d" title=" " alt="" coords="485,152,652,193"/>
+<area shape="rect" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d" title="Single Electron Functions." alt="" coords="485,152,652,193"/>
 <area shape="rect" href="namespacecomponent__functions.html#a99c6a1b2ffe9693cccd857e51178c28e" title=" " alt="" coords="708,116,871,157"/>
 </map>
 </div>
@@ -360,9 +360,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keywordflow">    END IF</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="basis__functions_8f90_source.html#l00347">basis_functions::wave_function_2_electrons()</a>, and <a class="el" href="basis__functions_8f90_source.html#l00220">basis_functions::wave_function_slater_1s()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="loop__test_8f90_source.html#l00021">loop_test()</a>.</p>
+<p class="reference">References <a class="el" href="basis__functions_8f90_source.html#l00044">basis_functions::dof</a>, <a class="el" href="basis__functions_8f90_source.html#l00346">basis_functions::wave_function_2_electrons()</a>, <a class="el" href="basis__functions_8f90_source.html#l00219">basis_functions::wave_function_slater_1s()</a>, and <a class="el" href="basis__functions_8f90_source.html#l00033">basis_functions::wavefunction</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -370,21 +368,12 @@ Here is the call graph for this function:</div>
 <map name="namespacecalculations_af6f75dd01f9b3fc48509b6f4a3911124_cgraph" id="namespacecalculations_af6f75dd01f9b3fc48509b6f4a3911124_cgraph">
 <area shape="rect" title="This function outputs an array of the wavefunction evaluated on a grid." alt="" coords="5,81,201,107"/>
 <area shape="rect" href="namespacebasis__functions.html#a1f59f9576cb02ba4361bf7dc5046ce5d" title=" " alt="" coords="249,44,416,85"/>
-<area shape="rect" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d" title=" " alt="" coords="464,103,631,144"/>
+<area shape="rect" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d" title="Single Electron Functions." alt="" coords="464,103,631,144"/>
 <area shape="rect" href="namespacecomponent__functions.html#a87166a18e7df3188b4ac3f123e39a3d7" title=" " alt="" coords="466,37,629,79"/>
 <area shape="rect" href="namespacecomponent__functions.html#ae19615a4b0c88888e2aa7a15cc51cd29" title=" " alt="" coords="679,37,857,79"/>
-<area shape="rect" href="namespacecomponent__functions.html#a97fe2b5cde42f4355466ef38099e014c" title=" " alt="" coords="905,5,1068,47"/>
+<area shape="rect" href="namespacecomponent__functions.html#a97fe2b5cde42f4355466ef38099e014c" title="Functions that construct the Jastrow interaction function Notation here follows Schmidt and Moskowitz..." alt="" coords="905,5,1068,47"/>
 <area shape="rect" href="namespacecomponent__functions.html#ae28c3bbfe7c6dbeb622126af558d8f84" title=" " alt="" coords="905,71,1068,112"/>
 <area shape="rect" href="namespacecomponent__functions.html#a99c6a1b2ffe9693cccd857e51178c28e" title=" " alt="" coords="687,103,849,144"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacecalculations_af6f75dd01f9b3fc48509b6f4a3911124_icgraph.png" border="0" usemap="#namespacecalculations_af6f75dd01f9b3fc48509b6f4a3911124_icgraph" alt=""/></div>
-<map name="namespacecalculations_af6f75dd01f9b3fc48509b6f4a3911124_icgraph" id="namespacecalculations_af6f75dd01f9b3fc48509b6f4a3911124_icgraph">
-<area shape="rect" title="This function outputs an array of the wavefunction evaluated on a grid." alt="" coords="136,5,332,32"/>
-<area shape="rect" href="loop__test_8f90.html#adfc39d5cd26473b3e806db2eebecb91f" title=" " alt="" coords="5,5,88,32"/>
 </map>
 </div>
 
@@ -396,7 +385,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecalculations.html">calculations</a></li>
-    <li class="footer">Generated on Mon May 24 2021 06:35:25 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Mon May 24 2021 13:01:41 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
