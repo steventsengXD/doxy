@@ -30,7 +30,7 @@ var NAVTREE =
       [ "Section 3 title", "index.html#section3", null ],
       [ "Section 4 title", "index.html#section4", null ]
     ] ],
-    [ "Tutorial Page", "tutorial_page.html", "tutorial_page" ],
+    [ "Tutorial", "tutorial_page.html", "tutorial_page" ],
     [ "Variational Monte Carlo Method", "new_page.html", null ],
     [ "Modules", "namespaces.html", [
       [ "Modules List", "namespaces.html", "namespaces_dup" ],
