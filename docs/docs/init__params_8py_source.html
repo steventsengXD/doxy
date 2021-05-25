@@ -69,28 +69,28 @@ $(document).ready(function(){initNavTree('init__params_8py_source.html',''); ini
 <div class="title">init_params.py</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="init__params_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespaceinit__params.html">    1</a></span>&#160;<span class="keyword">import</span> sympy <span class="keyword">as</span> sym</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"># from PIL import ImageTk, Image</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> os</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> numpy <span class="keyword">as</span> np</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<a href="init__params_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespaceinit__params.html">    1</a></span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> sympy <span class="keyword">as</span> sym</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"># from PIL import ImageTk, Image</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> os</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> numpy <span class="keyword">as</span> np</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"># Function to get a numerical value/parameter through command line</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"># Will use this if gui cant be used</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a6cfd0e0095022b90d21f1d1c7e0d2522">   10</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceinit__params.html#a6cfd0e0095022b90d21f1d1c7e0d2522">get_input</a>(parameter=&#39;parameter&#39;):</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">while</span> <span class="keyword">True</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        x=input(<span class="stringliteral">&#39;Please enter a value for the {0}: &#39;</span>.format(parameter))</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordflow">try</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            x=float(x)</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">break</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">except</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            print(<span class="stringliteral">&#39;You did not enter a proper numerical value for the {0}&#39;</span>.format(parameter))</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> x</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"># Example code to get the bond length</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"># x=get_input(parameter=&#39;bond length&#39;)</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"># print(&#39;The bond length is: {0}.&#39;.format(x))</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">#&gt; @brief Function to get a numerical value/parameter through command line</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">#&gt; This is used in when a gui cant be used or is unsuitable.</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">#&gt; Example code to get the bond length</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">#&gt; x=get_input(parameter=&#39;bond length&#39;)</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">#&gt; @param parameter The name of the parameter/variable needed from the user.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a6cfd0e0095022b90d21f1d1c7e0d2522">   14</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceinit__params.html#a6cfd0e0095022b90d21f1d1c7e0d2522">get_input</a>(parameter=&#39;parameter&#39;):</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">while</span> <span class="keyword">True</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        x=input(<span class="stringliteral">&#39;Please enter a value for the {0}: &#39;</span>.format(parameter))</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">try</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            x=float(x)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">break</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">except</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            print(<span class="stringliteral">&#39;You did not enter a proper numerical value for the {0}&#39;</span>.format(parameter))</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> x</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"># The code below is for a GUI input</span></div>
@@ -250,13 +250,13 @@ $(document).ready(function(){initNavTree('init__params_8py_source.html',''); ini
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    file.write(str(vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)])+<span class="stringliteral">&#39;\n&#39;</span>) <span class="comment">#+&#39;,&#39;+str(p3)+&#39;,0&#39;)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespaceinit__params_html_a6cfd0e0095022b90d21f1d1c7e0d2522"><div class="ttname"><a href="namespaceinit__params.html#a6cfd0e0095022b90d21f1d1c7e0d2522">init_params.get_input</a></div><div class="ttdeci">def get_input(parameter='parameter')</div><div class="ttdef"><b>Definition:</b> <a href="init__params_8py_source.html#l00010">init_params.py:10</a></div></div>
+<div class="ttc" id="anamespaceinit__params_html_a6cfd0e0095022b90d21f1d1c7e0d2522"><div class="ttname"><a href="namespaceinit__params.html#a6cfd0e0095022b90d21f1d1c7e0d2522">init_params.get_input</a></div><div class="ttdeci">def get_input(parameter='parameter')</div><div class="ttdef"><b>Definition:</b> <a href="init__params_8py_source.html#l00014">init_params.py:14</a></div></div>
 <div class="ttc" id="anamespaceinit__params_html_a6e4c1a98cad0e20f6ebbc47a22d7ce2d"><div class="ttname"><a href="namespaceinit__params.html#a6e4c1a98cad0e20f6ebbc47a22d7ce2d">init_params.new_param</a></div><div class="ttdeci">def new_param(window, tk_text, tk_entry, tk_input, row, dval='1', text='param', font=font, fs=fontsize)</div><div class="ttdef"><b>Definition:</b> <a href="init__params_8py_source.html#l00078">init_params.py:78</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="init__params_8py.html">init_params.py</a></li>
-    <li class="footer">Generated on Mon May 24 2021 18:27:33 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Mon May 24 2021 18:32:23 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
