@@ -71,32 +71,24 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="Introduction"></a>
 Introduction</h1>
-<h1><a class="anchor" id="autotoc_md0"></a>
-This document describes the source code.</h1>
-<h1><a class="anchor" id="autotoc_md1"></a>
-Can place image below, maybe a diagram of the code</h1>
-<h1><a class="anchor" id="autotoc_md2"></a>
-&lt;div class="dyncontent"&gt;</h1>
-<h1><a class="anchor" id="autotoc_md3"></a>
-&lt;div class="center"&gt;&lt;img src="latin__driver_8f90_a9c41b02ba03edb8de4ce1751ea3cf05f_cgraph.png" border="0" # usemap="#latin__driver_8f90_a9c41b02ba03edb8de4ce1751ea3cf05f_cgraph" alt=""/&gt;&lt;/div&gt;</h1>
-<h1><a class="anchor" id="autotoc_md4"></a>
-&lt;/div&gt;</h1>
 <p>This software will utilise the Markov chain technique (MCMC), specifically Metropolis Hastings method. Other possibilities could be implementing a random walk proposal or the preconditioned Crank–Nicolson algorithm (pCN).</p>
-<p>The Markov chain will produce samples from the trial distribution which is then used by the Monte Carlo integration for the local energy. The acceptance rates in addition to the sample list can be recorded for debugging/convergence checking. </p><dl class="section user"><dt></dt><dd></dd></dl>
-<h2><a class="anchor" id="Data"></a>
-Input</h2>
+<p>The Markov chain will produce samples from the trial distribution which is then used by the Monte Carlo integration for the local energy. The acceptance rates in addition to the sample list can be recorded for debugging/convergence checking.</p>
+<h2><a class="anchor" id="data_input"></a>
+Data Input</h2>
 <p>An initial python script will generate an input text file formed of relevant parameters and variables defined by the user. This will be used to launch the rest of the software via a python wrapper function.</p>
 <p>The software will have a degree of flexibility for the user. The user can specify the following for their input:</p>
-<p class="formulaDsp">
-\begin{itemize} \item The location/coordinates of the hydrogen nuclei. \item A choice of basis function (from an articulated set). \item The option to save the intermediate results to file or just output the final result. \end{itemize}
-</p>
- </div></div><!-- PageDoc -->
+<ul>
+<li>The location/coordinates of the hydrogen nuclei.</li>
+<li>A choice of basis function (from an articulated set).</li>
+<li>The option to save the intermediate results to file or just output the final result. </li>
+</ul>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 25 2021 07:09:44 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 07:15:33 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
