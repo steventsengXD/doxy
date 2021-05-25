@@ -74,153 +74,12 @@ $(document).ready(function(){initNavTree('namespacemcmc.html',''); initResizable
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:a09d88f1525fd04d0aa14c920976b6da8"><td class="memItemLeft" align="right" valign="top">real(dp) function, dimension(density_dimension), private&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemcmc.html#a09d88f1525fd04d0aa14c920976b6da8">mcmc_propose</a> (x, s, density_dimension)</td></tr>
-<tr class="separator:a09d88f1525fd04d0aa14c920976b6da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a218d74cdc457bf3dabaec17de2f86b94"><td class="memItemLeft" align="right" valign="top">pure real(dp) function, private&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemcmc.html#a218d74cdc457bf3dabaec17de2f86b94">mcmc_log_prop_dist</a> (x, y, s)</td></tr>
-<tr class="separator:a218d74cdc457bf3dabaec17de2f86b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9e09d42934ee54d8bea65ed70c87f46"><td class="memItemLeft" align="right" valign="top">subroutine, private&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemcmc.html#aa9e09d42934ee54d8bea65ed70c87f46">mcmc_accept</a> (a, x, x_prop, log_rho, s, rho_x, rho_x_prop, dof_coefficients)</td></tr>
-<tr class="separator:aa9e09d42934ee54d8bea65ed70c87f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41c389f202e2fb81f35279f940ed80ee"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee">mcmc_sample</a> (samples, log_rho, x_0, n_steps, n_burned, thinning_interval, s, e_code, dof_coefficients, density_dimension, average_accept, seed)</td></tr>
 <tr class="separator:a41c389f202e2fb81f35279f940ed80ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31491c97e8ebcd42c05916b9a0b81576"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576">mcmc_adapt</a> (s_out, log_rho, x_0, n_steps, s_0, e_code, s_max, s_min, memory, adapt_interval, dof_coefficients, density_dimension, seed)</td></tr>
 <tr class="separator:a31491c97e8ebcd42c05916b9a0b81576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a id="aa9e09d42934ee54d8bea65ed70c87f46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9e09d42934ee54d8bea65ed70c87f46">&#9670;&nbsp;</a></span>mcmc_accept()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">subroutine, private mcmc::mcmc_accept </td>
-          <td>(</td>
-          <td class="paramtype">real(dp), intent(out)&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(dp), dimension(:), intent(in)&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(dp), dimension(:), intent(in)&#160;</td>
-          <td class="paramname"><em>x_prop</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>log_rho</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(dp), intent(in)&#160;</td>
-          <td class="paramname"><em>s</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(dp), intent(in), optional&#160;</td>
-          <td class="paramname"><em>rho_x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(dp), intent(out), optional&#160;</td>
-          <td class="paramname"><em>rho_x_prop</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(dp), dimension(:), intent(in)&#160;</td>
-          <td class="paramname"><em>dof_coefficients</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="MCMC_8f90_source.html#l00063">63</a> of file <a class="el" href="MCMC_8f90_source.html">MCMC.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">!computes accpect prob in [0,1]</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: x, x_prop</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">optional</span>, <span class="keywordtype">intent(in)</span> :: rho_x <span class="comment">!log_rho(x) saved between runs to reduce calls</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">optional</span>, <span class="keywordtype">intent(out)</span> :: rho_x_prop <span class="comment">!log_rho(x_prop)</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: dof_coefficients</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">intent(in)</span> :: s <span class="comment">!stepsize parameter, contols log_prop_dist</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">intent(out)</span> :: a</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">        real</span>(dp) :: rho_x_, rho_x_prop_</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">!decribes shape of input functions</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">interface</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keyword">function </span>log_rho(x, dof) <span class="keyword">result</span>(out)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="comment">!log target dist</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordtype">use </span><a class="code" href="namespaceshared__constants.html">shared_constants</a></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordtype">                real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: x</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordtype">                real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: dof</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">                real</span>(dp) :: out</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keyword">end function </span>log_rho</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">end interface</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">present</span>(rho_x)) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            rho_x_ = rho_x</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            rho_x_ = log_rho(x, dof_coefficients)</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordflow">        end if</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        rho_x_prop_ = log_rho(x_prop, dof_coefficients)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">present</span>(rho_x_prop)) rho_x_prop=rho_x_prop_</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        a = (mcmc_log_prop_dist(x,x_prop,s)+rho_x_prop_)-(mcmc_log_prop_dist(x_prop,x,s)+rho_x_)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="MCMC_8f90_source.html#l00050">mcmc_log_prop_dist()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="MCMC_8f90_source.html#l00194">mcmc_adapt()</a>, and <a class="el" href="MCMC_8f90_source.html#l00103">mcmc_sample()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemcmc_aa9e09d42934ee54d8bea65ed70c87f46_cgraph.png" border="0" usemap="#namespacemcmc_aa9e09d42934ee54d8bea65ed70c87f46_cgraph" alt=""/></div>
-<map name="namespacemcmc_aa9e09d42934ee54d8bea65ed70c87f46_cgraph" id="namespacemcmc_aa9e09d42934ee54d8bea65ed70c87f46_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,165,32"/>
-<area shape="rect" href="namespacemcmc.html#a218d74cdc457bf3dabaec17de2f86b94" title=" " alt="" coords="213,5,417,32"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemcmc_aa9e09d42934ee54d8bea65ed70c87f46_icgraph.png" border="0" usemap="#namespacemcmc_aa9e09d42934ee54d8bea65ed70c87f46_icgraph" alt=""/></div>
-<map name="namespacemcmc_aa9e09d42934ee54d8bea65ed70c87f46_icgraph" id="namespacemcmc_aa9e09d42934ee54d8bea65ed70c87f46_icgraph">
-<area shape="rect" title=" " alt="" coords="671,85,831,112"/>
-<area shape="rect" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title=" " alt="" coords="463,60,617,87"/>
-<area shape="rect" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title=" " alt="" coords="457,111,623,137"/>
-<area shape="rect" href="namespaceelectron__density__functions.html#ad3fecfe2a82b71b01e22bedeb5c80bd7" title=" " alt="" coords="212,107,409,149"/>
-<area shape="rect" href="loop__test_8f90.html#adfc39d5cd26473b3e806db2eebecb91f" title=" " alt="" coords="269,173,352,200"/>
-<area shape="rect" href="MCMC__test__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="283,5,338,32"/>
-<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="261,56,361,83"/>
-<area shape="rect" href="namespacecalculations.html#a8558626802aea5ae20bfd747eb8e26ba" title=" " alt="" coords="5,107,164,149"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a31491c97e8ebcd42c05916b9a0b81576"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31491c97e8ebcd42c05916b9a0b81576">&#9670;&nbsp;</a></span>mcmc_adapt()</h2>
 
@@ -402,20 +261,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        e_code=0</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MCMC_8f90_source.html#l00063">mcmc_accept()</a>, and <a class="el" href="MCMC_8f90_source.html#l00020">mcmc_propose()</a>.</p>
-
 <p class="reference">Referenced by <a class="el" href="electron__density_8f90_source.html#l00009">electron_density_functions::electron_density()</a>, <a class="el" href="loop__test_8f90_source.html#l00021">loop_test()</a>, <a class="el" href="MCMC__test__driver_8f90_source.html#l00021">main()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemcmc_a31491c97e8ebcd42c05916b9a0b81576_cgraph.png" border="0" usemap="#namespacemcmc_a31491c97e8ebcd42c05916b9a0b81576_cgraph" alt=""/></div>
-<map name="namespacemcmc_a31491c97e8ebcd42c05916b9a0b81576_cgraph" id="namespacemcmc_a31491c97e8ebcd42c05916b9a0b81576_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,160,57"/>
-<area shape="rect" href="namespacemcmc.html#aa9e09d42934ee54d8bea65ed70c87f46" title=" " alt="" coords="213,5,373,32"/>
-<area shape="rect" href="namespacemcmc.html#a09d88f1525fd04d0aa14c920976b6da8" title=" " alt="" coords="208,56,377,83"/>
-<area shape="rect" href="namespacemcmc.html#a218d74cdc457bf3dabaec17de2f86b94" title=" " alt="" coords="425,5,629,32"/>
-</map>
-</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -427,168 +273,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="MCMC__test__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="283,122,338,149"/>
 <area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="261,173,361,199"/>
 <area shape="rect" href="namespacecalculations.html#a8558626802aea5ae20bfd747eb8e26ba" title=" " alt="" coords="5,5,164,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a218d74cdc457bf3dabaec17de2f86b94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a218d74cdc457bf3dabaec17de2f86b94">&#9670;&nbsp;</a></span>mcmc_log_prop_dist()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">pure real(dp) function, private mcmc::mcmc_log_prop_dist </td>
-          <td>(</td>
-          <td class="paramtype">real(dp), dimension(:), intent(in)&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(dp), dimension(:), intent(in)&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(dp), intent(in)&#160;</td>
-          <td class="paramname"><em>s</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="MCMC_8f90_source.html#l00050">50</a> of file <a class="el" href="MCMC_8f90_source.html">MCMC.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">!log liklihood x proposed at y</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: x</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: y</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">intent(in)</span> :: s</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">        real</span>(dp) :: out</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">!unnormalised, as not needed, doing 1D step not nessesearily best but is easy</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        out= -norm2(x-y)**2*(1/s)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-</div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="MCMC_8f90_source.html#l00063">mcmc_accept()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemcmc_a218d74cdc457bf3dabaec17de2f86b94_icgraph.png" border="0" usemap="#namespacemcmc_a218d74cdc457bf3dabaec17de2f86b94_icgraph" alt=""/></div>
-<map name="namespacemcmc_a218d74cdc457bf3dabaec17de2f86b94_icgraph" id="namespacemcmc_a218d74cdc457bf3dabaec17de2f86b94_icgraph">
-<area shape="rect" title=" " alt="" coords="879,85,1083,112"/>
-<area shape="rect" href="namespacemcmc.html#aa9e09d42934ee54d8bea65ed70c87f46" title=" " alt="" coords="671,85,831,112"/>
-<area shape="rect" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title=" " alt="" coords="463,60,617,87"/>
-<area shape="rect" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title=" " alt="" coords="457,111,623,137"/>
-<area shape="rect" href="namespaceelectron__density__functions.html#ad3fecfe2a82b71b01e22bedeb5c80bd7" title=" " alt="" coords="212,107,409,149"/>
-<area shape="rect" href="loop__test_8f90.html#adfc39d5cd26473b3e806db2eebecb91f" title=" " alt="" coords="269,173,352,200"/>
-<area shape="rect" href="MCMC__test__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="283,5,338,32"/>
-<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="261,56,361,83"/>
-<area shape="rect" href="namespacecalculations.html#a8558626802aea5ae20bfd747eb8e26ba" title=" " alt="" coords="5,107,164,149"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a09d88f1525fd04d0aa14c920976b6da8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09d88f1525fd04d0aa14c920976b6da8">&#9670;&nbsp;</a></span>mcmc_propose()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">real(dp) function, dimension(density_dimension), private mcmc::mcmc_propose </td>
-          <td>(</td>
-          <td class="paramtype">real(dp), dimension(density_dimension), intent(in)&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">real(dp), intent(in)&#160;</td>
-          <td class="paramname"><em>s</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">integer, intent(in)&#160;</td>
-          <td class="paramname"><em>density_dimension</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="MCMC_8f90_source.html#l00020">20</a> of file <a class="el" href="MCMC_8f90_source.html">MCMC.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: density_dimension</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(density_dimension)</span>, <span class="keywordtype">intent(in)</span> :: x</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">intent(in)</span> :: s</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(2*((density_dimension+1)/2))</span> :: u <span class="comment">!uniform random sample, </span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="comment">!note the dimension is the nearest even number above the given dimension</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">!integer division will autmatically round towards 0</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(density_dimension)</span> :: xi <span class="comment">!normal random sample</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(density_dimension)</span> :: x_prop</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">integer</span> :: i</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">!proposes, uses same dist as described in log_prop_dist</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="comment">!parametrising ititially with just a step size, </span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">!if proposal is changed, might need updated </span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">!implementing box muller to generate a normal</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">call </span>random_number(u)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">do</span> i=1,density_dimension/2</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            xi(i) = sqrt(-2.0_dp*log(u(i)))*cos(2.0_dp*<a class="code" href="namespaceshared__constants.html#af60d21edef3e12c6891d4193b862a4f4">pi</a>*u(i*2))</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            xi(i*2) = sqrt(-2.0_dp*log(u(i)))*sin(2.0_dp*<a class="code" href="namespaceshared__constants.html#af60d21edef3e12c6891d4193b862a4f4">pi</a>*u(i*2))</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordflow">        end do</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (modulo(density_dimension,2).ne.0) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            xi(density_dimension) = sqrt(-2.0_dp*log(u(density_dimension)))*cos(2.0_dp*<a class="code" href="namespaceshared__constants.html#af60d21edef3e12c6891d4193b862a4f4">pi</a>*u(density_dimension+1))</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordflow">        end if</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">!basic GRW</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        x_prop = x + s*xi</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-</div><!-- fragment -->
-<p class="reference">References <a class="el" href="constants_8f90_source.html#l00006">shared_constants::pi</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="MCMC_8f90_source.html#l00194">mcmc_adapt()</a>, and <a class="el" href="MCMC_8f90_source.html#l00103">mcmc_sample()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemcmc_a09d88f1525fd04d0aa14c920976b6da8_icgraph.png" border="0" usemap="#namespacemcmc_a09d88f1525fd04d0aa14c920976b6da8_icgraph" alt=""/></div>
-<map name="namespacemcmc_a09d88f1525fd04d0aa14c920976b6da8_icgraph" id="namespacemcmc_a09d88f1525fd04d0aa14c920976b6da8_icgraph">
-<area shape="rect" title=" " alt="" coords="671,85,840,112"/>
-<area shape="rect" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title=" " alt="" coords="463,60,617,87"/>
-<area shape="rect" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title=" " alt="" coords="457,111,623,137"/>
-<area shape="rect" href="namespaceelectron__density__functions.html#ad3fecfe2a82b71b01e22bedeb5c80bd7" title=" " alt="" coords="212,107,409,149"/>
-<area shape="rect" href="loop__test_8f90.html#adfc39d5cd26473b3e806db2eebecb91f" title=" " alt="" coords="269,173,352,200"/>
-<area shape="rect" href="MCMC__test__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="283,5,338,32"/>
-<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="261,56,361,83"/>
-<area shape="rect" href="namespacecalculations.html#a8558626802aea5ae20bfd747eb8e26ba" title=" " alt="" coords="5,107,164,149"/>
 </map>
 </div>
 
@@ -769,20 +453,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keywordflow">        end if</span></div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="MCMC_8f90_source.html#l00063">mcmc_accept()</a>, and <a class="el" href="MCMC_8f90_source.html#l00020">mcmc_propose()</a>.</p>
-
 <p class="reference">Referenced by <a class="el" href="electron__density_8f90_source.html#l00009">electron_density_functions::electron_density()</a>, <a class="el" href="loop__test_8f90_source.html#l00021">loop_test()</a>, <a class="el" href="MCMC__test__driver_8f90_source.html#l00021">main()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="namespacemcmc_a41c389f202e2fb81f35279f940ed80ee_cgraph.png" border="0" usemap="#namespacemcmc_a41c389f202e2fb81f35279f940ed80ee_cgraph" alt=""/></div>
-<map name="namespacemcmc_a41c389f202e2fb81f35279f940ed80ee_cgraph" id="namespacemcmc_a41c389f202e2fb81f35279f940ed80ee_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,171,57"/>
-<area shape="rect" href="namespacemcmc.html#aa9e09d42934ee54d8bea65ed70c87f46" title=" " alt="" coords="223,5,383,32"/>
-<area shape="rect" href="namespacemcmc.html#a09d88f1525fd04d0aa14c920976b6da8" title=" " alt="" coords="219,56,388,83"/>
-<area shape="rect" href="namespacemcmc.html#a218d74cdc457bf3dabaec17de2f86b94" title=" " alt="" coords="436,5,640,32"/>
-</map>
-</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -801,13 +472,12 @@ Here is the caller graph for this function:</div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespaceshared__constants_html_af60d21edef3e12c6891d4193b862a4f4"><div class="ttname"><a href="namespaceshared__constants.html#af60d21edef3e12c6891d4193b862a4f4">shared_constants::pi</a></div><div class="ttdeci">real(dp), parameter pi</div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00006">constants.f90:6</a></div></div>
 <div class="ttc" id="anamespaceshared__constants_html"><div class="ttname"><a href="namespaceshared__constants.html">shared_constants</a></div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00001">constants.f90:1</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacemcmc.html">mcmc</a></li>
-    <li class="footer">Generated on Tue May 25 2021 06:56:26 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 07:09:43 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
