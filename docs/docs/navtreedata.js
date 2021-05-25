@@ -24,7 +24,7 @@ var NAVTREE =
 [
   [ "PX 915 Project Title/Name Here", "index.html", [
     [ "PX 915 Group B Documentation", "index.html", [
-      [ "Introduction", "index.html#Introduction", [
+      [ "Introduction", "index.html#intro", [
         [ "Data Input", "index.html#data_input", null ]
       ] ]
     ] ],
