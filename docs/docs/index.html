@@ -71,30 +71,32 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="Introduction"></a>
 Introduction</h1>
-<p>This document describes the source code.</p>
-<p>Can place image below, maybe a diagram of the code</p>
-<div class="dyncontent"> <div class="center"><img src="latin__driver_8f90_a9c41b02ba03edb8de4ce1751ea3cf05f_cgraph.png" alt="" border="0" usemap="#latin__driver_8f90_a9c41b02ba03edb8de4ce1751ea3cf05f_cgraph" class="inline"/></div> </div><h1><a class="anchor" id="autotoc_md0"></a>
-@image html mc.jpeg width=50%</h1>
-<h1><a class="anchor" id="section1"></a>
-Section 1 title</h1>
-<p>They are all right, they no longer wear trousers. <br  />
-EMPEROR CLAUDIUS, CIRCA AD 48</p>
-<h1><a class="anchor" id="section2"></a>
-Section 2 title</h1>
-<p>More than just an immense military power, Rome represented a new pinnacle of Western civilization, achieving heights in science, literature, and the arts that would not be surpassed for more than a thousand years. In addition to classical poets and philosophers such as Virgil and Seneca, Roman civilization produced Galen, doctor to the gladiators, whose medical textbooks were widely used in Europe until the fifteenth century, and the astronomer Ptolemy. Pliny the Elder, who died in the eruption of Mount Vesuvius in AD 79, wrote Natural History, one of the world's first encyclopedias, nd the ten books by the Roman architect Vitruvius inspired the builders of the Italian Renaissance more than a millennium after their author died. Rome also set new global standards of representative government. In the year AD 212, Emperor Caracalla extended citizenship to every freeborn male inhabitant of the Roman Empire. This mass enfranchisement catapulted Rome far beyond Greece or any other ancient civilization in terms of individual participation in the political process.</p>
-<h1><a class="anchor" id="section3"></a>
-Section 3 title</h1>
-<p>Perhaps the most intriguing aspect of the Roman Empire was the attraction that people felt toward it. Conquered subjects from Britannia to Arabia wanted to be a part of it—to be "Roman." As Gibbon observed, Roman magistrates seldom "required the aid of  a military force" because "the vanquished nations, blended into one great people, resigned the hope, nay even the wish, of resuming their independence, and scarcely considered their own existence as distinct from the existence of Rome." But what was Rome's allure?</p>
-<h1><a class="anchor" id="section4"></a>
-Section 4 title</h1>
-<p>Under Trajan, the borders of the empire expanded all the way to the Persian Gulf; no other Roman commander ever marched so far. He apparently returned from conquered Dacia (now Romania) with millions of pounds of gold and silver—the last time Rome's treasury would reap large profits from a war. </p>
-</div></div><!-- PageDoc -->
+<h1><a class="anchor" id="autotoc_md0"></a>
+This document describes the source code.</h1>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Can place image below, maybe a diagram of the code</h1>
+<h1><a class="anchor" id="autotoc_md2"></a>
+&lt;div class="dyncontent"&gt;</h1>
+<h1><a class="anchor" id="autotoc_md3"></a>
+&lt;div class="center"&gt;&lt;img src="latin__driver_8f90_a9c41b02ba03edb8de4ce1751ea3cf05f_cgraph.png" border="0" # usemap="#latin__driver_8f90_a9c41b02ba03edb8de4ce1751ea3cf05f_cgraph" alt=""/&gt;&lt;/div&gt;</h1>
+<h1><a class="anchor" id="autotoc_md4"></a>
+&lt;/div&gt;</h1>
+<p>This software will utilise the Markov chain technique (MCMC), specifically Metropolis Hastings method. Other possibilities could be implementing a random walk proposal or the preconditioned Crank–Nicolson algorithm (pCN).</p>
+<p>The Markov chain will produce samples from the trial distribution which is then used by the Monte Carlo integration for the local energy. The acceptance rates in addition to the sample list can be recorded for debugging/convergence checking. </p><dl class="section user"><dt></dt><dd></dd></dl>
+<h2><a class="anchor" id="Data"></a>
+Input</h2>
+<p>An initial python script will generate an input text file formed of relevant parameters and variables defined by the user. This will be used to launch the rest of the software via a python wrapper function.</p>
+<p>The software will have a degree of flexibility for the user. The user can specify the following for their input:</p>
+<p class="formulaDsp">
+\begin{itemize} \item The location/coordinates of the hydrogen nuclei. \item A choice of basis function (from an articulated set). \item The option to save the intermediate results to file or just output the final result. \end{itemize}
+</p>
+ </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 25 2021 06:12:54 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 06:56:28 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
