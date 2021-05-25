@@ -69,14 +69,16 @@ $(document).ready(function(){initNavTree('new_page.html',''); initResizable(); }
 <div class="title">Variational Monte Carlo Method </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Mathematics explained here </p>
-</div></div><!-- contents -->
+<div class="textblock"><p>The VQMC method is a method used to find the groundstate (the minimum eigenvalue and corresponding eigenfunction) [1] of the Hamiltonian: </p><p class="formulaDsp">
+\begin{equation} \hat{H}(\{\mb{r}_i\},\{\mb{R}_I\})\Psi(\{\mb{r}_i\}) \equiv\left(-\frac{1}{2}\sum_i\grad_i^2+\sum_{i&gt;j}\frac{1}{r_{ij}}-\sum_{I}\sum_{i}\frac{Z_I}{r_{iI}}\right)\Psi=E\Psi \end{equation}
+</p>
+ </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 25 2021 07:17:55 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 07:56:20 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
