@@ -152,7 +152,9 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">deallocate</span>(mcmc_run)</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="electron__density_8f90_source.html#l00053">fixed_log_density()</a>, <a class="el" href="electron__density_8f90_source.html#l00006">fixed_position_mod</a>, <a class="el" href="electron__density_8f90_source.html#l00041">fixed_wave_function()</a>, <a class="el" href="MCMC_8f90_source.html#l00194">mcmc::mcmc_adapt()</a>, <a class="el" href="MCMC_8f90_source.html#l00103">mcmc::mcmc_sample()</a>, and <a class="el" href="basis__functions_8f90_source.html#l00043">basis_functions::n_space_dims</a>.</p>
+<p class="reference">References <a class="el" href="electron__density_8f90_source.html#l00053">fixed_log_density()</a>, <a class="el" href="electron__density_8f90_source.html#l00006">fixed_position_mod</a>, <a class="el" href="electron__density_8f90_source.html#l00041">fixed_wave_function()</a>, <a class="el" href="MCMC_8f90_source.html#l00194">mcmc::mcmc_adapt()</a>, <a class="el" href="MCMC_8f90_source.html#l00103">mcmc::mcmc_sample()</a>, and <a class="el" href="basis__functions_8f90_source.html#l00050">basis_functions::n_space_dims</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="calc_8f90_source.html#l00109">calculations::ele_den_2atom()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -166,6 +168,15 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespacemcmc.html#aa9e09d42934ee54d8bea65ed70c87f46" title=" " alt="" coords="501,137,661,163"/>
 <area shape="rect" href="namespacemcmc.html#a09d88f1525fd04d0aa14c920976b6da8" title=" " alt="" coords="496,187,665,214"/>
 <area shape="rect" href="namespacemcmc.html#a218d74cdc457bf3dabaec17de2f86b94" title=" " alt="" coords="713,137,917,163"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespaceelectron__density__functions_ad3fecfe2a82b71b01e22bedeb5c80bd7_icgraph.png" border="0" usemap="#namespaceelectron__density__functions_ad3fecfe2a82b71b01e22bedeb5c80bd7_icgraph" alt=""/></div>
+<map name="namespaceelectron__density__functions_ad3fecfe2a82b71b01e22bedeb5c80bd7_icgraph" id="namespaceelectron__density__functions_ad3fecfe2a82b71b01e22bedeb5c80bd7_icgraph">
+<area shape="rect" title=" " alt="" coords="212,5,409,47"/>
+<area shape="rect" href="namespacecalculations.html#a8558626802aea5ae20bfd747eb8e26ba" title=" " alt="" coords="5,5,164,47"/>
 </map>
 </div>
 
@@ -210,7 +221,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    fixed_log_density = 2*log(abs(wave_function(position_total,dof_coefficients_f)))</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="electron__density_8f90_source.html#l00006">fixed_position_mod</a>, and <a class="el" href="basis__functions_8f90_source.html#l00013">basis_functions::wave_function</a>.</p>
+<p class="reference">References <a class="el" href="electron__density_8f90_source.html#l00006">fixed_position_mod</a>, and <a class="el" href="basis__functions_8f90_source.html#l00019">basis_functions::wave_function</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="electron__density_8f90_source.html#l00009">electron_density()</a>.</p>
 <div class="dynheader">
@@ -218,8 +229,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceelectron__density__functions_a13a2846a3cc609373662ada2a34b6d4b_icgraph.png" border="0" usemap="#namespaceelectron__density__functions_a13a2846a3cc609373662ada2a34b6d4b_icgraph" alt=""/></div>
 <map name="namespaceelectron__density__functions_a13a2846a3cc609373662ada2a34b6d4b_icgraph" id="namespaceelectron__density__functions_a13a2846a3cc609373662ada2a34b6d4b_icgraph">
-<area shape="rect" title=" " alt="" coords="251,5,448,47"/>
-<area shape="rect" href="namespaceelectron__density__functions.html#ad3fecfe2a82b71b01e22bedeb5c80bd7" title=" " alt="" coords="5,5,203,47"/>
+<area shape="rect" title=" " alt="" coords="457,5,655,47"/>
+<area shape="rect" href="namespaceelectron__density__functions.html#ad3fecfe2a82b71b01e22bedeb5c80bd7" title=" " alt="" coords="212,5,409,47"/>
+<area shape="rect" href="namespacecalculations.html#a8558626802aea5ae20bfd747eb8e26ba" title=" " alt="" coords="5,5,164,47"/>
 </map>
 </div>
 
@@ -263,16 +275,18 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    fixed_wave_function = wave_function(position_total,dof_coefficients_f)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="electron__density_8f90_source.html#l00006">fixed_position_mod</a>, and <a class="el" href="basis__functions_8f90_source.html#l00013">basis_functions::wave_function</a>.</p>
+<p class="reference">References <a class="el" href="electron__density_8f90_source.html#l00006">fixed_position_mod</a>, and <a class="el" href="basis__functions_8f90_source.html#l00019">basis_functions::wave_function</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="electron__density_8f90_source.html#l00009">electron_density()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="electron__density_8f90_source.html#l00009">electron_density()</a>, and <a class="el" href="calc_8f90_source.html#l00143">calculations::wave_2atoms()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceelectron__density__functions_ab114266b229fcbbde70039a9b6fb390b_icgraph.png" border="0" usemap="#namespaceelectron__density__functions_ab114266b229fcbbde70039a9b6fb390b_icgraph" alt=""/></div>
 <map name="namespaceelectron__density__functions_ab114266b229fcbbde70039a9b6fb390b_icgraph" id="namespaceelectron__density__functions_ab114266b229fcbbde70039a9b6fb390b_icgraph">
-<area shape="rect" title=" " alt="" coords="251,5,448,47"/>
-<area shape="rect" href="namespaceelectron__density__functions.html#ad3fecfe2a82b71b01e22bedeb5c80bd7" title=" " alt="" coords="5,5,203,47"/>
+<area shape="rect" title=" " alt="" coords="457,39,655,80"/>
+<area shape="rect" href="namespaceelectron__density__functions.html#ad3fecfe2a82b71b01e22bedeb5c80bd7" title=" " alt="" coords="212,5,409,47"/>
+<area shape="rect" href="namespacecalculations.html#a91d8d5b6209a74c0b98d2592556eb73e" title=" " alt="" coords="239,71,382,112"/>
+<area shape="rect" href="namespacecalculations.html#a8558626802aea5ae20bfd747eb8e26ba" title=" " alt="" coords="5,5,164,47"/>
 </map>
 </div>
 
@@ -305,7 +319,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceelectron__density__functions.html">electron_density_functions</a></li>
-    <li class="footer">Generated on Mon May 24 2021 19:31:25 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 05:39:25 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

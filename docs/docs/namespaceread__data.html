@@ -77,15 +77,15 @@ $(document).ready(function(){initNavTree('namespaceread__data.html',''); initRes
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:abe86052e10100e6ee35303d41b0a98aa"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread__data.html#abe86052e10100e6ee35303d41b0a98aa">readtxt</a> (filename, n_electrons_in, n_atoms_in, bond_length, n_trials, n_MCMC_steps, n_basis_functions_per_atom_in, search_seed, n_Jastrow_in, fd_length_in, Jastrow_b_length_in, Jastrow_d_length_in)</td></tr>
-<tr class="memdesc:abe86052e10100e6ee35303d41b0a98aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in data from a text file.  <a href="namespaceread__data.html#abe86052e10100e6ee35303d41b0a98aa">More...</a><br /></td></tr>
-<tr class="separator:abe86052e10100e6ee35303d41b0a98aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f07f5d28f046aac4ce75d53ac2a665"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceread__data.html#a57f07f5d28f046aac4ce75d53ac2a665">readtxt</a> (filename, n_electrons_in, n_atoms_in, bond_length, n_trials, n_MCMC_steps, search_seed, n_basis_functions_per_atom_in, n_Jastrow_in, fd_length_in, Jastrow_b_length_in, Jastrow_d_length_in)</td></tr>
+<tr class="memdesc:a57f07f5d28f046aac4ce75d53ac2a665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in data from a text file.  <a href="namespaceread__data.html#a57f07f5d28f046aac4ce75d53ac2a665">More...</a><br /></td></tr>
+<tr class="separator:a57f07f5d28f046aac4ce75d53ac2a665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Subroutines to read files and transfer user inputs into fortran. </p>
 </div><h2 class="groupheader">Function/Subroutine Documentation</h2>
-<a id="abe86052e10100e6ee35303d41b0a98aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe86052e10100e6ee35303d41b0a98aa">&#9670;&nbsp;</a></span>readtxt()</h2>
+<a id="a57f07f5d28f046aac4ce75d53ac2a665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57f07f5d28f046aac4ce75d53ac2a665">&#9670;&nbsp;</a></span>readtxt()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,13 +130,13 @@ Functions/Subroutines</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">integer&#160;</td>
-          <td class="paramname"><em>n_basis_functions_per_atom_in</em>, </td>
+          <td class="paramname"><em>search_seed</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">integer&#160;</td>
-          <td class="paramname"><em>search_seed</em>, </td>
+          <td class="paramname"><em>n_basis_functions_per_atom_in</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -206,8 +206,8 @@ Functions/Subroutines</h2></td></tr>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">READ</span>(7,*) bond_length</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keyword">READ</span>(7,*) n_trials</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keyword">READ</span>(7,*) n_mcmc_steps</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keyword">READ</span>(7,*) n_basis_functions_per_atom_in</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keyword">READ</span>(7,*) search_seed</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keyword">READ</span>(7,*) search_seed</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keyword">READ</span>(7,*) n_basis_functions_per_atom_in     </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keyword">READ</span>(7,*) n_jastrow_in</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">READ</span>(7,*) fd_length_in</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">READ</span>(7,*) jastrow_b_length_in</div>
@@ -233,8 +233,8 @@ Functions/Subroutines</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespaceread__data_abe86052e10100e6ee35303d41b0a98aa_icgraph.png" border="0" usemap="#namespaceread__data_abe86052e10100e6ee35303d41b0a98aa_icgraph" alt=""/></div>
-<map name="namespaceread__data_abe86052e10100e6ee35303d41b0a98aa_icgraph" id="namespaceread__data_abe86052e10100e6ee35303d41b0a98aa_icgraph">
+<div class="center"><img src="namespaceread__data_a57f07f5d28f046aac4ce75d53ac2a665_icgraph.png" border="0" usemap="#namespaceread__data_a57f07f5d28f046aac4ce75d53ac2a665_icgraph" alt=""/></div>
+<map name="namespaceread__data_a57f07f5d28f046aac4ce75d53ac2a665_icgraph" id="namespaceread__data_a57f07f5d28f046aac4ce75d53ac2a665_icgraph">
 <area shape="rect" title="Read in data from a text file." alt="" coords="153,5,296,32"/>
 <area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,5,105,32"/>
 </map>
@@ -248,7 +248,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceread__data.html">read_data</a></li>
-    <li class="footer">Generated on Mon May 24 2021 19:31:26 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 05:39:26 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

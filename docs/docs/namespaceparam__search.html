@@ -391,12 +391,12 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">! arr_shape(1) contains the number of variables, param_bounds(x,y) where x is for each param and y for limits.</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    arr_shape = shape(param_bounds)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">allocate</span>(random_search_grid(n_trials, arr_shape(1)))</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">allocate</span>(rand_num(n_trials))</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">do</span> i = 1,arr_shape(1)</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">call </span>random_number(rand_num) </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    random_search_grid(:, i) = rand_num*(param_bounds(i,1) - param_bounds(i,2)) + param_bounds(i,2)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    trials(:, i) = rand_num*(param_bounds(i,1) - param_bounds(i,2)) + param_bounds(i,2)</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordflow">    end do</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 </div><!-- fragment -->
@@ -448,7 +448,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceparam__search.html">param_search</a></li>
-    <li class="footer">Generated on Mon May 24 2021 19:31:25 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 05:39:26 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

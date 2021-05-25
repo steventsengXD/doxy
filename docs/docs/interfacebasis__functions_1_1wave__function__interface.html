@@ -72,9 +72,6 @@ $(document).ready(function(){initNavTree('interfacebasis__functions_1_1wave__fun
 <div class="title">basis_functions::wave_function_interface Interface Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>This is a "template" used for the procedure pointers.  
- <a href="interfacebasis__functions_1_1wave__function__interface.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -82,9 +79,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae7f83f2720d32cbd476a752544c051ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is a "template" used for the procedure pointers. </p>
-
-<p class="definition">Definition at line <a class="el" href="basis__functions_8f90_source.html#l00018">18</a> of file <a class="el" href="basis__functions_8f90_source.html">basis_functions.f90</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="basis__functions_8f90_source.html#l00024">24</a> of file <a class="el" href="basis__functions_8f90_source.html">basis_functions.f90</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae7f83f2720d32cbd476a752544c051ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae7f83f2720d32cbd476a752544c051ea">&#9670;&nbsp;</a></span>wave_function_interface()</h2>
@@ -95,13 +91,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">real(dp) function basis_functions::wave_function_interface::wave_function_interface </td>
           <td>(</td>
-          <td class="paramtype">real(dp), dimension(:), intent(<a class="el" href="namespacebasis__functions.html#a394250e20f370a70d21ac09e1425c28c">in</a>)&#160;</td>
+          <td class="paramtype">real(dp), dimension(:), intent(in)&#160;</td>
           <td class="paramname"><em>position</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">real(dp), dimension(:), intent(<a class="el" href="namespacebasis__functions.html#a394250e20f370a70d21ac09e1425c28c">in</a>)&#160;</td>
+          <td class="paramtype">real(dp), dimension(:), intent(in)&#160;</td>
           <td class="paramname"><em>dof_coefficients</em>&#160;</td>
         </tr>
         <tr>
@@ -112,11 +108,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basis__functions_8f90_source.html#l00019">19</a> of file <a class="el" href="basis__functions_8f90_source.html">basis_functions.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keywordtype">use </span><a class="code" href="namespaceshared__constants.html">shared_constants</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">      real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: position</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">      real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: dof_coefficients</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">      real</span>(dp) :: wave_function_interface</div>
+<p class="definition">Definition at line <a class="el" href="basis__functions_8f90_source.html#l00025">25</a> of file <a class="el" href="basis__functions_8f90_source.html">basis_functions.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keywordtype">use </span><a class="code" href="namespaceshared__constants.html">shared_constants</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">      real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: position</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">      real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: dof_coefficients</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">      real</span>(dp) :: wave_function_interface</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -130,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacebasis__functions.html">basis_functions</a></li><li class="navelem"><a class="el" href="interfacebasis__functions_1_1wave__function__interface.html">wave_function_interface</a></li>
-    <li class="footer">Generated on Mon May 24 2021 19:31:23 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 05:39:25 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

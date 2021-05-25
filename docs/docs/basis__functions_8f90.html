@@ -80,7 +80,6 @@ $(document).ready(function(){initNavTree('basis__functions_8f90.html',''); initR
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Types</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">interface &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacebasis__functions_1_1wave__function__interface.html">basis_functions::wave_function_interface</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a "template" used for the procedure pointers.  <a href="interfacebasis__functions_1_1wave__function__interface.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -90,8 +89,9 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:ab16c402cc5d94ee00238790491750b61"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ab16c402cc5d94ee00238790491750b61">basis_functions::initialise_basis</a> (n_electrons_in, n_basis_functions_per_atom_in, n_atoms_in, atom_coords_in, n_Jastrow_in, fd_length_in, Jastrow_b_length_in, Jastrow_d_length_in)</td></tr>
-<tr class="separator:ab16c402cc5d94ee00238790491750b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b1743e80170bccff87171f1695bf9a3"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3">basis_functions::initialise_basis</a> (n_electrons_in, n_basis_functions_per_atom_in, n_atoms_in, atom_coords_in, n_Jastrow_in, fd_length_in, Jastrow_b_length_in, Jastrow_d_length_in, proton_numbers_in, basis_type_in)</td></tr>
+<tr class="memdesc:a2b1743e80170bccff87171f1695bf9a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation routine.  <a href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3">More...</a><br /></td></tr>
+<tr class="separator:a2b1743e80170bccff87171f1695bf9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13ef39e7df0f40c27616e9719cef10dc"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a13ef39e7df0f40c27616e9719cef10dc">basis_functions::deinitialise_basis</a></td></tr>
 <tr class="separator:a13ef39e7df0f40c27616e9719cef10dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9aa926890ee9ca588ab8439095de68d"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d">basis_functions::wave_function_slater_1s</a> (position, dof_coefficients)</td></tr>
@@ -110,138 +110,70 @@ Functions/Subroutines</h2></td></tr>
 <tr class="separator:a0e84ba132fa13988d8882ae21a781832"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad155a8bce0b153e59bfef25f0d7e6e1f"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ad155a8bce0b153e59bfef25f0d7e6e1f">basis_functions::log_density</a> (position, dof_coefficients)</td></tr>
 <tr class="separator:ad155a8bce0b153e59bfef25f0d7e6e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdeef21beca62feb10d5f5057e30c342"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#acdeef21beca62feb10d5f5057e30c342">basis_functions::wave_function_sto3g</a> (position, dof_coefficients)</td></tr>
+<tr class="separator:acdeef21beca62feb10d5f5057e30c342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dd883f5d1f574a78c3266f0ce627eb8"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a6dd883f5d1f574a78c3266f0ce627eb8">basis_functions::reduced_hamiltonian_sto3g</a> (position, dof_coefficients)</td></tr>
+<tr class="separator:a6dd883f5d1f574a78c3266f0ce627eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a5176e9e5598bd13047a4c720fbc37c50"><td class="memItemLeft" align="right" valign="top">procedure(wave_function_interface), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a5176e9e5598bd13047a4c720fbc37c50">basis_functions::wave_function</a></td></tr>
-<tr class="memdesc:a5176e9e5598bd13047a4c720fbc37c50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main functions are pointers assigned by the initialise routine Main program should only use wave_function and reduced_hamiltonian wave_function is the quantum wavefunction of the system reduced_hamiltonian is the hamiltonian divided by the wavefunction $(H\psi)/\psi$.  <a href="namespacebasis__functions.html#a5176e9e5598bd13047a4c720fbc37c50">More...</a><br /></td></tr>
 <tr class="separator:a5176e9e5598bd13047a4c720fbc37c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9981898fc0fed9c10945781e26917b1"><td class="memItemLeft" align="right" valign="top">procedure(wave_function_interface), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ab9981898fc0fed9c10945781e26917b1">basis_functions::reduced_hamiltonian</a></td></tr>
 <tr class="separator:ab9981898fc0fed9c10945781e26917b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33299211b5f4167aa20494965e6df6fe"><td class="memItemLeft" align="right" valign="top">logical, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a33299211b5f4167aa20494965e6df6fe">basis_functions::initialised</a> = .false.</td></tr>
-<tr class="memdesc:a33299211b5f4167aa20494965e6df6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Module Variables.  <a href="namespacebasis__functions.html#a33299211b5f4167aa20494965e6df6fe">More...</a><br /></td></tr>
 <tr class="separator:a33299211b5f4167aa20494965e6df6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1866738f6b2c1c28ba2453361637f7e7"><td class="memItemLeft" align="right" valign="top">logical, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a1866738f6b2c1c28ba2453361637f7e7">basis_functions::flag</a></td></tr>
-<tr class="separator:a1866738f6b2c1c28ba2453361637f7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adaf8f75dce6e690bbf015ab402c5e514"><td class="memItemLeft" align="right" valign="top">logical, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#adaf8f75dce6e690bbf015ab402c5e514">basis_functions::set</a></td></tr>
-<tr class="separator:adaf8f75dce6e690bbf015ab402c5e514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2e84bc2d805a1aa892a41e935cf84e7"><td class="memItemLeft" align="right" valign="top">logical, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ae2e84bc2d805a1aa892a41e935cf84e7">basis_functions::by</a></td></tr>
-<tr class="separator:ae2e84bc2d805a1aa892a41e935cf84e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acebacaa08323ffede1c693e591069a42"><td class="memItemLeft" align="right" valign="top">logical, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#acebacaa08323ffede1c693e591069a42">basis_functions::initialisation</a></td></tr>
-<tr class="separator:acebacaa08323ffede1c693e591069a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa96b5cd6bfa94db5c107c1feed3f72"><td class="memItemLeft" align="right" valign="top">logical, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a7fa96b5cd6bfa94db5c107c1feed3f72">basis_functions::routine</a></td></tr>
-<tr class="separator:a7fa96b5cd6bfa94db5c107c1feed3f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5db2d847630e34f95fac75c3e09e3f3"><td class="memItemLeft" align="right" valign="top">logical, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ab5db2d847630e34f95fac75c3e09e3f3">basis_functions::checked</a></td></tr>
-<tr class="separator:ab5db2d847630e34f95fac75c3e09e3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34b1fcfc3962b8fe1e453cf2c41f4651"><td class="memItemLeft" align="right" valign="top">logical, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a34b1fcfc3962b8fe1e453cf2c41f4651">basis_functions::other</a></td></tr>
-<tr class="separator:a34b1fcfc3962b8fe1e453cf2c41f4651"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01d6a8e4ec15fb207ddc43aa77136f62"><td class="memItemLeft" align="right" valign="top">logical, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a01d6a8e4ec15fb207ddc43aa77136f62">basis_functions::routines</a></td></tr>
-<tr class="separator:a01d6a8e4ec15fb207ddc43aa77136f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb2248f05b2bc45438c66c7bdf02bdb7"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aeb2248f05b2bc45438c66c7bdf02bdb7">basis_functions::n_electrons</a></td></tr>
-<tr class="memdesc:aeb2248f05b2bc45438c66c7bdf02bdb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variables directly set as inputs to the initialisation routine.  <a href="namespacebasis__functions.html#aeb2248f05b2bc45438c66c7bdf02bdb7">More...</a><br /></td></tr>
-<tr class="separator:aeb2248f05b2bc45438c66c7bdf02bdb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4dfb3b99da7a98dfb63e70865a1ee29"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ad4dfb3b99da7a98dfb63e70865a1ee29">basis_functions::n_electrons</a></td></tr>
+<tr class="separator:ad4dfb3b99da7a98dfb63e70865a1ee29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9fb7e7b9af3e057ec02a2feb7368b8e"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ac9fb7e7b9af3e057ec02a2feb7368b8e">basis_functions::n_basis_functions_per_atom</a></td></tr>
+<tr class="separator:ac9fb7e7b9af3e057ec02a2feb7368b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a106093181d8f73b5757e18bed45354"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a7a106093181d8f73b5757e18bed45354">basis_functions::n_atoms</a></td></tr>
+<tr class="separator:a7a106093181d8f73b5757e18bed45354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2433e6f0971d508142a511c8d87c30b"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ae2433e6f0971d508142a511c8d87c30b">basis_functions::atom_coords</a></td></tr>
+<tr class="separator:ae2433e6f0971d508142a511c8d87c30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8eaad13ee1fa3799c55ff4fe1dc48b5"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ac8eaad13ee1fa3799c55ff4fe1dc48b5">basis_functions::n_jastrow_dofs</a></td></tr>
+<tr class="separator:ac8eaad13ee1fa3799c55ff4fe1dc48b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8114bf21770f69fbbc228d14a9c2bf4"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ac8114bf21770f69fbbc228d14a9c2bf4">basis_functions::fd_h</a></td></tr>
+<tr class="separator:ac8114bf21770f69fbbc228d14a9c2bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a981aa8fc3a64198138bccb0413dacc94"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a981aa8fc3a64198138bccb0413dacc94">basis_functions::b_length</a></td></tr>
+<tr class="separator:a981aa8fc3a64198138bccb0413dacc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3a451d100c71d40dcfced3b16334e4"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a0f3a451d100c71d40dcfced3b16334e4">basis_functions::d_length</a></td></tr>
+<tr class="separator:a0f3a451d100c71d40dcfced3b16334e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7936f84f27dc052e58eb470bc220fb85"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a7936f84f27dc052e58eb470bc220fb85">basis_functions::proton_numbers</a></td></tr>
+<tr class="separator:a7936f84f27dc052e58eb470bc220fb85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c148eb124b16f4ce8a5c822b7ef30f4"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a9c148eb124b16f4ce8a5c822b7ef30f4">basis_functions::basis_type</a></td></tr>
+<tr class="separator:a9c148eb124b16f4ce8a5c822b7ef30f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b525380de9887a3919e23b5fd03e75"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a79b525380de9887a3919e23b5fd03e75">basis_functions::number_dofs</a></td></tr>
+<tr class="separator:a79b525380de9887a3919e23b5fd03e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e0cf4f62dc5afc6f91a283ba3f055e"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aa2e0cf4f62dc5afc6f91a283ba3f055e">basis_functions::n_space_dims</a></td></tr>
+<tr class="separator:aa2e0cf4f62dc5afc6f91a283ba3f055e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4fc66a8a927069f6788785e3ade0ff3"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ad4fc66a8a927069f6788785e3ade0ff3">basis_functions::dof_bounds</a></td></tr>
+<tr class="separator:ad4fc66a8a927069f6788785e3ade0ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc655d1e5dbccbd5fa2598c80dcb673"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a3fc655d1e5dbccbd5fa2598c80dcb673">basis_functions::n_dofs_per_atom</a></td></tr>
+<tr class="memdesc:a3fc655d1e5dbccbd5fa2598c80dcb673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variables used internally.  <a href="namespacebasis__functions.html#a3fc655d1e5dbccbd5fa2598c80dcb673">More...</a><br /></td></tr>
+<tr class="separator:a3fc655d1e5dbccbd5fa2598c80dcb673"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c255b509bca1c058fd6ad6cf2866b45"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a5c255b509bca1c058fd6ad6cf2866b45">basis_functions::number</a></td></tr>
 <tr class="separator:a5c255b509bca1c058fd6ad6cf2866b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52431ea23646f3851972ebf43c0567ad"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a52431ea23646f3851972ebf43c0567ad">basis_functions::of</a></td></tr>
 <tr class="separator:a52431ea23646f3851972ebf43c0567ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa49308729a9410103f1c3563710feee3"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aa49308729a9410103f1c3563710feee3">basis_functions::electrons</a></td></tr>
-<tr class="separator:aa49308729a9410103f1c3563710feee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9fb7e7b9af3e057ec02a2feb7368b8e"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ac9fb7e7b9af3e057ec02a2feb7368b8e">basis_functions::n_basis_functions_per_atom</a></td></tr>
-<tr class="separator:ac9fb7e7b9af3e057ec02a2feb7368b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21a1e365002eb9c42f448e7a08978bba"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a21a1e365002eb9c42f448e7a08978bba">basis_functions::linear</a></td></tr>
-<tr class="separator:a21a1e365002eb9c42f448e7a08978bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ef40c98e883e95484d139471d872590"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a8ef40c98e883e95484d139471d872590">basis_functions::terms</a></td></tr>
-<tr class="separator:a8ef40c98e883e95484d139471d872590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a394250e20f370a70d21ac09e1425c28c"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a394250e20f370a70d21ac09e1425c28c">basis_functions::in</a></td></tr>
-<tr class="separator:a394250e20f370a70d21ac09e1425c28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2433ba5eda13a550e2e014c9dd732e75"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a2433ba5eda13a550e2e014c9dd732e75">basis_functions::the</a></td></tr>
-<tr class="separator:a2433ba5eda13a550e2e014c9dd732e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca858ccdb0db10aeb6a5fd45f6e8ea9d"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aca858ccdb0db10aeb6a5fd45f6e8ea9d">basis_functions::single</a></td></tr>
-<tr class="separator:aca858ccdb0db10aeb6a5fd45f6e8ea9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a144be1c405ad958f6d06063fcd94160f"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a144be1c405ad958f6d06063fcd94160f">basis_functions::electron</a></td></tr>
-<tr class="separator:a144be1c405ad958f6d06063fcd94160f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4aedd530fac6b0abca6d3f24c1eb173"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aa4aedd530fac6b0abca6d3f24c1eb173">basis_functions::wavefunction</a></td></tr>
-<tr class="separator:aa4aedd530fac6b0abca6d3f24c1eb173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aceb5148ebb31e7121d181126e945a7dd"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aceb5148ebb31e7121d181126e945a7dd">basis_functions::per</a></td></tr>
-<tr class="separator:aceb5148ebb31e7121d181126e945a7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accf32aaa063be00ece9d581ec60975bb"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#accf32aaa063be00ece9d581ec60975bb">basis_functions::atom</a></td></tr>
-<tr class="separator:accf32aaa063be00ece9d581ec60975bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a106093181d8f73b5757e18bed45354"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a7a106093181d8f73b5757e18bed45354">basis_functions::n_atoms</a></td></tr>
-<tr class="separator:a7a106093181d8f73b5757e18bed45354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a314aefca50b3c398fec65efce5b30d"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a5a314aefca50b3c398fec65efce5b30d">basis_functions::atoms</a></td></tr>
-<tr class="separator:a5a314aefca50b3c398fec65efce5b30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2433e6f0971d508142a511c8d87c30b"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ae2433e6f0971d508142a511c8d87c30b">basis_functions::atom_coords</a></td></tr>
-<tr class="separator:ae2433e6f0971d508142a511c8d87c30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9883ede28e7526207e5e12fcdb2aec78"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a9883ede28e7526207e5e12fcdb2aec78">basis_functions::coordinates</a></td></tr>
-<tr class="separator:a9883ede28e7526207e5e12fcdb2aec78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcbc8561037b9f9f3f4040df927a905c"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(3, n_atoms), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#adcbc8561037b9f9f3f4040df927a905c">basis_functions::shape</a></td></tr>
-<tr class="separator:adcbc8561037b9f9f3f4040df927a905c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8eaad13ee1fa3799c55ff4fe1dc48b5"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ac8eaad13ee1fa3799c55ff4fe1dc48b5">basis_functions::n_jastrow_dofs</a></td></tr>
-<tr class="separator:ac8eaad13ee1fa3799c55ff4fe1dc48b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed16053a7901226f596e22ca0178f495"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aed16053a7901226f596e22ca0178f495">basis_functions::dofs</a></td></tr>
 <tr class="separator:aed16053a7901226f596e22ca0178f495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40c7365b5c52f2ab8e72b1770dbb30ef"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a40c7365b5c52f2ab8e72b1770dbb30ef">basis_functions::jastrow</a></td></tr>
-<tr class="separator:a40c7365b5c52f2ab8e72b1770dbb30ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefe3c196c784be27be8e64eaab619d93"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aefe3c196c784be27be8e64eaab619d93">basis_functions::term</a></td></tr>
-<tr class="separator:aefe3c196c784be27be8e64eaab619d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8114bf21770f69fbbc228d14a9c2bf4"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ac8114bf21770f69fbbc228d14a9c2bf4">basis_functions::fd_h</a></td></tr>
-<tr class="separator:ac8114bf21770f69fbbc228d14a9c2bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa936bf6d392429840d5768ee223db7b2"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aa936bf6d392429840d5768ee223db7b2">basis_functions::lengthscale</a></td></tr>
-<tr class="separator:aa936bf6d392429840d5768ee223db7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06f4d44236691d068f0bfa751a1e35a4"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a06f4d44236691d068f0bfa751a1e35a4">basis_functions::finite</a></td></tr>
-<tr class="separator:a06f4d44236691d068f0bfa751a1e35a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af08081d3a650f8a22b358fa0ba5cc34b"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#af08081d3a650f8a22b358fa0ba5cc34b">basis_functions::difference</a></td></tr>
-<tr class="separator:af08081d3a650f8a22b358fa0ba5cc34b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af03b4a6475898ba77d916c092ebf3123"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#af03b4a6475898ba77d916c092ebf3123">basis_functions::code</a></td></tr>
-<tr class="separator:af03b4a6475898ba77d916c092ebf3123"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a981aa8fc3a64198138bccb0413dacc94"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a981aa8fc3a64198138bccb0413dacc94">basis_functions::b_length</a></td></tr>
-<tr class="separator:a981aa8fc3a64198138bccb0413dacc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71a1019b767c74ab389fbc815ff31804"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a71a1019b767c74ab389fbc815ff31804">basis_functions::inverse</a></td></tr>
-<tr class="separator:a71a1019b767c74ab389fbc815ff31804"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94ceef1ad9248478d1073a3175086eda"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a94ceef1ad9248478d1073a3175086eda">basis_functions::nuclear</a></td></tr>
-<tr class="separator:a94ceef1ad9248478d1073a3175086eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76dd3db9825bfe126dc3633ef2c69272"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a76dd3db9825bfe126dc3633ef2c69272">basis_functions::interaction</a></td></tr>
-<tr class="separator:a76dd3db9825bfe126dc3633ef2c69272"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f3a451d100c71d40dcfced3b16334e4"><td class="memItemLeft" align="right" valign="top">real(dp), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a0f3a451d100c71d40dcfced3b16334e4">basis_functions::d_length</a></td></tr>
-<tr class="separator:a0f3a451d100c71d40dcfced3b16334e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79b525380de9887a3919e23b5fd03e75"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a79b525380de9887a3919e23b5fd03e75">basis_functions::number_dofs</a></td></tr>
-<tr class="memdesc:a79b525380de9887a3919e23b5fd03e75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variables used outside of this module.  <a href="namespacebasis__functions.html#a79b525380de9887a3919e23b5fd03e75">More...</a><br /></td></tr>
-<tr class="separator:a79b525380de9887a3919e23b5fd03e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a793eb84d322660e3ee937c739b882fc6"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a793eb84d322660e3ee937c739b882fc6">basis_functions::total</a></td></tr>
-<tr class="separator:a793eb84d322660e3ee937c739b882fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2af921266221f7f68de96b058c0744a"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aa2af921266221f7f68de96b058c0744a">basis_functions::degrees</a></td></tr>
-<tr class="separator:aa2af921266221f7f68de96b058c0744a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af00df35b8ee4b6c30b2ddecb59b972ce"><td class="memItemLeft" align="right" valign="top">integer, dimension(dofs), protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#af00df35b8ee4b6c30b2ddecb59b972ce">basis_functions::freedom</a></td></tr>
-<tr class="separator:af00df35b8ee4b6c30b2ddecb59b972ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2e0cf4f62dc5afc6f91a283ba3f055e"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aa2e0cf4f62dc5afc6f91a283ba3f055e">basis_functions::n_space_dims</a></td></tr>
-<tr class="separator:aa2e0cf4f62dc5afc6f91a283ba3f055e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e327b43035a915596c9539e7250920c"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a2e327b43035a915596c9539e7250920c">basis_functions::space</a></td></tr>
-<tr class="separator:a2e327b43035a915596c9539e7250920c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac66fddc9cd06bf0057e4a0e992228621"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ac66fddc9cd06bf0057e4a0e992228621">basis_functions::dimensions</a></td></tr>
-<tr class="separator:ac66fddc9cd06bf0057e4a0e992228621"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabeab7277fc1edf5082f5b5069100757"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aabeab7277fc1edf5082f5b5069100757">basis_functions::for</a></td></tr>
-<tr class="separator:aabeab7277fc1edf5082f5b5069100757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab966cc33cd861d24006087e432d31d81"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ab966cc33cd861d24006087e432d31d81">basis_functions::per</a></td></tr>
+<tr class="separator:ab966cc33cd861d24006087e432d31d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a897cb86894d34896821a8b35dc46c3e4"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a897cb86894d34896821a8b35dc46c3e4">basis_functions::atom</a></td></tr>
+<tr class="separator:a897cb86894d34896821a8b35dc46c3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b352be85726cbb75380cbf441706361"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a1b352be85726cbb75380cbf441706361">basis_functions::for</a></td></tr>
+<tr class="separator:a1b352be85726cbb75380cbf441706361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaecc67ea7eea66aa8e6b59d7e4b0365e"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aaecc67ea7eea66aa8e6b59d7e4b0365e">basis_functions::convenience</a></td></tr>
 <tr class="separator:aaecc67ea7eea66aa8e6b59d7e4b0365e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4fc66a8a927069f6788785e3ade0ff3"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ad4fc66a8a927069f6788785e3ade0ff3">basis_functions::dof_bounds</a></td></tr>
-<tr class="separator:ad4fc66a8a927069f6788785e3ade0ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ce69211a0f3d34090d0c92775ddd207"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a0ce69211a0f3d34090d0c92775ddd207">basis_functions::default</a></td></tr>
-<tr class="separator:a0ce69211a0f3d34090d0c92775ddd207"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a490142d0ed1f2b791c1ac80f680183fc"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a490142d0ed1f2b791c1ac80f680183fc">basis_functions::bounds</a></td></tr>
-<tr class="separator:a490142d0ed1f2b791c1ac80f680183fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2de27b4d2ca39ee7d9a65c4333a73d81"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a2de27b4d2ca39ee7d9a65c4333a73d81">basis_functions::possible</a></td></tr>
-<tr class="separator:a2de27b4d2ca39ee7d9a65c4333a73d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2df1599c3b4bc12542d1d7327b7d3045"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a2df1599c3b4bc12542d1d7327b7d3045">basis_functions::dof</a></td></tr>
-<tr class="separator:a2df1599c3b4bc12542d1d7327b7d3045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5db37c8abc3c25feb3d4756aaf255168"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a5db37c8abc3c25feb3d4756aaf255168">basis_functions::values</a></td></tr>
-<tr class="separator:a5db37c8abc3c25feb3d4756aaf255168"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fc655d1e5dbccbd5fa2598c80dcb673"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a3fc655d1e5dbccbd5fa2598c80dcb673">basis_functions::n_dofs_per_atom</a></td></tr>
-<tr class="memdesc:a3fc655d1e5dbccbd5fa2598c80dcb673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variables used internally.  <a href="namespacebasis__functions.html#a3fc655d1e5dbccbd5fa2598c80dcb673">More...</a><br /></td></tr>
-<tr class="separator:a3fc655d1e5dbccbd5fa2598c80dcb673"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a931089e272b9708ea78e4e84774e6491"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a931089e272b9708ea78e4e84774e6491">basis_functions::n_dofs_no_jastrow</a></td></tr>
 <tr class="separator:a931089e272b9708ea78e4e84774e6491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdcd73b37e6182808f3148a938e56461"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#afdcd73b37e6182808f3148a938e56461">basis_functions::without</a></td></tr>
 <tr class="separator:afdcd73b37e6182808f3148a938e56461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c7365b5c52f2ab8e72b1770dbb30ef"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a40c7365b5c52f2ab8e72b1770dbb30ef">basis_functions::jastrow</a></td></tr>
+<tr class="separator:a40c7365b5c52f2ab8e72b1770dbb30ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe3c196c784be27be8e64eaab619d93"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aefe3c196c784be27be8e64eaab619d93">basis_functions::term</a></td></tr>
+<tr class="separator:aefe3c196c784be27be8e64eaab619d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6153b94101ca52c60301c014e8018cd3"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a6153b94101ca52c60301c014e8018cd3">basis_functions::mno_parameters</a></td></tr>
 <tr class="separator:a6153b94101ca52c60301c014e8018cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27185d038d43af6f45a25f54ff91c99c"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a27185d038d43af6f45a25f54ff91c99c">basis_functions::parameters</a></td></tr>
@@ -250,12 +182,13 @@ Variables</h2></td></tr>
 <tr class="separator:a28f78af870d63cb38d28b1c0a0a6a265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a233c4168e3e3ae7a4464dcedba565178"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a233c4168e3e3ae7a4464dcedba565178">basis_functions::specify</a></td></tr>
 <tr class="separator:a233c4168e3e3ae7a4464dcedba565178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2433ba5eda13a550e2e014c9dd732e75"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a2433ba5eda13a550e2e014c9dd732e75">basis_functions::the</a></td></tr>
+<tr class="separator:a2433ba5eda13a550e2e014c9dd732e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c8df29a34ade507f7a6bf514cb58bc0"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a4c8df29a34ade507f7a6bf514cb58bc0">basis_functions::particular</a></td></tr>
 <tr class="separator:a4c8df29a34ade507f7a6bf514cb58bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f3e1a5d422db905b7f7aab28009536b"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a4f3e1a5d422db905b7f7aab28009536b">basis_functions::choice</a></td></tr>
 <tr class="separator:a4f3e1a5d422db905b7f7aab28009536b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c617d7a4f11173571c4e29000df9a1a"><td class="memItemLeft" align="right" valign="top">procedure(wave_function_interface), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a0c617d7a4f11173571c4e29000df9a1a">basis_functions::wave_function_single</a></td></tr>
-<tr class="memdesc:a0c617d7a4f11173571c4e29000df9a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">individual electron wavefunction for 2 electron code  <a href="namespacebasis__functions.html#a0c617d7a4f11173571c4e29000df9a1a">More...</a><br /></td></tr>
 <tr class="separator:a0c617d7a4f11173571c4e29000df9a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
@@ -264,7 +197,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="basis__functions_8f90.html">basis_functions.f90</a></li>
-    <li class="footer">Generated on Mon May 24 2021 19:31:21 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 05:39:23 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

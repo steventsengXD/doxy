@@ -1,10 +1,7 @@
 <map id="component_functions::centered_slater_1s_laplacian" name="component_functions::centered_slater_1s_laplacian">
-<area shape="rect" id="node1" title=" " alt="" coords="721,20,884,76"/>
-<area shape="rect" id="node2" href="$namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f" title=" " alt="" coords="491,27,673,69"/>
-<area shape="rect" id="node3" href="$namespacecalculations.html#a8c3dcb7746bf56fb97cbd49c3feed7ea" title="Function calculating the reduced Hamiltonian based." alt="" coords="256,5,443,32"/>
-<area shape="rect" id="node5" href="$namespacebasis__functions.html#ab16c402cc5d94ee00238790491750b61" title=" " alt="" coords="256,57,443,98"/>
-<area shape="rect" id="node4" href="$loop__test_8f90.html#adfc39d5cd26473b3e806db2eebecb91f" title=" " alt="" coords="117,7,199,33"/>
-<area shape="rect" id="node6" href="$latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="108,61,208,88"/>
-<area shape="rect" id="node7" href="$basis__example_8f90.html#a9bc57b8dbe7c3e1b9db72b918a1b6bab" title=" " alt="" coords="135,112,181,139"/>
-<area shape="rect" id="node8" href="$driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="5,112,60,139"/>
+<area shape="rect" id="node1" title=" " alt="" coords="619,16,781,72"/>
+<area shape="rect" id="node2" href="$namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f" title=" " alt="" coords="388,23,571,65"/>
+<area shape="rect" id="node3" href="$namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="153,23,340,65"/>
+<area shape="rect" id="node4" href="$loop__test_8f90.html#adfc39d5cd26473b3e806db2eebecb91f" title=" " alt="" coords="14,5,97,32"/>
+<area shape="rect" id="node5" href="$latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,56,105,83"/>
 </map>

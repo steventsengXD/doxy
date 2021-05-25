@@ -69,30 +69,30 @@ $(document).ready(function(){initNavTree('driver_8f90_source.html',''); initResi
 <div class="title">driver.f90</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="driver_8f90.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">    1</a></span>&#160;<span class="keyword">program</span> <a class="code" href="commonblock_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">main</a></div>
+<a href="driver_8f90.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">    1</a></span>&#160;<span class="keyword">program</span> <a class="code" href="driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">main</a></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">!load in modules.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">use </span>iso_fortran_env</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceinit.html">init</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespacedraft__basis.html">draft_basis</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">use </span>draft_basis</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceshared__constants.html">shared_constants</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">use </span><a class="code" href="namespaceparam__search.html">param_search</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="comment">!real(dp) :: a, b</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">  real</span>(<a class="code" href="namespaceshared__constants.html#a0dd7b5fd793b0a608ee9409cd05314db">dp</a>), <span class="keywordtype">dimension(3)</span> :: position</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">  real</span>(<a class="code" href="namespaceshared__constants.html#a0dd7b5fd793b0a608ee9409cd05314db">dp</a>), <span class="keywordtype">dimension(4)</span> :: dof_coefficients</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">  real</span>(<a class="code" href="namespaceshared__constants.html#a0dd7b5fd793b0a608ee9409cd05314db">dp</a>), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">allocatable</span> :: <a class="code" href="basis__example_8f90.html#a9bc57b8dbe7c3e1b9db72b918a1b6bab">test</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">  real</span>(<a class="code" href="namespaceshared__constants.html#a0dd7b5fd793b0a608ee9409cd05314db">dp</a>), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">allocatable</span> :: test</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  position = [1.0_dp,0.5_dp,0.0_dp]</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  dof_coefficients = [0.1_dp,0.2_dp,0.3_dp,0.1_dp]</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">call </span><a class="code" href="namespacedraft__basis.html#aee40b2611f55045b7d86505b60aa18dc">initialise_basis</a>(2)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">call </span>initialise_basis(2)</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="comment">!print*, wave_function(position,dof_coefficients)</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="comment">!print*, reduced_hamiltonian(position,dof_coefficients)</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  print*, <span class="stringliteral">&quot;param bounds:&quot;</span> </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  print*, <a class="code" href="namespacedraft__basis.html#ab2b6d7df2a26524f0ef3cb1ac627dbbf">dof_bounds</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  print*, dof_bounds</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="basis__example_8f90.html#a9bc57b8dbe7c3e1b9db72b918a1b6bab">test</a> = <a class="code" href="namespaceparam__search.html#aff5115008e830ffa95e4143c6908a389">latin_hypercube</a>(<a class="code" href="namespacedraft__basis.html#ab2b6d7df2a26524f0ef3cb1ac627dbbf">dof_bounds</a>)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  test = <a class="code" href="namespaceparam__search.html#aff5115008e830ffa95e4143c6908a389">latin_hypercube</a>(dof_bounds)</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  print*, <span class="stringliteral">&quot;param search:&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">! test(x,y) - x is each trial, y is each param </span></div>
@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('driver_8f90_source.html',''); initResi
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">call </span><a class="code" href="namespacedraft__basis.html#a6eabb9e04166e6e9a78e522ebeb08055">deinitialise_basis</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">call </span>deinitialise_basis</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">!call read_namelist(&#39;example_input.nml&#39;, a, b)</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="comment">!print*, a, b</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
@@ -108,21 +108,16 @@ $(document).ready(function(){initNavTree('driver_8f90_source.html',''); initResi
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespaceshared__constants_html_a0dd7b5fd793b0a608ee9409cd05314db"><div class="ttname"><a href="namespaceshared__constants.html#a0dd7b5fd793b0a608ee9409cd05314db">shared_constants::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00005">constants.f90:5</a></div></div>
-<div class="ttc" id="anamespacedraft__basis_html_a6eabb9e04166e6e9a78e522ebeb08055"><div class="ttname"><a href="namespacedraft__basis.html#a6eabb9e04166e6e9a78e522ebeb08055">draft_basis::deinitialise_basis</a></div><div class="ttdeci">subroutine deinitialise_basis</div><div class="ttdef"><b>Definition:</b> <a href="draft__basis_8f90_source.html#l00091">draft_basis.f90:91</a></div></div>
-<div class="ttc" id="anamespacedraft__basis_html"><div class="ttname"><a href="namespacedraft__basis.html">draft_basis</a></div><div class="ttdef"><b>Definition:</b> <a href="draft__basis_8f90_source.html#l00001">draft_basis.f90:1</a></div></div>
-<div class="ttc" id="abasis__example_8f90_html_a9bc57b8dbe7c3e1b9db72b918a1b6bab"><div class="ttname"><a href="basis__example_8f90.html#a9bc57b8dbe7c3e1b9db72b918a1b6bab">test</a></div><div class="ttdeci">program test</div><div class="ttdef"><b>Definition:</b> <a href="basis__example_8f90_source.html#l00002">basis_example.f90:2</a></div></div>
-<div class="ttc" id="acommonblock_8f90_html_a8ec2266d83cd6c0b762cbcbc92c0af3d"><div class="ttname"><a href="commonblock_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">main</a></div><div class="ttdeci">program main</div><div class="ttdef"><b>Definition:</b> <a href="commonblock_8f90_source.html#l00050">commonblock.f90:50</a></div></div>
 <div class="ttc" id="anamespaceparam__search_html_aff5115008e830ffa95e4143c6908a389"><div class="ttname"><a href="namespaceparam__search.html#aff5115008e830ffa95e4143c6908a389">param_search::latin_hypercube</a></div><div class="ttdeci">subroutine latin_hypercube(trials, param_bounds, n_trials, seed_in)</div><div class="ttdoc">latin_hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercu...</div><div class="ttdef"><b>Definition:</b> <a href="param__search_8f90_source.html#l00055">param_search.f90:55</a></div></div>
 <div class="ttc" id="anamespaceshared__constants_html"><div class="ttname"><a href="namespaceshared__constants.html">shared_constants</a></div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00001">constants.f90:1</a></div></div>
+<div class="ttc" id="adriver_8f90_html_a8ec2266d83cd6c0b762cbcbc92c0af3d"><div class="ttname"><a href="driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d">main</a></div><div class="ttdeci">program main</div><div class="ttdef"><b>Definition:</b> <a href="driver_8f90_source.html#l00001">driver.f90:1</a></div></div>
 <div class="ttc" id="anamespaceparam__search_html"><div class="ttname"><a href="namespaceparam__search.html">param_search</a></div><div class="ttdoc">functions/subroutines associated with building/initialisation the parameter searchspace and finding t...</div><div class="ttdef"><b>Definition:</b> <a href="param__search_8f90_source.html#l00003">param_search.f90:3</a></div></div>
 <div class="ttc" id="anamespaceinit_html"><div class="ttname"><a href="namespaceinit.html">init</a></div><div class="ttdef"><b>Definition:</b> <a href="init_8f90_source.html#l00001">init.f90:1</a></div></div>
-<div class="ttc" id="anamespacedraft__basis_html_aee40b2611f55045b7d86505b60aa18dc"><div class="ttname"><a href="namespacedraft__basis.html#aee40b2611f55045b7d86505b60aa18dc">draft_basis::initialise_basis</a></div><div class="ttdeci">subroutine initialise_basis(n_electrons_in, n_basis_functions_per_atom_in, n_atoms_in, atom_coords_in)</div><div class="ttdef"><b>Definition:</b> <a href="draft__basis_8f90_source.html#l00032">draft_basis.f90:32</a></div></div>
-<div class="ttc" id="anamespacedraft__basis_html_ab2b6d7df2a26524f0ef3cb1ac627dbbf"><div class="ttname"><a href="namespacedraft__basis.html#ab2b6d7df2a26524f0ef3cb1ac627dbbf">draft_basis::dof_bounds</a></div><div class="ttdeci">real(dp), dimension(:,:), allocatable, protected dof_bounds</div><div class="ttdef"><b>Definition:</b> <a href="draft__basis_8f90_source.html#l00007">draft_basis.f90:7</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="driver_8f90.html">driver.f90</a></li>
-    <li class="footer">Generated on Mon May 24 2021 19:31:20 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 05:39:22 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

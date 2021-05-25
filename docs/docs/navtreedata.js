@@ -25,6 +25,7 @@ var NAVTREE =
   [ "PX 915 Project Title/Name Here", "index.html", [
     [ "PX 915 Group B Documentation", "index.html", [
       [ "Introduction", "index.html#Introduction", null ],
+      [ "@image html mc.jpeg width=50%", "index.html#autotoc_md0", null ],
       [ "Section 1 title", "index.html#section1", null ],
       [ "Section 2 title", "index.html#section2", null ],
       [ "Section 3 title", "index.html#section3", null ],
@@ -35,7 +36,7 @@ var NAVTREE =
     [ "Modules", "namespaces.html", [
       [ "Modules List", "namespaces.html", "namespaces_dup" ],
       [ "Module Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
+        [ "All", "namespacemembers.html", null ],
         [ "Functions/Subroutines", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
@@ -59,8 +60,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"MCMC_8f90.html",
-"namespacemembers.html"
+"MCMC_8f90.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

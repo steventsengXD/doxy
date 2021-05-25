@@ -80,6 +80,10 @@ Variables</h2></td></tr>
 <tr class="separator:af60d21edef3e12c6891d4193b862a4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9977b6e8cfc703a93c11b7958e8f071"><td class="memItemLeft" align="right" valign="top">real(<a class="el" href="namespaceshared__constants.html#a0dd7b5fd793b0a608ee9409cd05314db">dp</a>), parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceshared__constants.html#aa9977b6e8cfc703a93c11b7958e8f071">electronvolt</a> = 27.211386245988_dp</td></tr>
 <tr class="separator:aa9977b6e8cfc703a93c11b7958e8f071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e4f55f3c356e8b029f8259a37023b73"><td class="memItemLeft" align="right" valign="top">integer, parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceshared__constants.html#a7e4f55f3c356e8b029f8259a37023b73">slater_1s_code</a> = 100</td></tr>
+<tr class="separator:a7e4f55f3c356e8b029f8259a37023b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e5476f114d740dc641d0567d2f51e3"><td class="memItemLeft" align="right" valign="top">integer, parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceshared__constants.html#a58e5476f114d740dc641d0567d2f51e3">sto_3g_code</a> = 200</td></tr>
+<tr class="separator:a58e5476f114d740dc641d0567d2f51e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="a0dd7b5fd793b0a608ee9409cd05314db"></a>
@@ -97,7 +101,7 @@ Variables</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="constants_8f90_source.html#l00005">5</a> of file <a class="el" href="constants_8f90_source.html">constants.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">integer</span>, <span class="keywordtype">parameter</span> :: dp = real64</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>, and <a class="el" href="draft__basis_8f90_source.html#l00017">draft_basis::wave_function_interface::wave_function_interface()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
 
 </div>
 </div>
@@ -135,7 +139,45 @@ Variables</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="constants_8f90_source.html#l00006">6</a> of file <a class="el" href="constants_8f90_source.html">constants.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">  real</span>(dp),<span class="keywordtype">parameter</span> :: pi = 3.141592653589793238_dp</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="component__functions_8f90_source.html#l00010">component_functions::centered_gaussian()</a>, <a class="el" href="draft__basis_8f90_source.html#l00174">draft_basis::centered_gaussian()</a>, <a class="el" href="component__functions_8f90_source.html#l00031">component_functions::centered_slater_1s()</a>, <a class="el" href="draft__basis_8f90_source.html#l00193">draft_basis::centered_slater_1s()</a>, and <a class="el" href="MCMC_8f90_source.html#l00020">mcmc::mcmc_propose()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="component__functions_8f90_source.html#l00010">component_functions::centered_gaussian()</a>, <a class="el" href="component__functions_8f90_source.html#l00031">component_functions::centered_slater_1s()</a>, and <a class="el" href="MCMC_8f90_source.html#l00020">mcmc::mcmc_propose()</a>.</p>
+
+</div>
+</div>
+<a id="a7e4f55f3c356e8b029f8259a37023b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4f55f3c356e8b029f8259a37023b73">&#9670;&nbsp;</a></span>slater_1s_code</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, parameter shared_constants::slater_1s_code = 100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="constants_8f90_source.html#l00010">10</a> of file <a class="el" href="constants_8f90_source.html">constants.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keywordtype">integer</span>, <span class="keywordtype">parameter</span> :: slater_1s_code = 100</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="basis__functions_8f90_source.html#l00078">basis_functions::initialise_basis()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
+
+</div>
+</div>
+<a id="a58e5476f114d740dc641d0567d2f51e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e5476f114d740dc641d0567d2f51e3">&#9670;&nbsp;</a></span>sto_3g_code</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">integer, parameter shared_constants::sto_3g_code = 200</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="constants_8f90_source.html#l00011">11</a> of file <a class="el" href="constants_8f90_source.html">constants.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">integer</span>, <span class="keywordtype">parameter</span> :: sto_3g_code = 200</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="basis__functions_8f90_source.html#l00078">basis_functions::initialise_basis()</a>.</p>
 
 </div>
 </div>
@@ -145,7 +187,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceshared__constants.html">shared_constants</a></li>
-    <li class="footer">Generated on Mon May 24 2021 19:31:26 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 05:39:26 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

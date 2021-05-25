@@ -78,10 +78,10 @@ $(document).ready(function(){initNavTree('read__data_8f90_source.html',''); init
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keyword">CONTAINS</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">SUBROUTINE </span><a class="code" href="namespaceread__data.html#abe86052e10100e6ee35303d41b0a98aa">readtxt</a>(filename, n_electrons_in, n_atoms_in, bond_length, n_trials, &amp;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;       n_MCMC_steps, n_basis_functions_per_atom_in, search_seed, n_Jastrow_in, &amp;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">SUBROUTINE </span><a class="code" href="namespaceread__data.html#a57f07f5d28f046aac4ce75d53ac2a665">readtxt</a>(filename, n_electrons_in, n_atoms_in, bond_length, n_trials, &amp;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;       n_MCMC_steps, search_seed, n_basis_functions_per_atom_in, n_Jastrow_in, &amp;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;       fd_length_in, Jastrow_b_length_in, Jastrow_d_length_in)</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespaceread__data.html#abe86052e10100e6ee35303d41b0a98aa">   18</a></span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespaceread__data.html#a57f07f5d28f046aac4ce75d53ac2a665">   18</a></span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keywordtype">CHARACTER(LEN=20)</span> :: filename</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keywordtype">integer</span> :: n_electrons_in</div>
@@ -105,8 +105,8 @@ $(document).ready(function(){initNavTree('read__data_8f90_source.html',''); init
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">READ</span>(7,*) bond_length</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keyword">READ</span>(7,*) n_trials</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keyword">READ</span>(7,*) n_mcmc_steps</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keyword">READ</span>(7,*) n_basis_functions_per_atom_in</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keyword">READ</span>(7,*) search_seed</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keyword">READ</span>(7,*) search_seed</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keyword">READ</span>(7,*) n_basis_functions_per_atom_in     </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keyword">READ</span>(7,*) n_jastrow_in</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">READ</span>(7,*) fd_length_in</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">READ</span>(7,*) jastrow_b_length_in</div>
@@ -127,19 +127,19 @@ $(document).ready(function(){initNavTree('read__data_8f90_source.html',''); init
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="comment">! PRINT *, Jastrow_b_length_in</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="comment">! PRINT *, Jastrow_d_length_in</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">END SUBROUTINE </span><a class="code" href="namespaceread__data.html#abe86052e10100e6ee35303d41b0a98aa">readtxt</a></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">END SUBROUTINE </span><a class="code" href="namespaceread__data.html#a57f07f5d28f046aac4ce75d53ac2a665">readtxt</a></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">END MODULE </span><a class="code" href="namespaceread__data.html">read_data</a></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="anamespaceread__data_html_a57f07f5d28f046aac4ce75d53ac2a665"><div class="ttname"><a href="namespaceread__data.html#a57f07f5d28f046aac4ce75d53ac2a665">read_data::readtxt</a></div><div class="ttdeci">subroutine readtxt(filename, n_electrons_in, n_atoms_in, bond_length, n_trials, n_MCMC_steps, search_seed, n_basis_functions_per_atom_in, n_Jastrow_in, fd_length_in, Jastrow_b_length_in, Jastrow_d_length_in)</div><div class="ttdoc">Read in data from a text file.</div><div class="ttdef"><b>Definition:</b> <a href="read__data_8f90_source.html#l00018">read_data.f90:18</a></div></div>
 <div class="ttc" id="anamespaceread__data_html"><div class="ttname"><a href="namespaceread__data.html">read_data</a></div><div class="ttdoc">Subroutines to read files and transfer user inputs into fortran.</div><div class="ttdef"><b>Definition:</b> <a href="read__data_8f90_source.html#l00002">read_data.f90:2</a></div></div>
 <div class="ttc" id="anamespaceshared__constants_html"><div class="ttname"><a href="namespaceshared__constants.html">shared_constants</a></div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00001">constants.f90:1</a></div></div>
-<div class="ttc" id="anamespaceread__data_html_abe86052e10100e6ee35303d41b0a98aa"><div class="ttname"><a href="namespaceread__data.html#abe86052e10100e6ee35303d41b0a98aa">read_data::readtxt</a></div><div class="ttdeci">subroutine readtxt(filename, n_electrons_in, n_atoms_in, bond_length, n_trials, n_MCMC_steps, n_basis_functions_per_atom_in, search_seed, n_Jastrow_in, fd_length_in, Jastrow_b_length_in, Jastrow_d_length_in)</div><div class="ttdoc">Read in data from a text file.</div><div class="ttdef"><b>Definition:</b> <a href="read__data_8f90_source.html#l00018">read_data.f90:18</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="read__data_8f90.html">read_data.f90</a></li>
-    <li class="footer">Generated on Mon May 24 2021 19:31:20 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 05:39:23 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
