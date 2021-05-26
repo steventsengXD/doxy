@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PX 915 Project Title/Name Here: PX 915 Group B Documentation</title>
+<title>PX 915 Project Title/Name Here: Introduction</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,29 +66,35 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div id="doc-content">
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">PX 915 Group B Documentation </div>  </div>
+<div class="title">Introduction </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="intro"></a>
-Introduction</h1>
-<p>This software will utilise the Markov chain technique (MCMC), specifically Metropolis Hastings method. Other possibilities could be implementing a random walk proposal or the preconditioned Crank–Nicolson algorithm (pCN).</p>
-<p>The Markov chain will produce samples from the trial distribution which is then used by the Monte Carlo integration for the local energy. The acceptance rates in addition to the sample list can be recorded for debugging/convergence checking.</p>
-<h2><a class="anchor" id="data_input"></a>
-Data Input</h2>
-<p>An initial python script will generate an input text file formed of relevant parameters and variables defined by the user. This will be used to launch the rest of the software via a python wrapper function.</p>
-<p>The software will have a degree of flexibility for the user. The user can specify the following for their input:</p>
+<div class="textblock"><p>This software will compute and visualise the ground state energy of the \(H_{2}^{+}\) ion and \(H_{2}\) molecule using the variational quantum Monte Carlo (VQMC) method. The main output result will be the minimum energy of the system and the resulting wavefunction.</p>
+<p>With the exception of user input and plotting the results, the code is written entirely in Fortran. For efficiency, parallelization has been implemented through OpenMP to ... .</p>
+<p><a class="el" href="vqmc.html">Variational Quantum Monte Carlo</a> <br  />
+<a class="el" href="tutorial_page.html">Tutorial</a> <br  />
+<a class="el" href="acknowledgments.html">Acknowledgements</a> <br  />
+ </p>
+<h3><a class="anchor" id="author"></a>
+Authors</h3>
 <ul>
-<li>The location/coordinates of the hydrogen nuclei.</li>
-<li>A choice of basis function (from an articulated set).</li>
-<li>The option to save the intermediate results to file or just output the final result. </li>
+<li>Connor Allen</li>
+<li>Adam Fisher</li>
+<li>Peter Lewin-Jones</li>
+<li>Charlotte Rogerson</li>
+<li>Alisdair Soppitt</li>
+<li>Steven Tseng</li>
 </ul>
+<h3><a class="anchor" id="github"></a>
+Github Repository</h3>
+<p>The code may be accessed and downloaded from <a href="https://github.com/HetSys/PX915_2021_B">GitHub </a>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 25 2021 19:52:58 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 20:56:04 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

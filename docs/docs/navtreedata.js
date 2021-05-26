@@ -23,13 +23,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "PX 915 Project Title/Name Here", "index.html", [
-    [ "PX 915 Group B Documentation", "index.html", [
-      [ "Introduction", "index.html#intro", [
-        [ "Data Input", "index.html#data_input", null ]
-      ] ]
-    ] ],
-    [ "Acknowledgements", "acknowledgments.html", null ],
-    [ "Tutorial", "tutorial_page.html", "tutorial_page" ],
+    [ "Introduction", "index.html", null ],
     [ "Variational Quantum Monte Carlo", "vqmc.html", [
       [ "VQMC in a Nutshell", "vqmc.html#introduction", null ],
       [ "Software Specific Details", "vqmc.html#software", [
@@ -38,6 +32,8 @@ var NAVTREE =
         [ "Markov Chain Monte Carlo", "vqmc.html#mcmc", null ]
       ] ]
     ] ],
+    [ "Tutorial", "tutorial_page.html", "tutorial_page" ],
+    [ "Acknowledgements", "acknowledgments.html", null ],
     [ "Bibliography", "citelist.html", null ],
     [ "Modules", "namespaces.html", [
       [ "Modules List", "namespaces.html", "namespaces_dup" ],
