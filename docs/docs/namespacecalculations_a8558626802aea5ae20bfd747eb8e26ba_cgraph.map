@@ -1,8 +1,4 @@
 <map id="calculations::ele_den_2atom" name="calculations::ele_den_2atom">
-<area shape="rect" id="node1" title=" " alt="" coords="5,100,164,141"/>
-<area shape="rect" id="node2" href="$namespaceelectron__density__functions.html#ad3fecfe2a82b71b01e22bedeb5c80bd7" title=" " alt="" coords="212,100,409,141"/>
-<area shape="rect" id="node3" href="$namespaceelectron__density__functions.html#a13a2846a3cc609373662ada2a34b6d4b" title=" " alt="" coords="457,5,655,47"/>
-<area shape="rect" id="node4" href="$namespaceelectron__density__functions.html#ab114266b229fcbbde70039a9b6fb390b" title=" " alt="" coords="457,71,655,112"/>
-<area shape="rect" id="node5" href="$namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title=" " alt="" coords="479,137,633,163"/>
-<area shape="rect" id="node6" href="$namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title=" " alt="" coords="473,187,639,214"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node2" href="$namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243" title="Computes electron density for 2 electron simulations Use basic Monte Carlo Integration." alt="" coords="212,5,409,47"/>
 </map>

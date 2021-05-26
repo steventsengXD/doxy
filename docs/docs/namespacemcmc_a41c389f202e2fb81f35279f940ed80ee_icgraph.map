@@ -1,8 +1,4 @@
 <map id="mcmc::mcmc_sample" name="mcmc::mcmc_sample">
-<area shape="rect" id="node1" title=" " alt="" coords="457,97,623,123"/>
-<area shape="rect" id="node2" href="$namespaceelectron__density__functions.html#ad3fecfe2a82b71b01e22bedeb5c80bd7" title=" " alt="" coords="212,5,409,47"/>
-<area shape="rect" id="node4" href="$loop__test_8f90.html#adfc39d5cd26473b3e806db2eebecb91f" title=" " alt="" coords="269,71,352,98"/>
-<area shape="rect" id="node5" href="$MCMC__test__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="283,122,338,149"/>
-<area shape="rect" id="node6" href="$latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="261,173,361,199"/>
-<area shape="rect" id="node3" href="$namespacecalculations.html#a8558626802aea5ae20bfd747eb8e26ba" title=" " alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="153,5,319,32"/>
+<area shape="rect" id="node2" href="$latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,5,105,32"/>
 </map>

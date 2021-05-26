@@ -1,7 +1,7 @@
 <map id="basis_functions::wave_function_2_electrons" name="basis_functions::wave_function_2_electrons">
-<area shape="rect" id="node1" title=" " alt="" coords="5,39,172,80"/>
-<area shape="rect" id="node2" href="$namespacecomponent__functions.html#a87166a18e7df3188b4ac3f123e39a3d7" title=" " alt="" coords="220,39,383,80"/>
-<area shape="rect" id="node3" href="$namespacecomponent__functions.html#ae19615a4b0c88888e2aa7a15cc51cd29" title=" " alt="" coords="431,39,609,80"/>
+<area shape="rect" id="node1" title="Wavefunction for 2 electrons." alt="" coords="5,39,172,80"/>
+<area shape="rect" id="node2" href="$namespacecomponent__functions.html#a87166a18e7df3188b4ac3f123e39a3d7" title="Jastrow correlation fuction Function F from Schmidt and Moskowitz 1990." alt="" coords="220,39,383,80"/>
+<area shape="rect" id="node3" href="$namespacecomponent__functions.html#ae19615a4b0c88888e2aa7a15cc51cd29" title="Jastrow subfuction: atom subterm Correlation term for each atom." alt="" coords="431,39,609,80"/>
 <area shape="rect" id="node4" href="$namespacecomponent__functions.html#a97fe2b5cde42f4355466ef38099e014c" title="Functions that construct the Jastrow interaction function Notation here follows Schmidt and Moskowitz..." alt="" coords="657,5,820,47"/>
-<area shape="rect" id="node5" href="$namespacecomponent__functions.html#ae28c3bbfe7c6dbeb622126af558d8f84" title=" " alt="" coords="657,71,820,112"/>
+<area shape="rect" id="node5" href="$namespacecomponent__functions.html#ae28c3bbfe7c6dbeb622126af558d8f84" title="Jastrow subfuction: basic subterm Subterm of the correlation function, one for each Jastrow dof per a..." alt="" coords="657,71,820,112"/>
 </map>

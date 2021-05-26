@@ -1,7 +1,6 @@
 <map id="basis_functions::wave_function_sto3g" name="basis_functions::wave_function_sto3g">
-<area shape="rect" id="node1" title=" " alt="" coords="619,23,785,65"/>
-<area shape="rect" id="node2" href="$namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="153,23,340,65"/>
-<area shape="rect" id="node5" href="$namespacebasis__functions.html#a6dd883f5d1f574a78c3266f0ce627eb8" title=" " alt="" coords="388,53,571,94"/>
-<area shape="rect" id="node3" href="$loop__test_8f90.html#adfc39d5cd26473b3e806db2eebecb91f" title=" " alt="" coords="14,5,97,32"/>
-<area shape="rect" id="node4" href="$latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,56,105,83"/>
+<area shape="rect" id="node1" title="Single Electron wavefunction: gaussian sto3g basis." alt="" coords="619,5,785,47"/>
+<area shape="rect" id="node2" href="$namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="153,5,340,47"/>
+<area shape="rect" id="node4" href="$namespacebasis__functions.html#a6dd883f5d1f574a78c3266f0ce627eb8" title="Single Electron Reduced Hamiltonian: gaussian sto3g basis." alt="" coords="388,35,571,76"/>
+<area shape="rect" id="node3" href="$latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,13,105,39"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="basis_functions::reduced_hamiltonian_slater_1s" name="basis_functions::reduced_hamiltonian_slater_1s">
-<area shape="rect" id="node1" title=" " alt="" coords="5,50,188,91"/>
-<area shape="rect" id="node2" href="$namespacecomponent__functions.html#ae432b45b9b8516a44e035e4394e7d75c" title=" " alt="" coords="238,5,401,61"/>
-<area shape="rect" id="node4" href="$namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d" title="Single Electron Functions." alt="" coords="236,86,403,127"/>
-<area shape="rect" id="node3" href="$namespacecomponent__functions.html#a99c6a1b2ffe9693cccd857e51178c28e" title=" " alt="" coords="451,50,613,91"/>
+<area shape="rect" id="node1" title="Single Electron Reduced Hamiltonian: slater 1s basis." alt="" coords="5,50,188,91"/>
+<area shape="rect" id="node2" href="$namespacecomponent__functions.html#ae432b45b9b8516a44e035e4394e7d75c" title="Analytic Laplacian of Slater&#45;1s distribution centred at the origin." alt="" coords="238,5,401,61"/>
+<area shape="rect" id="node4" href="$namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d" title="Single Electron wavefunction: slater 1s basis." alt="" coords="236,86,403,127"/>
+<area shape="rect" id="node3" href="$namespacecomponent__functions.html#a99c6a1b2ffe9693cccd857e51178c28e" title="Slater&#45;1s distribution centred at the origin." alt="" coords="451,50,613,91"/>
 </map>

@@ -147,15 +147,14 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="param__search_8f90_source.html#l00010">best_params</a>, and <a class="el" href="param__search_8f90_source.html#l00011">best_trial</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop__test_8f90_source.html#l00021">loop_test()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceparam__search_a675279a4de8b9d57fcf6ded067479a45_icgraph.png" border="0" usemap="#namespaceparam__search_a675279a4de8b9d57fcf6ded067479a45_icgraph" alt=""/></div>
 <map name="namespaceparam__search_a675279a4de8b9d57fcf6ded067479a45_icgraph" id="namespaceparam__search_a675279a4de8b9d57fcf6ded067479a45_icgraph">
-<area shape="rect" title="find_best_params returns the 1D array that contain the current best set of parameters found from a MC..." alt="" coords="153,23,300,65"/>
-<area shape="rect" href="loop__test_8f90.html#adfc39d5cd26473b3e806db2eebecb91f" title=" " alt="" coords="14,5,97,32"/>
-<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,56,105,83"/>
+<area shape="rect" title="find_best_params returns the 1D array that contain the current best set of parameters found from a MC..." alt="" coords="153,5,300,47"/>
+<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,13,105,39"/>
 </map>
 </div>
 
@@ -170,7 +169,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">subroutine param_search::latin_hypercube </td>
           <td>(</td>
-          <td class="paramtype">real(dp), dimension(:, :), intent(inout), allocatable&#160;</td>
+          <td class="paramtype">real(dp), dimension(:, :), intent(inout)&#160;</td>
           <td class="paramname"><em>trials</em>, </td>
         </tr>
         <tr>
@@ -212,7 +211,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="param__search_8f90_source.html#l00055">55</a> of file <a class="el" href="param__search_8f90_source.html">param_search.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> ,<span class="keywordtype">intent(in)</span> :: param_bounds <span class="comment">!length of this will be the &quot;N&quot;</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:, :)</span>,<span class="keywordtype">allocatable</span>,<span class="keywordtype">intent(inout)</span> :: trials <span class="comment">! (x,y) x is each trial, y is each param</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:, :)</span>,<span class="keywordtype">intent(inout)</span> :: trials <span class="comment">! (x,y) x is each trial, y is each param</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: n_trials, seed_in <span class="comment">!n_trials is the &quot;M&quot; and is specified as an input, seed_in is an integer used to set the seed.</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>,<span class="keywordtype">allocatable</span> ::  zero_to_one</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">    real</span>(dp) :: rand_num, temp_val</div>
@@ -254,16 +253,14 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">deallocate</span>(zero_to_one,seed)</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="loop__test_8f90_source.html#l00021">loop_test()</a>, <a class="el" href="driver_8f90_source.html#l00001">main()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceparam__search_aff5115008e830ffa95e4143c6908a389_icgraph.png" border="0" usemap="#namespaceparam__search_aff5115008e830ffa95e4143c6908a389_icgraph" alt=""/></div>
 <map name="namespaceparam__search_aff5115008e830ffa95e4143c6908a389_icgraph" id="namespaceparam__search_aff5115008e830ffa95e4143c6908a389_icgraph">
-<area shape="rect" title="latin_hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercu..." alt="" coords="153,49,304,90"/>
-<area shape="rect" href="loop__test_8f90.html#adfc39d5cd26473b3e806db2eebecb91f" title=" " alt="" coords="14,5,97,32"/>
-<area shape="rect" href="driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="28,56,83,83"/>
-<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,107,105,133"/>
+<area shape="rect" title="latin_hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercu..." alt="" coords="153,5,304,47"/>
+<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,13,105,39"/>
 </map>
 </div>
 
@@ -311,15 +308,14 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="param__search_8f90_source.html#l00010">best_params</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="loop__test_8f90_source.html#l00021">loop_test()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceparam__search_a04262aed0a917d0a5e07a7213aba7cf0_icgraph.png" border="0" usemap="#namespaceparam__search_a04262aed0a917d0a5e07a7213aba7cf0_icgraph" alt=""/></div>
 <map name="namespaceparam__search_a04262aed0a917d0a5e07a7213aba7cf0_icgraph" id="namespaceparam__search_a04262aed0a917d0a5e07a7213aba7cf0_icgraph">
-<area shape="rect" title="param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat..." alt="" coords="153,23,317,65"/>
-<area shape="rect" href="loop__test_8f90.html#adfc39d5cd26473b3e806db2eebecb91f" title=" " alt="" coords="14,5,97,32"/>
-<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,56,105,83"/>
+<area shape="rect" title="param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat..." alt="" coords="153,5,317,47"/>
+<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,13,105,39"/>
 </map>
 </div>
 
@@ -334,7 +330,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">subroutine param_search::random_search_grid </td>
           <td>(</td>
-          <td class="paramtype">real(dp), dimension(:, :), intent(inout), allocatable&#160;</td>
+          <td class="paramtype">real(dp), dimension(:, :), intent(inout)&#160;</td>
           <td class="paramname"><em>trials</em>, </td>
         </tr>
         <tr>
@@ -376,7 +372,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="param__search_8f90_source.html#l00019">19</a> of file <a class="el" href="param__search_8f90_source.html">param_search.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> ,<span class="keywordtype">intent(in)</span> :: param_bounds <span class="comment">!length of this will be the &quot;N&quot; </span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:, :)</span>,<span class="keywordtype">allocatable</span>,<span class="keywordtype">intent(inout)</span> :: trials <span class="comment">! (x,y) x is each trial, y is each param</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:, :)</span>,<span class="keywordtype">intent(inout)</span> :: trials <span class="comment">! (x,y) x is each trial, y is each param</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: n_trials, seed_in<span class="comment">!this is the &quot;M&quot;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>,<span class="keywordtype">allocatable</span> :: rand_num </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(2)</span> :: arr_shape</div>
@@ -418,7 +414,7 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="param__search_8f90_source.html#l00010">10</a> of file <a class="el" href="param__search_8f90_source.html">param_search.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">  real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span>, <span class="keywordtype">protected</span> :: best_params</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="param__search_8f90_source.html#l00107">find_best_params()</a>, <a class="el" href="loop__test_8f90_source.html#l00021">loop_test()</a>, <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>, and <a class="el" href="param__search_8f90_source.html#l00120">param_wall_check()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="param__search_8f90_source.html#l00107">find_best_params()</a>, <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>, and <a class="el" href="param__search_8f90_source.html#l00120">param_wall_check()</a>.</p>
 
 </div>
 </div>
@@ -437,7 +433,7 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="param__search_8f90_source.html#l00011">11</a> of file <a class="el" href="param__search_8f90_source.html">param_search.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(1)</span>, <span class="keywordtype">protected</span> :: best_trial</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="param__search_8f90_source.html#l00107">find_best_params()</a>, <a class="el" href="loop__test_8f90_source.html#l00021">loop_test()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="param__search_8f90_source.html#l00107">find_best_params()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00006">main_driver()</a>.</p>
 
 </div>
 </div>
@@ -448,7 +444,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceparam__search.html">param_search</a></li>
-    <li class="footer">Generated on Tue May 25 2021 19:06:27 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 19:19:41 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

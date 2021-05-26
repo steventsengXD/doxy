@@ -88,7 +88,7 @@ Data Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Modules</h2></td></tr>
 <tr class="memitem:namespacebasis__functions"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html">basis_functions</a></td></tr>
-<tr class="memdesc:namespacebasis__functions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Module containing functions that define the hamiltonian that specifies the problem and the basis set being used. <br /></td></tr>
+<tr class="memdesc:namespacebasis__functions"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wavefunction, hamiltonian and basis set choice. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -97,26 +97,34 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:a2b1743e80170bccff87171f1695bf9a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisation routine.  <a href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3">More...</a><br /></td></tr>
 <tr class="separator:a2b1743e80170bccff87171f1695bf9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13ef39e7df0f40c27616e9719cef10dc"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a13ef39e7df0f40c27616e9719cef10dc">basis_functions::deinitialise_basis</a></td></tr>
+<tr class="memdesc:a13ef39e7df0f40c27616e9719cef10dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dinitialisation routine.  <a href="namespacebasis__functions.html#a13ef39e7df0f40c27616e9719cef10dc">More...</a><br /></td></tr>
 <tr class="separator:a13ef39e7df0f40c27616e9719cef10dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9aa926890ee9ca588ab8439095de68d"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d">basis_functions::wave_function_slater_1s</a> (position, dof_coefficients)</td></tr>
-<tr class="memdesc:ac9aa926890ee9ca588ab8439095de68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single Electron Functions.  <a href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d">More...</a><br /></td></tr>
+<tr class="memdesc:ac9aa926890ee9ca588ab8439095de68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single Electron wavefunction: slater 1s basis.  <a href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d">More...</a><br /></td></tr>
 <tr class="separator:ac9aa926890ee9ca588ab8439095de68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a341dddb966f7d491ad3ffa90d862156f"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f">basis_functions::reduced_hamiltonian_slater_1s</a> (position, dof_coefficients)</td></tr>
+<tr class="memdesc:a341dddb966f7d491ad3ffa90d862156f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single Electron Reduced Hamiltonian: slater 1s basis.  <a href="namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f">More...</a><br /></td></tr>
 <tr class="separator:a341dddb966f7d491ad3ffa90d862156f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aa2ed47c325e9955b40da5b344fd31a"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a3aa2ed47c325e9955b40da5b344fd31a">basis_functions::discrete_laplacian_reduced</a> (position, h, dofs)</td></tr>
-<tr class="memdesc:a3aa2ed47c325e9955b40da5b344fd31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Two Electron Functions.  <a href="namespacebasis__functions.html#a3aa2ed47c325e9955b40da5b344fd31a">More...</a><br /></td></tr>
+<tr class="memdesc:a3aa2ed47c325e9955b40da5b344fd31a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finite Difference Reduced Laplacian Computes finite difference approximation to the reduced laplacian $(\nabla^2\psi)/\psi$.  <a href="namespacebasis__functions.html#a3aa2ed47c325e9955b40da5b344fd31a">More...</a><br /></td></tr>
 <tr class="separator:a3aa2ed47c325e9955b40da5b344fd31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f59f9576cb02ba4361bf7dc5046ce5d"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a1f59f9576cb02ba4361bf7dc5046ce5d">basis_functions::wave_function_2_electrons</a> (position, dof_coefficients)</td></tr>
+<tr class="memdesc:a1f59f9576cb02ba4361bf7dc5046ce5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wavefunction for 2 electrons.  <a href="namespacebasis__functions.html#a1f59f9576cb02ba4361bf7dc5046ce5d">More...</a><br /></td></tr>
 <tr class="separator:a1f59f9576cb02ba4361bf7dc5046ce5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acea41a868e0e1522cb6d3e3ed1b52d66"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#acea41a868e0e1522cb6d3e3ed1b52d66">basis_functions::reduced_hamiltonian_2_electrons</a> (position, dof_coefficients)</td></tr>
+<tr class="memdesc:acea41a868e0e1522cb6d3e3ed1b52d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduced Hamiltonian for 2 electrons.  <a href="namespacebasis__functions.html#acea41a868e0e1522cb6d3e3ed1b52d66">More...</a><br /></td></tr>
 <tr class="separator:acea41a868e0e1522cb6d3e3ed1b52d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e84ba132fa13988d8882ae21a781832"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a0e84ba132fa13988d8882ae21a781832">basis_functions::mno_allocate</a> (n_terms)</td></tr>
+<tr class="memdesc:a0e84ba132fa13988d8882ae21a781832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate parameters for Jastrow factor.  <a href="namespacebasis__functions.html#a0e84ba132fa13988d8882ae21a781832">More...</a><br /></td></tr>
 <tr class="separator:a0e84ba132fa13988d8882ae21a781832"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad155a8bce0b153e59bfef25f0d7e6e1f"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ad155a8bce0b153e59bfef25f0d7e6e1f">basis_functions::log_density</a> (position, dof_coefficients)</td></tr>
+<tr class="memdesc:ad155a8bce0b153e59bfef25f0d7e6e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log of the Probability Density.  <a href="namespacebasis__functions.html#ad155a8bce0b153e59bfef25f0d7e6e1f">More...</a><br /></td></tr>
 <tr class="separator:ad155a8bce0b153e59bfef25f0d7e6e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdeef21beca62feb10d5f5057e30c342"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#acdeef21beca62feb10d5f5057e30c342">basis_functions::wave_function_sto3g</a> (position, dof_coefficients)</td></tr>
+<tr class="memdesc:acdeef21beca62feb10d5f5057e30c342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single Electron wavefunction: gaussian sto3g basis.  <a href="namespacebasis__functions.html#acdeef21beca62feb10d5f5057e30c342">More...</a><br /></td></tr>
 <tr class="separator:acdeef21beca62feb10d5f5057e30c342"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dd883f5d1f574a78c3266f0ce627eb8"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a6dd883f5d1f574a78c3266f0ce627eb8">basis_functions::reduced_hamiltonian_sto3g</a> (position, dof_coefficients)</td></tr>
+<tr class="memdesc:a6dd883f5d1f574a78c3266f0ce627eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Single Electron Reduced Hamiltonian: gaussian sto3g basis.  <a href="namespacebasis__functions.html#a6dd883f5d1f574a78c3266f0ce627eb8">More...</a><br /></td></tr>
 <tr class="separator:a6dd883f5d1f574a78c3266f0ce627eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -154,44 +162,11 @@ Variables</h2></td></tr>
 <tr class="memitem:ad4fc66a8a927069f6788785e3ade0ff3"><td class="memItemLeft" align="right" valign="top">real(dp), dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ad4fc66a8a927069f6788785e3ade0ff3">basis_functions::dof_bounds</a></td></tr>
 <tr class="separator:ad4fc66a8a927069f6788785e3ade0ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fc655d1e5dbccbd5fa2598c80dcb673"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a3fc655d1e5dbccbd5fa2598c80dcb673">basis_functions::n_dofs_per_atom</a></td></tr>
-<tr class="memdesc:a3fc655d1e5dbccbd5fa2598c80dcb673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variables used internally.  <a href="namespacebasis__functions.html#a3fc655d1e5dbccbd5fa2598c80dcb673">More...</a><br /></td></tr>
 <tr class="separator:a3fc655d1e5dbccbd5fa2598c80dcb673"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c255b509bca1c058fd6ad6cf2866b45"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a5c255b509bca1c058fd6ad6cf2866b45">basis_functions::number</a></td></tr>
-<tr class="separator:a5c255b509bca1c058fd6ad6cf2866b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52431ea23646f3851972ebf43c0567ad"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a52431ea23646f3851972ebf43c0567ad">basis_functions::of</a></td></tr>
-<tr class="separator:a52431ea23646f3851972ebf43c0567ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed16053a7901226f596e22ca0178f495"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aed16053a7901226f596e22ca0178f495">basis_functions::dofs</a></td></tr>
-<tr class="separator:aed16053a7901226f596e22ca0178f495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab966cc33cd861d24006087e432d31d81"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#ab966cc33cd861d24006087e432d31d81">basis_functions::per</a></td></tr>
-<tr class="separator:ab966cc33cd861d24006087e432d31d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a897cb86894d34896821a8b35dc46c3e4"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a897cb86894d34896821a8b35dc46c3e4">basis_functions::atom</a></td></tr>
-<tr class="separator:a897cb86894d34896821a8b35dc46c3e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b352be85726cbb75380cbf441706361"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a1b352be85726cbb75380cbf441706361">basis_functions::for</a></td></tr>
-<tr class="separator:a1b352be85726cbb75380cbf441706361"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaecc67ea7eea66aa8e6b59d7e4b0365e"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aaecc67ea7eea66aa8e6b59d7e4b0365e">basis_functions::convenience</a></td></tr>
-<tr class="separator:aaecc67ea7eea66aa8e6b59d7e4b0365e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a931089e272b9708ea78e4e84774e6491"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a931089e272b9708ea78e4e84774e6491">basis_functions::n_dofs_no_jastrow</a></td></tr>
 <tr class="separator:a931089e272b9708ea78e4e84774e6491"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdcd73b37e6182808f3148a938e56461"><td class="memItemLeft" align="right" valign="top">integer, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#afdcd73b37e6182808f3148a938e56461">basis_functions::without</a></td></tr>
-<tr class="separator:afdcd73b37e6182808f3148a938e56461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40c7365b5c52f2ab8e72b1770dbb30ef"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a40c7365b5c52f2ab8e72b1770dbb30ef">basis_functions::jastrow</a></td></tr>
-<tr class="separator:a40c7365b5c52f2ab8e72b1770dbb30ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefe3c196c784be27be8e64eaab619d93"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#aefe3c196c784be27be8e64eaab619d93">basis_functions::term</a></td></tr>
-<tr class="separator:aefe3c196c784be27be8e64eaab619d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6153b94101ca52c60301c014e8018cd3"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a6153b94101ca52c60301c014e8018cd3">basis_functions::mno_parameters</a></td></tr>
 <tr class="separator:a6153b94101ca52c60301c014e8018cd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27185d038d43af6f45a25f54ff91c99c"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a27185d038d43af6f45a25f54ff91c99c">basis_functions::parameters</a></td></tr>
-<tr class="separator:a27185d038d43af6f45a25f54ff91c99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28f78af870d63cb38d28b1c0a0a6a265"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a28f78af870d63cb38d28b1c0a0a6a265">basis_functions::that</a></td></tr>
-<tr class="separator:a28f78af870d63cb38d28b1c0a0a6a265"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a233c4168e3e3ae7a4464dcedba565178"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a233c4168e3e3ae7a4464dcedba565178">basis_functions::specify</a></td></tr>
-<tr class="separator:a233c4168e3e3ae7a4464dcedba565178"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2433ba5eda13a550e2e014c9dd732e75"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a2433ba5eda13a550e2e014c9dd732e75">basis_functions::the</a></td></tr>
-<tr class="separator:a2433ba5eda13a550e2e014c9dd732e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c8df29a34ade507f7a6bf514cb58bc0"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a4c8df29a34ade507f7a6bf514cb58bc0">basis_functions::particular</a></td></tr>
-<tr class="separator:a4c8df29a34ade507f7a6bf514cb58bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f3e1a5d422db905b7f7aab28009536b"><td class="memItemLeft" align="right" valign="top">integer, dimension(:,:), allocatable, protected&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a4f3e1a5d422db905b7f7aab28009536b">basis_functions::choice</a></td></tr>
-<tr class="separator:a4f3e1a5d422db905b7f7aab28009536b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c617d7a4f11173571c4e29000df9a1a"><td class="memItemLeft" align="right" valign="top">procedure(wave_function_interface), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebasis__functions.html#a0c617d7a4f11173571c4e29000df9a1a">basis_functions::wave_function_single</a></td></tr>
 <tr class="separator:a0c617d7a4f11173571c4e29000df9a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -205,7 +180,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="basis__functions_8f90.html">basis_functions.f90</a></li>
-    <li class="footer">Generated on Tue May 25 2021 19:06:23 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 19:19:38 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

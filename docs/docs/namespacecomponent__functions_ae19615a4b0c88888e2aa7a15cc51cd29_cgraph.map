@@ -1,5 +1,5 @@
 <map id="component_functions::correlation_atom_term" name="component_functions::correlation_atom_term">
-<area shape="rect" id="node1" title=" " alt="" coords="5,39,184,80"/>
+<area shape="rect" id="node1" title="Jastrow subfuction: atom subterm Correlation term for each atom." alt="" coords="5,39,184,80"/>
 <area shape="rect" id="node2" href="$namespacecomponent__functions.html#a97fe2b5cde42f4355466ef38099e014c" title="Functions that construct the Jastrow interaction function Notation here follows Schmidt and Moskowitz..." alt="" coords="232,5,395,47"/>
-<area shape="rect" id="node3" href="$namespacecomponent__functions.html#ae28c3bbfe7c6dbeb622126af558d8f84" title=" " alt="" coords="232,71,395,112"/>
+<area shape="rect" id="node3" href="$namespacecomponent__functions.html#ae28c3bbfe7c6dbeb622126af558d8f84" title="Jastrow subfuction: basic subterm Subterm of the correlation function, one for each Jastrow dof per a..." alt="" coords="232,71,395,112"/>
 </map>

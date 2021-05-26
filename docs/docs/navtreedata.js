@@ -34,7 +34,9 @@ var NAVTREE =
       [ "Software Specific Details", "vqmc.html#software", [
         [ "Basis Set Construction", "vqmc.html#basis", null ],
         [ "Jastrow Factor", "vqmc.html#jastrow", null ],
-        [ "Markov Chain Monte Carlo", "vqmc.html#mcmc", null ]
+        [ "Markov Chain Monte Carlo", "vqmc.html#mcmc", [
+          [ "TESTING!!!", "vqmc.html#test", null ]
+        ] ]
       ] ]
     ] ],
     [ "Bibliography", "citelist.html", null ],
