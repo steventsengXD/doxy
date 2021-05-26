@@ -80,7 +80,7 @@ $(document).ready(function(){initNavTree('latin__driver_8f90.html',''); initResi
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a9c41b02ba03edb8de4ce1751ea3cf05f"><td class="memItemLeft" align="right" valign="top">program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f">main_driver</a></td></tr>
-<tr class="memdesc:a9c41b02ba03edb8de4ce1751ea3cf05f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main driver for simulation.  <a href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f">More...</a><br /></td></tr>
+<tr class="memdesc:a9c41b02ba03edb8de4ce1751ea3cf05f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main driver for simulation using the latin_hypercube search.  <a href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f">More...</a><br /></td></tr>
 <tr class="separator:a9c41b02ba03edb8de4ce1751ea3cf05f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -100,49 +100,49 @@ Functions/Subroutines</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Main driver for simulation. </p>
-<p>More description to be added</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">n_electrons_in</td><td>Number of electrons </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Main driver for simulation using the latin_hypercube search. </p>
+<p>This code computes the ground state energy and corresponding trial wavefunction for a given atom and electron configuration. It saves the resulting wavefunction in netcdf. </p>
 
-<p class="definition">Definition at line <a class="el" href="latin__driver_8f90_source.html#l00006">6</a> of file <a class="el" href="latin__driver_8f90_source.html">latin_driver.f90</a>.</p>
+<p class="definition">Definition at line <a class="el" href="latin__driver_8f90_source.html#l00007">7</a> of file <a class="el" href="latin__driver_8f90_source.html">latin_driver.f90</a>.</p>
 
-<p class="reference">References <a class="el" href="param__search_8f90_source.html#l00010">param_search::best_params</a>, <a class="el" href="param__search_8f90_source.html#l00011">param_search::best_trial</a>, <a class="el" href="basis__functions_8f90_source.html#l00267">basis_functions::deinitialise_basis()</a>, <a class="el" href="basis__functions_8f90_source.html#l00052">basis_functions::dof_bounds</a>, <a class="el" href="constants_8f90_source.html#l00005">shared_constants::dp</a>, <a class="el" href="constants_8f90_source.html#l00007">shared_constants::electronvolt</a>, <a class="el" href="param__search_8f90_source.html#l00107">param_search::find_best_params()</a>, <a class="el" href="basis__functions_8f90_source.html#l00069">basis_functions::initialise_basis()</a>, <a class="el" href="param__search_8f90_source.html#l00055">param_search::latin_hypercube()</a>, <a class="el" href="basis__functions_8f90_source.html#l00540">basis_functions::log_density()</a>, <a class="el" href="MCMC_8f90_source.html#l00192">mcmc::mcmc_adapt()</a>, <a class="el" href="MCMC_8f90_source.html#l00109">mcmc::mcmc_sample()</a>, <a class="el" href="basis__functions_8f90_source.html#l00051">basis_functions::n_space_dims</a>, <a class="el" href="basis__functions_8f90_source.html#l00050">basis_functions::number_dofs</a>, <a class="el" href="param__search_8f90_source.html#l00120">param_search::param_wall_check()</a>, <a class="el" href="read__data_8f90_source.html#l00018">read_data::readtxt()</a>, <a class="el" href="basis__functions_8f90_source.html#l00021">basis_functions::reduced_hamiltonian</a>, and <a class="el" href="constants_8f90_source.html#l00010">shared_constants::slater_1s_code</a>.</p>
+<p class="reference">References <a class="el" href="param__search_8f90_source.html#l00010">param_search::best_params</a>, <a class="el" href="param__search_8f90_source.html#l00011">param_search::best_trial</a>, <a class="el" href="calc_8f90_source.html#l00016">calculations::calc()</a>, <a class="el" href="basis__functions_8f90_source.html#l00267">basis_functions::deinitialise_basis()</a>, <a class="el" href="basis__functions_8f90_source.html#l00052">basis_functions::dof_bounds</a>, <a class="el" href="constants_8f90_source.html#l00005">shared_constants::dp</a>, <a class="el" href="constants_8f90_source.html#l00007">shared_constants::electronvolt</a>, <a class="el" href="param__search_8f90_source.html#l00107">param_search::find_best_params()</a>, <a class="el" href="basis__functions_8f90_source.html#l00069">basis_functions::initialise_basis()</a>, <a class="el" href="param__search_8f90_source.html#l00055">param_search::latin_hypercube()</a>, <a class="el" href="basis__functions_8f90_source.html#l00540">basis_functions::log_density()</a>, <a class="el" href="MCMC_8f90_source.html#l00192">mcmc::mcmc_adapt()</a>, <a class="el" href="MCMC_8f90_source.html#l00109">mcmc::mcmc_sample()</a>, <a class="el" href="basis__functions_8f90_source.html#l00051">basis_functions::n_space_dims</a>, <a class="el" href="basis__functions_8f90_source.html#l00050">basis_functions::number_dofs</a>, <a class="el" href="param__search_8f90_source.html#l00120">param_search::param_wall_check()</a>, <a class="el" href="read__data_8f90_source.html#l00021">read_data::readtxt()</a>, <a class="el" href="basis__functions_8f90_source.html#l00021">basis_functions::reduced_hamiltonian</a>, <a class="el" href="netcdf__file_8f90_source.html#l00013">write_file::result_netcdf()</a>, <a class="el" href="constants_8f90_source.html#l00010">shared_constants::slater_1s_code</a>, and <a class="el" href="netcdf__file_8f90_source.html#l00167">write_file::xy_grid()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="latin__driver_8f90_a9c41b02ba03edb8de4ce1751ea3cf05f_cgraph.png" border="0" usemap="#latin__driver_8f90_a9c41b02ba03edb8de4ce1751ea3cf05f_cgraph" alt=""/></div>
 <map name="latin__driver_8f90_a9c41b02ba03edb8de4ce1751ea3cf05f_cgraph" id="latin__driver_8f90_a9c41b02ba03edb8de4ce1751ea3cf05f_cgraph">
-<area shape="rect" title="Main driver for simulation." alt="" coords="5,333,105,359"/>
-<area shape="rect" href="namespacebasis__functions.html#a13ef39e7df0f40c27616e9719cef10dc" title="Dinitialisation routine." alt="" coords="153,64,356,105"/>
-<area shape="rect" href="namespaceparam__search.html#a675279a4de8b9d57fcf6ded067479a45" title="find_best_params returns the 1D array that contain the current best set of parameters found from a MC..." alt="" coords="181,129,328,171"/>
-<area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="161,195,348,236"/>
-<area shape="rect" href="namespaceparam__search.html#aff5115008e830ffa95e4143c6908a389" title="latin_hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercu..." alt="" coords="179,260,330,301"/>
-<area shape="rect" href="namespacebasis__functions.html#ad155a8bce0b153e59bfef25f0d7e6e1f" title="Log of the Probability Density." alt="" coords="179,325,330,367"/>
-<area shape="rect" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title=" " alt="" coords="177,391,332,418"/>
-<area shape="rect" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title=" " alt="" coords="172,442,337,469"/>
-<area shape="rect" href="namespaceparam__search.html#a04262aed0a917d0a5e07a7213aba7cf0" title="param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat..." alt="" coords="173,493,337,535"/>
-<area shape="rect" href="namespaceread__data.html#a57f07f5d28f046aac4ce75d53ac2a665" title="Read in data from a text file." alt="" coords="183,559,326,586"/>
-<area shape="rect" href="namespacebasis__functions.html#a0e84ba132fa13988d8882ae21a781832" title="Allocate parameters for Jastrow factor." alt="" coords="419,5,579,47"/>
-<area shape="rect" href="namespacebasis__functions.html#acea41a868e0e1522cb6d3e3ed1b52d66" title="Reduced Hamiltonian for 2 electrons." alt="" coords="404,71,593,112"/>
-<area shape="rect" href="namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f" title="Single Electron Reduced Hamiltonian: slater 1s basis." alt="" coords="407,136,590,177"/>
-<area shape="rect" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d" title="Single Electron wavefunction: slater 1s basis." alt="" coords="649,176,816,217"/>
-<area shape="rect" href="namespacebasis__functions.html#a6dd883f5d1f574a78c3266f0ce627eb8" title="Single Electron Reduced Hamiltonian: gaussian sto3g basis." alt="" coords="407,253,590,295"/>
-<area shape="rect" href="namespacebasis__functions.html#acdeef21beca62feb10d5f5057e30c342" title="Single Electron wavefunction: gaussian sto3g basis." alt="" coords="649,323,816,364"/>
-<area shape="rect" href="namespacebasis__functions.html#a1f59f9576cb02ba4361bf7dc5046ce5d" title="Wavefunction for 2 electrons." alt="" coords="415,380,582,421"/>
-<area shape="rect" href="namespacebasis__functions.html#a3aa2ed47c325e9955b40da5b344fd31a" title="Finite Difference Reduced Laplacian Computes finite difference approximation to the reduced laplacian..." alt="" coords="641,29,824,71"/>
-<area shape="rect" href="namespacecomponent__functions.html#ae432b45b9b8516a44e035e4394e7d75c" title="Analytic Laplacian of Slater&#45;1s distribution centred at the origin." alt="" coords="651,95,814,151"/>
-<area shape="rect" href="namespacecomponent__functions.html#a99c6a1b2ffe9693cccd857e51178c28e" title="Slater&#45;1s distribution centred at the origin." alt="" coords="880,140,1043,181"/>
-<area shape="rect" href="namespacecomponent__functions.html#a288bc484733f5e8d701360154c96b049" title="Analytic Laplacian of Gaussian distribution centred at the origin." alt="" coords="651,242,814,298"/>
-<area shape="rect" href="namespacecomponent__functions.html#a2798b65288a55750171eb18624a5c663" title="Gaussian distribution centred at the origin." alt="" coords="880,285,1043,327"/>
-<area shape="rect" href="namespacecomponent__functions.html#a87166a18e7df3188b4ac3f123e39a3d7" title="Jastrow correlation fuction Function F from Schmidt and Moskowitz 1990." alt="" coords="651,388,814,429"/>
-<area shape="rect" href="namespacecomponent__functions.html#ae19615a4b0c88888e2aa7a15cc51cd29" title="Jastrow subfuction: atom subterm Correlation term for each atom." alt="" coords="872,388,1051,429"/>
-<area shape="rect" href="namespacecomponent__functions.html#a97fe2b5cde42f4355466ef38099e014c" title="Functions that construct the Jastrow interaction function Notation here follows Schmidt and Moskowitz..." alt="" coords="1099,355,1261,396"/>
-<area shape="rect" href="namespacecomponent__functions.html#ae28c3bbfe7c6dbeb622126af558d8f84" title="Jastrow subfuction: basic subterm Subterm of the correlation function, one for each Jastrow dof per a..." alt="" coords="1099,420,1261,461"/>
+<area shape="rect" title="Main driver for simulation using the latin_hypercube search." alt="" coords="5,463,105,490"/>
+<area shape="rect" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98" title=" " alt="" coords="187,78,322,105"/>
+<area shape="rect" href="namespacebasis__functions.html#a13ef39e7df0f40c27616e9719cef10dc" title="Dinitialisation routine." alt="" coords="153,165,356,207"/>
+<area shape="rect" href="namespaceparam__search.html#a675279a4de8b9d57fcf6ded067479a45" title="find_best_params returns the 1D array that contain the current best set of parameters found from a MC..." alt="" coords="181,231,328,272"/>
+<area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="161,296,348,337"/>
+<area shape="rect" href="namespaceparam__search.html#aff5115008e830ffa95e4143c6908a389" title="latin_hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercu..." alt="" coords="179,361,330,403"/>
+<area shape="rect" href="namespacebasis__functions.html#ad155a8bce0b153e59bfef25f0d7e6e1f" title="Log of the Probability Density." alt="" coords="179,427,330,468"/>
+<area shape="rect" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title=" " alt="" coords="177,493,332,519"/>
+<area shape="rect" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title=" " alt="" coords="172,543,337,570"/>
+<area shape="rect" href="namespaceparam__search.html#a04262aed0a917d0a5e07a7213aba7cf0" title="param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat..." alt="" coords="173,595,337,636"/>
+<area shape="rect" href="namespaceread__data.html#af223084bb8e6fc232a5409f57dc88e52" title="Read in data from a text file." alt="" coords="183,661,326,687"/>
+<area shape="rect" href="namespacewrite__file.html#a3456d4f27de6570b87711fb5cd6fef76" title=" " alt="" coords="191,712,319,753"/>
+<area shape="rect" href="namespacewrite__file.html#a988eccddc1dfeda968686c7155ce133a" title=" " alt="" coords="185,778,324,805"/>
+<area shape="rect" href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243" title="Computes electron density for 2 electron simulations Uses basic Monte Carlo Integration." alt="" coords="417,5,614,47"/>
+<area shape="rect" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96" title="Computes the integral of the wavefunction squared To normalise the wavefunction for outputing Uses ba..." alt="" coords="404,71,627,112"/>
+<area shape="rect" href="namespacebasis__functions.html#a0e84ba132fa13988d8882ae21a781832" title="Allocate parameters for Jastrow factor." alt="" coords="435,136,595,177"/>
+<area shape="rect" href="namespacebasis__functions.html#acea41a868e0e1522cb6d3e3ed1b52d66" title="Reduced Hamiltonian for 2 electrons." alt="" coords="421,201,610,243"/>
+<area shape="rect" href="namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f" title="Single Electron Reduced Hamiltonian: slater 1s basis." alt="" coords="424,267,607,308"/>
+<area shape="rect" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d" title="Single Electron wavefunction: slater 1s basis." alt="" coords="683,307,849,348"/>
+<area shape="rect" href="namespacebasis__functions.html#a6dd883f5d1f574a78c3266f0ce627eb8" title="Single Electron Reduced Hamiltonian: gaussian sto3g basis." alt="" coords="424,384,607,425"/>
+<area shape="rect" href="namespacebasis__functions.html#acdeef21beca62feb10d5f5057e30c342" title="Single Electron wavefunction: gaussian sto3g basis." alt="" coords="683,453,849,495"/>
+<area shape="rect" href="namespacebasis__functions.html#a1f59f9576cb02ba4361bf7dc5046ce5d" title="Wavefunction for 2 electrons." alt="" coords="432,511,599,552"/>
+<area shape="rect" href="namespacebasis__functions.html#a3aa2ed47c325e9955b40da5b344fd31a" title="Finite Difference Reduced Laplacian Computes finite difference approximation to the reduced laplacian..." alt="" coords="675,160,857,201"/>
+<area shape="rect" href="namespacecomponent__functions.html#ae432b45b9b8516a44e035e4394e7d75c" title="Analytic Laplacian of Slater&#45;1s distribution centred at the origin." alt="" coords="685,226,847,282"/>
+<area shape="rect" href="namespacecomponent__functions.html#a99c6a1b2ffe9693cccd857e51178c28e" title="Slater&#45;1s distribution centred at the origin." alt="" coords="913,271,1076,312"/>
+<area shape="rect" href="namespacecomponent__functions.html#a288bc484733f5e8d701360154c96b049" title="Analytic Laplacian of Gaussian distribution centred at the origin." alt="" coords="685,373,847,429"/>
+<area shape="rect" href="namespacecomponent__functions.html#a2798b65288a55750171eb18624a5c663" title="Gaussian distribution centred at the origin." alt="" coords="913,416,1076,457"/>
+<area shape="rect" href="namespacecomponent__functions.html#a87166a18e7df3188b4ac3f123e39a3d7" title="Jastrow correlation fuction Function F from Schmidt and Moskowitz 1990." alt="" coords="685,519,847,560"/>
+<area shape="rect" href="namespacecomponent__functions.html#ae19615a4b0c88888e2aa7a15cc51cd29" title="Jastrow subfuction: atom subterm Correlation term for each atom." alt="" coords="905,519,1084,560"/>
+<area shape="rect" href="namespacecomponent__functions.html#a97fe2b5cde42f4355466ef38099e014c" title="Functions that construct the Jastrow interaction function Notation here follows Schmidt and Moskowitz..." alt="" coords="1132,485,1295,527"/>
+<area shape="rect" href="namespacecomponent__functions.html#ae28c3bbfe7c6dbeb622126af558d8f84" title="Jastrow subfuction: basic subterm Subterm of the correlation function, one for each Jastrow dof per a..." alt="" coords="1132,551,1295,592"/>
+<area shape="rect" href="namespacewrite__file.html#a7bee3284ae2e7b54b1a499095dfee1ee" title=" " alt="" coords="435,719,595,746"/>
 </map>
 </div>
 
@@ -154,7 +154,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="latin__driver_8f90.html">latin_driver.f90</a></li>
-    <li class="footer">Generated on Wed May 26 2021 07:53:15 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 15:13:12 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -34,6 +34,10 @@ var NAVTREE =
     ] ],
     [ "Tutorial", "tutorial_page.html", "tutorial_page" ],
     [ "Acknowledgements", "acknowledgments.html", null ],
+    [ "Optimisation for large a parameter search-space", "Biased.html", [
+      [ "Gaussian Process", "Biased.html#intro", null ],
+      [ "Optimisation of parameters", "Biased.html#grad_dec", null ]
+    ] ],
     [ "Bibliography", "citelist.html", null ],
     [ "Modules", "namespaces.html", [
       [ "Modules List", "namespaces.html", "namespaces_dup" ],
@@ -54,7 +58,8 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions/Subroutines", "globals_func.html", null ]
+        [ "Functions/Subroutines", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ]
       ] ]
     ] ]
   ] ]
@@ -62,7 +67,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"MCMC_8f90.html"
+"Biased.html",
+"namespaceplotting.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

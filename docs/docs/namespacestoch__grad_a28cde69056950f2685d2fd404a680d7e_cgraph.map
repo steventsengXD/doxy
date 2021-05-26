@@ -1,0 +1,16 @@
+<map id="stoch_grad::g_t" name="stoch_grad::g_t">
+<area shape="rect" id="node1" title=" " alt="" coords="5,78,127,105"/>
+<area shape="rect" id="node2" href="$namespacegradient__estimator.html#af808bce2f368f26109593d194b2dff6c" title="runs the gradient estimator associated routines from one block." alt="" coords="175,71,357,112"/>
+<area shape="rect" id="node3" href="$namespacegradient__estimator.html#a86da16b770f1b1b599707ea5d4323cc5" title="performs the backward difference differentiation on the workspace F" alt="" coords="407,5,553,47"/>
+<area shape="rect" id="node4" href="$namespacegradient__estimator.html#ab9cda2e11ba3871506436af8ca0d51a1" title="combines the gradient contributions from the workspace F and those associated with the m_vector and c..." alt="" coords="405,71,555,112"/>
+<area shape="rect" id="node8" href="$namespacegradient__estimator.html#aff319bb347b8b1675228aa9559c7f4c9" title="initialises the workspace F and Cholesky decomposition of the covariance matrix." alt="" coords="407,233,553,275"/>
+<area shape="rect" id="node5" href="$namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title=" " alt="" coords="610,5,769,47"/>
+<area shape="rect" id="node7" href="$namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title=" " alt="" coords="606,71,773,112"/>
+<area shape="rect" id="node6" href="$namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title=" " alt="" coords="842,5,1001,47"/>
+<area shape="rect" id="node9" href="$namespacegradient__estimator.html#a72a27ec72360ff067eb936c2b0348ca6" title="check if the maximum found in the find_max_thread is a unique value." alt="" coords="603,136,776,177"/>
+<area shape="rect" id="node10" href="$namespacegradient__estimator.html#a7c9f5c8734a30b7aa64d0974865a3971" title="finds the location in the vector that corresponds to the maximum of &quot;m + CZ&quot;" alt="" coords="616,201,763,243"/>
+<area shape="rect" id="node11" href="$namespacegradient__estimator.html#ab53d4f39673b87ba124706fd5ee2f809" title="performs Cholesky decomposition without destroying the old array." alt="" coords="616,267,763,308"/>
+<area shape="rect" id="node12" href="$namespacegradient__estimator.html#a01db3e2a30eb6add20ec4c01fa8fcc92" title="builds the &quot;m_vector&quot; as described in: arXiv:1602.05149v4 [stat.ML] 5 May 2019 contains the differenc..." alt="" coords="616,332,763,373"/>
+<area shape="rect" id="node14" href="$namespacegradient__estimator.html#a7895f082a080ec52b33806f7b4103aec" title="build the &quot;z_vector&quot; as described in: arXiv:1602.05149v4 [stat.ML] 5 May 2019" alt="" coords="616,397,763,439"/>
+<area shape="rect" id="node13" href="$namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title=" " alt="" coords="824,339,1019,366"/>
+</map>

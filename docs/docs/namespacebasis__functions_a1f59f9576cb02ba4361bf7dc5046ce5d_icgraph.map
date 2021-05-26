@@ -1,5 +1,6 @@
 <map id="basis_functions::wave_function_2_electrons" name="basis_functions::wave_function_2_electrons">
-<area shape="rect" id="node1" title="Wavefunction for 2 electrons." alt="" coords="388,5,555,47"/>
-<area shape="rect" id="node2" href="$namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="153,5,340,47"/>
-<area shape="rect" id="node3" href="$latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,13,105,39"/>
+<area shape="rect" id="node1" title="Wavefunction for 2 electrons." alt="" coords="388,23,555,65"/>
+<area shape="rect" id="node2" href="$namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="153,23,340,65"/>
+<area shape="rect" id="node3" href="$Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="28,5,83,32"/>
+<area shape="rect" id="node4" href="$ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title=" " alt="" coords="5,56,105,83"/>
 </map>

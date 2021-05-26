@@ -116,27 +116,83 @@ $(document).ready(function(){initNavTree('electron__density_8f90_source.html',''
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      position_total(4:6) = [x,y,z]</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <a class="code" href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density</a> = <a class="code" href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density</a>+<a class="code" href="namespacebasis__functions.html#a5176e9e5598bd13047a4c720fbc37c50">wave_function</a>(position_total,dof_coefficients)**2</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordflow">    end do</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density</a> = lx*ly*lz*<a class="code" href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density</a>/n_mc_points</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density</a> = 2*lx*ly*lz*<a class="code" href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density</a>/n_mc_points</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">allocated</span>(seed)) <span class="keyword">deallocate</span>(seed)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density</a></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">end module </span>electron_density_functions</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">function </span><a class="code" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">wave_function_normalisation</a>(integral_bounds,dof_coefficients,n_MC_points,seed_in)</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">   63</a></span>&#160;<span class="keywordtype">    real</span>(dp) :: <a class="code" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">wave_function_normalisation</a> </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(3,2)</span>, <span class="keywordtype">intent(in)</span> :: integral_bounds</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: dof_coefficients </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: n_mc_points</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span>,<span class="keywordtype">optional</span> :: seed_in</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">allocatable</span> :: seed(:)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">integer</span> :: i <span class="comment">! loop variables</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">integer</span> :: n</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">    real</span>(dp) :: x,y,z,lx,ly,lz</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>,<span class="keywordtype">allocatable</span> :: position_total</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">present</span>(seed_in)) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keyword">call </span>random_seed(size=n)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keyword">allocate</span>(seed(n))</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      seed = seed_in    </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keyword">call </span>random_seed(put=seed) </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordflow">    end if</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">do</span> i=1,3</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">if</span> ((integral_bounds(i,2)-integral_bounds(i,1))&lt;= 0.1) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      print*, <span class="stringliteral">&quot;Error, box too small or bounds incorrect&quot;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordflow">    end if</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordflow">    end do</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">allocate</span>(position_total(<a class="code" href="namespacebasis__functions.html#aa2e0cf4f62dc5afc6f91a283ba3f055e">n_space_dims</a>))</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    lx = integral_bounds(1,2)-integral_bounds(1,1)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    ly = integral_bounds(2,2)-integral_bounds(2,1)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    lz = integral_bounds(3,2)-integral_bounds(3,1)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">!$OMP parallel do default(shared) private(i,x,y,z) firstprivate(position_total) reduction(+:wave_function_normalisation)</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">do</span> i=1,n_mc_points      </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keyword">call </span>random_number(x)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keyword">call </span>random_number(y)</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keyword">call </span>random_number(z)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      x = lx*x +integral_bounds(1,1)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      y = ly*y +integral_bounds(2,1)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      z = lz*z +integral_bounds(3,1)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      position_total(1:3) = [x,y,z]</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacebasis__functions.html#aa2e0cf4f62dc5afc6f91a283ba3f055e">n_space_dims</a> == 6) <span class="keywordflow">then</span> </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">call </span>random_number(x)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">call </span>random_number(y)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keyword">call </span>random_number(z)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        x = lx*x +integral_bounds(1,1)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        y = ly*y +integral_bounds(2,1)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        z = lz*z +integral_bounds(3,1)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        position_total(4:6) = [x,y,z]</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <a class="code" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">wave_function_normalisation</a> = <a class="code" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">wave_function_normalisation</a>&amp;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        +<a class="code" href="namespacebasis__functions.html#a5176e9e5598bd13047a4c720fbc37c50">wave_function</a>(position_total,dof_coefficients)**2</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keywordflow">    end do</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">wave_function_normalisation</a> = lx*ly*lz*<a class="code" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">wave_function_normalisation</a>/n_mc_points</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacebasis__functions.html#aa2e0cf4f62dc5afc6f91a283ba3f055e">n_space_dims</a> == 6) <span class="keywordflow">then</span> </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <a class="code" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">wave_function_normalisation</a> = lx*ly*lz*<a class="code" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">wave_function_normalisation</a></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keywordflow">    end if</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> (<span class="keyword">allocated</span>(seed)) <span class="keyword">deallocate</span>(seed)</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">deallocate</span>(position_total)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">end function </span><a class="code" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">wave_function_normalisation</a></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">end module </span>electron_density_functions</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacebasis__functions_html"><div class="ttname"><a href="namespacebasis__functions.html">basis_functions</a></div><div class="ttdoc">Wavefunction, hamiltonian and basis set choice.</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00011">basis_functions.f90:11</a></div></div>
-<div class="ttc" id="anamespaceelectron__density__functions_html_a6a7ccc97d4e245b3179b8a4482035243"><div class="ttname"><a href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density_functions::electron_density</a></div><div class="ttdeci">real(dp) function electron_density(fixed_position, integral_bounds, dof_coefficients, n_MC_points, seed_in)</div><div class="ttdoc">Computes electron density for 2 electron simulations Use basic Monte Carlo Integration.</div><div class="ttdef"><b>Definition:</b> <a href="electron__density_8f90_source.html#l00011">electron_density.f90:11</a></div></div>
+<div class="ttc" id="anamespaceelectron__density__functions_html_a6a7ccc97d4e245b3179b8a4482035243"><div class="ttname"><a href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density_functions::electron_density</a></div><div class="ttdeci">real(dp) function electron_density(fixed_position, integral_bounds, dof_coefficients, n_MC_points, seed_in)</div><div class="ttdoc">Computes electron density for 2 electron simulations Uses basic Monte Carlo Integration.</div><div class="ttdef"><b>Definition:</b> <a href="electron__density_8f90_source.html#l00011">electron_density.f90:11</a></div></div>
+<div class="ttc" id="anamespacebasis__functions_html_aa2e0cf4f62dc5afc6f91a283ba3f055e"><div class="ttname"><a href="namespacebasis__functions.html#aa2e0cf4f62dc5afc6f91a283ba3f055e">basis_functions::n_space_dims</a></div><div class="ttdeci">integer, protected n_space_dims</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00051">basis_functions.f90:51</a></div></div>
 <div class="ttc" id="anamespacebasis__functions_html_a5176e9e5598bd13047a4c720fbc37c50"><div class="ttname"><a href="namespacebasis__functions.html#a5176e9e5598bd13047a4c720fbc37c50">basis_functions::wave_function</a></div><div class="ttdeci">procedure(wave_function_interface), pointer wave_function</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00020">basis_functions.f90:20</a></div></div>
 <div class="ttc" id="anamespaceelectron__density__functions_html"><div class="ttname"><a href="namespaceelectron__density__functions.html">electron_density_functions</a></div><div class="ttdoc">Electron density function.</div><div class="ttdef"><b>Definition:</b> <a href="electron__density_8f90_source.html#l00002">electron_density.f90:2</a></div></div>
+<div class="ttc" id="anamespaceelectron__density__functions_html_a40be7c615516f64a5d7df7854b4ede96"><div class="ttname"><a href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">electron_density_functions::wave_function_normalisation</a></div><div class="ttdeci">real(dp) function wave_function_normalisation(integral_bounds, dof_coefficients, n_MC_points, seed_in)</div><div class="ttdoc">Computes the integral of the wavefunction squared To normalise the wavefunction for outputing Uses ba...</div><div class="ttdef"><b>Definition:</b> <a href="electron__density_8f90_source.html#l00063">electron_density.f90:63</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="electron__density_8f90.html">electron_density.f90</a></li>
-    <li class="footer">Generated on Wed May 26 2021 07:53:14 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 15:13:10 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

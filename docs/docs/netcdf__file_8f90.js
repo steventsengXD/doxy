@@ -1,9 +1,8 @@
 var netcdf__file_8f90 =
 [
-    [ "atom1_netcdf", "netcdf__file_8f90.html#af21e1f0e20bc5d7ef050ca230e15025d", null ],
-    [ "atom2_netcdf", "netcdf__file_8f90.html#ab44062ede3c3b7a1d548b127bf71dfcd", null ],
-    [ "energies_netcdf", "netcdf__file_8f90.html#aa2915fe469549076045e50fec183f477", null ],
-    [ "xyz_coords1d", "netcdf__file_8f90.html#a9e3b89277ccb10c11436a0847ec74c94", null ],
-    [ "xyz_coords2d", "netcdf__file_8f90.html#a414424a594a2b90fdc3b836c2ea4430e", null ],
-    [ "xyz_coords3d", "netcdf__file_8f90.html#a36860f626a8c46139a212edaf4d23a85", null ]
+    [ "energies_netcdf", "netcdf__file_8f90.html#a7309e6004e1ea127b9ab60d14f197ed8", null ],
+    [ "handle_err", "netcdf__file_8f90.html#a7bee3284ae2e7b54b1a499095dfee1ee", null ],
+    [ "result_netcdf", "netcdf__file_8f90.html#a3456d4f27de6570b87711fb5cd6fef76", null ],
+    [ "write_restart_file", "netcdf__file_8f90.html#a85af283f6b75ebd924045dbb95bf169a", null ],
+    [ "xy_grid", "netcdf__file_8f90.html#a988eccddc1dfeda968686c7155ce133a", null ]
 ];

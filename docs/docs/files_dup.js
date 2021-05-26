@@ -1,15 +1,26 @@
 var files_dup =
 [
     [ "basis_functions.f90", "basis__functions_8f90.html", "basis__functions_8f90" ],
+    [ "Biased_Optim.f90", "Biased__Optim_8f90.html", "Biased__Optim_8f90" ],
+    [ "Biased_Optim_example_driver.f90", "Biased__Optim__example__driver_8f90.html", "Biased__Optim__example__driver_8f90" ],
     [ "calc.f90", "calc_8f90.html", "calc_8f90" ],
     [ "component_functions.f90", "component__functions_8f90.html", "component__functions_8f90" ],
     [ "constants.f90", "constants_8f90.html", "constants_8f90" ],
+    [ "ed_test.f90", "ed__test_8f90.html", "ed__test_8f90" ],
     [ "electron_density.f90", "electron__density_8f90.html", "electron__density_8f90" ],
+    [ "energy_plotting.py", "energy__plotting_8py.html", "energy__plotting_8py" ],
+    [ "GP_surrogate.f90", "GP__surrogate_8f90.html", "GP__surrogate_8f90" ],
+    [ "GP_surrogate_test_driver.f90", "GP__surrogate__test__driver_8f90.html", "GP__surrogate__test__driver_8f90" ],
+    [ "gradient_estimator.f90", "gradient__estimator_8f90.html", "gradient__estimator_8f90" ],
     [ "init_params.py", "init__params_8py.html", "init__params_8py" ],
     [ "latin_driver.f90", "latin__driver_8f90.html", "latin__driver_8f90" ],
+    [ "main_driver.f90", "main__driver_8f90.html", "main__driver_8f90" ],
     [ "MCMC.f90", "MCMC_8f90.html", "MCMC_8f90" ],
     [ "netcdf_file.f90", "netcdf__file_8f90.html", "netcdf__file_8f90" ],
     [ "param_search.f90", "param__search_8f90.html", "param__search_8f90" ],
     [ "plotting.py", "plotting_8py.html", "plotting_8py" ],
-    [ "read_data.f90", "read__data_8f90.html", "read__data_8f90" ]
+    [ "priors.f90", "priors_8f90.html", "priors_8f90" ],
+    [ "read_data.f90", "read__data_8f90.html", "read__data_8f90" ],
+    [ "read_in_restart.f90", "read__in__restart_8f90.html", "read__in__restart_8f90" ],
+    [ "stoch_grad.f90", "stoch__grad_8f90.html", "stoch__grad_8f90" ]
 ];

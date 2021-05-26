@@ -1,0 +1,9 @@
+<map id="gradient_estimator::init_diff_f" name="gradient_estimator::init_diff_f">
+<area shape="rect" id="node1" title="initialises the workspace F and Cholesky decomposition of the covariance matrix." alt="" coords="5,136,152,177"/>
+<area shape="rect" id="node2" href="$namespacegradient__estimator.html#a72a27ec72360ff067eb936c2b0348ca6" title="check if the maximum found in the find_max_thread is a unique value." alt="" coords="200,5,373,47"/>
+<area shape="rect" id="node3" href="$namespacegradient__estimator.html#a7c9f5c8734a30b7aa64d0974865a3971" title="finds the location in the vector that corresponds to the maximum of &quot;m + CZ&quot;" alt="" coords="213,71,360,112"/>
+<area shape="rect" id="node4" href="$namespacegradient__estimator.html#ab53d4f39673b87ba124706fd5ee2f809" title="performs Cholesky decomposition without destroying the old array." alt="" coords="213,136,360,177"/>
+<area shape="rect" id="node5" href="$namespacegradient__estimator.html#a01db3e2a30eb6add20ec4c01fa8fcc92" title="builds the &quot;m_vector&quot; as described in: arXiv:1602.05149v4 [stat.ML] 5 May 2019 contains the differenc..." alt="" coords="213,201,360,243"/>
+<area shape="rect" id="node7" href="$namespacegradient__estimator.html#a7895f082a080ec52b33806f7b4103aec" title="build the &quot;z_vector&quot; as described in: arXiv:1602.05149v4 [stat.ML] 5 May 2019" alt="" coords="213,267,360,308"/>
+<area shape="rect" id="node6" href="$namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title=" " alt="" coords="421,209,616,235"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="calculations::calc" name="calculations::calc">
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,140,73"/>
+<area shape="rect" id="node2" href="$namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243" title="Computes electron density for 2 electron simulations Uses basic Monte Carlo Integration." alt="" coords="201,5,398,47"/>
+<area shape="rect" id="node3" href="$namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96" title="Computes the integral of the wavefunction squared To normalise the wavefunction for outputing Uses ba..." alt="" coords="188,71,411,112"/>
+</map>

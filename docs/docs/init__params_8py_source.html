@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('init__params_8py_source.html',''); ini
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment"># note: mac may not support changing button color</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;bg_color=<span class="stringliteral">&#39;white&#39;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;fg_color=<span class="stringliteral">&#39;grey&#39;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;bg_button=<span class="stringliteral">&#39;grey&#39;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;bg_button=<span class="stringliteral">&#39;lightgrey&#39;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;fg_button=<span class="stringliteral">&#39;black&#39;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"># GUI font parameters</span></div>
@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('init__params_8py_source.html',''); ini
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"># Dimensions of the window</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;length=700</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;height=600</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;height=1000</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">#This creates the main window of the GUI</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;window=tk.Tk()</div>
@@ -139,11 +139,11 @@ $(document).ready(function(){initNavTree('init__params_8py_source.html',''); ini
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;txt0=<span class="stringliteral">&quot;The default simulation parameters are shown in the boxes in \</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="stringliteral">the right-hand column below. Please change any to your desired simulation \</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="stringliteral">parameters and then click &#39;Close&#39; at the bottom once you are done.&quot;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="stringliteral">parameters and then click &#39;Close&#39; at the bottom.&quot;</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;text0=tk.Label(window,text=txt0,font=(font,fontsize),wraplength=length-10) <span class="comment">#,justify=&#39;center&#39;)</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;text0=tk.Label(window,text=txt0,font=(font,fontsize),wraplength=length-5) <span class="comment">#,justify=&#39;center&#39;)</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;text0.configure(background=bg_color)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;text0.grid(row=0,columnspan=2,pady=5,padx=5,sticky=<span class="stringliteral">&#39;w&#39;</span>) <span class="comment">#column=0,padx=5,pady=5)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;text0.grid(row=0,column=0,columnspan=2,sticky=<span class="stringliteral">&#39;w&#39;</span>) <span class="comment">#column=0,padx=5,pady=5)</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"># function for creating a line of user entry within the gui</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a6e4c1a98cad0e20f6ebbc47a22d7ce2d">   78</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespaceinit__params.html#a6e4c1a98cad0e20f6ebbc47a22d7ce2d">new_param</a>(window,</div>
@@ -161,7 +161,7 @@ $(document).ready(function(){initNavTree('init__params_8py_source.html',''); ini
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment"># Create a space for user text entry</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment"># Only need first line if you want to show a default value</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    vars()[tk_input]=tk.StringVar(value=dval)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    vars()[tk_entry]=tk.Entry(window,width=15,textvariable=vars()[tk_input])</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    vars()[tk_entry]=tk.Entry(window,width=9,textvariable=vars()[tk_input])</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    vars()[tk_entry].grid(column=1,row=row,pady=5,sticky=<span class="stringliteral">&#39;w&#39;</span>)</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span> vars()[tk_text],vars()[tk_entry],vars()[tk_input]</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
@@ -169,85 +169,152 @@ $(document).ready(function(){initNavTree('init__params_8py_source.html',''); ini
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"># Create lines of user entry here for each parameter</span></div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;params=[<span class="stringliteral">&#39;Number of electrons&#39;</span>,<span class="stringliteral">&#39;Number of atoms&#39;</span>,<span class="stringliteral">&#39;Bond length if there are two atoms&#39;</span>, \</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="stringliteral">&#39;Number of trials for latin hypercube search&#39;</span>,<span class="stringliteral">&#39;Total number of steps for MCMC run&#39;</span>, \</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="stringliteral">&#39;Random seed for the latin hypecube&#39;</span>, \</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="stringliteral">&#39;Number of linear terms in the single-electron wavefunction per atom&#39;</span>, \</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="stringliteral">&#39;Number of dofs in the Jastrow (interaction) term&#39;</span>, \</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="stringliteral">&#39;Lengthscale for the finite difference method&#39;</span>, \</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="stringliteral">&#39;Inverse lengthscale of nuclear-electron interaction&#39;</span>, \</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="stringliteral">&#39;Inverse lengthscale of electron-electron interaction&#39;</span>]</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"># default values carried over from latin_driver.f90 code</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;def_values=[2,2,2.0,10,10000000,132,1,3,0.1,1.0,1.0]</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"># Whether param is float/integer by index</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;floats=[2,8,9,10]</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;integers=[0,1,3,4,5,6,7]</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;N_params=len(params)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="stringliteral">&#39;Biased optimizer&#39;</span>,<span class="stringliteral">&#39;Number of steps&#39;</span>, \</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="stringliteral">&#39;Type of orbitals&#39;</span>, \</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="stringliteral">&#39;Proton number&#39;</span>, \</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="stringliteral">&#39;Number of OMP Threads&#39;</span>, \</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="stringliteral">&#39;Random seed for the latin hypecube&#39;</span>, \</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="stringliteral">&#39;Number of linear terms in the single-electron wavefunction per atom&#39;</span>, \</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="stringliteral">&#39;Number of dofs in the Jastrow (interaction) term&#39;</span>, \</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="stringliteral">&#39;Lengthscale for the finite difference method&#39;</span>, \</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="stringliteral">&#39;Inverse lengthscale of nuclear-electron interaction&#39;</span>, \</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="stringliteral">&#39;Inverse lengthscale of electron-electron interaction&#39;</span>, \</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="stringliteral">&#39;Amount of distance away from atoms to plot&#39;</span>, \</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="stringliteral">&#39;Number of points along axis in each direction to plot&#39;</span>]</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"># default values carried over from latin_driver.f90 code</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;def_values=[2,1,2.0,10,10000000,1,10,100,2,1.0,132,1,3,0.1,1.0,1.0,10.0,100]</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keywordflow">for</span> i,param <span class="keywordflow">in</span> enumerate(params):</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    vars()[<span class="stringliteral">&#39;text&#39;</span>+str(i)],vars()[<span class="stringliteral">&#39;entry&#39;</span>+str(i)],vars()[<span class="stringliteral">&#39;input&#39;</span>+str(i)]= \</div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a9160a5cd7467d02f1b636f547d08590f">  119</a></span>&#160;    <a class="code" href="namespaceinit__params.html#a6e4c1a98cad0e20f6ebbc47a22d7ce2d">new_param</a>(window,<span class="stringliteral">&#39;text&#39;</span>+str(i),<span class="stringliteral">&#39;entry&#39;</span>+str(i),<span class="stringliteral">&#39;input&#39;</span>+str(i),row=i+1, \</div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a8a3099c86e5b63ae9073aed3c12d2ced">  120</a></span>&#160;    dval=str(def_values[i]),text=param+<span class="stringliteral">&#39;: &#39;</span>)</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"># adds a button to close the gui</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a7366328b11f9ad36e90220e890f9b9c3">  123</a></span>&#160;close=tk.Button(window,text=<span class="stringliteral">&#39;Close&#39;</span>,command=window.quit,</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                bg=bg_button,fg=fg_button)</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a9a67da3691151a9f4c01e3192e9acd01">  125</a></span>&#160;close.place(relx=0.5,rely=0.95,anchor=<span class="stringliteral">&#39;s&#39;</span>)</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"># Start the GUI and check if user entered a proper number</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"># Convert input to float if it is a number</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;window.mainloop()</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment"># Checks to see if user input is proper and sets everything to an integer except</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment"># bond length which is a float</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a4f00ee7da6b2cd8275a207a38db0cdd7">  133</a></span>&#160;p1=1</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(0,N_params):</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">try</span>:</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">if</span> i <span class="keywordflow">in</span> floats:</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordflow">if</span> i!=2:</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=float(vars()[<span class="stringliteral">&#39;entry{0}&#39;</span>.format(i)].get())</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                                                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">elif</span> i==2 <span class="keywordflow">and</span> p1&gt;1:</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=float(vars()[<span class="stringliteral">&#39;entry{0}&#39;</span>.format(i)].get())</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                                                                  vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">elif</span> i <span class="keywordflow">in</span> integers:</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=int(vars()[<span class="stringliteral">&#39;entry{0}&#39;</span>.format(i)].get())</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                                                              vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">except</span>:</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordflow">if</span> i <span class="keywordflow">in</span> floats:</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">if</span> i!=2:</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=def_values[i]</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                                                                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordflow">elif</span> i==2 <span class="keywordflow">and</span> p1&gt;1:</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=def_values[i]</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                                                                  vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">elif</span> i <span class="keywordflow">in</span> integers:</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=def_values[i]</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                                                              vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="comment"># Set the line for bond length equal to zero if there&#39;s only one atom</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keywordflow">if</span> p1==1:</div>
-<div class="line"><a name="l00166"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a432a6dd0ee51cdd03ca742e374974f54">  166</a></span>&#160;    p2=0</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="comment"># Making sure the input is a positive number, add as a check later (here or above)</span></div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment">#se default if not positive</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="comment"># if d &lt;= 0:</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="comment">#     print(&#39;You did not enter a positive number, default will be utilized.&#39;)</span></div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment">#     d=</span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="comment"># Saving user input into text file</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#ab1e7883f44d77906d1928409dcba3ad0">  175</a></span>&#160;filename=<span class="stringliteral">&#39;init_params.txt&#39;</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a146045a8246d5caf5c8cd1e38851979a">  176</a></span>&#160;file=open(filename,<span class="stringliteral">&#39;w&#39;</span>)</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(0,N_params):</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    file.write(str(vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)])+<span class="stringliteral">&#39;\n&#39;</span>) <span class="comment">#+&#39;,&#39;+str(p3)+&#39;,0&#39;)</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"># Whether param is float/integer by index</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;floats=[2, 9, 13, 14, 15, 16]</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;integers=[0, 1, 3, 4, 5, 6, 7, 8, 10, 11, 12, 17]</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;N_params=len(params)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;txt1=<span class="stringliteral">&quot;The user must provide the following inputs: &quot;</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;text1=tk.Label(window,text=txt1,font=(font,fontsize),wraplength=length-10)</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;text1.configure(background=bg_color)</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;text1.grid(row=1,columnspan=3,sticky=<span class="stringliteral">&#39;w&#39;</span>) <span class="comment"># pady=5,padx=5</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keywordflow">for</span> i,param <span class="keywordflow">in</span> enumerate(params[:5]):</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    vars()[<span class="stringliteral">&#39;text&#39;</span>+str(i)],vars()[<span class="stringliteral">&#39;entry&#39;</span>+str(i)],vars()[<span class="stringliteral">&#39;input&#39;</span>+str(i)]= \</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a9160a5cd7467d02f1b636f547d08590f">  130</a></span>&#160;    <a class="code" href="namespaceinit__params.html#a6e4c1a98cad0e20f6ebbc47a22d7ce2d">new_param</a>(window,<span class="stringliteral">&#39;text&#39;</span>+str(i),<span class="stringliteral">&#39;entry&#39;</span>+str(i),<span class="stringliteral">&#39;input&#39;</span>+str(i),row=i+2, \</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a8a3099c86e5b63ae9073aed3c12d2ced">  131</a></span>&#160;    dval=str(def_values[i]),text=param+<span class="stringliteral">&#39;: &#39;</span>)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#aad736862712eeb90e5b31d1fe332525f">  134</a></span>&#160;txt2=<span class="stringliteral">&quot;Biased Optimizer Options (enabled by default):&quot;</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#abdcc13047e1e89e1a762ecc3e7e02c60">  135</a></span>&#160;text2=tk.Label(window,text=txt2,font=(font,fontsize),wraplength=length-10)</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a4befb8a1e4873f00e6932bbbd9ac003c">  136</a></span>&#160;text2.configure(background=bg_color)</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a1c97f43f11d3997382192c23c6121bb7">  137</a></span>&#160;text2.grid(row=7,column=0,sticky=<span class="stringliteral">&#39;w&#39;</span>,pady=5) <span class="comment"># pady=5,padx=5</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a7d7ff12f24b63804efa90e93ab13c88a">  139</a></span>&#160;txt2_1=<span class="stringliteral">&quot;Enable the biased optimizer?&quot;</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#af06672307cc70efc16059d4cd34ed442">  140</a></span>&#160;text2_1=tk.Label(window,text=txt2_1,font=(font,fontsize),wraplength=length-10)</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;text2_1.configure(background=bg_color)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;text2_1.grid(row=8,column=0,sticky=<span class="stringliteral">&#39;e&#39;</span>) <span class="comment"># pady=5,padx=5</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#af518f2afae6838db7a3c393130880994">  144</a></span>&#160;bopt=tk.IntVar()</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;bopt.set(1)</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#acf238da8d19c9c94ab22d28e9b2adf98">  146</a></span>&#160;tk.Radiobutton(window,text=<span class="stringliteral">&#39;No&#39;</span>,variable=bopt,value=0,indicatoron=1,\</div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a52662da6f0b3bbb5eaa405a0ba8bf20e">  147</a></span>&#160;background=bg_button).grid(row=8,column=1,sticky=<span class="stringliteral">&#39;w&#39;</span>,padx=50)</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;tk.Radiobutton(window,text=<span class="stringliteral">&#39;Yes&#39;</span>,variable=bopt,value=1,indicatoron=1,\</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;background=bg_button).grid(row=8,column=1,sticky=<span class="stringliteral">&#39;w&#39;</span>)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment"># tk.Button(window,text=&#39;Reset&#39;,command=lambda:bopt.set(0)).grid(row=8,column=1,sticky=&#39;e&#39;)</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#acb28083def052ba75fac4a1d6956d3f2">  152</a></span>&#160;i=6</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;vars()[<span class="stringliteral">&#39;text&#39;</span>+str(i)],vars()[<span class="stringliteral">&#39;entry&#39;</span>+str(i)],vars()[<span class="stringliteral">&#39;input&#39;</span>+str(i)]= \</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<a class="code" href="namespaceinit__params.html#a6e4c1a98cad0e20f6ebbc47a22d7ce2d">new_param</a>(window,<span class="stringliteral">&#39;text&#39;</span>+str(i),<span class="stringliteral">&#39;entry&#39;</span>+str(i),<span class="stringliteral">&#39;input&#39;</span>+str(i),row=i+4, \</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;dval=str(def_values[i]),text=params[6]+<span class="stringliteral">&#39;: &#39;</span>)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a92d4e99a7af86877a4b21f4d0686d08d">  158</a></span>&#160;txt3=<span class="stringliteral">&quot;Optional user inputs (default options are shown):&quot;</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#ab57118680f572d32637a41c236943025">  159</a></span>&#160;text3=tk.Label(window,text=txt3,font=(font,fontsize),wraplength=length-10)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;text3.configure(background=bg_color)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;text3.grid(row=11,column=0,sticky=<span class="stringliteral">&#39;w&#39;</span>,pady=5)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a40d654672fdac66d620176891b53a01b">  163</a></span>&#160;basis=tk.IntVar()</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;basis.set(100)</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;tk.Radiobutton(window,text=<span class="stringliteral">&#39;Slater-type orbitals&#39;</span>,variable=basis,value=100,indicatoron=1,\</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;background=bg_button).grid(row=12,column=0,sticky=<span class="stringliteral">&#39;e&#39;</span>)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;tk.Radiobutton(window,text=<span class="stringliteral">&#39;Gaussian-type orbitals&#39;</span>,variable=basis,value=200,indicatoron=1,\</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;background=bg_button).grid(row=12,column=1,sticky=<span class="stringliteral">&#39;w&#39;</span>)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keywordflow">for</span> j,param <span class="keywordflow">in</span> enumerate(params[8:-2]):</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    i=j+8</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    vars()[<span class="stringliteral">&#39;text&#39;</span>+str(i)],vars()[<span class="stringliteral">&#39;entry&#39;</span>+str(i)],vars()[<span class="stringliteral">&#39;input&#39;</span>+str(i)]= \</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="namespaceinit__params.html#a6e4c1a98cad0e20f6ebbc47a22d7ce2d">new_param</a>(window,<span class="stringliteral">&#39;text&#39;</span>+str(i),<span class="stringliteral">&#39;entry&#39;</span>+str(i),<span class="stringliteral">&#39;input&#39;</span>+str(i),row=13+j, \</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    dval=str(def_values[i]),text=param+<span class="stringliteral">&#39;: &#39;</span>)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a41c9d7e885318e62d2e57d2f863e6d0e">  177</a></span>&#160;txt4=<span class="stringliteral">&quot;Visualization options:&quot;</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a35624ffa591f540972c3785bee012049">  178</a></span>&#160;text4=tk.Label(window,text=txt4,font=(font,fontsize),wraplength=length-10)</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;text4.configure(background=bg_color)</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;text4.grid(row=21,column=0,sticky=<span class="stringliteral">&#39;w&#39;</span>,pady=5)</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keywordflow">for</span> j,param <span class="keywordflow">in</span> enumerate(params[-2:]):</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    i=j+17</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    vars()[<span class="stringliteral">&#39;text&#39;</span>+str(i)],vars()[<span class="stringliteral">&#39;entry&#39;</span>+str(i)],vars()[<span class="stringliteral">&#39;input&#39;</span>+str(i)]= \</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <a class="code" href="namespaceinit__params.html#a6e4c1a98cad0e20f6ebbc47a22d7ce2d">new_param</a>(window,<span class="stringliteral">&#39;text&#39;</span>+str(i),<span class="stringliteral">&#39;entry&#39;</span>+str(i),<span class="stringliteral">&#39;input&#39;</span>+str(i),row=22+j, \</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    dval=str(def_values[-2+j]),text=param+<span class="stringliteral">&#39;: &#39;</span>)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="comment"># adds a button to close the gui</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a7366328b11f9ad36e90220e890f9b9c3">  190</a></span>&#160;close=tk.Button(window,text=<span class="stringliteral">&#39;Close&#39;</span>,command=window.quit,</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                bg=bg_button,fg=fg_button)</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a9a67da3691151a9f4c01e3192e9acd01">  192</a></span>&#160;close.place(relx=0.5,rely=0.95,anchor=<span class="stringliteral">&#39;s&#39;</span>)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment"># Start the GUI and check if user entered a proper number</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="comment"># Convert input to float if it is a number</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;window.mainloop()</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="comment"># Checks to see if user input is proper, otherwise use default value</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a4f00ee7da6b2cd8275a207a38db0cdd7">  199</a></span>&#160;p1=1</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(0,N_params):</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">try</span>:</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">if</span> i <span class="keywordflow">in</span> floats:</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">if</span> i!=2:</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=float(vars()[<span class="stringliteral">&#39;entry{0}&#39;</span>.format(i)].get())</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                                                                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordflow">elif</span> i==2 <span class="keywordflow">and</span> p1&gt;1:</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=float(vars()[<span class="stringliteral">&#39;entry{0}&#39;</span>.format(i)].get())</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                                                                  vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keywordflow">elif</span> i <span class="keywordflow">in</span> integers:</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=int(vars()[<span class="stringliteral">&#39;entry{0}&#39;</span>.format(i)].get())</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                                                              vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">except</span>:</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">if</span> i <span class="keywordflow">in</span> floats:</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">if</span> i!=2:</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=def_values[i]</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                                                                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordflow">elif</span> i==2 <span class="keywordflow">and</span> p1&gt;1:</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=def_values[i]</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                                                                  vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">elif</span> i <span class="keywordflow">in</span> integers:</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]=def_values[i]</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            print(<span class="stringliteral">&#39;{0} is set with value of {1}&#39;</span>.format(params[i],</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                                                              vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)]))</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment"># Set the line for bond length equal to zero if there&#39;s only one atom</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keywordflow">if</span> p1==1:</div>
+<div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a432a6dd0ee51cdd03ca742e374974f54">  233</a></span>&#160;    p2=0</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment"># Making sure the input is a positive number, add as a check later (here or above)</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">#se default if not positive</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment"># if d &lt;= 0:</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="comment">#     print(&#39;You did not enter a positive number, default will be utilized.&#39;)</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="comment">#     d=</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="comment"># Saving user input into text file</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#ab1e7883f44d77906d1928409dcba3ad0">  242</a></span>&#160;filename=<span class="stringliteral">&#39;init_params.txt&#39;</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno"><a class="line" href="namespaceinit__params.html#a146045a8246d5caf5c8cd1e38851979a">  243</a></span>&#160;file=open(filename,<span class="stringliteral">&#39;w&#39;</span>)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="keywordflow">for</span> i <span class="keywordflow">in</span> range(0,N_params):</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    file.write(str(vars()[<span class="stringliteral">&#39;p{0}&#39;</span>.format(i)])+<span class="stringliteral">&#39;\n&#39;</span>) <span class="comment">#+&#39;,&#39;+str(p3)+&#39;,0&#39;)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespaceinit__params_html_a6cfd0e0095022b90d21f1d1c7e0d2522"><div class="ttname"><a href="namespaceinit__params.html#a6cfd0e0095022b90d21f1d1c7e0d2522">init_params.get_input</a></div><div class="ttdeci">def get_input(parameter='parameter')</div><div class="ttdef"><b>Definition:</b> <a href="init__params_8py_source.html#l00010">init_params.py:10</a></div></div>
@@ -256,7 +323,7 @@ $(document).ready(function(){initNavTree('init__params_8py_source.html',''); ini
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="init__params_8py.html">init_params.py</a></li>
-    <li class="footer">Generated on Wed May 26 2021 07:53:14 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 15:13:10 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

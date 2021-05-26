@@ -74,77 +74,55 @@ $(document).ready(function(){initNavTree('namespaceplotting.html',''); initResiz
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ad618ad1d7a95dce2f630fb968d668ae9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#ad618ad1d7a95dce2f630fb968d668ae9">descriptor</a> = 0</td></tr>
-<tr class="separator:ad618ad1d7a95dce2f630fb968d668ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46d928411e568cd3b88128590d70a2e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a46d928411e568cd3b88128590d70a2e5">atom_1</a> = nc.Dataset('1_atom_result.nc4', mode='r', format='NETCDF4')</td></tr>
-<tr class="separator:a46d928411e568cd3b88128590d70a2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e4f2a0024f959265e53c50b1e231b3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a5e4f2a0024f959265e53c50b1e231b3b">dof</a> = atom_1.variables['DOF'][:]</td></tr>
+<tr class="memitem:a1c38490dd786d9e983e9d37b20707c82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a1c38490dd786d9e983e9d37b20707c82">coords</a> = np.loadtxt('xyz.txt')</td></tr>
+<tr class="separator:a1c38490dd786d9e983e9d37b20707c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09e5409aa423627fb4beccc0e108a222"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a09e5409aa423627fb4beccc0e108a222">data</a> = nc.Dataset('results.nc4', mode='r', format='NETCDF4')</td></tr>
+<tr class="separator:a09e5409aa423627fb4beccc0e108a222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fcf20c720e830dc634baef4258d25d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a2fcf20c720e830dc634baef4258d25d2">num_ele</a> = data.variables['Num_of_Electrons'][:]</td></tr>
+<tr class="separator:a2fcf20c720e830dc634baef4258d25d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4918981a26a1a4c7ce1596ccfcd6509f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a4918981a26a1a4c7ce1596ccfcd6509f">num_nuc</a> = data.variables['Num_of_Nuclei'][:]</td></tr>
+<tr class="separator:a4918981a26a1a4c7ce1596ccfcd6509f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8efe4ed71d4392739322abbecba4f049"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a8efe4ed71d4392739322abbecba4f049">x</a> = <a class="el" href="namespaceplotting.html#a1c38490dd786d9e983e9d37b20707c82">coords</a>[:,0]</td></tr>
+<tr class="separator:a8efe4ed71d4392739322abbecba4f049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af246d6fc4a1c45cbb3c7aa721ee899df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#af246d6fc4a1c45cbb3c7aa721ee899df">y</a> = <a class="el" href="namespaceplotting.html#a1c38490dd786d9e983e9d37b20707c82">coords</a>[:,1]</td></tr>
+<tr class="separator:af246d6fc4a1c45cbb3c7aa721ee899df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bb9737531938609201bff808b35d2ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a3bb9737531938609201bff808b35d2ac">wavefunction</a> = data.variables['Electron_Density'][:]</td></tr>
+<tr class="separator:a3bb9737531938609201bff808b35d2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e4f2a0024f959265e53c50b1e231b3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a5e4f2a0024f959265e53c50b1e231b3b">dof</a> = data.variables['Optimal_DOF'][:]</td></tr>
 <tr class="separator:a5e4f2a0024f959265e53c50b1e231b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75796106d6e1aa5278a3f4306b46489c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a75796106d6e1aa5278a3f4306b46489c">wave1d</a> = atom_1.variables['1D Wavefunction'][:]</td></tr>
-<tr class="separator:a75796106d6e1aa5278a3f4306b46489c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac63166d640fa763c59d19257b6f153a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#ac63166d640fa763c59d19257b6f153a4">wave2d</a> = atom_1.variables['2D Wavefunction'][:]</td></tr>
-<tr class="separator:ac63166d640fa763c59d19257b6f153a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8648e9908ca0c5648afd573d8165961"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#ae8648e9908ca0c5648afd573d8165961">wave3d</a> = atom_1.variables['3D Wavefunction'][:]</td></tr>
-<tr class="separator:ae8648e9908ca0c5648afd573d8165961"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad048ac2c35da78084415ff8e594374b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#ad048ac2c35da78084415ff8e594374b3">x1d</a> = coords1D[:,0]</td></tr>
-<tr class="separator:ad048ac2c35da78084415ff8e594374b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4253e20439b23028fbb8f0cc96876f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#aa4253e20439b23028fbb8f0cc96876f9">x2d</a> = coords2D[:,0]</td></tr>
-<tr class="separator:aa4253e20439b23028fbb8f0cc96876f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e794b401d3ed6afdb8bf1dc07d50761"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a1e794b401d3ed6afdb8bf1dc07d50761">y2d</a> = coords2D[:,1]</td></tr>
-<tr class="separator:a1e794b401d3ed6afdb8bf1dc07d50761"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e2514b1f15c8688dccb697d3307c3ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a1e2514b1f15c8688dccb697d3307c3ab">eb</a> = nc.Dataset('energies.nc4', mode='r', format='NETCDF4')</td></tr>
-<tr class="separator:a1e2514b1f15c8688dccb697d3307c3ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3f76c882dbad2e5f03e5be69e39cf01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#aa3f76c882dbad2e5f03e5be69e39cf01">energy</a> = eb.variables['Energies'][:]</td></tr>
-<tr class="separator:aa3f76c882dbad2e5f03e5be69e39cf01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7286b00557f031789d600c2e1f00f2ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a7286b00557f031789d600c2e1f00f2ec">bond_len</a> = eb.variables['Bond Lengths'][:]</td></tr>
-<tr class="separator:a7286b00557f031789d600c2e1f00f2ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac984b55b65f106df62ab0a19784910c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#aac984b55b65f106df62ab0a19784910c">ele_den</a> = data.variables['Electron_Density'][:]</td></tr>
+<tr class="separator:aac984b55b65f106df62ab0a19784910c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a46d928411e568cd3b88128590d70a2e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46d928411e568cd3b88128590d70a2e5">&#9670;&nbsp;</a></span>atom_1</h2>
+<a id="a1c38490dd786d9e983e9d37b20707c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c38490dd786d9e983e9d37b20707c82">&#9670;&nbsp;</a></span>coords</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">plotting.atom_1 = nc.Dataset('1_atom_result.nc4', mode='r', format='NETCDF4')</td>
+          <td class="memname">plotting.coords = np.loadtxt('xyz.txt')</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00023">23</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00011">11</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
-<a id="a7286b00557f031789d600c2e1f00f2ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7286b00557f031789d600c2e1f00f2ec">&#9670;&nbsp;</a></span>bond_len</h2>
+<a id="a09e5409aa423627fb4beccc0e108a222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09e5409aa423627fb4beccc0e108a222">&#9670;&nbsp;</a></span>data</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">plotting.bond_len = eb.variables['Bond Lengths'][:]</td>
+          <td class="memname">plotting.data = nc.Dataset('results.nc4', mode='r', format='NETCDF4')</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00060">60</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
-
-</div>
-</div>
-<a id="ad618ad1d7a95dce2f630fb968d668ae9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad618ad1d7a95dce2f630fb968d668ae9">&#9670;&nbsp;</a></span>descriptor</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int plotting.descriptor = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00017">17</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00014">14</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
@@ -155,71 +133,87 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">plotting.dof = atom_1.variables['DOF'][:]</td>
+          <td class="memname">plotting.dof = data.variables['Optimal_DOF'][:]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00026">26</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00038">38</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
-<a id="a1e2514b1f15c8688dccb697d3307c3ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e2514b1f15c8688dccb697d3307c3ab">&#9670;&nbsp;</a></span>eb</h2>
+<a id="aac984b55b65f106df62ab0a19784910c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac984b55b65f106df62ab0a19784910c">&#9670;&nbsp;</a></span>ele_den</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">plotting.eb = nc.Dataset('energies.nc4', mode='r', format='NETCDF4')</td>
+          <td class="memname">plotting.ele_den = data.variables['Electron_Density'][:]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00057">57</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00051">51</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
-<a id="aa3f76c882dbad2e5f03e5be69e39cf01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3f76c882dbad2e5f03e5be69e39cf01">&#9670;&nbsp;</a></span>energy</h2>
+<a id="a2fcf20c720e830dc634baef4258d25d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fcf20c720e830dc634baef4258d25d2">&#9670;&nbsp;</a></span>num_ele</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">plotting.energy = eb.variables['Energies'][:]</td>
+          <td class="memname">plotting.num_ele = data.variables['Num_of_Electrons'][:]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00059">59</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00021">21</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
-<a id="a75796106d6e1aa5278a3f4306b46489c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75796106d6e1aa5278a3f4306b46489c">&#9670;&nbsp;</a></span>wave1d</h2>
+<a id="a4918981a26a1a4c7ce1596ccfcd6509f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4918981a26a1a4c7ce1596ccfcd6509f">&#9670;&nbsp;</a></span>num_nuc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">plotting.wave1d = atom_1.variables['1D Wavefunction'][:]</td>
+          <td class="memname">plotting.num_nuc = data.variables['Num_of_Nuclei'][:]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00029">29</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00024">24</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
-<a id="ac63166d640fa763c59d19257b6f153a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac63166d640fa763c59d19257b6f153a4">&#9670;&nbsp;</a></span>wave2d</h2>
+<a id="a3bb9737531938609201bff808b35d2ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bb9737531938609201bff808b35d2ac">&#9670;&nbsp;</a></span>wavefunction</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">plotting.wave2d = atom_1.variables['2D Wavefunction'][:]</td>
+          <td class="memname">plotting.wavefunction = data.variables['Electron_Density'][:]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00036">36</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+
+</div>
+</div>
+<a id="a8efe4ed71d4392739322abbecba4f049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8efe4ed71d4392739322abbecba4f049">&#9670;&nbsp;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">plotting.x = <a class="el" href="namespaceplotting.html#a1c38490dd786d9e983e9d37b20707c82">coords</a>[:,0]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -228,67 +222,19 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ae8648e9908ca0c5648afd573d8165961"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8648e9908ca0c5648afd573d8165961">&#9670;&nbsp;</a></span>wave3d</h2>
+<a id="af246d6fc4a1c45cbb3c7aa721ee899df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af246d6fc4a1c45cbb3c7aa721ee899df">&#9670;&nbsp;</a></span>y</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">plotting.wave3d = atom_1.variables['3D Wavefunction'][:]</td>
+          <td class="memname">plotting.y = <a class="el" href="namespaceplotting.html#a1c38490dd786d9e983e9d37b20707c82">coords</a>[:,1]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00031">31</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
-
-</div>
-</div>
-<a id="ad048ac2c35da78084415ff8e594374b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad048ac2c35da78084415ff8e594374b3">&#9670;&nbsp;</a></span>x1d</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">plotting.x1d = coords1D[:,0]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00034">34</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
-
-</div>
-</div>
-<a id="aa4253e20439b23028fbb8f0cc96876f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4253e20439b23028fbb8f0cc96876f9">&#9670;&nbsp;</a></span>x2d</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">plotting.x2d = coords2D[:,0]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00040">40</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
-
-</div>
-</div>
-<a id="a1e794b401d3ed6afdb8bf1dc07d50761"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e794b401d3ed6afdb8bf1dc07d50761">&#9670;&nbsp;</a></span>y2d</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">plotting.y2d = coords2D[:,1]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00041">41</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
@@ -298,7 +244,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceplotting.html">plotting</a></li>
-    <li class="footer">Generated on Wed May 26 2021 07:53:24 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 15:13:20 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
