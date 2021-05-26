@@ -1,0 +1,1447 @@
+\hypertarget{namespacebasis__functions}{}\doxysection{basis\+\_\+functions Module Reference}
+\label{namespacebasis__functions}\index{basis\_functions@{basis\_functions}}
+
+
+Wavefunction, hamiltonian and basis set choice.  
+
+
+\doxysubsection*{Data Types}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{interfacebasis__functions_1_1wave__function__interface}{wave\+\_\+function\+\_\+interface}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \mbox{\hyperlink{namespacebasis__functions_a2b1743e80170bccff87171f1695bf9a3}{initialise\+\_\+basis}} (n\+\_\+electrons\+\_\+in, n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom\+\_\+in, n\+\_\+atoms\+\_\+in, atom\+\_\+coords\+\_\+in, n\+\_\+\+Jastrow\+\_\+in, fd\+\_\+length\+\_\+in, Jastrow\+\_\+b\+\_\+length\+\_\+in, Jastrow\+\_\+d\+\_\+length\+\_\+in, proton\+\_\+numbers\+\_\+in, basis\+\_\+type\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Initialisation routine. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespacebasis__functions_a13ef39e7df0f40c27616e9719cef10dc}{deinitialise\+\_\+basis}}
+\begin{DoxyCompactList}\small\item\em Dinitialisation routine. \end{DoxyCompactList}\item 
+real(dp) function \mbox{\hyperlink{namespacebasis__functions_ac9aa926890ee9ca588ab8439095de68d}{wave\+\_\+function\+\_\+slater\+\_\+1s}} (position, dof\+\_\+coefficients)
+\begin{DoxyCompactList}\small\item\em Single Electron wavefunction\+: slater 1s basis. \end{DoxyCompactList}\item 
+real(dp) function \mbox{\hyperlink{namespacebasis__functions_a341dddb966f7d491ad3ffa90d862156f}{reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s}} (position, dof\+\_\+coefficients)
+\begin{DoxyCompactList}\small\item\em Single Electron Reduced Hamiltonian\+: slater 1s basis. \end{DoxyCompactList}\item 
+real(dp) function \mbox{\hyperlink{namespacebasis__functions_a3aa2ed47c325e9955b40da5b344fd31a}{discrete\+\_\+laplacian\+\_\+reduced}} (position, h, dofs)
+\begin{DoxyCompactList}\small\item\em Finite Difference Reduced Laplacian Computes finite difference approximation to the reduced laplacian \$(\textbackslash{}nabla$^\wedge$2\textbackslash{}psi)/\textbackslash{}psi\$. \end{DoxyCompactList}\item 
+real(dp) function \mbox{\hyperlink{namespacebasis__functions_a1f59f9576cb02ba4361bf7dc5046ce5d}{wave\+\_\+function\+\_\+2\+\_\+electrons}} (position, dof\+\_\+coefficients)
+\begin{DoxyCompactList}\small\item\em Wavefunction for 2 electrons. \end{DoxyCompactList}\item 
+real(dp) function \mbox{\hyperlink{namespacebasis__functions_acea41a868e0e1522cb6d3e3ed1b52d66}{reduced\+\_\+hamiltonian\+\_\+2\+\_\+electrons}} (position, dof\+\_\+coefficients)
+\begin{DoxyCompactList}\small\item\em Reduced Hamiltonian for 2 electrons. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespacebasis__functions_a0e84ba132fa13988d8882ae21a781832}{mno\+\_\+allocate}} (n\+\_\+terms)
+\begin{DoxyCompactList}\small\item\em Allocate parameters for Jastrow factor. \end{DoxyCompactList}\item 
+real(dp) function \mbox{\hyperlink{namespacebasis__functions_ad155a8bce0b153e59bfef25f0d7e6e1f}{log\+\_\+density}} (position, dof\+\_\+coefficients)
+\begin{DoxyCompactList}\small\item\em Log of the Probability Density. \end{DoxyCompactList}\item 
+real(dp) function \mbox{\hyperlink{namespacebasis__functions_acdeef21beca62feb10d5f5057e30c342}{wave\+\_\+function\+\_\+sto3g}} (position, dof\+\_\+coefficients)
+\begin{DoxyCompactList}\small\item\em Single Electron wavefunction\+: gaussian sto3g basis. \end{DoxyCompactList}\item 
+real(dp) function \mbox{\hyperlink{namespacebasis__functions_a6dd883f5d1f574a78c3266f0ce627eb8}{reduced\+\_\+hamiltonian\+\_\+sto3g}} (position, dof\+\_\+coefficients)
+\begin{DoxyCompactList}\small\item\em Single Electron Reduced Hamiltonian\+: gaussian sto3g basis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+procedure(\mbox{\hyperlink{interfacebasis__functions_1_1wave__function__interface}{wave\+\_\+function\+\_\+interface}}), pointer \mbox{\hyperlink{namespacebasis__functions_a5176e9e5598bd13047a4c720fbc37c50}{wave\+\_\+function}}
+\item 
+procedure(\mbox{\hyperlink{interfacebasis__functions_1_1wave__function__interface}{wave\+\_\+function\+\_\+interface}}), pointer \mbox{\hyperlink{namespacebasis__functions_ab9981898fc0fed9c10945781e26917b1}{reduced\+\_\+hamiltonian}}
+\item 
+logical, protected \mbox{\hyperlink{namespacebasis__functions_a33299211b5f4167aa20494965e6df6fe}{initialised}} = .false.
+\item 
+integer, protected \mbox{\hyperlink{namespacebasis__functions_ad4dfb3b99da7a98dfb63e70865a1ee29}{n\+\_\+electrons}}
+\item 
+integer, protected \mbox{\hyperlink{namespacebasis__functions_ac9fb7e7b9af3e057ec02a2feb7368b8e}{n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom}}
+\item 
+integer, protected \mbox{\hyperlink{namespacebasis__functions_a7a106093181d8f73b5757e18bed45354}{n\+\_\+atoms}}
+\item 
+real(dp), dimension(\+:,\+:), allocatable, protected \mbox{\hyperlink{namespacebasis__functions_ae2433e6f0971d508142a511c8d87c30b}{atom\+\_\+coords}}
+\item 
+integer, protected \mbox{\hyperlink{namespacebasis__functions_ac8eaad13ee1fa3799c55ff4fe1dc48b5}{n\+\_\+jastrow\+\_\+dofs}}
+\item 
+real(dp), protected \mbox{\hyperlink{namespacebasis__functions_ac8114bf21770f69fbbc228d14a9c2bf4}{fd\+\_\+h}}
+\item 
+real(dp), protected \mbox{\hyperlink{namespacebasis__functions_a981aa8fc3a64198138bccb0413dacc94}{b\+\_\+length}}
+\item 
+real(dp), protected \mbox{\hyperlink{namespacebasis__functions_a0f3a451d100c71d40dcfced3b16334e4}{d\+\_\+length}}
+\item 
+real(dp), dimension(\+:), allocatable, protected \mbox{\hyperlink{namespacebasis__functions_a7936f84f27dc052e58eb470bc220fb85}{proton\+\_\+numbers}}
+\item 
+integer, protected \mbox{\hyperlink{namespacebasis__functions_a9c148eb124b16f4ce8a5c822b7ef30f4}{basis\+\_\+type}}
+\item 
+integer, protected \mbox{\hyperlink{namespacebasis__functions_a79b525380de9887a3919e23b5fd03e75}{number\+\_\+dofs}}
+\item 
+integer, protected \mbox{\hyperlink{namespacebasis__functions_aa2e0cf4f62dc5afc6f91a283ba3f055e}{n\+\_\+space\+\_\+dims}}
+\item 
+real(dp), dimension(\+:,\+:), allocatable, protected \mbox{\hyperlink{namespacebasis__functions_ad4fc66a8a927069f6788785e3ade0ff3}{dof\+\_\+bounds}}
+\item 
+integer, protected \mbox{\hyperlink{namespacebasis__functions_a3fc655d1e5dbccbd5fa2598c80dcb673}{n\+\_\+dofs\+\_\+per\+\_\+atom}}
+\item 
+integer, protected \mbox{\hyperlink{namespacebasis__functions_a931089e272b9708ea78e4e84774e6491}{n\+\_\+dofs\+\_\+no\+\_\+jastrow}}
+\item 
+integer, dimension(\+:,\+:), allocatable, protected \mbox{\hyperlink{namespacebasis__functions_a6153b94101ca52c60301c014e8018cd3}{mno\+\_\+parameters}}
+\item 
+procedure(\mbox{\hyperlink{interfacebasis__functions_1_1wave__function__interface}{wave\+\_\+function\+\_\+interface}}), pointer \mbox{\hyperlink{namespacebasis__functions_a0c617d7a4f11173571c4e29000df9a1a}{wave\+\_\+function\+\_\+single}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wavefunction, hamiltonian and basis set choice. 
+
+This module contains functions that define the hamiltonian that specifies the problem and the basis set being used. Makes significant use of module variables defined in an initialisation subroutine. This allocates 2 function pointers using \mbox{\hyperlink{interfacebasis__functions_1_1wave__function__interface}{wave\+\_\+function\+\_\+interface}}
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{namespacebasis__functions_a5176e9e5598bd13047a4c720fbc37c50}{wave\+\_\+function}}
+\item \mbox{\hyperlink{namespacebasis__functions_ab9981898fc0fed9c10945781e26917b1}{reduced\+\_\+hamiltonian}} 
+\begin{DoxyParams}{Parameters}
+{\em position} & a real(dp) array of electron coordinates \\
+\hline
+{\em dof\+\_\+coefficients} & a real(dp) array of degree of freedom (dof) parameters These are the only functions that should be used outside of the module. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+\doxysubsection{Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{namespacebasis__functions_a13ef39e7df0f40c27616e9719cef10dc}\label{namespacebasis__functions_a13ef39e7df0f40c27616e9719cef10dc}} 
+\index{basis\_functions@{basis\_functions}!deinitialise\_basis@{deinitialise\_basis}}
+\index{deinitialise\_basis@{deinitialise\_basis}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{deinitialise\_basis()}{deinitialise\_basis()}}
+{\footnotesize\ttfamily subroutine basis\+\_\+functions\+::deinitialise\+\_\+basis}
+
+
+
+Dinitialisation routine. 
+
+M\+U\+ST be run at the end of main program to deallocate module variables. 
+
+Definition at line 261 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{261     \textcolor{keywordtype}{implicit none}}
+\DoxyCodeLine{262     \textcolor{keywordflow}{if} (initialised) \textcolor{keyword}{deallocate}(dof\_bounds,atom\_coords,proton\_numbers)}
+\DoxyCodeLine{263     \textcolor{keywordflow}{if} (\textcolor{keyword}{allocated}(mno\_parameters)) \textcolor{keyword}{deallocate}(mno\_parameters)}
+\DoxyCodeLine{264     initialised = .false.}
+
+\end{DoxyCode}
+
+
+References atom\+\_\+coords, dof\+\_\+bounds, initialised, mno\+\_\+parameters, and proton\+\_\+numbers.
+
+
+
+Referenced by main\+\_\+driver().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{namespacebasis__functions_a13ef39e7df0f40c27616e9719cef10dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacebasis__functions_a3aa2ed47c325e9955b40da5b344fd31a}\label{namespacebasis__functions_a3aa2ed47c325e9955b40da5b344fd31a}} 
+\index{basis\_functions@{basis\_functions}!discrete\_laplacian\_reduced@{discrete\_laplacian\_reduced}}
+\index{discrete\_laplacian\_reduced@{discrete\_laplacian\_reduced}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{discrete\_laplacian\_reduced()}{discrete\_laplacian\_reduced()}}
+{\footnotesize\ttfamily real(dp) function basis\+\_\+functions\+::discrete\+\_\+laplacian\+\_\+reduced (\begin{DoxyParamCaption}\item[{real(dp), dimension(\+:), intent(in)}]{position,  }\item[{real(dp), intent(in)}]{h,  }\item[{real(dp), dimension(\+:), intent(in)}]{dofs }\end{DoxyParamCaption})}
+
+
+
+Finite Difference Reduced Laplacian Computes finite difference approximation to the reduced laplacian \$(\textbackslash{}nabla$^\wedge$2\textbackslash{}psi)/\textbackslash{}psi\$. 
+
+Uses that \$f\textquotesingle{}\textquotesingle{}(x)/f(x) =((f(x+h)+f(x-\/h))/f(x)-\/2)/(h$^\wedge$2)+O(h$^\wedge$2)\$ ($\ast$) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Space coordinate of electrons \\
+\hline
+\mbox{\texttt{ in}}  & {\em h} & Finite difference lengthscale \\
+\hline
+\mbox{\texttt{ in}}  & {\em dofs} & Values of the dofs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 357 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{357     }
+\DoxyCodeLine{358     \textcolor{keywordtype}{implicit none}}
+\DoxyCodeLine{359 \textcolor{keywordtype}{    real}(dp) :: discrete\_Laplacian\_reduced}
+\DoxyCodeLine{361 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: position}
+\DoxyCodeLine{363 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{intent(in)} :: h }
+\DoxyCodeLine{365 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: dofs }
+\DoxyCodeLine{366     \textcolor{keywordtype}{integer} :: i \textcolor{comment}{! Loop variable}}
+\DoxyCodeLine{367 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:,:)}, \textcolor{keywordtype}{allocatable} :: delta \textcolor{comment}{! temporary array for vector displacements}}
+\DoxyCodeLine{368     }
+\DoxyCodeLine{369     \textcolor{comment}{! Initialise and bounds tests}}
+\DoxyCodeLine{370     \textcolor{keywordflow}{if} (.not.(initialised)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{371       print *, \textcolor{stringliteral}{"Error, basis not initialised"}}
+\DoxyCodeLine{372       stop}
+\DoxyCodeLine{373 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{374     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(position).ne.n\_space\_dims) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{375       print *, \textcolor{stringliteral}{"Error, wrong space dimension, got"}, \textcolor{keyword}{size}(position), \textcolor{stringliteral}{"wanted"}, n\_space\_dims}
+\DoxyCodeLine{376       stop}
+\DoxyCodeLine{377 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{378     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(dofs).ne.number\_dofs) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{379       print *, \textcolor{stringliteral}{"Error, wrong number of dofs, got"}, \textcolor{keyword}{size}(dofs), \textcolor{stringliteral}{"wanted"}, number\_dofs}
+\DoxyCodeLine{380       stop}
+\DoxyCodeLine{381 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{382     }
+\DoxyCodeLine{383     \textcolor{comment}{! Create matrix of cartesian basis vectors of length h. Set as 0 initially, h added during main loop}}
+\DoxyCodeLine{384     \textcolor{keyword}{allocate}(delta(n\_space\_dims,n\_space\_dims))}
+\DoxyCodeLine{385     delta = 0.0\_dp \textcolor{comment}{! Matrix assignment}}
+\DoxyCodeLine{386     discrete\_laplacian\_reduced = 0.0\_dp}
+\DoxyCodeLine{387     \textcolor{keywordflow}{do} i = 1, n\_space\_dims \textcolor{comment}{! Loop over space dimensions}}
+\DoxyCodeLine{388       delta(i,i) = h }
+\DoxyCodeLine{389       discrete\_laplacian\_reduced = discrete\_laplacian\_reduced \&}
+\DoxyCodeLine{390       \textcolor{comment}{! Following (*), sum of (f(x+h)+f(x-\/h)) in all space dimensions}}
+\DoxyCodeLine{391       + wave\_function(position + delta(:,i), dofs) + wave\_function(position -\/ delta(:,i), dofs)}
+\DoxyCodeLine{392 \textcolor{keywordflow}{    end do} }
+\DoxyCodeLine{393     \textcolor{comment}{! Following (*), divide by \$f(x)\$, and subtract 2 for each space dimension}}
+\DoxyCodeLine{394     discrete\_laplacian\_reduced = discrete\_laplacian\_reduced/wave\_function(position ,dofs) -\/ 2*n\_space\_dims}
+\DoxyCodeLine{395     \textcolor{comment}{! Following (*), divide by h\string^2}}
+\DoxyCodeLine{396     discrete\_laplacian\_reduced = discrete\_laplacian\_reduced/(h**2)}
+\DoxyCodeLine{397 }
+\DoxyCodeLine{398     \textcolor{comment}{! deallocate temporary array}}
+\DoxyCodeLine{399     \textcolor{keyword}{deallocate}(delta)}
+
+\end{DoxyCode}
+
+
+References initialised, n\+\_\+space\+\_\+dims, number\+\_\+dofs, and wave\+\_\+function.
+
+
+
+Referenced by reduced\+\_\+hamiltonian\+\_\+2\+\_\+electrons().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_a3aa2ed47c325e9955b40da5b344fd31a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacebasis__functions_a2b1743e80170bccff87171f1695bf9a3}\label{namespacebasis__functions_a2b1743e80170bccff87171f1695bf9a3}} 
+\index{basis\_functions@{basis\_functions}!initialise\_basis@{initialise\_basis}}
+\index{initialise\_basis@{initialise\_basis}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{initialise\_basis()}{initialise\_basis()}}
+{\footnotesize\ttfamily subroutine basis\+\_\+functions\+::initialise\+\_\+basis (\begin{DoxyParamCaption}\item[{integer, intent(in)}]{n\+\_\+electrons\+\_\+in,  }\item[{integer, intent(in)}]{n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom\+\_\+in,  }\item[{integer, intent(in)}]{n\+\_\+atoms\+\_\+in,  }\item[{real(dp), dimension(\+:,\+:), intent(in)}]{atom\+\_\+coords\+\_\+in,  }\item[{integer, intent(in), optional}]{n\+\_\+\+Jastrow\+\_\+in,  }\item[{real(dp), intent(in), optional}]{fd\+\_\+length\+\_\+in,  }\item[{real(dp), intent(in), optional}]{Jastrow\+\_\+b\+\_\+length\+\_\+in,  }\item[{real(dp), intent(in), optional}]{Jastrow\+\_\+d\+\_\+length\+\_\+in,  }\item[{real(dp), dimension(\+:), intent(in), optional}]{proton\+\_\+numbers\+\_\+in,  }\item[{integer, intent(in), optional}]{basis\+\_\+type\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+Initialisation routine. 
+
+Must be run at the start of the main program, after user input. This defines the problem and selects the basis being used. It allocates module variables and procedure pointers. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n\+\_\+electrons\+\_\+in} & Number of electrons \\
+\hline
+\mbox{\texttt{ in}}  & {\em n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom\+\_\+in} & Number of linear terms in the single-\/electron wavefunction per atom \\
+\hline
+\mbox{\texttt{ in}}  & {\em n\+\_\+atoms\+\_\+in} & Number of atoms \\
+\hline
+\mbox{\texttt{ in}}  & {\em atom\+\_\+coords\+\_\+in} & Coordinates of the atoms. Shape (3,n\+\_\+atoms) \\
+\hline
+\mbox{\texttt{ in}}  & {\em n\+\_\+jastrow\+\_\+in} & Number of dofs in the Jastrow (interaction) term \\
+\hline
+\mbox{\texttt{ in}}  & {\em fd\+\_\+length\+\_\+in} & Lengthscale of the finite difference code \\
+\hline
+\mbox{\texttt{ in}}  & {\em jastrow\+\_\+b\+\_\+length\+\_\+in} & Inverse lengthscale of nuclear-\/electron interaction \\
+\hline
+\mbox{\texttt{ in}}  & {\em jastrow\+\_\+d\+\_\+length\+\_\+in} & Inverse lengthscale of electron-\/electron interaction \\
+\hline
+\mbox{\texttt{ in}}  & {\em proton\+\_\+numbers\+\_\+in} & Proton Numbers of atoms \\
+\hline
+\mbox{\texttt{ in}}  & {\em basis\+\_\+type\+\_\+in} & integer code for type of basis. Codes are listed in shared\+\_\+constants.\+f90 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69     \textcolor{keywordtype}{implicit none}}
+\DoxyCodeLine{70     \textcolor{comment}{! Required Parameters}}
+\DoxyCodeLine{72     \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{intent(in)} :: n\_electrons\_in }
+\DoxyCodeLine{74     \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{intent(in)} :: n\_basis\_functions\_per\_atom\_in }
+\DoxyCodeLine{76     \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{intent(in)} :: n\_atoms\_in }
+\DoxyCodeLine{78 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:,:)}, \textcolor{keywordtype}{intent(in)} :: atom\_coords\_in }
+\DoxyCodeLine{79     \textcolor{comment}{! Optional Paramters}}
+\DoxyCodeLine{81     \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{optional}, \textcolor{keywordtype}{intent(in)} :: n\_Jastrow\_in }
+\DoxyCodeLine{83 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{optional}, \textcolor{keywordtype}{intent(in)} :: fd\_length\_in }
+\DoxyCodeLine{85 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{optional}, \textcolor{keywordtype}{intent(in)} :: Jastrow\_b\_length\_in}
+\DoxyCodeLine{87 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{optional}, \textcolor{keywordtype}{intent(in)} :: Jastrow\_d\_length\_in}
+\DoxyCodeLine{89 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{optional}, \textcolor{keywordtype}{intent(in)} :: proton\_numbers\_in }
+\DoxyCodeLine{91     \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{optional}, \textcolor{keywordtype}{intent(in)} :: basis\_type\_in }
+\DoxyCodeLine{92     \textcolor{comment}{! Internal Variables}}
+\DoxyCodeLine{93     \textcolor{keywordtype}{integer} :: i \textcolor{comment}{! Loop variable}}
+\DoxyCodeLine{94     \textcolor{keywordtype}{integer} :: n\_dofs\_per\_basis\_function \textcolor{comment}{! number of dofs per linear term of the wavefunction. Always 2 for slater and Gaussian}}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96     \textcolor{comment}{! Check not already initialised}}
+\DoxyCodeLine{97     \textcolor{keywordflow}{if} (initialised) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{98       print *, \textcolor{stringliteral}{"Error, cannot initialise basis twice"}}
+\DoxyCodeLine{99       stop}
+\DoxyCodeLine{100 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{101     }
+\DoxyCodeLine{102     \textcolor{comment}{! Check and allocate the atom coordinates}}
+\DoxyCodeLine{103     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(atom\_coords\_in,2) .ne. n\_atoms\_in ) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{104       print*,\textcolor{stringliteral}{"Error, wrong number of atoms"}}
+\DoxyCodeLine{105       stop}
+\DoxyCodeLine{106 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{107     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(atom\_coords\_in,1) .ne. 3 ) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{108       print*,\textcolor{stringliteral}{"Error, wrong dimension of atom coordinates"}}
+\DoxyCodeLine{109       stop}
+\DoxyCodeLine{110 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{111     \textcolor{keyword}{allocate}(atom\_coords(3,\textcolor{keyword}{size}(atom\_coords\_in,2)))}
+\DoxyCodeLine{112     atom\_coords = atom\_coords\_in}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114     \textcolor{comment}{! Check and assign other required inputs}}
+\DoxyCodeLine{115     \textcolor{keywordflow}{if} (n\_basis\_functions\_per\_atom\_in <= 0) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{116       print*,\textcolor{stringliteral}{"Error, number of basis functions per atom must be positive"}}
+\DoxyCodeLine{117       stop}
+\DoxyCodeLine{118 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{119     n\_basis\_functions\_per\_atom = n\_basis\_functions\_per\_atom\_in}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121     \textcolor{keywordflow}{if} ((n\_electrons\_in .ne. 1).and.(n\_electrons\_in .ne. 2)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{122       print*,\textcolor{stringliteral}{"Error, number of electrons must be 1 or 2"} }
+\DoxyCodeLine{123       stop}
+\DoxyCodeLine{124 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{125     n\_electrons = n\_electrons\_in}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127     n\_space\_dims = 3*n\_electrons}
+\DoxyCodeLine{128     }
+\DoxyCodeLine{129     \textcolor{keywordflow}{if} (n\_atoms\_in <= 0) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{130       print*,\textcolor{stringliteral}{"Error, number of basis functions per atom must be positive"}}
+\DoxyCodeLine{131       stop}
+\DoxyCodeLine{132 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{133     n\_atoms = n\_atoms\_in}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135     \textcolor{comment}{! Check and assign optional paramters}}
+\DoxyCodeLine{136     \textcolor{keywordflow}{if} (\textcolor{keyword}{present}(n\_jastrow\_in)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{137       n\_jastrow\_dofs = n\_jastrow\_in}
+\DoxyCodeLine{138     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{139       n\_jastrow\_dofs = 7 \textcolor{comment}{! Default Value}}
+\DoxyCodeLine{140 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     \textcolor{keywordflow}{if} (\textcolor{keyword}{present}(fd\_length\_in)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{143       \textcolor{keywordflow}{if} (fd\_length\_in>0.00009) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{144         fd\_h = fd\_length\_in}
+\DoxyCodeLine{145       \textcolor{keywordflow}{else} }
+\DoxyCodeLine{146         print*, \textcolor{stringliteral}{"Error, finite difference length must be at least 0.0001"}}
+\DoxyCodeLine{147         stop}
+\DoxyCodeLine{148 \textcolor{keywordflow}{      end if}}
+\DoxyCodeLine{149     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{150       fd\_h = 0.01\_dp \textcolor{comment}{! Default Value}}
+\DoxyCodeLine{151 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153     \textcolor{keywordflow}{if} (\textcolor{keyword}{present}(jastrow\_b\_length\_in)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{154       \textcolor{keywordflow}{if} (jastrow\_b\_length\_in>0.05) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{155         b\_length = jastrow\_b\_length\_in}
+\DoxyCodeLine{156       \textcolor{keywordflow}{else} }
+\DoxyCodeLine{157         print*, \textcolor{stringliteral}{"Error, Jastrow length must be positive"}}
+\DoxyCodeLine{158         stop}
+\DoxyCodeLine{159 \textcolor{keywordflow}{      end if}}
+\DoxyCodeLine{160     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{161       b\_length = 1.0\_dp \textcolor{comment}{! Default value}}
+\DoxyCodeLine{162 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164     \textcolor{keywordflow}{if} (\textcolor{keyword}{present}(jastrow\_d\_length\_in)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{165       \textcolor{keywordflow}{if} (jastrow\_d\_length\_in>0.05) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{166         d\_length = jastrow\_d\_length\_in}
+\DoxyCodeLine{167       \textcolor{keywordflow}{else} }
+\DoxyCodeLine{168         print*, \textcolor{stringliteral}{"Error, Jastrow length must be positive"}}
+\DoxyCodeLine{169         stop}
+\DoxyCodeLine{170 \textcolor{keywordflow}{      end if}}
+\DoxyCodeLine{171     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{172       d\_length = 1.0\_dp \textcolor{comment}{! Default value}}
+\DoxyCodeLine{173 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{174     \textcolor{keyword}{allocate}(proton\_numbers(n\_atoms))}
+\DoxyCodeLine{175     \textcolor{keywordflow}{if} (\textcolor{keyword}{present}(proton\_numbers\_in)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{176       \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(proton\_numbers\_in)==n\_atoms) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{177         proton\_numbers = proton\_numbers\_in}
+\DoxyCodeLine{178       \textcolor{keywordflow}{else} }
+\DoxyCodeLine{179         print*, \textcolor{stringliteral}{"Error, mismatch in number of atoms and proton numbers"}}
+\DoxyCodeLine{180         stop}
+\DoxyCodeLine{181 \textcolor{keywordflow}{      end if}}
+\DoxyCodeLine{182     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{183       proton\_numbers = 1.0\_dp \textcolor{comment}{! Default value is hydrogen}}
+\DoxyCodeLine{184 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186     \textcolor{keywordflow}{if}(\textcolor{keyword}{present}(basis\_type\_in)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{187       basis\_type = basis\_type\_in}
+\DoxyCodeLine{188     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{189       basis\_type = slater\_1s\_code \textcolor{comment}{!Default basis set}}
+\DoxyCodeLine{190 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192     \textcolor{comment}{! Assign individual electron wavefunction with input basis set}}
+\DoxyCodeLine{193     \textcolor{keywordflow}{select case}(basis\_type)}
+\DoxyCodeLine{194     \textcolor{keywordflow}{case} (slater\_1s\_code)}
+\DoxyCodeLine{195       wave\_function\_single => wave\_function\_slater\_1s}
+\DoxyCodeLine{196       reduced\_hamiltonian => reduced\_hamiltonian\_slater\_1s}
+\DoxyCodeLine{197     \textcolor{keywordflow}{case} (sto\_3g\_code)}
+\DoxyCodeLine{198       wave\_function\_single => wave\_function\_sto3g}
+\DoxyCodeLine{199       reduced\_hamiltonian => reduced\_hamiltonian\_sto3g}
+\DoxyCodeLine{200 \textcolor{keywordflow}{    case default} }
+\DoxyCodeLine{201       print *, \textcolor{stringliteral}{"Basis type not recognised"}}
+\DoxyCodeLine{202       stop}
+\DoxyCodeLine{203 \textcolor{keywordflow}{    end select}}
+\DoxyCodeLine{204     }
+\DoxyCodeLine{205     \textcolor{comment}{! Set number of dofs per basis function. This may change for future choices of basis sets}}
+\DoxyCodeLine{206     n\_dofs\_per\_basis\_function = 2}
+\DoxyCodeLine{207     n\_dofs\_per\_atom = n\_dofs\_per\_basis\_function * n\_basis\_functions\_per\_atom }
+\DoxyCodeLine{208     n\_dofs\_no\_jastrow = n\_dofs\_per\_atom * n\_atoms }
+\DoxyCodeLine{209 }
+\DoxyCodeLine{210     \textcolor{comment}{! Assignments for one electron, slater type orbital}}
+\DoxyCodeLine{211     \textcolor{keywordflow}{if} (n\_electrons\_in .eq. 1) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{212       }
+\DoxyCodeLine{213       number\_dofs = n\_dofs\_per\_atom * n\_atoms}
+\DoxyCodeLine{214       }
+\DoxyCodeLine{215       \textcolor{keyword}{allocate}(dof\_bounds(number\_dofs,2))}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217       \textcolor{comment}{! Assign dof bounds for single electron part}}
+\DoxyCodeLine{218       \textcolor{comment}{! Ordering here is for 2 dofs per basis function, in pairs, first linear dof then width dof}}
+\DoxyCodeLine{219       \textcolor{keywordflow}{do} i = 1, n\_basis\_functions\_per\_atom*n\_atoms \textcolor{comment}{! Loop over pairs of dofs}}
+\DoxyCodeLine{220           dof\_bounds(2*i-\/1,:)=[-\/1.5\_dp,1.5\_dp] \textcolor{comment}{! Linear coeffs defaults -\/1.5 to 1.5}}
+\DoxyCodeLine{221           dof\_bounds(2*i,:)=[0.1\_dp,1.5\_dp]   \textcolor{comment}{! width positive, up to 1.5 }}
+\DoxyCodeLine{222 \textcolor{keywordflow}{      end do}}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224       \textcolor{comment}{! Assign wave\_function pointer. Ham pointer already assigned}}
+\DoxyCodeLine{225       wave\_function => wave\_function\_single}
+\DoxyCodeLine{226 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228     \textcolor{comment}{! Assignments for 2 electrons, slater type orbital}}
+\DoxyCodeLine{229     \textcolor{keywordflow}{if} (n\_electrons\_in .eq. 2) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{230       }
+\DoxyCodeLine{231       \textcolor{comment}{! Allocate the mno parameters that determine the form of Jastrow term}}
+\DoxyCodeLine{232       \textcolor{keyword}{call }mno\_allocate(n\_jastrow\_dofs)}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234       number\_dofs = n\_dofs\_per\_atom * n\_atoms + n\_jastrow\_dofs}
+\DoxyCodeLine{235       }
+\DoxyCodeLine{236       \textcolor{keyword}{allocate}(dof\_bounds(number\_dofs,2))}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{238       \textcolor{comment}{! Assign dof bounds}}
+\DoxyCodeLine{239       \textcolor{comment}{! Ordering here is for 2 dofs per basis function, first linear cooef then width coeff}}
+\DoxyCodeLine{240       \textcolor{keywordflow}{do} i = 1,n\_basis\_functions\_per\_atom*n\_atoms \textcolor{comment}{! Loop over pairs of dofs}}
+\DoxyCodeLine{241           dof\_bounds(2*i-\/1,:)=[-\/1.5\_dp,1.5\_dp] \textcolor{comment}{! Linear coeffs bounds -\/1.5 to 1.5}}
+\DoxyCodeLine{242           dof\_bounds(2*i,:)=[0.1\_dp,1.5\_dp]   \textcolor{comment}{! width positive, up to 1.5 }}
+\DoxyCodeLine{243 \textcolor{keywordflow}{      end do}}
+\DoxyCodeLine{244       \textcolor{keywordflow}{if} (n\_jastrow\_dofs.ne.0) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{245         \textcolor{keywordflow}{do} i = n\_dofs\_per\_atom*n\_atoms+1, number\_dofs}
+\DoxyCodeLine{246           dof\_bounds(i,:) = [-\/1.5\_dp,1.5\_dp] \textcolor{comment}{! Jastrow dofs bounds -\/1.5 to 1.5}}
+\DoxyCodeLine{247 \textcolor{keywordflow}{        end do}}
+\DoxyCodeLine{248 \textcolor{keywordflow}{      end if}}
+\DoxyCodeLine{249       \textcolor{comment}{! Assign the procedure pointers}}
+\DoxyCodeLine{250       wave\_function => wave\_function\_2\_electrons}
+\DoxyCodeLine{251       reduced\_hamiltonian => reduced\_hamiltonian\_2\_electrons }
+\DoxyCodeLine{252 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254     \textcolor{comment}{! Set initialised flag, which is tested in the routines}}
+\DoxyCodeLine{255     initialised = .true.}
+
+\end{DoxyCode}
+
+
+References atom\+\_\+coords, b\+\_\+length, basis\+\_\+type, d\+\_\+length, dof\+\_\+bounds, fd\+\_\+h, initialised, mno\+\_\+allocate(), n\+\_\+atoms, n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom, n\+\_\+dofs\+\_\+no\+\_\+jastrow, n\+\_\+dofs\+\_\+per\+\_\+atom, n\+\_\+electrons, n\+\_\+jastrow\+\_\+dofs, n\+\_\+space\+\_\+dims, number\+\_\+dofs, proton\+\_\+numbers, reduced\+\_\+hamiltonian, reduced\+\_\+hamiltonian\+\_\+2\+\_\+electrons(), reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s(), reduced\+\_\+hamiltonian\+\_\+sto3g(), shared\+\_\+constants\+::slater\+\_\+1s\+\_\+code, shared\+\_\+constants\+::sto\+\_\+3g\+\_\+code, wave\+\_\+function, wave\+\_\+function\+\_\+2\+\_\+electrons(), wave\+\_\+function\+\_\+single, wave\+\_\+function\+\_\+slater\+\_\+1s(), and wave\+\_\+function\+\_\+sto3g().
+
+
+
+Referenced by main\+\_\+driver().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_a2b1743e80170bccff87171f1695bf9a3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{namespacebasis__functions_a2b1743e80170bccff87171f1695bf9a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacebasis__functions_ad155a8bce0b153e59bfef25f0d7e6e1f}\label{namespacebasis__functions_ad155a8bce0b153e59bfef25f0d7e6e1f}} 
+\index{basis\_functions@{basis\_functions}!log\_density@{log\_density}}
+\index{log\_density@{log\_density}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{log\_density()}{log\_density()}}
+{\footnotesize\ttfamily real(dp) function basis\+\_\+functions\+::log\+\_\+density (\begin{DoxyParamCaption}\item[{real(dp), dimension(\+:), intent(in)}]{position,  }\item[{real(dp), dimension(\+:), intent(in)}]{dof\+\_\+coefficients }\end{DoxyParamCaption})}
+
+
+
+Log of the Probability Density. 
+
+For the M\+C\+MC integration. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Space coordinate of electrons \\
+\hline
+\mbox{\texttt{ in}}  & {\em dof\+\_\+coefficients} & Values of the dofs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 524 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{524     \textcolor{keywordtype}{implicit none}}
+\DoxyCodeLine{525 \textcolor{keywordtype}{    real}(dp) :: log\_density}
+\DoxyCodeLine{527 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: position }
+\DoxyCodeLine{529 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: dof\_coefficients }
+\DoxyCodeLine{530     }
+\DoxyCodeLine{531     log\_density = 2*log(abs(wave\_function(position,dof\_coefficients)))}
+\DoxyCodeLine{532 }
+
+\end{DoxyCode}
+
+
+References wave\+\_\+function.
+
+
+
+Referenced by main\+\_\+driver().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{namespacebasis__functions_ad155a8bce0b153e59bfef25f0d7e6e1f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacebasis__functions_a0e84ba132fa13988d8882ae21a781832}\label{namespacebasis__functions_a0e84ba132fa13988d8882ae21a781832}} 
+\index{basis\_functions@{basis\_functions}!mno\_allocate@{mno\_allocate}}
+\index{mno\_allocate@{mno\_allocate}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{mno\_allocate()}{mno\_allocate()}}
+{\footnotesize\ttfamily subroutine basis\+\_\+functions\+::mno\+\_\+allocate (\begin{DoxyParamCaption}\item[{integer, intent(in)}]{n\+\_\+terms }\end{DoxyParamCaption})}
+
+
+
+Allocate parameters for Jastrow factor. 
+
+Allocates the paramters that determine type of Jastrow function. Sizes 0,3,7,9 supported. Functions are from Schmidt and Moskowitz 1990 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em n\+\_\+terms} & Number of terms in Jastrow correlation function \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 481 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{481     \textcolor{keywordtype}{implicit none}}
+\DoxyCodeLine{483     \textcolor{keywordtype}{integer},\textcolor{keywordtype}{intent(in)} :: n\_terms }
+\DoxyCodeLine{484     \textcolor{keywordflow}{select case} (n\_terms)}
+\DoxyCodeLine{485       \textcolor{keywordflow}{case} (0)}
+\DoxyCodeLine{486         n\_jastrow\_dofs = 0}
+\DoxyCodeLine{487       \textcolor{keywordflow}{case} (3)}
+\DoxyCodeLine{488         \textcolor{keyword}{allocate}(mno\_parameters(3,3))}
+\DoxyCodeLine{489         mno\_parameters(:,1) = [0,0,1]}
+\DoxyCodeLine{490         mno\_parameters(:,2) = [0,0,2]}
+\DoxyCodeLine{491         mno\_parameters(:,3) = [2,0,0]}
+\DoxyCodeLine{492         n\_jastrow\_dofs = 3}
+\DoxyCodeLine{493       \textcolor{keywordflow}{case} (7)}
+\DoxyCodeLine{494         \textcolor{keyword}{allocate}(mno\_parameters(3,7))}
+\DoxyCodeLine{495         mno\_parameters(:,1) = [0,0,1]}
+\DoxyCodeLine{496         mno\_parameters(:,2) = [0,0,2]}
+\DoxyCodeLine{497         mno\_parameters(:,3) = [0,0,3]}
+\DoxyCodeLine{498         mno\_parameters(:,4) = [0,0,4]}
+\DoxyCodeLine{499         mno\_parameters(:,5) = [2,0,0]}
+\DoxyCodeLine{500         mno\_parameters(:,6) = [3,0,0]}
+\DoxyCodeLine{501         mno\_parameters(:,7) = [4,0,0]}
+\DoxyCodeLine{502         n\_jastrow\_dofs = 7}
+\DoxyCodeLine{503       \textcolor{keywordflow}{case} (9)}
+\DoxyCodeLine{504         \textcolor{keyword}{allocate}(mno\_parameters(3,9))}
+\DoxyCodeLine{505         mno\_parameters(:,1) = [0,0,1]}
+\DoxyCodeLine{506         mno\_parameters(:,2) = [0,0,2]}
+\DoxyCodeLine{507         mno\_parameters(:,3) = [0,0,3]}
+\DoxyCodeLine{508         mno\_parameters(:,4) = [0,0,4]}
+\DoxyCodeLine{509         mno\_parameters(:,5) = [2,0,0]}
+\DoxyCodeLine{510         mno\_parameters(:,6) = [3,0,0]}
+\DoxyCodeLine{511         mno\_parameters(:,7) = [4,0,0]}
+\DoxyCodeLine{512         mno\_parameters(:,8) = [2,2,0]}
+\DoxyCodeLine{513         mno\_parameters(:,9) = [2,0,2]}
+\DoxyCodeLine{514         n\_jastrow\_dofs = 9}
+\DoxyCodeLine{515 \textcolor{keywordflow}{      case default} }
+\DoxyCodeLine{516         print *, \textcolor{stringliteral}{"Jastrow term of size:"}, n\_terms, \textcolor{stringliteral}{"not supported"}}
+\DoxyCodeLine{517         stop}
+\DoxyCodeLine{518 \textcolor{keywordflow}{    end select}}
+
+\end{DoxyCode}
+
+
+References mno\+\_\+parameters, and n\+\_\+jastrow\+\_\+dofs.
+
+
+
+Referenced by initialise\+\_\+basis().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_a0e84ba132fa13988d8882ae21a781832_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacebasis__functions_acea41a868e0e1522cb6d3e3ed1b52d66}\label{namespacebasis__functions_acea41a868e0e1522cb6d3e3ed1b52d66}} 
+\index{basis\_functions@{basis\_functions}!reduced\_hamiltonian\_2\_electrons@{reduced\_hamiltonian\_2\_electrons}}
+\index{reduced\_hamiltonian\_2\_electrons@{reduced\_hamiltonian\_2\_electrons}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{reduced\_hamiltonian\_2\_electrons()}{reduced\_hamiltonian\_2\_electrons()}}
+{\footnotesize\ttfamily real(dp) function basis\+\_\+functions\+::reduced\+\_\+hamiltonian\+\_\+2\+\_\+electrons (\begin{DoxyParamCaption}\item[{real(dp), dimension(\+:), intent(in)}]{position,  }\item[{real(dp), dimension(\+:), intent(in)}]{dof\+\_\+coefficients }\end{DoxyParamCaption})}
+
+
+
+Reduced Hamiltonian for 2 electrons. 
+
+Computes the reduced Hamiltonian \$(H\textbackslash{}psi)/\textbackslash{}psi\$ for 2 electrons. Uses discrete\+\_\+\+Laplacian\+\_\+reduced in this module. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Space coordinate of electrons \\
+\hline
+\mbox{\texttt{ in}}  & {\em dof\+\_\+coefficients} & Values of the dofs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 443 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{443     \textcolor{keywordtype}{implicit none}}
+\DoxyCodeLine{444 \textcolor{keywordtype}{    real}(dp) :: reduced\_hamiltonian\_2\_electrons}
+\DoxyCodeLine{446 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: position}
+\DoxyCodeLine{448 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: dof\_coefficients }
+\DoxyCodeLine{449     \textcolor{keywordtype}{integer} :: j \textcolor{comment}{! Loop variable}}
+\DoxyCodeLine{450     \textcolor{comment}{! Initialise and bounds tests}}
+\DoxyCodeLine{451     \textcolor{keywordflow}{if} (.not.(initialised)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{452       print *, \textcolor{stringliteral}{"Error, basis not initialised"}}
+\DoxyCodeLine{453       stop}
+\DoxyCodeLine{454 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{455     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(position).ne.n\_space\_dims) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{456       print *, \textcolor{stringliteral}{"Error, wrong space dimension, got"}, \textcolor{keyword}{size}(position), \textcolor{stringliteral}{"wanted"}, n\_space\_dims}
+\DoxyCodeLine{457       stop}
+\DoxyCodeLine{458 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{459     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(dof\_coefficients).ne.number\_dofs) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{460       print *, \textcolor{stringliteral}{"Error, wrong number of dofs, got"}, \textcolor{keyword}{size}(dof\_coefficients), \textcolor{stringliteral}{"wanted"}, number\_dofs}
+\DoxyCodeLine{461       stop}
+\DoxyCodeLine{462 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{463 }
+\DoxyCodeLine{464     \textcolor{comment}{! Reduced Kinetic energy and electron-\/electron reduced potential energy}}
+\DoxyCodeLine{465     \textcolor{comment}{! \$-\/0.5\(\backslash\)nabla\string^2\(\backslash\)psi\$ +1/r, r distance between electrons}}
+\DoxyCodeLine{466     reduced\_hamiltonian\_2\_electrons = -\/0.5\_dp*discrete\_laplacian\_reduced(position, fd\_h, dof\_coefficients) \&}
+\DoxyCodeLine{467       + 1.0\_dp /norm2(position(1:3)-\/position(4:6))}
+\DoxyCodeLine{468 }
+\DoxyCodeLine{469     \textcolor{comment}{! Reduced electron-\/nuclear potential energy, -\/1/r, r distance from electron to atom}}
+\DoxyCodeLine{470     \textcolor{keywordflow}{do} j = 1, n\_atoms \textcolor{comment}{! Loop over atoms}}
+\DoxyCodeLine{471       reduced\_hamiltonian\_2\_electrons  = reduced\_hamiltonian\_2\_electrons  \&}
+\DoxyCodeLine{472           -\/proton\_numbers(j) /norm2(position(1:3)-\/atom\_coords(:,j))\&}
+\DoxyCodeLine{473           -\/proton\_numbers(j) /norm2(position(4:6)-\/atom\_coords(:,j))}
+\DoxyCodeLine{474 \textcolor{keywordflow}{    end do}}
+
+\end{DoxyCode}
+
+
+References atom\+\_\+coords, discrete\+\_\+laplacian\+\_\+reduced(), fd\+\_\+h, initialised, n\+\_\+atoms, n\+\_\+space\+\_\+dims, number\+\_\+dofs, and proton\+\_\+numbers.
+
+
+
+Referenced by initialise\+\_\+basis().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_acea41a868e0e1522cb6d3e3ed1b52d66_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_acea41a868e0e1522cb6d3e3ed1b52d66_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacebasis__functions_a341dddb966f7d491ad3ffa90d862156f}\label{namespacebasis__functions_a341dddb966f7d491ad3ffa90d862156f}} 
+\index{basis\_functions@{basis\_functions}!reduced\_hamiltonian\_slater\_1s@{reduced\_hamiltonian\_slater\_1s}}
+\index{reduced\_hamiltonian\_slater\_1s@{reduced\_hamiltonian\_slater\_1s}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{reduced\_hamiltonian\_slater\_1s()}{reduced\_hamiltonian\_slater\_1s()}}
+{\footnotesize\ttfamily real(dp) function basis\+\_\+functions\+::reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s (\begin{DoxyParamCaption}\item[{real(dp), dimension(\+:), intent(in)}]{position,  }\item[{real(dp), dimension(\+:), intent(in)}]{dof\+\_\+coefficients }\end{DoxyParamCaption})}
+
+
+
+Single Electron Reduced Hamiltonian\+: slater 1s basis. 
+
+Reduced Hamiltonian \$(H\textbackslash{}psi)/\textbackslash{}psi\$ for 1 electron, with slater 1s type orbital Uses centered\+\_\+slater\+\_\+1s\+\_\+laplacian in \mbox{\hyperlink{component__functions_8f90}{component\+\_\+functions.\+f90}} Used only for 1 electron problems. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Space coordinate of electrons \\
+\hline
+\mbox{\texttt{ in}}  & {\em dof\+\_\+coefficients} & Values of the dofs \\
+\hline
+\end{DoxyParams}
+loop over atoms
+
+loop over linear terms in wavefunction
+
+Definition at line 309 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{309     \textcolor{keywordtype}{implicit none}}
+\DoxyCodeLine{310 \textcolor{keywordtype}{    real}(dp) :: reduced\_hamiltonian\_slater\_1s}
+\DoxyCodeLine{312 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: position }
+\DoxyCodeLine{314 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: dof\_coefficients }
+\DoxyCodeLine{315     \textcolor{keywordtype}{integer} :: i, j \textcolor{comment}{! Loop variables}}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{317     \textcolor{comment}{! Initialise and bounds tests}}
+\DoxyCodeLine{318     \textcolor{keywordflow}{if} (.not.(initialised)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{319       print *, \textcolor{stringliteral}{"Error, basis not initialised"}}
+\DoxyCodeLine{320       stop}
+\DoxyCodeLine{321 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{322     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(position).ne.n\_space\_dims) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{323       print *, \textcolor{stringliteral}{"Error, wrong space dimension, got"}, \textcolor{keyword}{size}(position), \textcolor{stringliteral}{"wanted"}, n\_space\_dims}
+\DoxyCodeLine{324       stop}
+\DoxyCodeLine{325 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{326     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(dof\_coefficients).ne.number\_dofs) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{327       print *, \textcolor{stringliteral}{"Error, wrong number of dofs, got"}, \textcolor{keyword}{size}(dof\_coefficients), \textcolor{stringliteral}{"wanted"}, number\_dofs}
+\DoxyCodeLine{328       stop}
+\DoxyCodeLine{329 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{330   }
+\DoxyCodeLine{331     reduced\_hamiltonian\_slater\_1s = 0.0\_dp}
+\DoxyCodeLine{332     \textcolor{comment}{! Kinetic energy term \$-\/0.5\(\backslash\)nabla\string^2\(\backslash\)psi\$}}
+\DoxyCodeLine{333     \textcolor{comment}{! This wavefunction is linear, and it is easy to compute this analytically}}
+\DoxyCodeLine{334     \textcolor{keywordflow}{do} j = 0, n\_atoms-\/1}
+\DoxyCodeLine{335       \textcolor{keywordflow}{do} i= 1,n\_basis\_functions\_per\_atom}
+\DoxyCodeLine{336         reduced\_hamiltonian\_slater\_1s = reduced\_hamiltonian\_slater\_1s \&}
+\DoxyCodeLine{337           -\/0.5\_dp * dof\_coefficients( 2*i-\/1 +j*n\_dofs\_per\_atom) \& \textcolor{comment}{! linear coefficient dof}}
+\DoxyCodeLine{338             *centered\_slater\_1s\_laplacian(position-\/atom\_coords(:,j+1), \& \textcolor{comment}{! position relative to atom}}
+\DoxyCodeLine{339               dof\_coefficients( 2*i +j*n\_dofs\_per\_atom ) ) \textcolor{comment}{! lengthscale dof}}
+\DoxyCodeLine{340 \textcolor{keywordflow}{      end do}}
+\DoxyCodeLine{341 \textcolor{keywordflow}{    end do}}
+\DoxyCodeLine{342     \textcolor{comment}{! Divide by the wavefunction to get reduced laplacian \$(-\/0.5\(\backslash\)nabla\string^2\(\backslash\)psi)/\(\backslash\)psi\$}}
+\DoxyCodeLine{343     reduced\_hamiltonian\_slater\_1s = reduced\_hamiltonian\_slater\_1s/wave\_function\_slater\_1s(position,dof\_coefficients)}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345     \textcolor{comment}{! Potential energy, already reduced, so no wavefunction in this}}
+\DoxyCodeLine{346     \textcolor{keywordflow}{do} j = 1, n\_atoms \textcolor{comment}{! loop over atoms}}
+\DoxyCodeLine{347     reduced\_hamiltonian\_slater\_1s = reduced\_hamiltonian\_slater\_1s \&}
+\DoxyCodeLine{348       -\/proton\_numbers(j) /norm2(position-\/atom\_coords(:,j)) \textcolor{comment}{! -\/1/r, r distance from electron to atom}}
+\DoxyCodeLine{349 \textcolor{keywordflow}{    end do}}
+\DoxyCodeLine{350     }
+
+\end{DoxyCode}
+
+
+References atom\+\_\+coords, component\+\_\+functions\+::centered\+\_\+slater\+\_\+1s\+\_\+laplacian(), initialised, n\+\_\+atoms, n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom, n\+\_\+dofs\+\_\+per\+\_\+atom, n\+\_\+space\+\_\+dims, number\+\_\+dofs, proton\+\_\+numbers, and wave\+\_\+function\+\_\+slater\+\_\+1s().
+
+
+
+Referenced by initialise\+\_\+basis().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_a341dddb966f7d491ad3ffa90d862156f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_a341dddb966f7d491ad3ffa90d862156f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacebasis__functions_a6dd883f5d1f574a78c3266f0ce627eb8}\label{namespacebasis__functions_a6dd883f5d1f574a78c3266f0ce627eb8}} 
+\index{basis\_functions@{basis\_functions}!reduced\_hamiltonian\_sto3g@{reduced\_hamiltonian\_sto3g}}
+\index{reduced\_hamiltonian\_sto3g@{reduced\_hamiltonian\_sto3g}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{reduced\_hamiltonian\_sto3g()}{reduced\_hamiltonian\_sto3g()}}
+{\footnotesize\ttfamily real(dp) function basis\+\_\+functions\+::reduced\+\_\+hamiltonian\+\_\+sto3g (\begin{DoxyParamCaption}\item[{real(dp), dimension(\+:), intent(in)}]{position,  }\item[{real(dp), dimension(\+:), intent(in)}]{dof\+\_\+coefficients }\end{DoxyParamCaption})}
+
+
+
+Single Electron Reduced Hamiltonian\+: gaussian sto3g basis. 
+
+Reduced Hamiltonian \$(H\textbackslash{}psi)/\textbackslash{}psi\$ for 1 electron, with basic gaussian sto3g type orbital Uses centered\+\_\+gaussian\+\_\+laplacian in \mbox{\hyperlink{component__functions_8f90}{component\+\_\+functions.\+f90}} Used only for 1 electron problems. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Space coordinate of electrons \\
+\hline
+\mbox{\texttt{ in}}  & {\em dof\+\_\+coefficients} & Values of the dofs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 578 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{578     \textcolor{keywordtype}{implicit none}}
+\DoxyCodeLine{579 \textcolor{keywordtype}{    real}(dp) :: reduced\_hamiltonian\_sto3g}
+\DoxyCodeLine{581 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: position }
+\DoxyCodeLine{583 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: dof\_coefficients }
+\DoxyCodeLine{584     \textcolor{keywordtype}{integer} :: i, j \textcolor{comment}{! Loop variables}}
+\DoxyCodeLine{585 }
+\DoxyCodeLine{586     \textcolor{comment}{! Initialise and bounds tests}}
+\DoxyCodeLine{587     \textcolor{keywordflow}{if} (.not.(initialised)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{588       print *, \textcolor{stringliteral}{"Error, basis not initialised"}}
+\DoxyCodeLine{589       stop}
+\DoxyCodeLine{590 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{591     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(position).ne.n\_space\_dims) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{592       print *, \textcolor{stringliteral}{"Error, wrong space dimension, got"}, \textcolor{keyword}{size}(position), \textcolor{stringliteral}{"wanted"}, n\_space\_dims}
+\DoxyCodeLine{593       stop}
+\DoxyCodeLine{594 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{595     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(dof\_coefficients).ne.number\_dofs) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{596       print *, \textcolor{stringliteral}{"Error, wrong number of dofs, got"}, \textcolor{keyword}{size}(dof\_coefficients), \textcolor{stringliteral}{"wanted"}, number\_dofs}
+\DoxyCodeLine{597       stop}
+\DoxyCodeLine{598 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{599   }
+\DoxyCodeLine{600     reduced\_hamiltonian\_sto3g = 0.0\_dp}
+\DoxyCodeLine{601     \textcolor{comment}{! Kinetic energy term \$-\/0.5\(\backslash\)nabla\string^2\(\backslash\)psi\$}}
+\DoxyCodeLine{602     \textcolor{comment}{! This wavefunction is linear, and it is easy to compute this analytically}}
+\DoxyCodeLine{603     \textcolor{keywordflow}{do} j = 0, n\_atoms-\/1 \textcolor{comment}{! loop over atoms}}
+\DoxyCodeLine{604       \textcolor{keywordflow}{do} i= 1,n\_basis\_functions\_per\_atom \textcolor{comment}{! loop over linear terms in wavefunction}}
+\DoxyCodeLine{605         reduced\_hamiltonian\_sto3g = reduced\_hamiltonian\_sto3g \&}
+\DoxyCodeLine{606           -\/0.5\_dp * dof\_coefficients( 2*i-\/1 +j*n\_dofs\_per\_atom) \& \textcolor{comment}{! linear coefficient dof}}
+\DoxyCodeLine{607             *centered\_gaussian\_laplacian(position-\/atom\_coords(:,j+1), \& \textcolor{comment}{! position relative to atom}}
+\DoxyCodeLine{608               dof\_coefficients( 2*i +j*n\_dofs\_per\_atom ) ) \textcolor{comment}{! lengthscale dof}}
+\DoxyCodeLine{609 \textcolor{keywordflow}{      end do}}
+\DoxyCodeLine{610 \textcolor{keywordflow}{    end do}}
+\DoxyCodeLine{611     \textcolor{comment}{! Divide by the wavefunction to get reduced laplacian \$(-\/0.5\(\backslash\)nabla\string^2\(\backslash\)psi)/\(\backslash\)psi\$}}
+\DoxyCodeLine{612     reduced\_hamiltonian\_sto3g = reduced\_hamiltonian\_sto3g/wave\_function\_sto3g(position,dof\_coefficients)}
+\DoxyCodeLine{613 }
+\DoxyCodeLine{614     \textcolor{comment}{! Potential energy, already reduced, so no wavefunction in this}}
+\DoxyCodeLine{615     \textcolor{keywordflow}{do} j = 0, n\_atoms-\/1 \textcolor{comment}{! loop over atoms}}
+\DoxyCodeLine{616       reduced\_hamiltonian\_sto3g = reduced\_hamiltonian\_sto3g \&}
+\DoxyCodeLine{617       -\/1.0\_dp /norm2(position-\/atom\_coords(:,j+1)) \textcolor{comment}{!-\/1/r, r distance from electron to atom}}
+\DoxyCodeLine{618 \textcolor{keywordflow}{    end do}}
+\DoxyCodeLine{619     }
+
+\end{DoxyCode}
+
+
+References atom\+\_\+coords, component\+\_\+functions\+::centered\+\_\+gaussian\+\_\+laplacian(), initialised, n\+\_\+atoms, n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom, n\+\_\+dofs\+\_\+per\+\_\+atom, n\+\_\+space\+\_\+dims, number\+\_\+dofs, and wave\+\_\+function\+\_\+sto3g().
+
+
+
+Referenced by initialise\+\_\+basis().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_a6dd883f5d1f574a78c3266f0ce627eb8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_a6dd883f5d1f574a78c3266f0ce627eb8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacebasis__functions_a1f59f9576cb02ba4361bf7dc5046ce5d}\label{namespacebasis__functions_a1f59f9576cb02ba4361bf7dc5046ce5d}} 
+\index{basis\_functions@{basis\_functions}!wave\_function\_2\_electrons@{wave\_function\_2\_electrons}}
+\index{wave\_function\_2\_electrons@{wave\_function\_2\_electrons}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{wave\_function\_2\_electrons()}{wave\_function\_2\_electrons()}}
+{\footnotesize\ttfamily real(dp) function basis\+\_\+functions\+::wave\+\_\+function\+\_\+2\+\_\+electrons (\begin{DoxyParamCaption}\item[{real(dp), dimension(\+:), intent(in)}]{position,  }\item[{real(dp), dimension(\+:), intent(in)}]{dof\+\_\+coefficients }\end{DoxyParamCaption})}
+
+
+
+Wavefunction for 2 electrons. 
+
+Uses subprocedure correlation\+\_\+function in \mbox{\hyperlink{component__functions_8f90}{component\+\_\+functions.\+f90}} Uses the function pointer \mbox{\hyperlink{namespacebasis__functions_a0c617d7a4f11173571c4e29000df9a1a}{wave\+\_\+function\+\_\+single}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Space coordinate of electrons \\
+\hline
+\mbox{\texttt{ in}}  & {\em dof\+\_\+coefficients} & Values of the dofs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 406 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{406     \textcolor{keywordtype}{implicit none}}
+\DoxyCodeLine{407 \textcolor{keywordtype}{    real}(dp) :: wave\_function\_2\_electrons}
+\DoxyCodeLine{409 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: position }
+\DoxyCodeLine{411 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: dof\_coefficients }
+\DoxyCodeLine{412     \textcolor{comment}{! Initialise and bounds tests}}
+\DoxyCodeLine{413     \textcolor{keywordflow}{if} (.not.(initialised)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{414       print *, \textcolor{stringliteral}{"Error, basis not initialised"}}
+\DoxyCodeLine{415       stop}
+\DoxyCodeLine{416 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{417     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(position).ne.n\_space\_dims) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{418       print *, \textcolor{stringliteral}{"Error, wrong space dimension, got"}, \textcolor{keyword}{size}(position), \textcolor{stringliteral}{"wanted"}, n\_space\_dims}
+\DoxyCodeLine{419       stop}
+\DoxyCodeLine{420 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{421     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(dof\_coefficients).ne.number\_dofs) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{422       print *, \textcolor{stringliteral}{"Error, wrong number of dofs, got"}, \textcolor{keyword}{size}(dof\_coefficients), \textcolor{stringliteral}{"wanted"}, number\_dofs}
+\DoxyCodeLine{423       stop}
+\DoxyCodeLine{424 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{425 }
+\DoxyCodeLine{426     \textcolor{comment}{! Slater determinant (trivial for 2 electron spin up/down pair)}}
+\DoxyCodeLine{427     \textcolor{comment}{! position(1:3) is coords of first electron, (4:6) is the second. dof(:n\_no\_jastrow) are the relevant dofs}}
+\DoxyCodeLine{428     wave\_function\_2\_electrons = wave\_function\_single(position(1:3),dof\_coefficients(:n\_dofs\_no\_jastrow))\&}
+\DoxyCodeLine{429     * wave\_function\_single(position(4:6),dof\_coefficients(:n\_dofs\_no\_jastrow))}
+\DoxyCodeLine{430     }
+\DoxyCodeLine{431     \textcolor{comment}{! Multiply by correlation function. This is the Jastrow term. dof(n\_dofs\_no\_Jastrow+1:) are relevant terms}}
+\DoxyCodeLine{432     \textcolor{keywordflow}{if} (n\_jastrow\_dofs.ne.0) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{433     wave\_function\_2\_electrons = \&}
+\DoxyCodeLine{434       correlation\_function(atom\_coords,position,mno\_parameters,dof\_coefficients(n\_dofs\_no\_jastrow+1:),\&}
+\DoxyCodeLine{435       b\_length,d\_length)*wave\_function\_2\_electrons}
+\DoxyCodeLine{436 \textcolor{keywordflow}{    end if}}
+
+\end{DoxyCode}
+
+
+References atom\+\_\+coords, b\+\_\+length, component\+\_\+functions\+::correlation\+\_\+function(), d\+\_\+length, initialised, mno\+\_\+parameters, n\+\_\+dofs\+\_\+no\+\_\+jastrow, n\+\_\+jastrow\+\_\+dofs, n\+\_\+space\+\_\+dims, number\+\_\+dofs, and wave\+\_\+function\+\_\+single.
+
+
+
+Referenced by initialise\+\_\+basis().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_a1f59f9576cb02ba4361bf7dc5046ce5d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_a1f59f9576cb02ba4361bf7dc5046ce5d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacebasis__functions_ac9aa926890ee9ca588ab8439095de68d}\label{namespacebasis__functions_ac9aa926890ee9ca588ab8439095de68d}} 
+\index{basis\_functions@{basis\_functions}!wave\_function\_slater\_1s@{wave\_function\_slater\_1s}}
+\index{wave\_function\_slater\_1s@{wave\_function\_slater\_1s}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{wave\_function\_slater\_1s()}{wave\_function\_slater\_1s()}}
+{\footnotesize\ttfamily real(dp) function basis\+\_\+functions\+::wave\+\_\+function\+\_\+slater\+\_\+1s (\begin{DoxyParamCaption}\item[{real(dp), dimension(\+:), intent(in)}]{position,  }\item[{real(dp), dimension(\+:), intent(in)}]{dof\+\_\+coefficients }\end{DoxyParamCaption})}
+
+
+
+Single Electron wavefunction\+: slater 1s basis. 
+
+Uses centered\+\_\+slater\+\_\+1s in \mbox{\hyperlink{component__functions_8f90}{component\+\_\+functions.\+f90}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Space coordinate of electron \\
+\hline
+\mbox{\texttt{ in}}  & {\em dof\+\_\+coefficients} & Values of the dofs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 270 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{270     \textcolor{keywordtype}{implicit none}}
+\DoxyCodeLine{271 \textcolor{keywordtype}{    real}(dp) :: wave\_function\_slater\_1s}
+\DoxyCodeLine{273 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: position }
+\DoxyCodeLine{275 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: dof\_coefficients }
+\DoxyCodeLine{276     \textcolor{keywordtype}{integer} :: i, j \textcolor{comment}{! loop variables}}
+\DoxyCodeLine{277     \textcolor{comment}{! Initialise and bounds tests}}
+\DoxyCodeLine{278     \textcolor{keywordflow}{if} (.not.(initialised)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{279       print *, \textcolor{stringliteral}{"Error, basis not initialised"}}
+\DoxyCodeLine{280       stop}
+\DoxyCodeLine{281 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{282     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(position).ne.3) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{283       print *, \textcolor{stringliteral}{"Error, wrong space dimension, got"}, \textcolor{keyword}{size}(position), \textcolor{stringliteral}{"wanted 3"}}
+\DoxyCodeLine{284       stop}
+\DoxyCodeLine{285 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{286     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(dof\_coefficients).ne.n\_dofs\_no\_jastrow) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{287       print *, \textcolor{stringliteral}{"Error, wrong number of dofs, got"}, \textcolor{keyword}{size}(dof\_coefficients), \textcolor{stringliteral}{"wanted"}, n\_dofs\_no\_jastrow}
+\DoxyCodeLine{288       stop}
+\DoxyCodeLine{289 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{290     }
+\DoxyCodeLine{291     \textcolor{comment}{! Wavefunction is sum over linear terms with 2 dofs each -\/ a linear coefficient and a lengthscale}}
+\DoxyCodeLine{292     wave\_function\_slater\_1s = 0.0\_dp }
+\DoxyCodeLine{293     \textcolor{keywordflow}{do} j = 0, n\_atoms-\/1 \textcolor{comment}{! loop over atoms}}
+\DoxyCodeLine{294       \textcolor{keywordflow}{do} i= 1, n\_basis\_functions\_per\_atom \textcolor{comment}{! loop over linear terms in wavefunction}}
+\DoxyCodeLine{295         wave\_function\_slater\_1s = wave\_function\_slater\_1s + \&}
+\DoxyCodeLine{296           dof\_coefficients( 2*i-\/1 + j*n\_dofs\_per\_atom )\& \textcolor{comment}{! linear coefficient dof}}
+\DoxyCodeLine{297             *centered\_slater\_1s(position-\/atom\_coords(:,j+1), \& \textcolor{comment}{! position relative to atom}}
+\DoxyCodeLine{298               dof\_coefficients( 2*i + j*n\_dofs\_per\_atom  ) ) \textcolor{comment}{! lengthscale dof}}
+\DoxyCodeLine{299 \textcolor{keywordflow}{      end do}}
+\DoxyCodeLine{300 \textcolor{keywordflow}{    end do}}
+\DoxyCodeLine{301    }
+
+\end{DoxyCode}
+
+
+References atom\+\_\+coords, component\+\_\+functions\+::centered\+\_\+slater\+\_\+1s(), initialised, n\+\_\+atoms, n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom, n\+\_\+dofs\+\_\+no\+\_\+jastrow, and n\+\_\+dofs\+\_\+per\+\_\+atom.
+
+
+
+Referenced by initialise\+\_\+basis(), and reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_ac9aa926890ee9ca588ab8439095de68d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_ac9aa926890ee9ca588ab8439095de68d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespacebasis__functions_acdeef21beca62feb10d5f5057e30c342}\label{namespacebasis__functions_acdeef21beca62feb10d5f5057e30c342}} 
+\index{basis\_functions@{basis\_functions}!wave\_function\_sto3g@{wave\_function\_sto3g}}
+\index{wave\_function\_sto3g@{wave\_function\_sto3g}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{wave\_function\_sto3g()}{wave\_function\_sto3g()}}
+{\footnotesize\ttfamily real(dp) function basis\+\_\+functions\+::wave\+\_\+function\+\_\+sto3g (\begin{DoxyParamCaption}\item[{real(dp), dimension(\+:), intent(in)}]{position,  }\item[{real(dp), dimension(\+:), intent(in)}]{dof\+\_\+coefficients }\end{DoxyParamCaption})}
+
+
+
+Single Electron wavefunction\+: gaussian sto3g basis. 
+
+Uses centered\+\_\+gaussian in \mbox{\hyperlink{component__functions_8f90}{component\+\_\+functions.\+f90}} 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & Space coordinate of electron \\
+\hline
+\mbox{\texttt{ in}}  & {\em dof\+\_\+coefficients} & Values of the dofs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 538 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{538     \textcolor{keywordtype}{implicit none}}
+\DoxyCodeLine{539 \textcolor{keywordtype}{    real}(dp) :: wave\_function\_sto3g}
+\DoxyCodeLine{541 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: position }
+\DoxyCodeLine{543 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: dof\_coefficients }
+\DoxyCodeLine{544 }
+\DoxyCodeLine{545     \textcolor{keywordtype}{integer} :: i, j \textcolor{comment}{! loop variables}}
+\DoxyCodeLine{546     \textcolor{comment}{! Initialise and bounds tests}}
+\DoxyCodeLine{547     \textcolor{keywordflow}{if} (.not.(initialised)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{548       print *, \textcolor{stringliteral}{"Error, basis not initialised"}}
+\DoxyCodeLine{549       stop}
+\DoxyCodeLine{550 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{551     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(position).ne.3) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{552       print *, \textcolor{stringliteral}{"Error, wrong space dimension, got"}, \textcolor{keyword}{size}(position), \textcolor{stringliteral}{"wanted 3"}}
+\DoxyCodeLine{553       stop}
+\DoxyCodeLine{554 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{555     \textcolor{keywordflow}{if} (\textcolor{keyword}{size}(dof\_coefficients).ne.n\_dofs\_no\_jastrow) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{556       print *, \textcolor{stringliteral}{"Error, wrong number of dofs, got"}, \textcolor{keyword}{size}(dof\_coefficients), \textcolor{stringliteral}{"wanted"}, n\_dofs\_no\_jastrow}
+\DoxyCodeLine{557       stop}
+\DoxyCodeLine{558 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{559     }
+\DoxyCodeLine{560     \textcolor{comment}{! Wavefunction is sum over linear terms with 2 dofs each -\/ a linear coefficient and a lengthscale}}
+\DoxyCodeLine{561     wave\_function\_sto3g = 0.0\_dp }
+\DoxyCodeLine{562     \textcolor{keywordflow}{do} j = 0, n\_atoms-\/1 \textcolor{comment}{! loop over atoms}}
+\DoxyCodeLine{563       \textcolor{keywordflow}{do} i= 1, n\_basis\_functions\_per\_atom \textcolor{comment}{! loop over linear terms in wavefunction}}
+\DoxyCodeLine{564         wave\_function\_sto3g = wave\_function\_sto3g + \&}
+\DoxyCodeLine{565           dof\_coefficients( 2*i-\/1 + j*n\_dofs\_per\_atom )\& \textcolor{comment}{! linear coefficient dof}}
+\DoxyCodeLine{566             *centered\_gaussian(position-\/atom\_coords(:,j+1), \& \textcolor{comment}{! position relative to atom}}
+\DoxyCodeLine{567               dof\_coefficients( 2*i + j*n\_dofs\_per\_atom  ) ) \textcolor{comment}{! lengthscale dof}}
+\DoxyCodeLine{568 \textcolor{keywordflow}{      end do}}
+\DoxyCodeLine{569 \textcolor{keywordflow}{    end do}}
+\DoxyCodeLine{570    }
+
+\end{DoxyCode}
+
+
+References atom\+\_\+coords, component\+\_\+functions\+::centered\+\_\+gaussian(), initialised, n\+\_\+atoms, n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom, n\+\_\+dofs\+\_\+no\+\_\+jastrow, and n\+\_\+dofs\+\_\+per\+\_\+atom.
+
+
+
+Referenced by initialise\+\_\+basis(), and reduced\+\_\+hamiltonian\+\_\+sto3g().
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_acdeef21beca62feb10d5f5057e30c342_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespacebasis__functions_acdeef21beca62feb10d5f5057e30c342_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacebasis__functions_ae2433e6f0971d508142a511c8d87c30b}\label{namespacebasis__functions_ae2433e6f0971d508142a511c8d87c30b}} 
+\index{basis\_functions@{basis\_functions}!atom\_coords@{atom\_coords}}
+\index{atom\_coords@{atom\_coords}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{atom\_coords}{atom\_coords}}
+{\footnotesize\ttfamily real(dp), dimension(\+:,\+:), allocatable, protected basis\+\_\+functions\+::atom\+\_\+coords}
+
+
+
+Definition at line 42 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42 \textcolor{keywordtype}{  real}(dp), \textcolor{keywordtype}{protected}, \textcolor{keywordtype}{allocatable}, \textcolor{keywordtype}{dimension(:,:)} :: atom\_coords \textcolor{comment}{! Coordinates of the atoms. Shape (3,n\_atoms)}}
+
+\end{DoxyCode}
+
+
+Referenced by deinitialise\+\_\+basis(), initialise\+\_\+basis(), reduced\+\_\+hamiltonian\+\_\+2\+\_\+electrons(), reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s(), reduced\+\_\+hamiltonian\+\_\+sto3g(), wave\+\_\+function\+\_\+2\+\_\+electrons(), wave\+\_\+function\+\_\+slater\+\_\+1s(), and wave\+\_\+function\+\_\+sto3g().
+
+\mbox{\Hypertarget{namespacebasis__functions_a981aa8fc3a64198138bccb0413dacc94}\label{namespacebasis__functions_a981aa8fc3a64198138bccb0413dacc94}} 
+\index{basis\_functions@{basis\_functions}!b\_length@{b\_length}}
+\index{b\_length@{b\_length}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{b\_length}{b\_length}}
+{\footnotesize\ttfamily real(dp), protected basis\+\_\+functions\+::b\+\_\+length}
+
+
+
+Definition at line 45 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45 \textcolor{keywordtype}{  real}(dp), \textcolor{keywordtype}{protected} :: b\_length \textcolor{comment}{! Inverse lengthscale of nuclear-\/electron interaction}}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis(), and wave\+\_\+function\+\_\+2\+\_\+electrons().
+
+\mbox{\Hypertarget{namespacebasis__functions_a9c148eb124b16f4ce8a5c822b7ef30f4}\label{namespacebasis__functions_a9c148eb124b16f4ce8a5c822b7ef30f4}} 
+\index{basis\_functions@{basis\_functions}!basis\_type@{basis\_type}}
+\index{basis\_type@{basis\_type}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{basis\_type}{basis\_type}}
+{\footnotesize\ttfamily integer, protected basis\+\_\+functions\+::basis\+\_\+type}
+
+
+
+Definition at line 48 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48   \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{protected} :: basis\_type \textcolor{comment}{! integer code for type of basis. In shared\_constants module}}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis().
+
+\mbox{\Hypertarget{namespacebasis__functions_a0f3a451d100c71d40dcfced3b16334e4}\label{namespacebasis__functions_a0f3a451d100c71d40dcfced3b16334e4}} 
+\index{basis\_functions@{basis\_functions}!d\_length@{d\_length}}
+\index{d\_length@{d\_length}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{d\_length}{d\_length}}
+{\footnotesize\ttfamily real(dp), protected basis\+\_\+functions\+::d\+\_\+length}
+
+
+
+Definition at line 46 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{46 \textcolor{keywordtype}{  real}(dp), \textcolor{keywordtype}{protected} :: d\_length \textcolor{comment}{! Inverse lengthscale of electron-\/electron interaction}}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis(), and wave\+\_\+function\+\_\+2\+\_\+electrons().
+
+\mbox{\Hypertarget{namespacebasis__functions_ad4fc66a8a927069f6788785e3ade0ff3}\label{namespacebasis__functions_ad4fc66a8a927069f6788785e3ade0ff3}} 
+\index{basis\_functions@{basis\_functions}!dof\_bounds@{dof\_bounds}}
+\index{dof\_bounds@{dof\_bounds}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{dof\_bounds}{dof\_bounds}}
+{\footnotesize\ttfamily real(dp), dimension(\+:,\+:), allocatable, protected basis\+\_\+functions\+::dof\+\_\+bounds}
+
+
+
+Definition at line 52 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52 \textcolor{keywordtype}{  real}(dp), \textcolor{keywordtype}{allocatable}, \textcolor{keywordtype}{dimension(:,:)}, \textcolor{keywordtype}{protected} :: dof\_bounds \textcolor{comment}{! Default bounds for the possible dof values}}
+
+\end{DoxyCode}
+
+
+Referenced by deinitialise\+\_\+basis(), initialise\+\_\+basis(), and main\+\_\+driver().
+
+\mbox{\Hypertarget{namespacebasis__functions_ac8114bf21770f69fbbc228d14a9c2bf4}\label{namespacebasis__functions_ac8114bf21770f69fbbc228d14a9c2bf4}} 
+\index{basis\_functions@{basis\_functions}!fd\_h@{fd\_h}}
+\index{fd\_h@{fd\_h}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{fd\_h}{fd\_h}}
+{\footnotesize\ttfamily real(dp), protected basis\+\_\+functions\+::fd\+\_\+h}
+
+
+
+Definition at line 44 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44 \textcolor{keywordtype}{  real}(dp), \textcolor{keywordtype}{protected} :: fd\_h \textcolor{comment}{! Lengthscale of the finite difference code}}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis(), and reduced\+\_\+hamiltonian\+\_\+2\+\_\+electrons().
+
+\mbox{\Hypertarget{namespacebasis__functions_a33299211b5f4167aa20494965e6df6fe}\label{namespacebasis__functions_a33299211b5f4167aa20494965e6df6fe}} 
+\index{basis\_functions@{basis\_functions}!initialised@{initialised}}
+\index{initialised@{initialised}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{initialised}{initialised}}
+{\footnotesize\ttfamily logical, protected basis\+\_\+functions\+::initialised = .false.}
+
+
+
+Definition at line 36 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36   \textcolor{keywordtype}{logical}, \textcolor{keywordtype}{protected} :: initialised = .false. \textcolor{comment}{! Flag set by initialisation routine, checked by other routines}}
+
+\end{DoxyCode}
+
+
+Referenced by deinitialise\+\_\+basis(), discrete\+\_\+laplacian\+\_\+reduced(), initialise\+\_\+basis(), reduced\+\_\+hamiltonian\+\_\+2\+\_\+electrons(), reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s(), reduced\+\_\+hamiltonian\+\_\+sto3g(), wave\+\_\+function\+\_\+2\+\_\+electrons(), wave\+\_\+function\+\_\+slater\+\_\+1s(), and wave\+\_\+function\+\_\+sto3g().
+
+\mbox{\Hypertarget{namespacebasis__functions_a6153b94101ca52c60301c014e8018cd3}\label{namespacebasis__functions_a6153b94101ca52c60301c014e8018cd3}} 
+\index{basis\_functions@{basis\_functions}!mno\_parameters@{mno\_parameters}}
+\index{mno\_parameters@{mno\_parameters}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{mno\_parameters}{mno\_parameters}}
+{\footnotesize\ttfamily integer, dimension(\+:,\+:), allocatable, protected basis\+\_\+functions\+::mno\+\_\+parameters}
+
+
+
+Definition at line 57 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57   \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{protected}, \textcolor{keywordtype}{allocatable}, \textcolor{keywordtype}{dimension(:,:)} :: mno\_parameters \textcolor{comment}{! Parameters that specify the particular choice of Jastrow term}}
+
+\end{DoxyCode}
+
+
+Referenced by deinitialise\+\_\+basis(), mno\+\_\+allocate(), and wave\+\_\+function\+\_\+2\+\_\+electrons().
+
+\mbox{\Hypertarget{namespacebasis__functions_a7a106093181d8f73b5757e18bed45354}\label{namespacebasis__functions_a7a106093181d8f73b5757e18bed45354}} 
+\index{basis\_functions@{basis\_functions}!n\_atoms@{n\_atoms}}
+\index{n\_atoms@{n\_atoms}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{n\_atoms}{n\_atoms}}
+{\footnotesize\ttfamily integer, protected basis\+\_\+functions\+::n\+\_\+atoms}
+
+
+
+Definition at line 41 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41   \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{protected} :: n\_atoms \textcolor{comment}{! Number of atoms}}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis(), reduced\+\_\+hamiltonian\+\_\+2\+\_\+electrons(), reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s(), reduced\+\_\+hamiltonian\+\_\+sto3g(), wave\+\_\+function\+\_\+slater\+\_\+1s(), and wave\+\_\+function\+\_\+sto3g().
+
+\mbox{\Hypertarget{namespacebasis__functions_ac9fb7e7b9af3e057ec02a2feb7368b8e}\label{namespacebasis__functions_ac9fb7e7b9af3e057ec02a2feb7368b8e}} 
+\index{basis\_functions@{basis\_functions}!n\_basis\_functions\_per\_atom@{n\_basis\_functions\_per\_atom}}
+\index{n\_basis\_functions\_per\_atom@{n\_basis\_functions\_per\_atom}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{n\_basis\_functions\_per\_atom}{n\_basis\_functions\_per\_atom}}
+{\footnotesize\ttfamily integer, protected basis\+\_\+functions\+::n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom}
+
+
+
+Definition at line 40 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{40   \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{protected} :: n\_basis\_functions\_per\_atom \textcolor{comment}{! Number of linear terms in the single-\/electron wavefunction per atom}}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis(), reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s(), reduced\+\_\+hamiltonian\+\_\+sto3g(), wave\+\_\+function\+\_\+slater\+\_\+1s(), and wave\+\_\+function\+\_\+sto3g().
+
+\mbox{\Hypertarget{namespacebasis__functions_a931089e272b9708ea78e4e84774e6491}\label{namespacebasis__functions_a931089e272b9708ea78e4e84774e6491}} 
+\index{basis\_functions@{basis\_functions}!n\_dofs\_no\_jastrow@{n\_dofs\_no\_jastrow}}
+\index{n\_dofs\_no\_jastrow@{n\_dofs\_no\_jastrow}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{n\_dofs\_no\_jastrow}{n\_dofs\_no\_jastrow}}
+{\footnotesize\ttfamily integer, protected basis\+\_\+functions\+::n\+\_\+dofs\+\_\+no\+\_\+jastrow}
+
+
+
+Definition at line 56 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56   \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{protected} :: n\_dofs\_no\_Jastrow \textcolor{comment}{! Number of dofs without Jastrow term, for convenience}}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis(), wave\+\_\+function\+\_\+2\+\_\+electrons(), wave\+\_\+function\+\_\+slater\+\_\+1s(), and wave\+\_\+function\+\_\+sto3g().
+
+\mbox{\Hypertarget{namespacebasis__functions_a3fc655d1e5dbccbd5fa2598c80dcb673}\label{namespacebasis__functions_a3fc655d1e5dbccbd5fa2598c80dcb673}} 
+\index{basis\_functions@{basis\_functions}!n\_dofs\_per\_atom@{n\_dofs\_per\_atom}}
+\index{n\_dofs\_per\_atom@{n\_dofs\_per\_atom}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{n\_dofs\_per\_atom}{n\_dofs\_per\_atom}}
+{\footnotesize\ttfamily integer, protected basis\+\_\+functions\+::n\+\_\+dofs\+\_\+per\+\_\+atom}
+
+
+
+Definition at line 55 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55   \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{protected} :: n\_dofs\_per\_atom \textcolor{comment}{! Number of dofs per atom, for convenience}}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis(), reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s(), reduced\+\_\+hamiltonian\+\_\+sto3g(), wave\+\_\+function\+\_\+slater\+\_\+1s(), and wave\+\_\+function\+\_\+sto3g().
+
+\mbox{\Hypertarget{namespacebasis__functions_ad4dfb3b99da7a98dfb63e70865a1ee29}\label{namespacebasis__functions_ad4dfb3b99da7a98dfb63e70865a1ee29}} 
+\index{basis\_functions@{basis\_functions}!n\_electrons@{n\_electrons}}
+\index{n\_electrons@{n\_electrons}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{n\_electrons}{n\_electrons}}
+{\footnotesize\ttfamily integer, protected basis\+\_\+functions\+::n\+\_\+electrons}
+
+
+
+Definition at line 39 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39   \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{protected} :: n\_electrons \textcolor{comment}{! Number of electrons}}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis().
+
+\mbox{\Hypertarget{namespacebasis__functions_ac8eaad13ee1fa3799c55ff4fe1dc48b5}\label{namespacebasis__functions_ac8eaad13ee1fa3799c55ff4fe1dc48b5}} 
+\index{basis\_functions@{basis\_functions}!n\_jastrow\_dofs@{n\_jastrow\_dofs}}
+\index{n\_jastrow\_dofs@{n\_jastrow\_dofs}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{n\_jastrow\_dofs}{n\_jastrow\_dofs}}
+{\footnotesize\ttfamily integer, protected basis\+\_\+functions\+::n\+\_\+jastrow\+\_\+dofs}
+
+
+
+Definition at line 43 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43   \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{protected} :: n\_Jastrow\_dofs \textcolor{comment}{! Number of dofs in the Jastrow (interaction) term}}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis(), mno\+\_\+allocate(), and wave\+\_\+function\+\_\+2\+\_\+electrons().
+
+\mbox{\Hypertarget{namespacebasis__functions_aa2e0cf4f62dc5afc6f91a283ba3f055e}\label{namespacebasis__functions_aa2e0cf4f62dc5afc6f91a283ba3f055e}} 
+\index{basis\_functions@{basis\_functions}!n\_space\_dims@{n\_space\_dims}}
+\index{n\_space\_dims@{n\_space\_dims}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{n\_space\_dims}{n\_space\_dims}}
+{\footnotesize\ttfamily integer, protected basis\+\_\+functions\+::n\+\_\+space\+\_\+dims}
+
+
+
+Definition at line 51 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51   \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{protected} :: n\_space\_dims \textcolor{comment}{! Number of space dimensions, 3*n\_electrons, for convenience}}
+
+\end{DoxyCode}
+
+
+Referenced by discrete\+\_\+laplacian\+\_\+reduced(), initialise\+\_\+basis(), main\+\_\+driver(), reduced\+\_\+hamiltonian\+\_\+2\+\_\+electrons(), reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s(), reduced\+\_\+hamiltonian\+\_\+sto3g(), and wave\+\_\+function\+\_\+2\+\_\+electrons().
+
+\mbox{\Hypertarget{namespacebasis__functions_a79b525380de9887a3919e23b5fd03e75}\label{namespacebasis__functions_a79b525380de9887a3919e23b5fd03e75}} 
+\index{basis\_functions@{basis\_functions}!number\_dofs@{number\_dofs}}
+\index{number\_dofs@{number\_dofs}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{number\_dofs}{number\_dofs}}
+{\footnotesize\ttfamily integer, protected basis\+\_\+functions\+::number\+\_\+dofs}
+
+
+
+Definition at line 50 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50   \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{protected} :: number\_dofs \textcolor{comment}{! Total number of degrees of freedom (dofs) in the wavefunction}}
+
+\end{DoxyCode}
+
+
+Referenced by discrete\+\_\+laplacian\+\_\+reduced(), initialise\+\_\+basis(), main\+\_\+driver(), reduced\+\_\+hamiltonian\+\_\+2\+\_\+electrons(), reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s(), reduced\+\_\+hamiltonian\+\_\+sto3g(), and wave\+\_\+function\+\_\+2\+\_\+electrons().
+
+\mbox{\Hypertarget{namespacebasis__functions_a7936f84f27dc052e58eb470bc220fb85}\label{namespacebasis__functions_a7936f84f27dc052e58eb470bc220fb85}} 
+\index{basis\_functions@{basis\_functions}!proton\_numbers@{proton\_numbers}}
+\index{proton\_numbers@{proton\_numbers}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{proton\_numbers}{proton\_numbers}}
+{\footnotesize\ttfamily real(dp), dimension(\+:), allocatable, protected basis\+\_\+functions\+::proton\+\_\+numbers}
+
+
+
+Definition at line 47 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47 \textcolor{keywordtype}{  real}(dp),\textcolor{keywordtype}{dimension(:)},\textcolor{keywordtype}{allocatable}, \textcolor{keywordtype}{protected} :: proton\_numbers \textcolor{comment}{! Proton Numbers of atoms}}
+
+\end{DoxyCode}
+
+
+Referenced by deinitialise\+\_\+basis(), initialise\+\_\+basis(), reduced\+\_\+hamiltonian\+\_\+2\+\_\+electrons(), and reduced\+\_\+hamiltonian\+\_\+slater\+\_\+1s().
+
+\mbox{\Hypertarget{namespacebasis__functions_ab9981898fc0fed9c10945781e26917b1}\label{namespacebasis__functions_ab9981898fc0fed9c10945781e26917b1}} 
+\index{basis\_functions@{basis\_functions}!reduced\_hamiltonian@{reduced\_hamiltonian}}
+\index{reduced\_hamiltonian@{reduced\_hamiltonian}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{reduced\_hamiltonian}{reduced\_hamiltonian}}
+{\footnotesize\ttfamily procedure(\mbox{\hyperlink{interfacebasis__functions_1_1wave__function__interface}{wave\+\_\+function\+\_\+interface}}), pointer basis\+\_\+functions\+::reduced\+\_\+hamiltonian}
+
+
+
+Definition at line 21 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21   \textcolor{keywordtype}{procedure}(wave\_function\_interface), \textcolor{keywordtype}{pointer} :: reduced\_hamiltonian}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis(), and main\+\_\+driver().
+
+\mbox{\Hypertarget{namespacebasis__functions_a5176e9e5598bd13047a4c720fbc37c50}\label{namespacebasis__functions_a5176e9e5598bd13047a4c720fbc37c50}} 
+\index{basis\_functions@{basis\_functions}!wave\_function@{wave\_function}}
+\index{wave\_function@{wave\_function}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{wave\_function}{wave\_function}}
+{\footnotesize\ttfamily procedure(\mbox{\hyperlink{interfacebasis__functions_1_1wave__function__interface}{wave\+\_\+function\+\_\+interface}}), pointer basis\+\_\+functions\+::wave\+\_\+function}
+
+
+
+Definition at line 20 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20   \textcolor{keywordtype}{procedure}(wave\_function\_interface), \textcolor{keywordtype}{pointer} :: wave\_function}
+
+\end{DoxyCode}
+
+
+Referenced by discrete\+\_\+laplacian\+\_\+reduced(), electron\+\_\+density\+\_\+functions\+::electron\+\_\+density(), initialise\+\_\+basis(), log\+\_\+density(), calculations\+::wave1d(), calculations\+::wave2d(), and calculations\+::wave3d().
+
+\mbox{\Hypertarget{namespacebasis__functions_a0c617d7a4f11173571c4e29000df9a1a}\label{namespacebasis__functions_a0c617d7a4f11173571c4e29000df9a1a}} 
+\index{basis\_functions@{basis\_functions}!wave\_function\_single@{wave\_function\_single}}
+\index{wave\_function\_single@{wave\_function\_single}!basis\_functions@{basis\_functions}}
+\doxysubsubsection{\texorpdfstring{wave\_function\_single}{wave\_function\_single}}
+{\footnotesize\ttfamily procedure(\mbox{\hyperlink{interfacebasis__functions_1_1wave__function__interface}{wave\+\_\+function\+\_\+interface}}), pointer basis\+\_\+functions\+::wave\+\_\+function\+\_\+single}
+
+
+
+Definition at line 60 of file basis\+\_\+functions.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60   \textcolor{keywordtype}{procedure}(wave\_function\_interface), \textcolor{keywordtype}{pointer} :: wave\_function\_single}
+
+\end{DoxyCode}
+
+
+Referenced by initialise\+\_\+basis(), and wave\+\_\+function\+\_\+2\+\_\+electrons().
+

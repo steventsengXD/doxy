@@ -1,0 +1,35 @@
+\hypertarget{param__search_8f90}{}\doxysection{param\+\_\+search.\+f90 File Reference}
+\label{param__search_8f90}\index{param\_search.f90@{param\_search.f90}}
+
+
+desc soon  
+
+
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+module \mbox{\hyperlink{namespaceparam__search}{param\+\_\+search}}
+\begin{DoxyCompactList}\small\item\em functions/subroutines associated with building/initialisation the parameter searchspace and finding the best paramters from a given M\+C\+MC run. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \mbox{\hyperlink{namespaceparam__search_a58cbd0f2cfb54aba223bfba6c19a8a46}{param\+\_\+search\+::random\+\_\+search\+\_\+grid}} (trials, param\+\_\+bounds, n\+\_\+trials, seed\+\_\+in)
+\begin{DoxyCompactList}\small\item\em random\+\_\+search\+\_\+grid returns MxN grid of test points for M free parameters and N trials distributed \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceparam__search_aff5115008e830ffa95e4143c6908a389}{param\+\_\+search\+::latin\+\_\+hypercube}} (trials, param\+\_\+bounds, n\+\_\+trials, seed\+\_\+in)
+\begin{DoxyCompactList}\small\item\em latin\+\_\+hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercube for given bounds. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceparam__search_a675279a4de8b9d57fcf6ded067479a45}{param\+\_\+search\+::find\+\_\+best\+\_\+params}} (trial\+\_\+energies, trials)
+\begin{DoxyCompactList}\small\item\em find\+\_\+best\+\_\+params returns the 1D array that contain the current best set of parameters found from a M\+C\+MC run. \end{DoxyCompactList}\item 
+subroutine \mbox{\hyperlink{namespaceparam__search_a04262aed0a917d0a5e07a7213aba7cf0}{param\+\_\+search\+::param\+\_\+wall\+\_\+check}} (param\+\_\+bounds)
+\begin{DoxyCompactList}\small\item\em param\+\_\+wall\+\_\+check evaluates if the best parameter set is close to the parameter bounds used to generate the test points. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+real(dp), dimension(\+:), allocatable, protected \mbox{\hyperlink{namespaceparam__search_aa3dd5eff65c268d29ead64f36434e0d8}{param\+\_\+search\+::best\+\_\+params}}
+\item 
+integer, dimension(1), protected \mbox{\hyperlink{namespaceparam__search_a709050fff27b65db5c3707ae115003e2}{param\+\_\+search\+::best\+\_\+trial}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+desc soon 
+

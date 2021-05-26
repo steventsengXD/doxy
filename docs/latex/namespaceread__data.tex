@@ -1,0 +1,104 @@
+\hypertarget{namespaceread__data}{}\doxysection{read\+\_\+data Module Reference}
+\label{namespaceread__data}\index{read\_data@{read\_data}}
+
+
+Subroutines to read files and transfer user inputs into fortran.  
+
+
+\doxysubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+subroutine \mbox{\hyperlink{namespaceread__data_a57f07f5d28f046aac4ce75d53ac2a665}{readtxt}} (filename, n\+\_\+electrons\+\_\+in, n\+\_\+atoms\+\_\+in, bond\+\_\+length, n\+\_\+trials, n\+\_\+\+M\+C\+M\+C\+\_\+steps, search\+\_\+seed, n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom\+\_\+in, n\+\_\+\+Jastrow\+\_\+in, fd\+\_\+length\+\_\+in, Jastrow\+\_\+b\+\_\+length\+\_\+in, Jastrow\+\_\+d\+\_\+length\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Read in data from a text file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subroutines to read files and transfer user inputs into fortran. 
+
+\doxysubsection{Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{namespaceread__data_a57f07f5d28f046aac4ce75d53ac2a665}\label{namespaceread__data_a57f07f5d28f046aac4ce75d53ac2a665}} 
+\index{read\_data@{read\_data}!readtxt@{readtxt}}
+\index{readtxt@{readtxt}!read\_data@{read\_data}}
+\doxysubsubsection{\texorpdfstring{readtxt()}{readtxt()}}
+{\footnotesize\ttfamily subroutine read\+\_\+data\+::readtxt (\begin{DoxyParamCaption}\item[{character(len=20)}]{filename,  }\item[{integer}]{n\+\_\+electrons\+\_\+in,  }\item[{integer}]{n\+\_\+atoms\+\_\+in,  }\item[{real(dp)}]{bond\+\_\+length,  }\item[{integer}]{n\+\_\+trials,  }\item[{integer}]{n\+\_\+\+M\+C\+M\+C\+\_\+steps,  }\item[{integer}]{search\+\_\+seed,  }\item[{integer}]{n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom\+\_\+in,  }\item[{integer}]{n\+\_\+\+Jastrow\+\_\+in,  }\item[{real(dp)}]{fd\+\_\+length\+\_\+in,  }\item[{real(dp)}]{Jastrow\+\_\+b\+\_\+length\+\_\+in,  }\item[{real(dp)}]{Jastrow\+\_\+d\+\_\+length\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+Read in data from a text file. 
+
+This module reads txt, csv files line by line. The implementation is basic but will read each line properly as it was written specifically for the parameters needed from the user. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of txt file containing user defined parameters \\
+\hline
+{\em n\+\_\+electrons\+\_\+in} & User Inputs required -\/ the user must define all of these \\
+\hline
+{\em n\+\_\+electrons\+\_\+in} & User Inputs required -\/ the user must define all of these \\
+\hline
+{\em n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+atom\+\_\+in} & Optional user Inputs -\/ these may be defined by the user, but have good default values below \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file read\+\_\+data.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{20       \textcolor{keywordtype}{CHARACTER(LEN=20)} :: filename}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{23       \textcolor{keywordtype}{integer} :: n\_electrons\_in}
+\DoxyCodeLine{24       \textcolor{keywordtype}{integer} :: n\_atoms\_in}
+\DoxyCodeLine{25 \textcolor{keywordtype}{      real}(dp) :: bond\_length}
+\DoxyCodeLine{26       \textcolor{keywordtype}{integer} :: n\_trials}
+\DoxyCodeLine{27       \textcolor{keywordtype}{integer} :: n\_MCMC\_steps}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{30       \textcolor{keywordtype}{integer} :: n\_basis\_functions\_per\_atom\_in}
+\DoxyCodeLine{31       \textcolor{keywordtype}{integer} :: search\_seed}
+\DoxyCodeLine{32       \textcolor{keywordtype}{integer} :: n\_Jastrow\_in}
+\DoxyCodeLine{33 \textcolor{keywordtype}{      real}(dp) :: fd\_length\_in}
+\DoxyCodeLine{34 \textcolor{keywordtype}{      real}(dp) :: Jastrow\_b\_length\_in}
+\DoxyCodeLine{35 \textcolor{keywordtype}{      real}(dp) :: Jastrow\_d\_length\_in}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37       \textcolor{keyword}{OPEN}(unit = 7, file = filename)}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39       \textcolor{comment}{! Read in lines containing only one value}}
+\DoxyCodeLine{40       \textcolor{keyword}{READ}(7,*) n\_electrons\_in}
+\DoxyCodeLine{41       \textcolor{keyword}{READ}(7,*) n\_atoms\_in}
+\DoxyCodeLine{42       \textcolor{keyword}{READ}(7,*) bond\_length}
+\DoxyCodeLine{43       \textcolor{keyword}{READ}(7,*) n\_trials}
+\DoxyCodeLine{44       \textcolor{keyword}{READ}(7,*) n\_mcmc\_steps}
+\DoxyCodeLine{45       \textcolor{keyword}{READ}(7,*) search\_seed}
+\DoxyCodeLine{46       \textcolor{keyword}{READ}(7,*) n\_basis\_functions\_per\_atom\_in     }
+\DoxyCodeLine{47       \textcolor{keyword}{READ}(7,*) n\_jastrow\_in}
+\DoxyCodeLine{48       \textcolor{keyword}{READ}(7,*) fd\_length\_in}
+\DoxyCodeLine{49       \textcolor{keyword}{READ}(7,*) jastrow\_b\_length\_in}
+\DoxyCodeLine{50       \textcolor{keyword}{READ}(7,*) jastrow\_d\_length\_in}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52       \textcolor{keyword}{CLOSE}(7)}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{comment}{! Print to see if data was properly read into fortran}}
+\DoxyCodeLine{55       \textcolor{comment}{! PRINT *, n\_electrons\_in}}
+\DoxyCodeLine{56       \textcolor{comment}{! PRINT *, n\_atoms\_in}}
+\DoxyCodeLine{57       \textcolor{comment}{! PRINT *, bond\_length}}
+\DoxyCodeLine{58       \textcolor{comment}{! PRINT *, n\_trials}}
+\DoxyCodeLine{59       \textcolor{comment}{! PRINT *, n\_MCMC\_steps}}
+\DoxyCodeLine{60       \textcolor{comment}{! PRINT *, n\_basis\_functions\_per\_atom\_in}}
+\DoxyCodeLine{61       \textcolor{comment}{! PRINT *, search\_seed}}
+\DoxyCodeLine{62       \textcolor{comment}{! PRINT *, n\_Jastrow\_in}}
+\DoxyCodeLine{63       \textcolor{comment}{! PRINT *, fd\_length\_in}}
+\DoxyCodeLine{64       \textcolor{comment}{! PRINT *, Jastrow\_b\_length\_in}}
+\DoxyCodeLine{65       \textcolor{comment}{! PRINT *, Jastrow\_d\_length\_in}}
+\DoxyCodeLine{66 }
+
+\end{DoxyCode}
+
+
+Referenced by main\+\_\+driver().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{namespaceread__data_a57f07f5d28f046aac4ce75d53ac2a665_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,105 @@
+\hypertarget{namespaceelectron__density__functions}{}\doxysection{electron\+\_\+density\+\_\+functions Module Reference}
+\label{namespaceelectron__density__functions}\index{electron\_density\_functions@{electron\_density\_functions}}
+
+
+Electron density function.  
+
+
+\doxysubsection*{Functions/\+Subroutines}
+\begin{DoxyCompactItemize}
+\item 
+real(dp) function \mbox{\hyperlink{namespaceelectron__density__functions_a6a7ccc97d4e245b3179b8a4482035243}{electron\+\_\+density}} (fixed\+\_\+position, integral\+\_\+bounds, dof\+\_\+coefficients, n\+\_\+\+M\+C\+\_\+points, seed\+\_\+in)
+\begin{DoxyCompactList}\small\item\em Computes electron density for 2 electron simulations Use basic Monte Carlo Integration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Electron density function. 
+
+\doxysubsection{Function/\+Subroutine Documentation}
+\mbox{\Hypertarget{namespaceelectron__density__functions_a6a7ccc97d4e245b3179b8a4482035243}\label{namespaceelectron__density__functions_a6a7ccc97d4e245b3179b8a4482035243}} 
+\index{electron\_density\_functions@{electron\_density\_functions}!electron\_density@{electron\_density}}
+\index{electron\_density@{electron\_density}!electron\_density\_functions@{electron\_density\_functions}}
+\doxysubsubsection{\texorpdfstring{electron\_density()}{electron\_density()}}
+{\footnotesize\ttfamily real(dp) function electron\+\_\+density\+\_\+functions\+::electron\+\_\+density (\begin{DoxyParamCaption}\item[{real(dp), dimension(3), intent(in)}]{fixed\+\_\+position,  }\item[{real(dp), dimension(3,2), intent(in)}]{integral\+\_\+bounds,  }\item[{real(dp), dimension(\+:), intent(in)}]{dof\+\_\+coefficients,  }\item[{integer, intent(in)}]{n\+\_\+\+M\+C\+\_\+points,  }\item[{integer, intent(in), optional}]{seed\+\_\+in }\end{DoxyParamCaption})}
+
+
+
+Computes electron density for 2 electron simulations Use basic Monte Carlo Integration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fixed\+\_\+position} & Space position of density \\
+\hline
+\mbox{\texttt{ in}}  & {\em integral\+\_\+bounds} & bounds of integration box \\
+\hline
+\mbox{\texttt{ in}}  & {\em dof\+\_\+coefficients} & Current dof parameters \\
+\hline
+\mbox{\texttt{ in}}  & {\em n\+\_\+mc\+\_\+points} & Number of Monte Carlo Points \\
+\hline
+\mbox{\texttt{ in}}  & {\em seed\+\_\+in} & input seed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 11 of file electron\+\_\+density.\+f90.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11 \textcolor{keywordtype}{    real}(dp) :: electron\_density}
+\DoxyCodeLine{13 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(3)}, \textcolor{keywordtype}{intent(in)} :: fixed\_position }
+\DoxyCodeLine{15 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(3,2)}, \textcolor{keywordtype}{intent(in)} :: integral\_bounds}
+\DoxyCodeLine{17 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(:)}, \textcolor{keywordtype}{intent(in)} :: dof\_coefficients }
+\DoxyCodeLine{19     \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{intent(in)} :: n\_MC\_points}
+\DoxyCodeLine{21     \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{intent(in)},\textcolor{keywordtype}{optional} :: seed\_in}
+\DoxyCodeLine{22     \textcolor{keywordtype}{integer}, \textcolor{keywordtype}{allocatable} :: seed(:)}
+\DoxyCodeLine{23     \textcolor{keywordtype}{integer} :: i \textcolor{comment}{! loop variables}}
+\DoxyCodeLine{24     \textcolor{keywordtype}{integer} :: n}
+\DoxyCodeLine{25 \textcolor{keywordtype}{    real}(dp) :: x,y,z,Lx,Ly,Lz}
+\DoxyCodeLine{26 \textcolor{keywordtype}{    real}(dp), \textcolor{keywordtype}{dimension(6)} :: position\_total}
+\DoxyCodeLine{27     \textcolor{keywordflow}{if} (\textcolor{keyword}{present}(seed\_in)) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{28       \textcolor{keyword}{call }random\_seed(size=n)}
+\DoxyCodeLine{29       \textcolor{keyword}{allocate}(seed(n))}
+\DoxyCodeLine{30       seed = seed\_in    }
+\DoxyCodeLine{31       \textcolor{keyword}{call }random\_seed(put=seed) }
+\DoxyCodeLine{32 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{34     \textcolor{keywordflow}{do} i=1,3}
+\DoxyCodeLine{35     \textcolor{keywordflow}{if} ((integral\_bounds(i,2)-\/integral\_bounds(i,1))<= 0.1) \textcolor{keywordflow}{then}}
+\DoxyCodeLine{36       print*, \textcolor{stringliteral}{"Error, box too small or bounds incorrect"}}
+\DoxyCodeLine{37 \textcolor{keywordflow}{    end if}}
+\DoxyCodeLine{38 \textcolor{keywordflow}{    end do}}
+\DoxyCodeLine{39     position\_total(1:3) = 0.0\_dp}
+\DoxyCodeLine{40     position\_total(4:6) = fixed\_position}
+\DoxyCodeLine{41     lx = integral\_bounds(1,2)-\/integral\_bounds(1,1)}
+\DoxyCodeLine{42     ly = integral\_bounds(2,2)-\/integral\_bounds(2,1)}
+\DoxyCodeLine{43     lz = integral\_bounds(3,2)-\/integral\_bounds(3,1)}
+\DoxyCodeLine{44     \textcolor{comment}{!\$OMP parallel do default(shared) private(i,x,y,z) firstprivate(position\_total) reduction(+:electron\_density)}}
+\DoxyCodeLine{45     \textcolor{keywordflow}{do} i=1,n\_mc\_points      }
+\DoxyCodeLine{46       \textcolor{keyword}{call }random\_number(x)}
+\DoxyCodeLine{47       \textcolor{keyword}{call }random\_number(y)}
+\DoxyCodeLine{48       \textcolor{keyword}{call }random\_number(z)}
+\DoxyCodeLine{49       x = lx*x +integral\_bounds(1,1)}
+\DoxyCodeLine{50       y = ly*y +integral\_bounds(2,1)}
+\DoxyCodeLine{51       z = lz*z +integral\_bounds(3,1)}
+\DoxyCodeLine{52       position\_total(4:6) = [x,y,z]}
+\DoxyCodeLine{53       electron\_density = electron\_density+wave\_function(position\_total,dof\_coefficients)**2}
+\DoxyCodeLine{54 \textcolor{keywordflow}{    end do}}
+\DoxyCodeLine{55     electron\_density = lx*ly*lz*electron\_density/n\_mc\_points}
+\DoxyCodeLine{56     \textcolor{keywordflow}{if} (\textcolor{keyword}{allocated}(seed)) \textcolor{keyword}{deallocate}(seed)}
+
+\end{DoxyCode}
+
+
+References basis\+\_\+functions\+::wave\+\_\+function.
+
+
+
+Referenced by calculations\+::ele\+\_\+den\+\_\+2atom().
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceelectron__density__functions_a6a7ccc97d4e245b3179b8a4482035243_icgraph}
+\end{center}
+\end{figure}
