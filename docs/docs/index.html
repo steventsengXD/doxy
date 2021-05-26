@@ -13,6 +13,13 @@
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtreedata.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -62,7 +69,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title">Introduction </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This software will compute and visualise the ground state energy of the <img class="formulaInl" alt="$H_{2}^{+}$" src="form_0.png"/> ion and <img class="formulaInl" alt="$H_{2}$" src="form_1.png"/> molecule using the variational quantum Monte Carlo (VQMC) method. The main output result will be the minimum energy of the system and the resulting wavefunction.</p>
+<div class="textblock"><p>This software will compute and visualise the ground state energy of the \(H_{2}^{+}\) ion and \(H_{2}\) molecule using the variational quantum Monte Carlo (VQMC) method. The main output result will be the minimum energy of the system and the resulting wavefunction.</p>
 <p>With the exception of user input and plotting the results, the code is written entirely in Fortran. For efficiency, parallelization has been implemented through OpenMP to ... .</p>
 <p><a class="el" href="vqmc.html">Variational Quantum Monte Carlo</a> <br  />
 <a class="el" href="tutorial_page.html">Tutorial</a> <br  />
@@ -87,7 +94,7 @@ Github Repository</h3>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 25 2021 21:48:20 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Tue May 25 2021 22:12:32 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

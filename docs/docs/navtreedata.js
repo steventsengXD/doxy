@@ -25,7 +25,12 @@ var NAVTREE =
   [ "PX 915 Project Title/Name Here", "index.html", [
     [ "Introduction", "index.html", null ],
     [ "Variational Quantum Monte Carlo", "vqmc.html", [
-      [ "VQMC in a Nutshell", "vqmc.html#introduction", null ]
+      [ "VQMC in a Nutshell", "vqmc.html#introduction", null ],
+      [ "Software Specific Details", "vqmc.html#software", [
+        [ "Basis Set Construction", "vqmc.html#basis", null ],
+        [ "Jastrow Factor", "vqmc.html#jastrow", null ],
+        [ "Markov Chain Monte Carlo", "vqmc.html#mcmc", null ]
+      ] ]
     ] ],
     [ "Tutorial", "tutorial_page.html", "tutorial_page" ],
     [ "Acknowledgements", "acknowledgments.html", null ],

@@ -100,8 +100,8 @@ var NAVTREEINDEX0 =
 "latin__driver_8f90.html":[7,0,6],
 "latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f":[7,0,6,0],
 "latin__driver_8f90_source.html":[7,0,6],
-"namespacebasis__functions.html":[5,0,0],
 "namespacebasis__functions.html":[6,0,0],
+"namespacebasis__functions.html":[5,0,0],
 "namespacecalculations.html":[5,0,1],
 "namespacecomponent__functions.html":[5,0,2],
 "namespaceelectron__density__functions.html":[5,0,3],
@@ -155,5 +155,9 @@ var NAVTREEINDEX0 =
 "startup.html":[2,0],
 "tutorial_page.html":[2],
 "vqmc.html":[1],
-"vqmc.html#introduction":[1,0]
+"vqmc.html#basis":[1,1,0],
+"vqmc.html#introduction":[1,0],
+"vqmc.html#jastrow":[1,1,1],
+"vqmc.html#mcmc":[1,1,2],
+"vqmc.html#software":[1,1]
 };
