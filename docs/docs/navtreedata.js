@@ -28,15 +28,14 @@ var NAVTREE =
         [ "Data Input", "index.html#data_input", null ]
       ] ]
     ] ],
+    [ "Acknowledgements", "acknowledgments.html", null ],
     [ "Tutorial", "tutorial_page.html", "tutorial_page" ],
     [ "Variational Quantum Monte Carlo", "vqmc.html", [
       [ "VQMC in a Nutshell", "vqmc.html#introduction", null ],
       [ "Software Specific Details", "vqmc.html#software", [
         [ "Basis Set Construction", "vqmc.html#basis", null ],
         [ "Jastrow Factor", "vqmc.html#jastrow", null ],
-        [ "Markov Chain Monte Carlo", "vqmc.html#mcmc", [
-          [ "TESTING!!!", "vqmc.html#test", null ]
-        ] ]
+        [ "Markov Chain Monte Carlo", "vqmc.html#mcmc", null ]
       ] ]
     ] ],
     [ "Bibliography", "citelist.html", null ],
