@@ -69,8 +69,7 @@ $(document).ready(function(){initNavTree('vqmc.html',''); initResizable(); });
 <div class="title">Variational Quantum Monte Carlo </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This page provides a brief overview of the theory behind the variational quantum Monte Carlo method. The mathematics used in the software are then described in more detail such that a user may better understand how the functions and variables utilized within are related.</p>
-<h1><a class="anchor" id="introduction"></a>
+<div class="textblock"><h1><a class="anchor" id="introduction"></a>
 VQMC in a Nutshell</h1>
 <p>The variational quantum Monte Carlo method (VQMC) is a computational method for approximating the ground state energy of a system. More often than not, the time-independent Schrödinger equation of a system defined by the Hamiltonian \(\hat{H}\) may not be solved to determine the system's ground state energy \(E_{gs}\). The <em>variational</em> <em>principle</em> from quantum mechanics provides that for any normalized function \(\Psi\), we have </p><p class="formulaDsp">
 \begin{equation}E_{gs} \leq \langle \Psi | \hat{H} | \Psi \rangle \equiv \langle \hat{H} \rangle, \end{equation}
@@ -86,9 +85,9 @@ Software Specific Details</h1>
 <p>This software calculates the ground state energy of the \( H_2^+ \) ion and \( H_2 \) molecule using VQMC. The Hamiltonian is given by <br  />
 </p>
 <p class="formulaDsp">
-\begin{equation}\tag {2} \hat{H}(\{\textbf{r}_i\},\{\textbf{R}_I\})\Psi(\{\textbf{r}_i\}) \equiv\left(-\frac{1}{2}\sum_i\nabla_i^2+\sum_{i&gt;j}\frac{1}{r_{ij}}-\sum_{I}\sum_{i}\frac{Z_I}{r_{iI}}\right)\Psi=E\Psi, \end{equation}
+\begin{equation}\tag {2} \hat{H}(\{\textbf{r}_i\},\{\textbf{R}_I\})\Psi(\{\textbf{r}_i\}) \equiv\left(-\frac{1}{2}\sum_i\nabla_i^2+\sum_{i&gt;j}\frac{1}{r_{ij}}-\sum_{I}\sum_{i}\frac{Z_I}{r_{iI}}+\sum_{I&gt;J}\frac{Z_IZ_J}{r_{IJ}}\right)\Psi=E\Psi, \end{equation}
 </p>
-<p>where the Born-Oppenheimer approximation is assumed and the units are given in Hartree atomic units. The problem specifies \(N_n\) nuclei of atomic number \(Z_I \) at coordinates \(\textbf{R}_I \) and \(N \) electrons at coordinates \(\textbf{r}_i \) where \( r_{ij} = \left | \textbf{r}_i - \textbf{r}_j \right | \), \(r_{iI}= \left | \textbf{r}_i - \textbf{R}_I \right | \).</p>
+<p>where the Born-Oppenheimer approximation is assumed and the units are given in Hartree atomic units. The problem specifies \(N_n\) nuclei of atomic number \(Z_I \) at coordinates \(\textbf{R}_I \) and \(N \) electrons at coordinates \(\textbf{r}_i \) where \( r_{ij} = \left | \textbf{r}_i - \textbf{r}_j \right | \), \(r_{iI}= \left | \textbf{r}_i - \textbf{R}_I \right | \) and \( r_{IJ} = \left | \textbf{r}_I - \textbf{r}_J \right | \).</p>
 <p>To apply a Monte Carlo integration method, specifically Markov chain Monte Carlo (MCMC) for this software, the integral given in equation (1) is rewritten as</p>
 <p class="formulaDsp">
 \begin{equation}\tag {3} \langle \hat{H}_L \rangle_{|\Psi|^2} = \frac{\int |\Psi|^2(\hat{H}\Psi)/\Psi d\{\textbf{r}_i\}}{\int |\Psi|^2 d{\textbf{r}_i}}, \end{equation}
@@ -101,10 +100,11 @@ Basis Set Construction</h2>
 <p class="formulaDsp">
 \begin{equation}\{\varphi_k(\textbf{r})\}_{k=1}^{N_nM} = \bigcup_I\{\phi_k^I(\textbf{r})\}. \end{equation}
 </p>
+<p>In the software, M is the parameter n_basis_functions_per_atom. For both slater-type basis functions and Gaussians there are 2 parameters per basis function, a linear multiplier and a length scale.</p>
 <p>Single electron wave functions are obtained through summing the basis set in its entirety </p><p class="formulaDsp">
 \begin{equation} \psi_i(\textbf{r})=\sum_{k=1}^{N_IM}c_{ik}\varphi_k(\textbf{r}). \end{equation}
 </p>
-<p>Using this as the trial wave function, i.e., \( \Psi=\psi_1 \), with MCMC algorithms and optimization schemes results in \(N_n\times M \) degrees of freedom. As this is also a linear combination, the linearity of \(\hat{H}\) and analytic derivatives of the basis set may be used to speed up the calculation of </p><p class="formulaDsp">
+<p>Using this as the trial wave function, i.e., \( \Psi=\psi_1 \), with MCMC algorithms and optimization schemes results in \(2*N_n\times M \) degrees of freedom. As this is also a linear combination, the linearity of \(\hat{H}\) and analytic derivatives of the basis set may be used to speed up the calculation of </p><p class="formulaDsp">
 \begin{equation} H\psi_1(\textbf{r})=\sum_kc_{ik}H\varphi_k(\textbf{r}),\end{equation}
 </p>
 <p> where \(H\varphi_k(\textbf{r})\) can be analytically precomputed for hydrogen-like orbitals or Gaussians.</p>
@@ -114,9 +114,11 @@ Basis Set Construction</h2>
 <p class="formulaDsp">
 \begin{equation} D(\{\psi_i\},\{\textbf{r}_i\})=\begin{vmatrix} \psi_1(\textbf{r}_1) &amp;\psi_2(\textbf{r}_1) &amp;\cdots&amp; \psi_N(\textbf{r}_1) \\ \psi_1(\textbf{r}_2) &amp;\psi_2(\textbf{r}_2) &amp;\cdots&amp; \psi_N(\textbf{r}_2) \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots \\ \psi_1(\textbf{r}_N) &amp;\psi_2(\textbf{r}_N) &amp;\cdots&amp; \psi_N(\textbf{r}_N) \\ \end{vmatrix}. \end{equation}
 </p>
-<p>When utilized in full, the degrees of freedom (DOF) is \(M\times N_n\times N+N_J\) where \( N_J \) is the DOF in \(J\). However, this can be significantly reduced by assuming that a single electron \(\{\psi_i\}\) is sufficient for the calculation. Although spin has not been considered, since \(\psi_1(\textbf{r},\uparrow)=\psi_1(\textbf{r})|{\uparrow}\rangle\), and \(\psi_2=\psi_1|{\downarrow}\rangle \), this gives for 2 electrons: </p><p class="formulaDsp">
+<p>When utilized in full, the number of degrees of freedom (DOF) would be \(2*M\times N_n\times N+N_J\) where \( N_J \) is the DOF in \(J\). However, this can be significantly reduced by assuming that a single electron state \(\{\psi_i\}\) is sufficient for the calculation, assuming the first 2 electron states differ only by spin: \(\psi_1(\textbf{r},\uparrow)=\psi_1(\textbf{r})|{\uparrow}\rangle\), and \(\psi_2=\psi_1|{\downarrow}\rangle \). Then this gives for 2 electrons: </p><p class="formulaDsp">
 \begin{equation} D(\{\psi_i\},\{\textbf{r}_i\})=\psi_1(\textbf{r}_1)\psi_2(\textbf{r}_2)-\psi_1(\textbf{r}_2)\psi_2(\textbf{r}_1)=\psi_1(\textbf{r}_1)\psi_1(\textbf{r}_2)(|{\uparrow}\rangle|{\downarrow}\rangle-|{\downarrow}\rangle|{\uparrow}\rangle)=\psi_1(\textbf{r}_1)\psi_1(\textbf{r}_2).\end{equation}
 </p>
+<p>.</p>
+<p>This is the expression used in the program and the number of degrees of freedom is only \(2*M\times N_n+N_J\). While this significantly simplifies calculations, it means states where 2 electrons are in different states will not be found.</p>
 <h2><a class="anchor" id="jastrow"></a>
 Jastrow Factor</h2>
 <p>The choice of Jastrow factor is never trivial. The CASINO code suggests using the DTN factor as one possibility <a class="el" href="citelist.html#CITEREF_drummond">[1]</a>. However, these are designed specifically for periodic systems which is not characteristic of the systems here. Adopting that of Boys and Handy [3,4] would be more suitable:</p>
@@ -135,7 +137,7 @@ Jastrow Factor</h2>
 <p class="formulaDsp">
 \begin{equation} \Delta(m,n)=1-0.5\delta_{mn}, \end{equation}
 </p>
-<p>where \((m,n,o)\) is a triple of integers, and including more increases the complexity of \(J\). Furthermore, there are various cusp conditions that must be satisfied <a class="el" href="citelist.html#CITEREF_schmidt">[3]</a>. Accordingly, this leads to the set of DOFs being \(\{b_I,d_I,\{c_{kI}\}\}\), such that \(N_J=N_n(N_u+2)\).</p>
+<p>where \((m,n,o)\) is a triple of integers, and including more increases the complexity of \(J\). Furthermore, there are various cusp conditions that must be satisfied <a class="el" href="citelist.html#CITEREF_schmidt">[3]</a>, which fixes the choice of these integers. The inverse length scales are assumed to be the same for all atoms, \(b_I=b\), \(d_I=d\), and we fix them rather than use them as dofs. This is also done with the dofs \(c_{kI}=c_k\), so that \(N_J\) is the number of terms in the \(k\) sum in \(U_{Iij}\).</p>
 <h2><a class="anchor" id="mcmc"></a>
 Markov Chain Monte Carlo</h2>
 <p>This software utilizes the Markov chain technique (MCMC), specifically Metropolis Hastings method. The Markov chain will produce samples from the trial distribution which is then used by the Monte Carlo integration for the local energy. </p>
@@ -145,7 +147,7 @@ Markov Chain Monte Carlo</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue May 25 2021 22:59:09 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 06:50:55 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
