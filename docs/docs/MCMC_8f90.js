@@ -1,5 +1,6 @@
 var MCMC_8f90 =
 [
+    [ "log_rho_interface", "interfacemcmc_1_1log__rho__interface.html", "interfacemcmc_1_1log__rho__interface" ],
     [ "mcmc_accept", "MCMC_8f90.html#aa9e09d42934ee54d8bea65ed70c87f46", null ],
     [ "mcmc_adapt", "MCMC_8f90.html#a31491c97e8ebcd42c05916b9a0b81576", null ],
     [ "mcmc_log_prop_dist", "MCMC_8f90.html#a218d74cdc457bf3dabaec17de2f86b94", null ],

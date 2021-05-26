@@ -1,4 +1,5 @@
 var annotated_dup =
 [
-    [ "basis_functions", "namespacebasis__functions.html", "namespacebasis__functions" ]
+    [ "basis_functions", "namespacebasis__functions.html", "namespacebasis__functions" ],
+    [ "mcmc", "namespacemcmc.html", "namespacemcmc" ]
 ];
