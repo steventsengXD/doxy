@@ -29,7 +29,15 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Tutorial", "tutorial_page.html", "tutorial_page" ],
-    [ "Variational Monte Carlo Method", "new_page.html", null ],
+    [ "Variational Quantum Monte Carlo", "vqmc.html", [
+      [ "VQMC in a Nutshell", "vqmc.html#introduction", null ],
+      [ "Software Specific Details", "vqmc.html#software", [
+        [ "Basis Set Construction", "vqmc.html#basis", null ],
+        [ "Jastrow Factor", "vqmc.html#jastrow", null ],
+        [ "Markov Chain Monte Carlo", "vqmc.html#mcmc", null ]
+      ] ]
+    ] ],
+    [ "Bibliography", "citelist.html", null ],
     [ "Modules", "namespaces.html", [
       [ "Modules List", "namespaces.html", "namespaces_dup" ],
       [ "Module Members", "namespacemembers.html", [
