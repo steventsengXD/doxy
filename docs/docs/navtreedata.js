@@ -34,6 +34,7 @@ var NAVTREE =
         [ "Problem 1: Single atom and electron using Slater-type Orbitals", "tutorial_page.html#problem1", null ],
         [ "Problem 2: Single atom and electron using Gaussian-type Orbitals", "tutorial_page.html#problem2", null ],
         [ "Problem 3: Two atoms and a single electron", "tutorial_page.html#problem3", null ],
+        [ "Problem 4: Helium+ ion", "tutorial_page.html#problem4", null ],
         [ "User options beyond the tutorial", "tutorial_page.html#options", null ],
         [ "Plotting Options", "tutorial_page.html#plotting", null ]
       ] ],

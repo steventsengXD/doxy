@@ -126,11 +126,25 @@ Problem 1: Single atom and electron using Slater-type Orbitals</h2>
 <p>The code should take no longer than 3 seconds to run and complete.</p>
 <h2><a class="anchor" id="problem2"></a>
 Problem 2: Single atom and electron using Gaussian-type Orbitals</h2>
-<p>This problem is the same set up as the previous problem, however the user instead chooses Gaussian-type orbitals instead of Slater-type orbitals to describe the Hydrogen atom.</p>
+<p>This problem is the same set up as the previous problem, however the user instead chooses Gaussian-type orbitals instead of Slater-type orbitals to describe the Hydrogen atom. Also, as the Gaussian-type orbitals only give an approximate result, the total number of steps for MCMC run is increased from 1000000 to 10000000.</p>
+<p>This simulation results in the following contour plot as shown in the figure below for the electron probability density.</p>
+<div class="image">
+<img src="problem2.png" alt=""/>
+</div>
+<p>The energy obtained for this run is -11.8 eV and -0.434 Hartree energy. The energy results for this run may vary as it is an approximate result but the result the user obatins should not stray far from this value due to the increased MCMC steps.</p>
+<p>This result is not far from the analytical result</p>
+<p>Due to the higher number of MCMC steps defined, this code will take slightly longer than the run completed in Problem 1. The code should not take longer 30 seconds.</p>
 <h2><a class="anchor" id="problem3"></a>
 Problem 3: Two atoms and a single electron</h2>
-<p>The output of this system not only produces a contour plot of the electron probability density, but also allows for the evaluation</p>
+<p>The output of this system not only produces a contour plot of the electron probability density, but also allows for the evaluation of energy for varying bond lengths.</p>
+<p>To first obtain the contour plot, the user uses the same procedure as previously defined in running the scripts, keeping all of the defualt values except the number of atoms is being changed from 1 to 2. Slater-type orbitals are used. The following contour plot should be obtained.</p>
+<div class="image">
+<img src="problem3.png" alt=""/>
+</div>
 <p>In order to obtain the bond length against energy plot, the user must run the</p>
+<p>This is a proof of concept,</p>
+<h2><a class="anchor" id="problem4"></a>
+Problem 4: Helium+ ion</h2>
 <h2><a class="anchor" id="options"></a>
 User options beyond the tutorial</h2>
 <p>The user can change the following variables if they want to look at 1 atom only:</p>
@@ -174,7 +188,7 @@ Future extensions</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu May 27 2021 02:21:36 for PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN by
+    <li class="footer">Generated on Thu May 27 2021 02:31:36 for PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
