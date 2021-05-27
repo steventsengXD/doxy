@@ -70,11 +70,16 @@ $(document).ready(function(){initNavTree('pages.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock">Here is a list of all related documentation pages:</div><div class="directory">
-<table class="directory">
+<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
 <tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="vqmc.html" target="_self">Variational Quantum Monte Carlo</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="acknowledgments.html" target="_self">Acknowledgements</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="Biased.html" target="_self">Optimisation for large a parameter search-space</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="citelist.html" target="_self">Bibliography</a></td><td class="desc"></td></tr>
+<tr id="row_1_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="toggleFolder('1_')">&#9660;</span><a class="el" href="tutorial_page.html" target="_self">Tutorial</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="startup.html" target="_self">Installing/Running the code</a></td><td class="desc"></td></tr>
+<tr id="row_1_1_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="output.html" target="_self">Analyzing the results</a></td><td class="desc"></td></tr>
+<tr id="row_1_2_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="options.html" target="_self">User options</a></td><td class="desc"></td></tr>
+<tr id="row_1_3_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="future.html" target="_self">Future extensions</a></td><td class="desc"></td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="acknowledgments.html" target="_self">Acknowledgements</a></td><td class="desc"></td></tr>
+<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="Biased.html" target="_self">Optimisation for large a parameter search-space</a></td><td class="desc"></td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="citelist.html" target="_self">Bibliography</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
@@ -82,7 +87,7 @@ $(document).ready(function(){initNavTree('pages.html',''); initResizable(); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 26 2021 17:40:57 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 17:45:10 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

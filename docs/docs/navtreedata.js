@@ -33,6 +33,7 @@ var NAVTREE =
         [ "Jastrow Factor", "vqmc.html#jastrow", null ]
       ] ]
     ] ],
+    [ "Tutorial", "tutorial_page.html", "tutorial_page" ],
     [ "Acknowledgements", "acknowledgments.html", null ],
     [ "Optimisation for large a parameter search-space", "Biased.html", [
       [ "Gaussian Process", "Biased.html#intro", null ],
@@ -68,7 +69,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Biased.html",
-"namespacemembers.html"
+"namespacemcmc.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
