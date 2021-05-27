@@ -24,21 +24,27 @@ var NAVTREE =
 [
   [ "PX 915 Project Title/Name Here", "index.html", [
     [ "Introduction", "index.html", null ],
-    [ "Variational Quantum Monte Carlo", "vqmc.html", [
-      [ "VQMC in a Nutshell", "vqmc.html#introduction", [
-        [ "techniques in evaluating this integral.", "vqmc.html#montecarlo", null ]
+    [ "Tutorial", "tutorial_page.html", [
+      [ "Installing/Running the code", "tutorial_page.html#startup", [
+        [ "How to add a basis set", "tutorial_page.html#add_basis", null ]
       ] ],
+      [ "Analyzing the results", "tutorial_page.html#output", null ],
+      [ "User options", "tutorial_page.html#options", null ],
+      [ "Future extensions", "tutorial_page.html#future", null ]
+    ] ],
+    [ "Variational Quantum Monte Carlo", "vqmc.html", [
+      [ "VQMC in a Nutshell", "vqmc.html#introduction", null ],
       [ "Software Specific Details", "vqmc.html#software", [
         [ "Basis Set Construction", "vqmc.html#basis", null ],
         [ "Jastrow Factor", "vqmc.html#jastrow", null ]
       ] ]
     ] ],
-    [ "Tutorial", "tutorial_page.html", "tutorial_page" ],
-    [ "Acknowledgements", "acknowledgments.html", null ],
-    [ "Optimisation for large a parameter search-space", "Biased.html", [
-      [ "Gaussian Process", "Biased.html#intro", null ],
-      [ "Optimisation of parameters", "Biased.html#grad_dec", null ]
+    [ "Monte Carlo Integration", "montecarlo.html", null ],
+    [ "Optimisation for a large parameter search-space", "optimization.html", [
+      [ "Gaussian Process", "optimization.html#intro", null ],
+      [ "Optimisation of parameters", "optimization.html#grad_dec", null ]
     ] ],
+    [ "Acknowledgements", "acknowledgments.html", null ],
     [ "Bibliography", "citelist.html", null ],
     [ "Modules", "namespaces.html", [
       [ "Modules List", "namespaces.html", "namespaces_dup" ],
@@ -68,8 +74,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Biased.html",
-"namespacemcmc.html"
+"Biased__Optim_8f90.html",
+"main__driver_8f90_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
