@@ -26,10 +26,18 @@ var NAVTREE =
     [ "Introduction", "index.html", null ],
     [ "Tutorial", "tutorial_page.html", [
       [ "Installing/Running the code", "tutorial_page.html#startup", [
-        [ "How to add a basis set", "tutorial_page.html#add_basis", null ]
+        [ "Github Repository", "index.html#github", [
+          [ "Fortran Packages Required", "index.html#f90mods", null ],
+          [ "Python Packages Required", "index.html#pymods", null ]
+        ] ],
+        [ "Authors", "index.html#author", null ],
+        [ "User Options", "tutorial_page.html#options", null ],
+        [ "Plotting Options", "tutorial_page.html#plotting", null ]
       ] ],
       [ "Analyzing the results", "tutorial_page.html#output", null ],
-      [ "User options", "tutorial_page.html#options", null ],
+      [ "Advanced Options", "tutorial_page.html#advopts", [
+        [ "How to add a basis set", "tutorial_page.html#add_basis", null ]
+      ] ],
       [ "Future extensions", "tutorial_page.html#future", null ]
     ] ],
     [ "Variational Quantum Monte Carlo", "vqmc.html", [
@@ -65,8 +73,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions/Subroutines", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ]
+        [ "Functions/Subroutines", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -75,7 +82,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Biased__Optim_8f90.html",
-"main__driver_8f90_source.html"
+"latin__driver_8f90_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

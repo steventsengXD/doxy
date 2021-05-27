@@ -77,17 +77,31 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <p>\(H_{2}\) = -31.72 eV ref: <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/molecule/hmol.html">http://hyperphysics.phy-astr.gsu.edu/hbase/molecule/hmol.html</a></p>
 <p>\(He^{+1}\) = -54.42 eV ref: <a href="http://www.umich.edu/~chem461/QMChap8.pdf">http://www.umich.edu/~chem461/QMChap8.pdf</a></p>
 <p>\(He\) = -79.02 eV ref: <a href="http://www.umich.edu/~chem461/QMChap8.pdf">http://www.umich.edu/~chem461/QMChap8.pdf</a></p>
-<p>With the exception of user input and plotting the results, the code is written entirely in Fortran. For efficiency, parallelization has been implemented through OpenMP to ... .</p>
-<p>Along with the software documentation, this site provides a <a class="el" href="tutorial_page.html">Tutorial</a> for running this software and how to interpret the results that are produced. Additionally, the general theory applied in these simulations are explained in the following pages:</p><ul>
+<p>With the exception of user input and results visualization which are done via Python, the code is written entirely in Fortran. To boost efficiency, parallelization has been implemented through OpenMP with regards to Latin hypercube sampling and Markov chain Monte Carlo integration.</p>
+<p>Along with the software documentation, this site provides a <a class="el" href="tutorial_page.html">Tutorial</a> for installing and running this software and interpreting the results produced. Additionally, the general theory applied in these simulations are explained on the following pages:</p>
+<ul>
 <li><a class="el" href="vqmc.html">Variational Quantum Monte Carlo</a></li>
 <li><a class="el" href="montecarlo.html">Monte Carlo Integration</a></li>
 <li><a class="el" href="optimization.html">Optimisation for a large parameter search-space</a></li>
 </ul>
-<h3><a class="anchor" id="github"></a>
-Github Repository</h3>
+<h2><a class="anchor" id="github"></a>
+Github Repository</h2>
 <p>The code may be accessed and downloaded from <a href="https://github.com/HetSys/PX915_2021_B">GitHub</a>.</p>
-<h3><a class="anchor" id="author"></a>
-Authors</h3>
+<h3><a class="anchor" id="f90mods"></a>
+Fortran Packages Required</h3>
+<ul>
+<li>LAPack</li>
+</ul>
+<h3><a class="anchor" id="pymods"></a>
+Python Packages Required</h3>
+<ul>
+<li>Numpy</li>
+<li>Matlplotlib</li>
+<li>Tkinter (for the GUI input interface)</li>
+<li>Netcdf</li>
+</ul>
+<h2><a class="anchor" id="author"></a>
+Authors</h2>
 <ul>
 <li>Connor Allen</li>
 <li>Adam Fisher</li>
@@ -102,7 +116,7 @@ Authors</h3>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 26 2021 20:04:58 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 22:44:23 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

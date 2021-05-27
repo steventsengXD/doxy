@@ -76,7 +76,7 @@ $(document).ready(function(){initNavTree('tutorial_page.html',''); initResizable
 <ul>
 <li><a class="el" href="tutorial_page.html#startup">Installing/Running the code</a></li>
 <li><a class="el" href="tutorial_page.html#output">Analyzing the results</a></li>
-<li><a class="el" href="tutorial_page.html#options">User options</a></li>
+<li><a class="el" href="tutorial_page.html#options">User Options</a></li>
 <li><a class="el" href="tutorial_page.html#future">Future extensions</a></li>
 </ul>
 <h1><a class="anchor" id="startup"></a>
@@ -85,28 +85,36 @@ Installing/Running the code</h1>
 <p>./build_latin_driver.sh</p>
 <p>To now run the code execute the bash program:</p>
 <p>./run_latin_driver.sh</p>
-<p>This will prompt you to enter various paramters to specify the problem you would like to investigate.</p>
+<p>This will prompt you to enter various parameters to specify the problem you would like to investigate.</p>
 <p>Once you are happy with the problem specified, click close and the program should run.</p>
 <p>If code fails to run, do not panic, please remain calm </p><div class="image">
 <img src="kale.jpeg" alt=""/>
 </div>
-<h2><a class="anchor" id="add_basis"></a>
-How to add a basis set</h2>
-<p>It is relatively easy to add a basis set to the program. Two new functions defining the corresponding single electron wavefunction and reduced hamiltonian must be added to <a class="el" href="basis__functions_8f90.html">basis_functions.f90</a>, following the format of <a class="el" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d">wave_function_slater_1s()</a> and <a class="el" href="namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f">reduced_hamiltonian_slater_1s()</a>. Pure subfunctions similar to <a class="el" href="namespacecomponent__functions.html#ae432b45b9b8516a44e035e4394e7d75c">centered_slater_1s_laplacian()</a> can be added to <a class="el" href="component__functions_8f90.html">component_functions.f90</a>.</p>
-<p>An integer code for the basis must be added to <a class="el" href="constants_8f90.html">constants.f90</a>. A corresponding check must be added to the case selection on <a class="el" href="namespacebasis__functions.html#a9c148eb124b16f4ce8a5c822b7ef30f4">basis_functions::basis_type</a> in the initialisation routine (currently line 198 in <a class="el" href="basis__functions_8f90.html">basis_functions.f90</a>). This must point the function pointers <code>wave_function_single</code> and <code>reduced_hamiltonian</code> to the new functions.</p>
+<h2><a class="anchor" id="options"></a>
+User Options</h2>
+<ul>
+<li>Number of electrons</li>
+<li>Number of atoms</li>
+<li>Number of MCMC steps</li>
+</ul>
+<h2><a class="anchor" id="plotting"></a>
+Plotting Options</h2>
+<ul>
+<li>Amount of distance from electron</li>
+<li>Number of points in each direction</li>
+</ul>
 <h1><a class="anchor" id="output"></a>
 Analyzing the results</h1>
 <p>Results are saved using the subroutine <a href="namespacewrite__file.html">create_netcdf</a></p>
 <p><br  />
 Python is used to plot the wave function, you will be amazed</p>
 <dl class="section see"><dt>See also</dt><dd>write_file.create_netcdf</dd></dl>
-<h1><a class="anchor" id="options"></a>
-User options</h1>
-<ul>
-<li>Basis functions: <a class="el" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d">wave_function_slater_1s()</a></li>
-<li>Bond length</li>
-<li>Supersize it</li>
-</ul>
+<h1><a class="anchor" id="advopts"></a>
+Advanced Options</h1>
+<h2><a class="anchor" id="add_basis"></a>
+How to add a basis set</h2>
+<p>It is relatively easy to add a basis set to the program. Two new functions defining the corresponding single electron wavefunction and reduced hamiltonian must be added to <a class="el" href="basis__functions_8f90.html">basis_functions.f90</a>, following the format of <a class="el" href="namespacebasis__functions.html#ac9aa926890ee9ca588ab8439095de68d">wave_function_slater_1s()</a> and <a class="el" href="namespacebasis__functions.html#a341dddb966f7d491ad3ffa90d862156f">reduced_hamiltonian_slater_1s()</a>. Pure subfunctions similar to <a class="el" href="namespacecomponent__functions.html#ae432b45b9b8516a44e035e4394e7d75c">centered_slater_1s_laplacian()</a> can be added to <a class="el" href="component__functions_8f90.html">component_functions.f90</a>.</p>
+<p>An integer code for the basis must be added to <a class="el" href="constants_8f90.html">constants.f90</a>. A corresponding check must be added to the case selection on <a class="el" href="namespacebasis__functions.html#a9c148eb124b16f4ce8a5c822b7ef30f4">basis_functions::basis_type</a> in the initialisation routine (currently line 198 in <a class="el" href="basis__functions_8f90.html">basis_functions.f90</a>). This must point the function pointers <code>wave_function_single</code> and <code>reduced_hamiltonian</code> to the new functions.</p>
 <h1><a class="anchor" id="future"></a>
 Future extensions</h1>
 <ul>
@@ -119,7 +127,7 @@ Future extensions</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 26 2021 20:04:52 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 22:44:15 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

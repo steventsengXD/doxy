@@ -69,8 +69,8 @@ $(document).ready(function(){initNavTree('montecarlo.html',''); initResizable();
 <div class="title">Monte Carlo Integration </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Monte Carlo (MC) integration is a class of numerical integration techniques having a stochastic-probabilistic nature as opposed to deterministic techniques such as Gaussian quadrature and trapezoidal integration <a class="el" href="citelist.html#CITEREF_ernst">[2]</a>. In general, the MC integration involves taking a simple region that encloses the region of integration, followed by generating random points from the simple region and counting the number of 'hits' or points that are from the integration region <code></code>. Then in the 2D case, the integral would be evaluated by multiplying the fraction of points that are hits to the total area of the simple region. Thus, as more random points are generated, the integral will converge to the actual value.</p>
-<p>This software utilizes the Markov chain Monte Carlo technique (MCMC), specifically Metropolis-Hastings method (see <a class="el" href="namespacemcmc.html">mcmc</a>). Under the Metropolis algorithm, a Markov chain is generated from a proposed density function and moves are accepted/rejected based on a set rule or probability, leading to a probability distribution or final value <a class="el" href="citelist.html#CITEREF_metropolis">[4]</a>. If \({\cal P}_i^{(n)}\) defines the probability of being in state \( i\) at step \( n\) then the algorithm is as follows:</p>
+<div class="textblock"><p>Monte Carlo (MC) integration is a class of numerical integration techniques having a stochastic-probabilistic nature as opposed to deterministic techniques such as Gaussian quadrature and trapezoidal integration <b>[ernst]</b>. In general, the MC integration involves taking a simple region that encloses the region of integration, followed by generating random points from the simple region and counting the number of 'hits' or points that are from the integration region <code></code>. Then in the 2D case, the integral would be evaluated by multiplying the fraction of points that are hits to the total area of the simple region. Thus, as more random points are generated, the integral will converge to the actual value.</p>
+<p>This software utilizes the Markov chain Monte Carlo technique (MCMC), specifically Metropolis-Hastings method (see <a class="el" href="namespacemcmc.html">mcmc</a>). Under the Metropolis algorithm, a Markov chain is generated from a proposed density function and moves are accepted/rejected based on a set rule or probability, leading to a probability distribution or final value <b>[metropolis]</b>. If \({\cal P}_i^{(n)}\) defines the probability of being in state \( i\) at step \( n\) then the algorithm is as follows:</p>
 <ul>
 <li>The next state \( j \) is sampled with probability \(F_{i\rightarrow j}\)</li>
 <li>State \( j \) is accepted with probability \(A_{i \rightarrow j}\) whereby it is used as the next sample</li>
@@ -83,7 +83,7 @@ $(document).ready(function(){initNavTree('montecarlo.html',''); initResizable();
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 26 2021 20:04:52 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 22:44:15 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

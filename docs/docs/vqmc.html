@@ -75,7 +75,7 @@ VQMC in a Nutshell</h1>
 <p>The variational quantum Monte Carlo method (VQMC) is a computational method for approximating the ground state energy of a system. More often than not, the time-independent Schrödinger equation of a system defined by the Hamiltonian \(\hat{H}\) may not be solved to determine the system's ground state energy \(E_{gs}\). The <em>variational</em> <em>principle</em> from quantum mechanics provides that for any normalized function \(\Psi\), we have </p><p class="formulaDsp">
 \begin{equation}E_{gs} \leq \langle \Psi | \hat{H} | \Psi \rangle \equiv \langle \hat{H} \rangle, \end{equation}
 </p>
-<p> i.e., the expected value of \(\hat{H}\) with an arbitrary \(\Psi\) will most likely overestimate \( E_{gs}\), giving an upper bound for the ground state energy <a class="el" href="citelist.html#CITEREF_griffiths2018introduction">[3]</a>. It follows that \(E_{gs}\) may be estimated through testing trial functions across combinations of parameter values and selecting as the approximate ground state wave function the one parameterized with the values that minimize \(\langle \hat{H} \rangle\).</p>
+<p> i.e., the expected value of \(\hat{H}\) with an arbitrary \(\Psi\) will most likely overestimate \( E_{gs}\), giving an upper bound for the ground state energy <b>[griffiths2018introduction]</b>. It follows that \(E_{gs}\) may be estimated through testing trial functions across combinations of parameter values and selecting as the approximate ground state wave function the one parameterized with the values that minimize \(\langle \hat{H} \rangle\).</p>
 <p>The expected value of \(\hat{H}\) is given by the following integral</p>
 <p class="formulaDsp">
 \begin{align*}\tag 1 \langle \hat{H} \rangle &amp; = \langle \Psi |\hat{H}| \Psi \rangle \\ &amp; = \int \Psi^* \hat{H} \Psi d\textbf{r}_i, \end{align*}
@@ -122,7 +122,7 @@ Basis Set Construction</h2>
 <p>This is the expression used in the program and the number of degrees of freedom is only \(2*M\times N_n+N_J\). While this significantly simplifies calculations, it means states where 2 electrons are in different states will not be found.</p>
 <h2><a class="anchor" id="jastrow"></a>
 Jastrow Factor</h2>
-<p>The choice of Jastrow factor is never trivial. The CASINO code suggests using the DTN factor as one possibility <a class="el" href="citelist.html#CITEREF_drummond">[1]</a>. However, these are designed specifically for periodic systems which is not characteristic of the systems here. Adopting that of Boys and Handy [3,4] would be more suitable:</p>
+<p>The choice of Jastrow factor is never trivial. The CASINO code suggests using the DTN factor as one possibility <b>[drummond]</b>. However, these are designed specifically for periodic systems which is not characteristic of the systems here. Adopting that of Boys and Handy [3,4] would be more suitable:</p>
 <p class="formulaDsp">
 \begin{equation} J(\{\textbf{r}_i\})=\sum_I\sum_{i&lt;j}U_{Iij}, \end{equation}
 </p>
@@ -138,14 +138,14 @@ Jastrow Factor</h2>
 <p class="formulaDsp">
 \begin{equation} \Delta(m,n)=1-0.5\delta_{mn}, \end{equation}
 </p>
-<p>where \((m,n,o)\) is a triple of integers, and including more increases the complexity of \(J\). Furthermore, there are various cusp conditions that must be satisfied <a class="el" href="citelist.html#CITEREF_schmidt">[5]</a>, which fixes the choice of these integers. The inverse length scales are assumed to be the same for all atoms, \(b_I=b\), \(d_I=d\), and we fix them rather than use them as dofs. This is also done with the dofs \(c_{kI}=c_k\), so that \(N_J\) is the number of terms in the \(k\) sum in \(U_{Iij}\). </p>
+<p>where \((m,n,o)\) is a triple of integers, and including more increases the complexity of \(J\). Furthermore, there are various cusp conditions that must be satisfied <b>[schmidt]</b>, which fixes the choice of these integers. The inverse length scales are assumed to be the same for all atoms, \(b_I=b\), \(d_I=d\), and we fix them rather than use them as dofs. This is also done with the dofs \(c_{kI}=c_k\), so that \(N_J\) is the number of terms in the \(k\) sum in \(U_{Iij}\). </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 26 2021 20:04:52 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 22:44:15 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
