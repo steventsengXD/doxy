@@ -141,8 +141,19 @@ Problem 3: Two atoms and a single electron</h2>
 <div class="image">
 <img src="problem3.png" alt=""/>
 </div>
-<p>In order to obtain the bond length against energy plot, the user must run the</p>
-<p>This is a proof of concept,</p>
+<p>Energy results here</p>
+<p>This code run should take no more than</p>
+<p>In order to obtain the energy against varying bond length plot, the user must run the following commands in the terminal:</p>
+<p>./build_bond_driver</p>
+<p>Then run</p>
+<p>./run_bond_driver</p>
+<p>Which will present the user input interface used previously. The only thing the user needs to change is the number of atoms from 1 to 2. The difference with this run is that the contour plot will not be outputted, only the energy against varying bond length will be plotted. The resulting output plot is shown in the figure below.</p>
+<div class="image">
+<img src="problem3b.png" alt=""/>
+</div>
+<p>In the terminal, when the code has finished running, the minimum energy and its corresponding bond length is outputted. For this example, the bond length with the minimum energy was found to be 2.09 atomic units, with -0.586 Hartree energy.</p>
+<p>The bond length driver is currently a proof-of-concept. The parameters for the search over bond length are hardcoded, but can be changed on lines 168-170 of <a class="el" href="bond__driver_8f90.html" title="Driver for running multiple simulations to optimise bond length.">bond_driver.f90</a> file.</p>
+<p>This code run should take no more than 75 seconds to fully run.</p>
 <h2><a class="anchor" id="problem4"></a>
 Problem 4: Helium+ ion</h2>
 <h2><a class="anchor" id="options"></a>
@@ -188,7 +199,7 @@ Future extensions</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu May 27 2021 02:31:36 for PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN by
+    <li class="footer">Generated on Thu May 27 2021 02:41:35 for PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
