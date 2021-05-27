@@ -69,98 +69,89 @@ $(document).ready(function(){initNavTree('calc_8f90_source.html',''); initResiza
 <div class="title">calc.f90</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="calc_8f90.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacecalculations.html">    1</a></span>&#160;<span class="keyword">MODULE</span> <a class="code" href="namespacecalculations.html">calculations</a></div>
+<a href="calc_8f90.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;  <span class="keywordtype">USE </span>iso_fortran_env</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;  <span class="keywordtype">USE </span><a class="code" href="namespacecomponent__functions.html">component_functions</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">USE </span><a class="code" href="namespacebasis__functions.html">basis_functions</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">USE </span><a class="code" href="namespaceelectron__density__functions.html">electron_density_functions</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">IMPLICIT NONE</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keyword">CONTAINS</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="comment">! Returns the wavefunction evaluated on a 2D xy plane  (taking a slice)</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="comment">! Sets the z coordinate to 0</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="comment">! Takes the optimal DOF, the number of points in each direction, </span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <span class="keyword">FUNCTION </span><a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>(dof, points, box, n_ele, n_MCMC_steps)</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">   16</a></span>&#160;  </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">IMPLICIT NONE</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">INTEGER</span>, <span class="keywordtype">PARAMETER</span> :: dp=kind(1.0d0)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">INTEGER</span>, <span class="keywordtype">INTENT(IN)</span> :: points, n_ele, n_mcmc_steps</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">    real</span>(dp),<span class="keywordtype">intent(in)</span> :: box</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">DIMENSION(:)</span>, <span class="keywordtype">INTENT(IN)</span> :: dof</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">! Loop Variables</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">INTEGER</span> :: array_len, track, i,j</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">    REAL</span>(dp) :: a,b</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">    real</span>(dp),<span class="keywordtype">dimension(3,2)</span> :: box_in</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">    real</span>(dp) :: wave_norm_squared</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">! Ouput array</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">DIMENSION(:)</span>, <span class="keywordtype">ALLOCATABLE</span> :: <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">do</span> i=1,3</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      box_in(i,:) = [-box,box]</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordflow">    end do</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    array_len = (abs(points) + abs(points) + 1)**2</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">ALLOCATE</span>(<a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>(array_len))</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    wave_norm_squared = <a class="code" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">wave_function_normalisation</a>(box_in,dof,n_mcmc_steps)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    track = 0</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">! This is for the 1 electron case, will just return the wavefunction</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">IF</span> (n_ele .eq. 1) <span class="keywordflow">THEN</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="namespacecalculations.html">    3</a></span>&#160;<span class="keyword">MODULE</span> <a class="code" href="namespacecalculations.html">calculations</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keywordtype">USE </span>iso_fortran_env</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keywordtype">USE </span><a class="code" href="namespacecomponent__functions.html">component_functions</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keywordtype">USE </span><a class="code" href="namespacebasis__functions.html">basis_functions</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keywordtype">USE </span><a class="code" href="namespaceelectron__density__functions.html">electron_density_functions</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">IMPLICIT NONE</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">CONTAINS</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">FUNCTION </span><a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>(dof, points, box, n_ele, n_MCMC_steps)</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">   18</a></span>&#160;  </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">IMPLICIT NONE</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">INTEGER</span>, <span class="keywordtype">PARAMETER</span> :: dp=kind(1.0d0)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">INTEGER</span>, <span class="keywordtype">INTENT(IN)</span> :: points, n_ele, n_mcmc_steps</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">    real</span>(dp),<span class="keywordtype">intent(in)</span> :: box</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">DIMENSION(:)</span>, <span class="keywordtype">INTENT(IN)</span> :: dof</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">INTEGER</span> :: array_len, track, i,j</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">    REAL</span>(dp) :: a,b</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">    real</span>(dp),<span class="keywordtype">dimension(3,2)</span> :: box_in</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">    real</span>(dp) :: wave_norm_squared</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">DIMENSION(:)</span>, <span class="keywordtype">ALLOCATABLE</span> :: <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">do</span> i=1,3</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      box_in(i,:) = [-box,box]</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordflow">    end do</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordflow">DO</span> i = -points, points</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">DO</span> j = -points, points</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          <span class="comment">! Calculating the positions for input</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          track = track + 1</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;          <span class="comment">! Gives coordinates between -box/2 to box/2</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;          a =  (real(i) / (abs(points) + abs(points)))*box</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          b =  (real(j) / (abs(points) + abs(points)))*box</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>(track) = <a class="code" href="namespacebasis__functions.html#a5176e9e5598bd13047a4c720fbc37c50">wave_function</a>([a,b,0.0d0], dof)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordflow">        END DO</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordflow">      END DO</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a> = <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>/sqrt(wave_norm_squared)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">! For the 2 electron case, will calculate the electron density</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">ELSE</span> <span class="keywordflow">IF</span> (n_ele .eq. 2) <span class="keywordflow">THEN</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">DO</span> i = -points, points</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">DO</span> j = -points, points</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;          <span class="comment">! Calculating the positions for input</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;          track = track + 1</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;          a =  (real(i) / (abs(points) + abs(points)))*box</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          b =  (real(j) / (abs(points) + abs(points)))*box</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>(track) = <a class="code" href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density</a>([a,b,0.0d0],box_in, dof, n_mcmc_steps )</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordflow">        END DO</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordflow">      END DO</span>  </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;          </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a> = <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>/wave_norm_squared</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">ELSE</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      print*, <span class="stringliteral">&#39;Incorrect number of electrons in output calculation&#39;</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordflow">    END IF</span>  </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keyword">END FUNCTION </span><a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">END MODULE </span><a class="code" href="namespacecalculations.html">calculations</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    array_len = (abs(points) + abs(points) + 1)**2</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">ALLOCATE</span>(<a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>(array_len))</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    wave_norm_squared = <a class="code" href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">wave_function_normalisation</a>(box_in,dof,n_mcmc_steps)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    track = 0</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">IF</span> (n_ele .eq. 1) <span class="keywordflow">THEN</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">DO</span> i = -points, points</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">DO</span> j = -points, points</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          track = track + 1</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;          a =  (real(i) / (abs(points) + abs(points)))*box</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          b =  (real(j) / (abs(points) + abs(points)))*box</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;          <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>(track) = <a class="code" href="namespacebasis__functions.html#a5176e9e5598bd13047a4c720fbc37c50">wave_function</a>([a,b,0.0d0], dof)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordflow">        END DO</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordflow">      END DO</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a> = <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>/sqrt(wave_norm_squared)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">ELSE</span> <span class="keywordflow">IF</span> (n_ele .eq. 2) <span class="keywordflow">THEN</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">DO</span> i = -points, points</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">DO</span> j = -points, points</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          track = track + 1</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          a =  (real(i) / (abs(points) + abs(points)))*box</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;          b =  (real(j) / (abs(points) + abs(points)))*box</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;          <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>(track) = <a class="code" href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density</a>([a,b,0.0d0],box_in, dof, n_mcmc_steps )</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordflow">        END DO</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordflow">      END DO</span>  </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a> = <a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a>/wave_norm_squared</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">ELSE</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      print*, <span class="stringliteral">&#39;Incorrect number of electrons in output calculation&#39;</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordflow">    END IF</span>  </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">END FUNCTION </span><a class="code" href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calc</a></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">END MODULE </span><a class="code" href="namespacecalculations.html">calculations</a></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacecomponent__functions_html"><div class="ttname"><a href="namespacecomponent__functions.html">component_functions</a></div><div class="ttdoc">Basic subfunctions This module contains basic functions used in basis_functions.f90.</div><div class="ttdef"><b>Definition:</b> <a href="component__functions_8f90_source.html#l00003">component_functions.f90:3</a></div></div>
 <div class="ttc" id="anamespacebasis__functions_html"><div class="ttname"><a href="namespacebasis__functions.html">basis_functions</a></div><div class="ttdoc">Wavefunction, hamiltonian and basis set choice.</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00011">basis_functions.f90:11</a></div></div>
 <div class="ttc" id="anamespaceelectron__density__functions_html_a6a7ccc97d4e245b3179b8a4482035243"><div class="ttname"><a href="namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243">electron_density_functions::electron_density</a></div><div class="ttdeci">real(dp) function electron_density(fixed_position, integral_bounds, dof_coefficients, n_MC_points, seed_in)</div><div class="ttdoc">Computes electron density for 2 electron simulations Uses basic Monte Carlo Integration.</div><div class="ttdef"><b>Definition:</b> <a href="electron__density_8f90_source.html#l00011">electron_density.f90:11</a></div></div>
 <div class="ttc" id="anamespacebasis__functions_html_a5176e9e5598bd13047a4c720fbc37c50"><div class="ttname"><a href="namespacebasis__functions.html#a5176e9e5598bd13047a4c720fbc37c50">basis_functions::wave_function</a></div><div class="ttdeci">procedure(wave_function_interface), pointer wave_function</div><div class="ttdef"><b>Definition:</b> <a href="basis__functions_8f90_source.html#l00020">basis_functions.f90:20</a></div></div>
-<div class="ttc" id="anamespacecalculations_html"><div class="ttname"><a href="namespacecalculations.html">calculations</a></div><div class="ttdef"><b>Definition:</b> <a href="calc_8f90_source.html#l00001">calc.f90:1</a></div></div>
-<div class="ttc" id="anamespacecalculations_html_a57033791115d45e45faa4c34040b1c98"><div class="ttname"><a href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calculations::calc</a></div><div class="ttdeci">real(dp) function, dimension(:), allocatable calc(dof, points, box, n_ele, n_MCMC_steps)</div><div class="ttdef"><b>Definition:</b> <a href="calc_8f90_source.html#l00016">calc.f90:16</a></div></div>
+<div class="ttc" id="anamespacecalculations_html"><div class="ttname"><a href="namespacecalculations.html">calculations</a></div><div class="ttdoc">Function completing calculations of either the wavefunction or electron density (depending on the sys...</div><div class="ttdef"><b>Definition:</b> <a href="calc_8f90_source.html#l00003">calc.f90:3</a></div></div>
+<div class="ttc" id="anamespacecalculations_html_a57033791115d45e45faa4c34040b1c98"><div class="ttname"><a href="namespacecalculations.html#a57033791115d45e45faa4c34040b1c98">calculations::calc</a></div><div class="ttdeci">real(dp) function, dimension(:), allocatable calc(dof, points, box, n_ele, n_MCMC_steps)</div><div class="ttdoc">calc function returns the wavefunction or electron density evaluated on a 2D xy plane (taking a slice...</div><div class="ttdef"><b>Definition:</b> <a href="calc_8f90_source.html#l00018">calc.f90:18</a></div></div>
 <div class="ttc" id="anamespaceelectron__density__functions_html"><div class="ttname"><a href="namespaceelectron__density__functions.html">electron_density_functions</a></div><div class="ttdoc">Electron density function.</div><div class="ttdef"><b>Definition:</b> <a href="electron__density_8f90_source.html#l00002">electron_density.f90:2</a></div></div>
 <div class="ttc" id="anamespaceelectron__density__functions_html_a40be7c615516f64a5d7df7854b4ede96"><div class="ttname"><a href="namespaceelectron__density__functions.html#a40be7c615516f64a5d7df7854b4ede96">electron_density_functions::wave_function_normalisation</a></div><div class="ttdeci">real(dp) function wave_function_normalisation(integral_bounds, dof_coefficients, n_MC_points, seed_in)</div><div class="ttdoc">Computes the integral of the wavefunction squared To normalise the wavefunction for outputing Uses ba...</div><div class="ttdef"><b>Definition:</b> <a href="electron__density_8f90_source.html#l00063">electron_density.f90:63</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_ecf6256b7f19e30d22b098c6b27f6455.html">sf_Desktop</a></li><li class="navelem"><a class="el" href="dir_3850c8fd76647970c2a493c8355cac76.html">px915</a></li><li class="navelem"><a class="el" href="calc_8f90.html">calc.f90</a></li>
-    <li class="footer">Generated on Wed May 26 2021 17:45:01 for PX 915 Project Title/Name Here by
+    <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_ecf6256b7f19e30d22b098c6b27f6455.html">sf_Desktop</a></li><li class="navelem"><a class="el" href="dir_e2b7542c30bf71d66199829652533b9f.html">px915_</a></li><li class="navelem"><a class="el" href="calc_8f90.html">calc.f90</a></li>
+    <li class="footer">Generated on Wed May 26 2021 17:57:36 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

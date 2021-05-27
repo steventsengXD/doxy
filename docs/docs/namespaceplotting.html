@@ -75,22 +75,28 @@ $(document).ready(function(){initNavTree('namespaceplotting.html',''); initResiz
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a1c38490dd786d9e983e9d37b20707c82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a1c38490dd786d9e983e9d37b20707c82">coords</a> = np.loadtxt('xyz.txt')</td></tr>
+<tr class="memdesc:a1c38490dd786d9e983e9d37b20707c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uploading the xy plane coordinates from the xyz.txt file generated from the xy_grid subroutine in netcdf_file.f90.  <a href="namespaceplotting.html#a1c38490dd786d9e983e9d37b20707c82">More...</a><br /></td></tr>
 <tr class="separator:a1c38490dd786d9e983e9d37b20707c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09e5409aa423627fb4beccc0e108a222"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a09e5409aa423627fb4beccc0e108a222">data</a> = nc.Dataset('results.nc4', mode='r', format='NETCDF4')</td></tr>
+<tr class="memdesc:a09e5409aa423627fb4beccc0e108a222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uploading the main results NetCDF file named results.nc4 generated from the result_netcdf routine.  <a href="namespaceplotting.html#a09e5409aa423627fb4beccc0e108a222">More...</a><br /></td></tr>
 <tr class="separator:a09e5409aa423627fb4beccc0e108a222"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fcf20c720e830dc634baef4258d25d2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a2fcf20c720e830dc634baef4258d25d2">num_ele</a> = data.variables['Num_of_Electrons'][:]</td></tr>
+<tr class="memdesc:a2fcf20c720e830dc634baef4258d25d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a statement if it has been uploaded successfully.  <a href="namespaceplotting.html#a2fcf20c720e830dc634baef4258d25d2">More...</a><br /></td></tr>
 <tr class="separator:a2fcf20c720e830dc634baef4258d25d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4918981a26a1a4c7ce1596ccfcd6509f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a4918981a26a1a4c7ce1596ccfcd6509f">num_nuc</a> = data.variables['Num_of_Nuclei'][:]</td></tr>
 <tr class="separator:a4918981a26a1a4c7ce1596ccfcd6509f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8efe4ed71d4392739322abbecba4f049"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a8efe4ed71d4392739322abbecba4f049">x</a> = <a class="el" href="namespaceplotting.html#a1c38490dd786d9e983e9d37b20707c82">coords</a>[:,0]</td></tr>
+<tr class="memdesc:a8efe4ed71d4392739322abbecba4f049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the x and y coordinates from the xyz.txt.  <a href="namespaceplotting.html#a8efe4ed71d4392739322abbecba4f049">More...</a><br /></td></tr>
 <tr class="separator:a8efe4ed71d4392739322abbecba4f049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af246d6fc4a1c45cbb3c7aa721ee899df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#af246d6fc4a1c45cbb3c7aa721ee899df">y</a> = <a class="el" href="namespaceplotting.html#a1c38490dd786d9e983e9d37b20707c82">coords</a>[:,1]</td></tr>
 <tr class="separator:af246d6fc4a1c45cbb3c7aa721ee899df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bb9737531938609201bff808b35d2ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a3bb9737531938609201bff808b35d2ac">wavefunction</a> = data.variables['Electron_Density'][:]</td></tr>
+<tr class="memdesc:a3bb9737531938609201bff808b35d2ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">This does the contour plot for the 1 electron case.  <a href="namespaceplotting.html#a3bb9737531938609201bff808b35d2ac">More...</a><br /></td></tr>
 <tr class="separator:a3bb9737531938609201bff808b35d2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e4f2a0024f959265e53c50b1e231b3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#a5e4f2a0024f959265e53c50b1e231b3b">dof</a> = data.variables['Optimal_DOF'][:]</td></tr>
 <tr class="separator:a5e4f2a0024f959265e53c50b1e231b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac984b55b65f106df62ab0a19784910c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplotting.html#aac984b55b65f106df62ab0a19784910c">ele_den</a> = data.variables['Electron_Density'][:]</td></tr>
+<tr class="memdesc:aac984b55b65f106df62ab0a19784910c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the contour plot of the wavefunction squared.  <a href="namespaceplotting.html#aac984b55b65f106df62ab0a19784910c">More...</a><br /></td></tr>
 <tr class="separator:aac984b55b65f106df62ab0a19784910c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -106,7 +112,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00011">11</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p>Uploading the xy plane coordinates from the xyz.txt file generated from the xy_grid subroutine in netcdf_file.f90. </p>
+
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00012">12</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
@@ -122,7 +130,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00014">14</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p>Uploading the main results NetCDF file named results.nc4 generated from the result_netcdf routine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>this contains all the information contained in the NetCDF file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00016">16</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
@@ -137,8 +153,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dof</td><td>contains the degrees of freedom data</td></tr>
+    <tr><td class="paramname">dof</td><td>the degrees of freedom </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00038">38</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00047">47</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
@@ -154,7 +177,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00051">51</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p>Creates the contour plot of the wavefunction squared. </p>
+<p>This does the contour plot for the 2 electron case. <br  />
+ It returns a contour plot of the electron probability density in the xy plane <br  />
+ </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ele_den</td><td>the electron probability density </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00063">63</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
@@ -170,7 +203,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00021">21</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p>Prints a statement if it has been uploaded successfully. </p>
+<p>Extracting the number of electrons and nuclei variables from the result file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_ele</td><td>is the number of electrons used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00026">26</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
@@ -185,8 +226,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_nuc</td><td>is the number of nuclei </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00024">24</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00029">29</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
@@ -202,7 +249,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00036">36</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p>This does the contour plot for the 1 electron case. </p>
+<p>It returns a contour plot of the wavefunction squared in the xy plane</p>
+<p>Extracts the wavefunction and degrees of freedom parameters from the input NetCDF file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wavefunction</td><td>contains the wavefunction data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00045">45</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
@@ -218,7 +274,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00030">30</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p>Extracts the x and y coordinates from the xyz.txt. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>is the x coordinates </td></tr>
+    <tr><td class="paramname">y</td><td>is the y coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00036">36</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
@@ -234,7 +299,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00031">31</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotting_8py_source.html#l00037">37</a> of file <a class="el" href="plotting_8py_source.html">plotting.py</a>.</p>
 
 </div>
 </div>
@@ -244,7 +309,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceplotting.html">plotting</a></li>
-    <li class="footer">Generated on Wed May 26 2021 17:45:09 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 17:57:43 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
