@@ -1,0 +1,12 @@
+<map id="gp_surrogate::gp_mu_post" name="gp_surrogate::gp_mu_post">
+<area shape="rect" id="node1" title="posterior mean" alt="" coords="1407,64,1601,91"/>
+<area shape="rect" id="node2" href="$namespacebiased__optim.html#a0a768e03eee063b3d43e563a17a2f152" title=" " alt="" coords="153,31,341,57"/>
+<area shape="rect" id="node5" href="$namespacegradient__estimator.html#a01db3e2a30eb6add20ec4c01fa8fcc92" title="builds the &quot;m_vector&quot; as described in: arXiv:1602.05149v4 [stat.ML] 5 May 2019 contains the differenc..." alt="" coords="1212,57,1359,98"/>
+<area shape="rect" id="node10" href="$GP__surrogate__test__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="Driver for testing the Gaussain process surrogate." alt="" coords="1258,123,1313,149"/>
+<area shape="rect" id="node3" href="$Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="28,5,83,32"/>
+<area shape="rect" id="node4" href="$main__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,56,105,83"/>
+<area shape="rect" id="node6" href="$namespacegradient__estimator.html#aff319bb347b8b1675228aa9559c7f4c9" title="initialises the workspace F and Cholesky decomposition of the covariance matrix." alt="" coords="1017,57,1164,98"/>
+<area shape="rect" id="node7" href="$namespacegradient__estimator.html#af808bce2f368f26109593d194b2dff6c" title="runs the gradient estimator associated routines from one block." alt="" coords="787,57,969,98"/>
+<area shape="rect" id="node8" href="$namespacestoch__grad.html#a28cde69056950f2685d2fd404a680d7e" title="Return an estimate for the gradient which is an average over no_samples." alt="" coords="617,60,739,87"/>
+<area shape="rect" id="node9" href="$namespacestoch__grad.html#a5a0cf4db08bf20519faee0b5104ceb46" title="Performs the gradient assent for sequence length X_0 is the intial point to start the assent at seque..." alt="" coords="389,56,569,83"/>
+</map>

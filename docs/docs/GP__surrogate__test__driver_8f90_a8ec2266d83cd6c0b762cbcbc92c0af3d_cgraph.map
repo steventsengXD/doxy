@@ -1,0 +1,10 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Driver for testing the Gaussain process surrogate." alt="" coords="5,159,60,185"/>
+<area shape="rect" id="node2" href="$namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title="posterior mean" alt="" coords="108,5,303,32"/>
+<area shape="rect" id="node3" href="$namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title="derivative of the posterior mean, needed for stoch_grad" alt="" coords="126,57,285,98"/>
+<area shape="rect" id="node5" href="$namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title="grad of the posterior covariance, evaluated at X of size x_dim,n_dof, needed for stoch_grad" alt="" coords="122,122,289,163"/>
+<area shape="rect" id="node6" href="$namespacegp__surrogate.html#a0e17bf316499bd5d38f5c9f3512d4efb" title="update routine for adding data to gp" alt="" coords="114,188,297,215"/>
+<area shape="rect" id="node7" href="$namespacepriors.html#acb42ef6671d38028764fd5406b77502c" title="Gives the prior mean." alt="" coords="135,239,276,265"/>
+<area shape="rect" id="node8" href="$namespacepriors.html#aabb4a579fe1660f8bb4f1571c4359aab" title="Derivative of the prior mean." alt="" coords="123,289,287,316"/>
+<area shape="rect" id="node4" href="$namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title="derivative of the posterior mean, wrt dimension dim" alt="" coords="351,57,509,98"/>
+</map>
