@@ -235,7 +235,6 @@ var NAVTREEINDEX0 =
 "main__driver_8f90.html":[7,0,15],
 "main__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f":[7,0,15,0],
 "main__driver_8f90_source.html":[7,0,15],
-"montecarlo.html":[1,2],
 "namespacebasis__functions.html":[5,0,0],
 "namespacebasis__functions.html":[6,0,0],
 "namespacebiased__optim.html":[5,0,1],
@@ -244,10 +243,11 @@ var NAVTREEINDEX0 =
 "namespacecomponent__functions.html":[5,0,3],
 "namespaceelectron__density__functions.html":[5,0,4],
 "namespaceenergy__plotting.html":[5,0,5],
-"namespacegp__surrogate.html":[6,0,2],
 "namespacegp__surrogate.html":[5,0,6],
+"namespacegp__surrogate.html":[6,0,2],
 "namespacegradient__estimator.html":[5,0,7],
 "namespaceinit__params.html":[5,0,8],
 "namespacelog__rho__mod.html":[5,0,9],
-"namespacemcmc.html":[6,0,3]
+"namespacemcmc.html":[6,0,3],
+"namespacemcmc.html":[5,0,10]
 };

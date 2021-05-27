@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"namespacemcmc.html":[5,0,10],
 "namespacemembers.html":[5,1,0],
 "namespacemembers_func.html":[5,1,1],
 "namespacemembers_vars.html":[5,1,2],
@@ -62,5 +61,6 @@ var NAVTREEINDEX1 =
 "vqmc.html#basis":[1,1,0],
 "vqmc.html#introduction":[1,0],
 "vqmc.html#jastrow":[1,1,1],
+"vqmc.html#montecarlo":[1,0,0],
 "vqmc.html#software":[1,1]
 };
