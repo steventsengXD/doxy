@@ -73,6 +73,9 @@ $(document).ready(function(){initNavTree('namespacebiased__optim.html',''); init
 <div class="title">biased_optim Module Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Biased optimization subroutines and functions.  
+<a href="namespacebiased__optim.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Types</h2></td></tr>
@@ -95,7 +98,9 @@ Variables</h2></td></tr>
 <tr class="memitem:aed3c01cb0066f1a03ba178ef80c76706"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacebiased__optim.html#aed3c01cb0066f1a03ba178ef80c76706">gp_uptodate</a> = .False.</td></tr>
 <tr class="separator:aed3c01cb0066f1a03ba178ef80c76706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Biased optimization subroutines and functions. </p>
+</div><h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="a9d1b11713cffd3a329bbf4ed0fee8523"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9d1b11713cffd3a329bbf4ed0fee8523">&#9670;&nbsp;</a></span>bi_op_init_arb_mean()</h2>
 
@@ -182,28 +187,28 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biased__Optim_8f90_source.html#l00132">132</a> of file <a class="el" href="Biased__Optim_8f90_source.html">Biased_Optim.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;       <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;       <span class="keywordtype">integer</span>, <span class="keywordtype">intent(inout)</span> :: n_loops_to_do</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;       <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: n_data_in, n_dof_in, optim_no_samples,n_threads</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keywordtype">       real</span>(dp), <span class="keywordtype">dimension(n_data_in, n_dof_in)</span>, <span class="keywordtype">intent(in)</span> :: param_init_data</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keywordtype">       real</span>(dp), <span class="keywordtype">dimension(n_data_in)</span>, <span class="keywordtype">intent(in)</span> :: energy_init_data</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordtype">       real</span>(dp), <span class="keywordtype">intent(in)</span> :: ker_var, ker_lengthscale,  optim_rate_para</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;       <span class="keywordtype">procedure</span>(mean_func_interface) :: mean_prior_func</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;       <span class="keywordtype">procedure</span>(mean_func_interface_dx) :: mean_prior_dx </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;       n_dof = n_dof_in</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;       gamma = optim_rate_para</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;       no_samples=optim_no_samples</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;       <span class="keyword">call </span>gp_init(mean_prior_func, mean_prior_dx, ker_var, ker_lengthscale, param_init_data, energy_init_data,&amp;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        n_data_in, n_dof_in, n_threads)</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;       gp_uptodate = .false.</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;       current_best_e = minval(energy_init_data)</div>
+<p class="definition">Definition at line <a class="el" href="Biased__Optim_8f90_source.html#l00134">134</a> of file <a class="el" href="Biased__Optim_8f90_source.html">Biased_Optim.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;       <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;       <span class="keywordtype">integer</span>, <span class="keywordtype">intent(inout)</span> :: n_loops_to_do</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;       <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: n_data_in, n_dof_in, optim_no_samples,n_threads</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordtype">       real</span>(dp), <span class="keywordtype">dimension(n_data_in, n_dof_in)</span>, <span class="keywordtype">intent(in)</span> :: param_init_data</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keywordtype">       real</span>(dp), <span class="keywordtype">dimension(n_data_in)</span>, <span class="keywordtype">intent(in)</span> :: energy_init_data</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keywordtype">       real</span>(dp), <span class="keywordtype">intent(in)</span> :: ker_var, ker_lengthscale,  optim_rate_para</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;       <span class="keywordtype">procedure</span>(mean_func_interface) :: mean_prior_func</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;       <span class="keywordtype">procedure</span>(mean_func_interface_dx) :: mean_prior_dx</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;       n_dof = n_dof_in</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;       gamma = optim_rate_para</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;       no_samples=optim_no_samples</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;       <span class="keyword">call </span>gp_init(mean_prior_func, mean_prior_dx, ker_var, ker_lengthscale, param_init_data, energy_init_data,&amp;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        n_data_in, n_dof_in, n_threads)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;       gp_uptodate = .false.</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;       current_best_e = minval(energy_init_data)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biased__Optim_8f90_source.html#l00013">gp_uptodate</a>.</p>
+<p class="reference">References <a class="el" href="Biased__Optim_8f90_source.html#l00015">gp_uptodate</a>.</p>
 
 </div>
 </div>
@@ -287,54 +292,54 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biased__Optim_8f90_source.html#l00082">82</a> of file <a class="el" href="Biased__Optim_8f90_source.html">Biased_Optim.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(inout)</span> :: n_loops_to_do</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: n_data_in, n_dof_in, optim_no_samples,n_threads</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_data_in, n_dof_in)</span>, <span class="keywordtype">intent(in)</span> :: param_init_data</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_data_in)</span>, <span class="keywordtype">intent(in)</span> :: energy_init_data</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">intent(in)</span> :: ker_var, ker_lengthscale, constant_mean_prior, optim_rate_para</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">integer</span> gp_n_data, gp_n_dof, n_cycles</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">        real</span>(dp) :: kernel_var, kernal_inv_length</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> :: param_data</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: E_data</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> :: param_pres, param_cov</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: data_mean </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">if</span> (find_restart_file()) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keyword">call </span>read_restart_file_sizes(gp_n_data, gp_n_dof)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keyword">allocate</span>(param_data(gp_n_data, gp_n_dof))</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keyword">allocate</span>(e_data(gp_n_data))</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keyword">allocate</span>(param_pres(gp_n_data, gp_n_data))</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keyword">allocate</span>(param_cov(gp_n_data, gp_n_data))</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keyword">allocate</span>(data_mean(gp_n_data))</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keyword">call </span>read_restart_file_data(n_cycles, no_samples, current_best_e,&amp;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            constant_mean_value, kernel_var, gamma, kernal_inv_length,&amp;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            gp_n_data, e_data, gp_n_data, data_mean, gp_n_data, gp_n_data, param_pres, &amp;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            gp_n_data, gp_n_data, param_pres, gp_n_data, gp_n_dof, param_data)</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            n_dof = gp_n_dof</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keyword">call </span>gp_restart(gp_n_data, gp_n_dof,kernel_var, kernal_inv_length,&amp;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            param_data, e_data,param_pres, param_cov, data_mean, constant_mean,&amp;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;             zero_func, n_threads)</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            gp_uptodate = .false.</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            current_best_e = minval(e_data)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            n_loops_to_do=n_loops_to_do-(n_cycles-1)</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            constant_mean_value = constant_mean_prior</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            gamma = optim_rate_para</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            no_samples=optim_no_samples</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            n_dof = n_dof_in</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keyword">call </span>gp_init(constant_mean, zero_func, ker_var, ker_lengthscale, param_init_data, energy_init_data, n_data_in,&amp;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;             n_dof_in,n_threads)</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            gp_uptodate = .false.</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            current_best_e = minval(energy_init_data)</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordflow">        end if</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<p class="definition">Definition at line <a class="el" href="Biased__Optim_8f90_source.html#l00084">84</a> of file <a class="el" href="Biased__Optim_8f90_source.html">Biased_Optim.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(inout)</span> :: n_loops_to_do</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: n_data_in, n_dof_in, optim_no_samples,n_threads</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_data_in, n_dof_in)</span>, <span class="keywordtype">intent(in)</span> :: param_init_data</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_data_in)</span>, <span class="keywordtype">intent(in)</span> :: energy_init_data</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">intent(in)</span> :: ker_var, ker_lengthscale, constant_mean_prior, optim_rate_para</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">integer</span> gp_n_data, gp_n_dof, n_cycles</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">        real</span>(dp) :: kernel_var, kernal_inv_length</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> :: param_data</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: E_data</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> :: param_pres, param_cov</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: data_mean</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span> (find_restart_file()) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keyword">call </span>read_restart_file_sizes(gp_n_data, gp_n_dof)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keyword">allocate</span>(param_data(gp_n_data, gp_n_dof))</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keyword">allocate</span>(e_data(gp_n_data))</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keyword">allocate</span>(param_pres(gp_n_data, gp_n_data))</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keyword">allocate</span>(param_cov(gp_n_data, gp_n_data))</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keyword">allocate</span>(data_mean(gp_n_data))</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keyword">call </span>read_restart_file_data(n_cycles, no_samples, current_best_e,&amp;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            constant_mean_value, kernel_var, gamma, kernal_inv_length,&amp;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            gp_n_data, e_data, gp_n_data, data_mean, gp_n_data, gp_n_data, param_pres, &amp;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            gp_n_data, gp_n_data, param_pres, gp_n_data, gp_n_dof, param_data)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            n_dof = gp_n_dof</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keyword">call </span>gp_restart(gp_n_data, gp_n_dof,kernel_var, kernal_inv_length,&amp;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            param_data, e_data,param_pres, param_cov, data_mean, constant_mean,&amp;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;             zero_func, n_threads)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            gp_uptodate = .false.</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            current_best_e = minval(e_data)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            n_loops_to_do=n_loops_to_do-(n_cycles-1)</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            constant_mean_value = constant_mean_prior</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            gamma = optim_rate_para</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            no_samples=optim_no_samples</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            n_dof = n_dof_in</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keyword">call </span>gp_init(constant_mean, zero_func, ker_var, ker_lengthscale, param_init_data, energy_init_data, n_data_in,&amp;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;             n_dof_in,n_threads)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            gp_uptodate = .false.</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            current_best_e = minval(energy_init_data)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keywordflow">        end if</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biased__Optim_8f90_source.html#l00072">find_restart_file()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00768">gp_surrogate::gp_restart()</a>, and <a class="el" href="Biased__Optim_8f90_source.html#l00013">gp_uptodate</a>.</p>
+<p class="reference">References <a class="el" href="Biased__Optim_8f90_source.html#l00074">find_restart_file()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00770">gp_surrogate::gp_restart()</a>, and <a class="el" href="Biased__Optim_8f90_source.html#l00015">gp_uptodate</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -398,81 +403,81 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biased__Optim_8f90_source.html#l00155">155</a> of file <a class="el" href="Biased__Optim_8f90_source.html">Biased_Optim.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: n_new_data, n_cycles</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: threads <span class="comment">!number of threads/restarts goes here</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(IN)</span>:: seed</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_new_data, n_dof)</span>, <span class="keywordtype">intent(in)</span> :: param_update_data</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_new_data)</span>, <span class="keywordtype">intent(in)</span> :: energy_update_data</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(threads,threads, n_dof)</span> ::  per_thread_best_loc</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(0:threads)</span> ::  m,z</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(0:threads,0:threads)</span> ::  c</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(threads)</span> ::  per_thread_best_qei</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(threads,n_dof)</span> :: best_locs</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keywordtype">        real</span>(dp) :: best_E_in_batch</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordtype">integer</span> :: i, j, best_restart, n_seed, gp_n_data, gp_n_dof</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keywordtype">        real</span>(dp) :: kernel_var, kernal_inv_length</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> :: param_data</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: E_data</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> :: param_pres, param_cov</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: data_mean </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">if</span> (gp_uptodate) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keyword">call </span>gp_update(param_update_data,  energy_update_data, n_new_data, <span class="stringliteral">&#39;F&#39;</span>)</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keywordflow">        end if</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="comment">!updating best point</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        best_e_in_batch = minval(energy_update_data)</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">if</span> (best_e_in_batch &lt; current_best_e) current_best_e=best_e_in_batch</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        print*, current_best_e</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keyword">call </span>stoch_grad_init(threads,current_best_e,seed)</div>
+<p class="definition">Definition at line <a class="el" href="Biased__Optim_8f90_source.html#l00157">157</a> of file <a class="el" href="Biased__Optim_8f90_source.html">Biased_Optim.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: n_new_data, n_cycles</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: threads <span class="comment">!number of threads/restarts goes here</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(IN)</span>:: seed</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_new_data, n_dof)</span>, <span class="keywordtype">intent(in)</span> :: param_update_data</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_new_data)</span>, <span class="keywordtype">intent(in)</span> :: energy_update_data</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(threads,threads, n_dof)</span> ::  per_thread_best_loc</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(0:threads)</span> ::  m,z</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(0:threads,0:threads)</span> ::  c</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(threads)</span> ::  per_thread_best_qei</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(threads,n_dof)</span> :: best_locs</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keywordtype">        real</span>(dp) :: best_E_in_batch</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordtype">integer</span> :: i, j, best_restart, n_seed, gp_n_data, gp_n_dof</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keywordtype">        real</span>(dp) :: kernel_var, kernal_inv_length</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> :: param_data</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: E_data</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> :: param_pres, param_cov</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span> :: data_mean</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">if</span> (gp_uptodate) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keyword">call </span>gp_update(param_update_data,  energy_update_data, n_new_data, <span class="stringliteral">&#39;F&#39;</span>)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keywordflow">        end if</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="comment">!updating best point</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        best_e_in_batch = minval(energy_update_data)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keywordflow">if</span> (best_e_in_batch &lt; current_best_e) current_best_e=best_e_in_batch</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        print*, current_best_e</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="comment">! !doing the restart file thing</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="comment">! call gp_return_size_data(gp_n_data, gp_n_dof)</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">! allocate(param_data(gp_n_data, gp_n_dof))</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="comment">! allocate(E_data(gp_n_data))</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="comment">! allocate(param_pres(gp_n_data, gp_n_data))</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="comment">! allocate(param_cov(gp_n_data, gp_n_data))</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="comment">! allocate(data_mean(gp_n_data))</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">! call gp_return_state_data(kernel_var, kernal_inv_length,  param_data, E_data,&amp;</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="comment">! param_pres, param_cov, data_mean)</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="comment">! !assuming calling order of (scalars(rank 0),..., vector_dim, vector(rank 1),..., matrix_dim_1,matrix_dim2, matrix(rank 2))</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="comment">! call write_restart_file(gp_n_data, gp_n_dof,n_cycles,no_samples, current_best_E,&amp;</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="comment">! constant_mean_value, gamma, kernel_var, kernal_inv_length, &amp;</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="comment">! gp_n_data, E_data, gp_n_data, data_mean, gp_n_data, gp_n_data, param_pres, &amp;</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="comment">! gp_n_data, gp_n_data, param_pres, gp_n_data, gp_n_dof, param_data)</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="comment">!doing grad_accent, can be parrallel</span></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="comment">!$OMP parallel do default(shared) private(i,m,c,z)</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">do</span> i=1,threads</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="comment">!the &quot;no change&quot; state</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            z=0.0_dp</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            m=0.0_dp</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keyword">call </span>grad_accent(n_points(i,:,:),threads,no_samples,gamma,per_thread_best_loc(i,:,:))</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            m(1:threads) = current_best_e-gp_mu_post(per_thread_best_loc(i,:,:), threads)</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keyword">call </span>get_cholesky(c, gp_k_post_same_x(per_thread_best_loc(i,:,:), threads))</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            c= -c</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="comment">!c = -get_cholesky(gp_k_post_same_x(per_thread_best_loc(i,:,:), threads))</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordflow">do</span> j=1,no_samples</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                z(1:threads) = gaussian(threads)</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                per_thread_best_qei(i) =  maxval(m + matmul(c, z))</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="keywordflow">            end do</span></div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="keywordflow">        end do</span></div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        best_restart = maxloc(per_thread_best_qei,dim=1)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keyword">call </span>stoch_grad_init(threads,current_best_e,seed)</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="comment">! !doing the restart file thing</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="comment">! call gp_return_size_data(gp_n_data, gp_n_dof)</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="comment">! allocate(param_data(gp_n_data, gp_n_dof))</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="comment">! allocate(E_data(gp_n_data))</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="comment">! allocate(param_pres(gp_n_data, gp_n_data))</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">! allocate(param_cov(gp_n_data, gp_n_data))</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="comment">! allocate(data_mean(gp_n_data))</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="comment">! call gp_return_state_data(kernel_var, kernal_inv_length,  param_data, E_data,&amp;</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="comment">! param_pres, param_cov, data_mean)</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="comment">! !assuming calling order of (scalars(rank 0),..., vector_dim, vector(rank 1),..., matrix_dim_1,matrix_dim2, matrix(rank 2))</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="comment">! call write_restart_file(gp_n_data, gp_n_dof,n_cycles,no_samples, current_best_E,&amp;</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="comment">! constant_mean_value, gamma, kernel_var, kernal_inv_length, &amp;</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="comment">! gp_n_data, E_data, gp_n_data, data_mean, gp_n_data, gp_n_data, param_pres, &amp;</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="comment">! gp_n_data, gp_n_data, param_pres, gp_n_data, gp_n_dof, param_data)</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="comment">!doing grad_accent, can be parrallel</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="comment">!$OMP parallel do default(shared) private(i,m,c,z)</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">do</span> i=1,threads</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="comment">!the &quot;no change&quot; state</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            z=0.0_dp</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            m=0.0_dp</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keyword">call </span>grad_accent(n_points(i,:,:),threads,no_samples,gamma,per_thread_best_loc(i,:,:))</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            m(1:threads) = current_best_e-gp_mu_post(per_thread_best_loc(i,:,:), threads)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keyword">call </span>get_cholesky(c, gp_k_post_same_x(per_thread_best_loc(i,:,:), threads))</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            c= -c</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="comment">!c = -get_cholesky(gp_k_post_same_x(per_thread_best_loc(i,:,:), threads))</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordflow">do</span> j=1,no_samples</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                z(1:threads) = gaussian(threads)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                per_thread_best_qei(i) =  maxval(m + matmul(c, z))</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keywordflow">            end do</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keywordflow">        end do</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        best_locs = per_thread_best_loc(best_restart,:,:)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        best_restart = maxloc(per_thread_best_qei,dim=1)</div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        gp_uptodate = .true.</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        best_locs = per_thread_best_loc(best_restart,:,:)</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        gp_uptodate = .true.</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="GP__surrogate_8f90_source.html#l00320">gp_surrogate::gp_k_post_same_x()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00242">gp_surrogate::gp_mu_post()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00451">gp_surrogate::gp_update()</a>, <a class="el" href="Biased__Optim_8f90_source.html#l00013">gp_uptodate</a>, <a class="el" href="stoch__grad_8f90_source.html#l00058">stoch_grad::grad_accent()</a>, <a class="el" href="stoch__grad_8f90_source.html#l00012">stoch_grad::n_points</a>, and <a class="el" href="stoch__grad_8f90_source.html#l00023">stoch_grad::stoch_grad_init()</a>.</p>
+<p class="reference">References <a class="el" href="GP__surrogate_8f90_source.html#l00322">gp_surrogate::gp_k_post_same_x()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00244">gp_surrogate::gp_mu_post()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00453">gp_surrogate::gp_update()</a>, <a class="el" href="Biased__Optim_8f90_source.html#l00015">gp_uptodate</a>, <a class="el" href="stoch__grad_8f90_source.html#l00058">stoch_grad::grad_accent()</a>, <a class="el" href="stoch__grad_8f90_source.html#l00013">stoch_grad::n_points</a>, and <a class="el" href="stoch__grad_8f90_source.html#l00023">stoch_grad::stoch_grad_init()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, and <a class="el" href="main__driver_8f90_source.html#l00006">main_driver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00023">main()</a>, and <a class="el" href="main__driver_8f90_source.html#l00006">main_driver()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -482,10 +487,10 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespacegp__surrogate.html#a15caf47173b2bf2567141e44f5dc6818" title="specific function for cov(x,x), see gp_k_post" alt="" coords="268,5,415,47"/>
 <area shape="rect" href="namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title="posterior mean" alt="" coords="1337,134,1532,161"/>
 <area shape="rect" href="namespacegp__surrogate.html#a0e17bf316499bd5d38f5c9f3512d4efb" title="update routine for adding data to gp" alt="" coords="250,122,433,149"/>
-<area shape="rect" href="namespacestoch__grad.html#a5a0cf4db08bf20519faee0b5104ceb46" title=" " alt="" coords="251,173,431,199"/>
-<area shape="rect" href="namespacestoch__grad.html#a4195e5f4e69a29ba2269bc6645f9e1a5" title=" " alt="" coords="241,234,441,261"/>
-<area shape="rect" href="namespacestoch__grad.html#a28cde69056950f2685d2fd404a680d7e" title=" " alt="" coords="504,147,625,174"/>
-<area shape="rect" href="namespacestoch__grad.html#a271534c23bc106fe6af8338d0d28ae7e" title=" " alt="" coords="489,199,640,240"/>
+<area shape="rect" href="namespacestoch__grad.html#a5a0cf4db08bf20519faee0b5104ceb46" title="Performs the gradient assent for sequence length X_0 is the intial point to start the assent at seque..." alt="" coords="251,173,431,199"/>
+<area shape="rect" href="namespacestoch__grad.html#a4195e5f4e69a29ba2269bc6645f9e1a5" title="Initalises module variables and sets up starts points for the restarts of the gradient assent." alt="" coords="241,234,441,261"/>
+<area shape="rect" href="namespacestoch__grad.html#a28cde69056950f2685d2fd404a680d7e" title="Return an estimate for the gradient which is an average over no_samples." alt="" coords="504,147,625,174"/>
+<area shape="rect" href="namespacestoch__grad.html#a271534c23bc106fe6af8338d0d28ae7e" title="Returns a new point back to the search space if it leaves." alt="" coords="489,199,640,240"/>
 <area shape="rect" href="namespacegradient__estimator.html#af808bce2f368f26109593d194b2dff6c" title="runs the gradient estimator associated routines from one block." alt="" coords="688,285,871,327"/>
 <area shape="rect" href="namespacegradient__estimator.html#a86da16b770f1b1b599707ea5d4323cc5" title="performs the backward difference differentiation on the workspace F" alt="" coords="920,319,1067,360"/>
 <area shape="rect" href="namespacegradient__estimator.html#ab9cda2e11ba3871506436af8ca0d51a1" title="combines the gradient contributions from the workspace F and those associated with the m_vector and c..." alt="" coords="919,449,1068,491"/>
@@ -526,14 +531,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biased__Optim_8f90_source.html#l00072">72</a> of file <a class="el" href="Biased__Optim_8f90_source.html">Biased_Optim.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">logical</span> :: retval</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        retval=.false.</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        </div>
+<p class="definition">Definition at line <a class="el" href="Biased__Optim_8f90_source.html#l00074">74</a> of file <a class="el" href="Biased__Optim_8f90_source.html">Biased_Optim.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">logical</span> :: retval</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        retval=.false.</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biased__Optim_8f90_source.html#l00082">bi_op_init_constant_mean()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biased__Optim_8f90_source.html#l00084">bi_op_init_constant_mean()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -559,10 +564,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biased__Optim_8f90_source.html#l00013">13</a> of file <a class="el" href="Biased__Optim_8f90_source.html">Biased_Optim.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">logical</span> :: GP_uptodate = .false.</div>
+<p class="definition">Definition at line <a class="el" href="Biased__Optim_8f90_source.html#l00015">15</a> of file <a class="el" href="Biased__Optim_8f90_source.html">Biased_Optim.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">logical</span> :: GP_uptodate = .false.</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biased__Optim_8f90_source.html#l00132">bi_op_init_arb_mean()</a>, <a class="el" href="Biased__Optim_8f90_source.html#l00082">bi_op_init_constant_mean()</a>, and <a class="el" href="Biased__Optim_8f90_source.html#l00155">bi_op_step()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biased__Optim_8f90_source.html#l00134">bi_op_init_arb_mean()</a>, <a class="el" href="Biased__Optim_8f90_source.html#l00084">bi_op_init_constant_mean()</a>, and <a class="el" href="Biased__Optim_8f90_source.html#l00157">bi_op_step()</a>.</p>
 
 </div>
 </div>
@@ -572,7 +577,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacebiased__optim.html">biased_optim</a></li>
-    <li class="footer">Generated on Wed May 26 2021 22:44:17 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Thu May 27 2021 00:25:24 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

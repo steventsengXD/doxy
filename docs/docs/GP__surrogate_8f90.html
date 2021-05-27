@@ -75,6 +75,9 @@ $(document).ready(function(){initNavTree('GP__surrogate_8f90.html',''); initResi
 </div><!--header-->
 <div class="contents">
 
+<p>Gaussian process surrogate subroutines and functions.  
+<a href="#details">More...</a></p>
+
 <p><a href="GP__surrogate_8f90_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -99,12 +102,13 @@ Data Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Modules</h2></td></tr>
 <tr class="memitem:namespacegp__surrogate"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegp__surrogate.html">gp_surrogate</a></td></tr>
+<tr class="memdesc:namespacegp__surrogate"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gaussian process surrogate submodules and functions. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a4328571ab67388645458c4e416c8a525"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegp__surrogate.html#a4328571ab67388645458c4e416c8a525">gp_surrogate::gp_init_gausscov</a> (mean_prior, mean_prior_dx, ker_var, ker_length, param_data_in, E_data_in, n_data_in, n_dof_in, n_threads_in)</td></tr>
-<tr class="memdesc:a4328571ab67388645458c4e416c8a525"><td class="mdescLeft">&#160;</td><td class="mdescRight">intialises with a gaussian covairiance  <a href="namespacegp__surrogate.html#a4328571ab67388645458c4e416c8a525">More...</a><br /></td></tr>
+<tr class="memdesc:a4328571ab67388645458c4e416c8a525"><td class="mdescLeft">&#160;</td><td class="mdescRight">intialises with a gaussian covariance  <a href="namespacegp__surrogate.html#a4328571ab67388645458c4e416c8a525">More...</a><br /></td></tr>
 <tr class="separator:a4328571ab67388645458c4e416c8a525"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f9b3ba8789c463b5a18be08b25005f4"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegp__surrogate.html#a2f9b3ba8789c463b5a18be08b25005f4">gp_surrogate::gp_init_arbcov</a> (mean_prior, cov_prior, param_data_in, E_data_in, n_data_in, n_dof_in)</td></tr>
 <tr class="memdesc:a2f9b3ba8789c463b5a18be08b25005f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">do not use, don't have a function for the dervatives of the kernal/mean  <a href="namespacegp__surrogate.html#a2f9b3ba8789c463b5a18be08b25005f4">More...</a><br /></td></tr>
@@ -116,7 +120,7 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:a0e14bb8083db57385c53f0ff771de4a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">derivative of the posterior mean, wrt dimension dim  <a href="namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7">More...</a><br /></td></tr>
 <tr class="separator:a0e14bb8083db57385c53f0ff771de4a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac886420977e0f68753966a9b72f4f047"><td class="memItemLeft" align="right" valign="top">real(dp) function, dimension(x_dim, n_dof)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047">gp_surrogate::gp_mu_post_grad</a> (x, x_dim, only)</td></tr>
-<tr class="memdesc:ac886420977e0f68753966a9b72f4f047"><td class="mdescLeft">&#160;</td><td class="mdescRight">derivative of the posterior mean, needed for <a class="el" href="namespacestoch__grad.html">stoch_grad</a>  <a href="namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047">More...</a><br /></td></tr>
+<tr class="memdesc:ac886420977e0f68753966a9b72f4f047"><td class="mdescLeft">&#160;</td><td class="mdescRight">derivative of the posterior mean, needed for <a class="el" href="namespacestoch__grad.html" title="Optimization modules.">stoch_grad</a>  <a href="namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047">More...</a><br /></td></tr>
 <tr class="separator:ac886420977e0f68753966a9b72f4f047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15caf47173b2bf2567141e44f5dc6818"><td class="memItemLeft" align="right" valign="top">real(dp) function, dimension(x_dim, x_dim)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegp__surrogate.html#a15caf47173b2bf2567141e44f5dc6818">gp_surrogate::gp_k_post_same_x</a> (x, x_dim)</td></tr>
 <tr class="memdesc:a15caf47173b2bf2567141e44f5dc6818"><td class="mdescLeft">&#160;</td><td class="mdescRight">specific function for cov(x,x), see <a class="el" href="interfacegp__surrogate_1_1gp__k__post.html" title="function for postieror covairance kernal use in format x_1, x_2, x1_dim, x2_dim for cov(x_1,...">gp_k_post</a>  <a href="namespacegp__surrogate.html#a15caf47173b2bf2567141e44f5dc6818">More...</a><br /></td></tr>
@@ -125,7 +129,7 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:adad427a427a4dfd178efbd42128469ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">specific function for cov(x_1,x_2), see <a class="el" href="interfacegp__surrogate_1_1gp__k__post.html" title="function for postieror covairance kernal use in format x_1, x_2, x1_dim, x2_dim for cov(x_1,...">gp_k_post</a>  <a href="namespacegp__surrogate.html#adad427a427a4dfd178efbd42128469ce">More...</a><br /></td></tr>
 <tr class="separator:adad427a427a4dfd178efbd42128469ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9940ed211173497561480e7b7bbae5bd"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd">gp_surrogate::gp_post_k_grad</a> (X, x_dim, out)</td></tr>
-<tr class="memdesc:a9940ed211173497561480e7b7bbae5bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">grad of the posterior covariance, evaluated at X of size x_dim,n_dof, needed for <a class="el" href="namespacestoch__grad.html">stoch_grad</a>  <a href="namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd">More...</a><br /></td></tr>
+<tr class="memdesc:a9940ed211173497561480e7b7bbae5bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">grad of the posterior covariance, evaluated at X of size x_dim,n_dof, needed for <a class="el" href="namespacestoch__grad.html" title="Optimization modules.">stoch_grad</a>  <a href="namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd">More...</a><br /></td></tr>
 <tr class="separator:a9940ed211173497561480e7b7bbae5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e17bf316499bd5d38f5c9f3512d4efb"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegp__surrogate.html#a0e17bf316499bd5d38f5c9f3512d4efb">gp_surrogate::gp_update</a> (param_data_in_top, E_data_in_top, n_top, Algo_choice)</td></tr>
 <tr class="memdesc:a0e17bf316499bd5d38f5c9f3512d4efb"><td class="mdescLeft">&#160;</td><td class="mdescRight">update routine for adding data to gp  <a href="namespacegp__surrogate.html#a0e17bf316499bd5d38f5c9f3512d4efb">More...</a><br /></td></tr>
@@ -154,13 +158,17 @@ Variables</h2></td></tr>
 <tr class="memitem:a64b10c98bbfa2609ffbb42cac3ac58fe"><td class="memItemLeft" align="right" valign="top">procedure(mean_func_interface_dx), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacegp__surrogate.html#a64b10c98bbfa2609ffbb42cac3ac58fe">gp_surrogate::mu_prior_dx</a> =&gt; null()</td></tr>
 <tr class="separator:a64b10c98bbfa2609ffbb42cac3ac58fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Gaussian process surrogate subroutines and functions. </p>
+
+<p class="definition">Definition in file <a class="el" href="GP__surrogate_8f90_source.html">GP_surrogate.f90</a>.</p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_ecf6256b7f19e30d22b098c6b27f6455.html">sf_Desktop</a></li><li class="navelem"><a class="el" href="dir_e2b7542c30bf71d66199829652533b9f.html">px915_</a></li><li class="navelem"><a class="el" href="GP__surrogate_8f90.html">GP_surrogate.f90</a></li>
-    <li class="footer">Generated on Wed May 26 2021 22:44:14 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Thu May 27 2021 00:25:21 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

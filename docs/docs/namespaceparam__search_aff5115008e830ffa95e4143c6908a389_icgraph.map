@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="416,5,563,32"/>
 <area shape="rect" id="node3" href="$Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="28,68,83,95"/>
 <area shape="rect" id="node4" href="$latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation using the latin_hypercube search." alt="" coords="439,107,539,133"/>
-<area shape="rect" id="node5" href="$namespacestoch__grad.html#a4195e5f4e69a29ba2269bc6645f9e1a5" title=" " alt="" coords="389,157,589,184"/>
+<area shape="rect" id="node5" href="$namespacestoch__grad.html#a4195e5f4e69a29ba2269bc6645f9e1a5" title="Initalises module variables and sets up starts points for the restarts of the gradient assent." alt="" coords="389,157,589,184"/>
 <area shape="rect" id="node6" href="$namespacebiased__optim.html#a0a768e03eee063b3d43e563a17a2f152" title=" " alt="" coords="153,144,341,171"/>
 <area shape="rect" id="node7" href="$main__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,144,105,171"/>
 </map>

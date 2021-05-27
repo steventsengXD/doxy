@@ -3,7 +3,6 @@ var files_dup =
     [ "basis_functions.f90", "basis__functions_8f90.html", "basis__functions_8f90" ],
     [ "Biased_Optim.f90", "Biased__Optim_8f90.html", "Biased__Optim_8f90" ],
     [ "Biased_Optim_example_driver.f90", "Biased__Optim__example__driver_8f90.html", "Biased__Optim__example__driver_8f90" ],
-    [ "bib.bib", "bib_8bib.html", null ],
     [ "bond_driver.f90", "bond__driver_8f90.html", "bond__driver_8f90" ],
     [ "calc.f90", "calc_8f90.html", "calc_8f90" ],
     [ "component_functions.f90", "component__functions_8f90.html", "component__functions_8f90" ],

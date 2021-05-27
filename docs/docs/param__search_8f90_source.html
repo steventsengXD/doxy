@@ -76,15 +76,15 @@ $(document).ready(function(){initNavTree('param__search_8f90_source.html',''); i
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="comment">! Public Variables </span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="comment">! Public Variables</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespaceparam__search.html#aa3dd5eff65c268d29ead64f36434e0d8">   10</a></span>&#160;<span class="keywordtype">  real</span>(<a class="code" href="namespaceshared__constants.html#a0dd7b5fd793b0a608ee9409cd05314db">dp</a>), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span>, <span class="keywordtype">protected</span> :: <a class="code" href="namespaceparam__search.html#aa3dd5eff65c268d29ead64f36434e0d8">best_params</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="namespaceparam__search.html#a709050fff27b65db5c3707ae115003e2">   11</a></span>&#160;  <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(1)</span>, <span class="keywordtype">protected</span> :: <a class="code" href="namespaceparam__search.html#a709050fff27b65db5c3707ae115003e2">best_trial</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">contains</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceparam__search.html#a58cbd0f2cfb54aba223bfba6c19a8a46">random_search_grid</a>(trials,param_bounds,n_trials, seed_in)</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespaceparam__search.html#a58cbd0f2cfb54aba223bfba6c19a8a46">   19</a></span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> ,<span class="keywordtype">intent(in)</span> :: param_bounds <span class="comment">!length of this will be the &quot;N&quot; </span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespaceparam__search.html#a58cbd0f2cfb54aba223bfba6c19a8a46">   19</a></span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> ,<span class="keywordtype">intent(in)</span> :: param_bounds <span class="comment">!length of this will be the &quot;N&quot;</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:, :)</span>,<span class="keywordtype">intent(inout)</span> :: trials <span class="comment">! (x,y) x is each trial, y is each param</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: n_trials, seed_in<span class="comment">!this is the &quot;M&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>,<span class="keywordtype">allocatable</span> :: rand_num </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>,<span class="keywordtype">allocatable</span> :: rand_num</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(2)</span> :: arr_shape</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">integer</span> :: i, n</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">integer</span>,<span class="keywordtype">allocatable</span> :: seed(:)</div>
@@ -93,15 +93,15 @@ $(document).ready(function(){initNavTree('param__search_8f90_source.html',''); i
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">allocate</span>(seed(n))</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    seed = seed_in   <span class="comment">!set seed to that read in from input.</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">call </span>random_seed(put=seed)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">! arr_shape(1) contains the number of variables, param_bounds(x,y) where x is for each param and y for limits.</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    arr_shape = shape(param_bounds)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">allocate</span>(rand_num(n_trials))</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">do</span> i = 1,arr_shape(1)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">call </span>random_number(rand_num) </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">call </span>random_number(rand_num)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    trials(:, i) = rand_num*(param_bounds(i,1) - param_bounds(i,2)) + param_bounds(i,2)</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordflow">    end do</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
@@ -125,16 +125,16 @@ $(document).ready(function(){initNavTree('param__search_8f90_source.html',''); i
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">allocate</span>(seed(n))</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    seed = seed_in    <span class="comment">!set seed value to that read in from input.</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">call </span>random_seed(put=seed) <span class="comment">!actually set the random seed for repeatability</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">! arr_shape(1) contains the number of variables, param_bounds(x,y) where x is for each param and y for limits.</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    arr_shape = shape(param_bounds)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">allocate</span>(zero_to_one(n_trials))</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">do</span> i = 1,n_trials</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      zero_to_one(i) = (real(i, dp)-1.0_dp)/(n_trials-1.0_dp) <span class="comment">!extra bit needed to make sure we are binning right in the param search space!</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordflow">    end do</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">! initialize latin cube in order.</span></div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">do</span> i = 1,arr_shape(1)</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      trials(:, i) = zero_to_one*(param_bounds(i,1) - param_bounds(i,2)) + param_bounds(i,2)</div>
@@ -151,13 +151,13 @@ $(document).ready(function(){initNavTree('param__search_8f90_source.html',''); i
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          trials(j,i) = temp_val <span class="comment">!swap back the temp value. simple as.</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordflow">        end do</span></div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordflow">      end do</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordflow">    end do</span> </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordflow">    end do</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">deallocate</span>(zero_to_one,seed)</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceparam__search.html#aff5115008e830ffa95e4143c6908a389">latin_hypercube</a></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceparam__search.html#a675279a4de8b9d57fcf6ded067479a45">find_best_params</a>(trial_energies, trials)</div>
 <div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="namespaceparam__search.html#a675279a4de8b9d57fcf6ded067479a45">  107</a></span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:, :)</span>, <span class="keywordtype">allocatable</span>, <span class="keywordtype">intent(in)</span> :: trials</div>
@@ -169,41 +169,41 @@ $(document).ready(function(){initNavTree('param__search_8f90_source.html',''); i
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="namespaceparam__search.html#a709050fff27b65db5c3707ae115003e2">best_trial</a> = minloc(trial_energies) <span class="comment">!index corresponding to the most negative, &quot;best&quot;, energy.</span></div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="namespaceparam__search.html#aa3dd5eff65c268d29ead64f36434e0d8">best_params</a> = trials(<a class="code" href="namespaceparam__search.html#a709050fff27b65db5c3707ae115003e2">best_trial</a>(1),:)</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceparam__search.html#a675279a4de8b9d57fcf6ded067479a45">find_best_params</a></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keyword">subroutine </span><a class="code" href="namespaceparam__search.html#a04262aed0a917d0a5e07a7213aba7cf0">param_wall_check</a>(param_bounds)</div>
 <div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="namespaceparam__search.html#a04262aed0a917d0a5e07a7213aba7cf0">  121</a></span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> ,<span class="keywordtype">intent(in)</span> :: param_bounds</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">parameter</span> :: tol = 0.05_dp <span class="comment">!percentage tol as determined by the min and max bounds.</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keywordtype">    real</span>(dp) :: bound_gap </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">integer</span> :: i  </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keywordtype">    real</span>(dp) :: bound_gap</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">integer</span> :: i</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(<a class="code" href="namespaceparam__search.html#aa3dd5eff65c268d29ead64f36434e0d8">best_params</a>)</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      bound_gap = abs(param_bounds(i,1) - param_bounds(i,2))</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordflow">if</span> ( abs(<a class="code" href="namespaceparam__search.html#aa3dd5eff65c268d29ead64f36434e0d8">best_params</a>(i) - param_bounds(i,1))/bound_gap &lt; tol &amp;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      .or. abs(<a class="code" href="namespaceparam__search.html#aa3dd5eff65c268d29ead64f36434e0d8">best_params</a>(i) - param_bounds(i,2))/bound_gap &lt; tol ) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        print*, <span class="stringliteral">&quot;parameter &quot;</span>, i,  <span class="stringliteral">&quot; is close to wall&quot;</span></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="comment">!for later: might want to instead store i in and array of potential problem parameters.</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">!As oppsed to just printing out the problem. </span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">!As oppsed to just printing out the problem.</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keywordflow">      end if</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keywordflow">    end do</span> </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keywordflow">    end do</span></div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keyword">end subroutine </span><a class="code" href="namespaceparam__search.html#a04262aed0a917d0a5e07a7213aba7cf0">param_wall_check</a></div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">end module</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespaceshared__constants_html_a0dd7b5fd793b0a608ee9409cd05314db"><div class="ttname"><a href="namespaceshared__constants.html#a0dd7b5fd793b0a608ee9409cd05314db">shared_constants::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00005">constants.f90:5</a></div></div>
+<div class="ttc" id="anamespaceshared__constants_html_a0dd7b5fd793b0a608ee9409cd05314db"><div class="ttname"><a href="namespaceshared__constants.html#a0dd7b5fd793b0a608ee9409cd05314db">shared_constants::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00006">constants.f90:6</a></div></div>
 <div class="ttc" id="anamespaceparam__search_html_a675279a4de8b9d57fcf6ded067479a45"><div class="ttname"><a href="namespaceparam__search.html#a675279a4de8b9d57fcf6ded067479a45">param_search::find_best_params</a></div><div class="ttdeci">subroutine find_best_params(trial_energies, trials)</div><div class="ttdoc">find_best_params returns the 1D array that contain the current best set of parameters found from a MC...</div><div class="ttdef"><b>Definition:</b> <a href="param__search_8f90_source.html#l00107">param_search.f90:107</a></div></div>
 <div class="ttc" id="anamespaceparam__search_html_a58cbd0f2cfb54aba223bfba6c19a8a46"><div class="ttname"><a href="namespaceparam__search.html#a58cbd0f2cfb54aba223bfba6c19a8a46">param_search::random_search_grid</a></div><div class="ttdeci">subroutine random_search_grid(trials, param_bounds, n_trials, seed_in)</div><div class="ttdoc">random_search_grid returns MxN grid of test points for M free parameters and N trials distributed</div><div class="ttdef"><b>Definition:</b> <a href="param__search_8f90_source.html#l00019">param_search.f90:19</a></div></div>
 <div class="ttc" id="anamespaceparam__search_html_aff5115008e830ffa95e4143c6908a389"><div class="ttname"><a href="namespaceparam__search.html#aff5115008e830ffa95e4143c6908a389">param_search::latin_hypercube</a></div><div class="ttdeci">subroutine latin_hypercube(trials, param_bounds, n_trials, seed_in)</div><div class="ttdoc">latin_hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercu...</div><div class="ttdef"><b>Definition:</b> <a href="param__search_8f90_source.html#l00055">param_search.f90:55</a></div></div>
-<div class="ttc" id="anamespaceshared__constants_html"><div class="ttname"><a href="namespaceshared__constants.html">shared_constants</a></div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00001">constants.f90:1</a></div></div>
+<div class="ttc" id="anamespaceshared__constants_html"><div class="ttname"><a href="namespaceshared__constants.html">shared_constants</a></div><div class="ttdoc">Definitions of shared constants used throughout the software.</div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00002">constants.f90:2</a></div></div>
 <div class="ttc" id="anamespaceparam__search_html_a04262aed0a917d0a5e07a7213aba7cf0"><div class="ttname"><a href="namespaceparam__search.html#a04262aed0a917d0a5e07a7213aba7cf0">param_search::param_wall_check</a></div><div class="ttdeci">subroutine param_wall_check(param_bounds)</div><div class="ttdoc">param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat...</div><div class="ttdef"><b>Definition:</b> <a href="param__search_8f90_source.html#l00121">param_search.f90:121</a></div></div>
 <div class="ttc" id="anamespaceparam__search_html_a709050fff27b65db5c3707ae115003e2"><div class="ttname"><a href="namespaceparam__search.html#a709050fff27b65db5c3707ae115003e2">param_search::best_trial</a></div><div class="ttdeci">integer, dimension(1), protected best_trial</div><div class="ttdef"><b>Definition:</b> <a href="param__search_8f90_source.html#l00011">param_search.f90:11</a></div></div>
-<div class="ttc" id="anamespaceparam__search_html"><div class="ttname"><a href="namespaceparam__search.html">param_search</a></div><div class="ttdoc">functions/subroutines associated with building/initialisation the parameter searchspace and finding t...</div><div class="ttdef"><b>Definition:</b> <a href="param__search_8f90_source.html#l00003">param_search.f90:3</a></div></div>
+<div class="ttc" id="anamespaceparam__search_html"><div class="ttname"><a href="namespaceparam__search.html">param_search</a></div><div class="ttdoc">Functions/subroutines associated with building/initialisation the parameter search space and finding ...</div><div class="ttdef"><b>Definition:</b> <a href="param__search_8f90_source.html#l00003">param_search.f90:3</a></div></div>
 <div class="ttc" id="anamespaceparam__search_html_aa3dd5eff65c268d29ead64f36434e0d8"><div class="ttname"><a href="namespaceparam__search.html#aa3dd5eff65c268d29ead64f36434e0d8">param_search::best_params</a></div><div class="ttdeci">real(dp), dimension(:), allocatable, protected best_params</div><div class="ttdef"><b>Definition:</b> <a href="param__search_8f90_source.html#l00010">param_search.f90:10</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_ecf6256b7f19e30d22b098c6b27f6455.html">sf_Desktop</a></li><li class="navelem"><a class="el" href="dir_e2b7542c30bf71d66199829652533b9f.html">px915_</a></li><li class="navelem"><a class="el" href="param__search_8f90.html">param_search.f90</a></li>
-    <li class="footer">Generated on Wed May 26 2021 22:44:13 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Thu May 27 2021 00:25:20 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

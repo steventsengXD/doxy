@@ -5,7 +5,7 @@
 <area shape="rect" id="node4" href="$namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="208,195,395,236"/>
 <area shape="rect" id="node21" href="$namespaceparam__search.html#aff5115008e830ffa95e4143c6908a389" title="latin_hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercu..." alt="" coords="226,260,377,301"/>
 <area shape="rect" id="node22" href="$namespacebasis__functions.html#ad155a8bce0b153e59bfef25f0d7e6e1f" title="Log of the Probability Density." alt="" coords="226,325,377,367"/>
-<area shape="rect" id="node23" href="$namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title="runs a version of mcmc_sample but every adapt_interval steps adjusts s, based on an exponetial averag..." alt="" coords="224,391,379,418"/>
+<area shape="rect" id="node23" href="$namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title="Runs a version of mcmc_sample but every adapt_interval steps adjusts s, based on an exponetial averag..." alt="" coords="224,391,379,418"/>
 <area shape="rect" id="node24" href="$namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title="The main routine for MCMC, generates (n_steps&#45;n_burned)/thinning_interval samples from a distribution..." alt="" coords="219,442,384,469"/>
 <area shape="rect" id="node25" href="$namespaceparam__search.html#a04262aed0a917d0a5e07a7213aba7cf0" title="param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat..." alt="" coords="219,493,383,535"/>
 <area shape="rect" id="node26" href="$namespaceread__data.html#a8f6dbd540e98c78b92a68b194a273daf" title="Read in data from a text file." alt="" coords="230,559,373,586"/>

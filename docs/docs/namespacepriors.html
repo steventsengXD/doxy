@@ -71,15 +71,22 @@ $(document).ready(function(){initNavTree('namespacepriors.html',''); initResizab
 <div class="title">priors Module Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Functions for obtaining the prior mean and its derivative.  
+<a href="namespacepriors.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:acb42ef6671d38028764fd5406b77502c"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepriors.html#acb42ef6671d38028764fd5406b77502c">prior_mean</a> (x)</td></tr>
+<tr class="memdesc:acb42ef6671d38028764fd5406b77502c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the prior mean.  <a href="namespacepriors.html#acb42ef6671d38028764fd5406b77502c">More...</a><br /></td></tr>
 <tr class="separator:acb42ef6671d38028764fd5406b77502c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabb4a579fe1660f8bb4f1571c4359aab"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepriors.html#aabb4a579fe1660f8bb4f1571c4359aab">prior_mean_dx</a> (x, dim)</td></tr>
+<tr class="memdesc:aabb4a579fe1660f8bb4f1571c4359aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivative of the prior mean.  <a href="namespacepriors.html#aabb4a579fe1660f8bb4f1571c4359aab">More...</a><br /></td></tr>
 <tr class="separator:aabb4a579fe1660f8bb4f1571c4359aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Functions for obtaining the prior mean and its derivative. </p>
+</div><h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="acb42ef6671d38028764fd5406b77502c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb42ef6671d38028764fd5406b77502c">&#9670;&nbsp;</a></span>prior_mean()</h2>
 
@@ -96,22 +103,24 @@ Functions/Subroutines</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="priors_8f90_source.html#l00008">8</a> of file <a class="el" href="priors_8f90_source.html">priors.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: x <span class="comment">!param space point</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">        real</span>(dp) :: out</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        out = 1.0_dp</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        </div>
+<p>Gives the prior mean. </p>
+
+<p class="definition">Definition at line <a class="el" href="priors_8f90_source.html#l00009">9</a> of file <a class="el" href="priors_8f90_source.html">priors.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: x <span class="comment">!param space point</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">        real</span>(dp) :: out</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        out = 1.0_dp</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="GP__surrogate__test__driver_8f90_source.html#l00001">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GP__surrogate__test__driver_8f90_source.html#l00003">main()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacepriors_acb42ef6671d38028764fd5406b77502c_icgraph.png" border="0" usemap="#namespacepriors_acb42ef6671d38028764fd5406b77502c_icgraph" alt=""/></div>
 <map name="namespacepriors_acb42ef6671d38028764fd5406b77502c_icgraph" id="namespacepriors_acb42ef6671d38028764fd5406b77502c_icgraph">
-<area shape="rect" title=" " alt="" coords="108,5,249,32"/>
-<area shape="rect" href="GP__surrogate__test__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" title="Gives the prior mean." alt="" coords="108,5,249,32"/>
+<area shape="rect" href="GP__surrogate__test__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="Driver for testing the Gaussain process surrogate." alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
@@ -143,23 +152,25 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="priors_8f90_source.html#l00017">17</a> of file <a class="el" href="priors_8f90_source.html">priors.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: dim</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: x <span class="comment">!param space point</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">        real</span>(dp) :: out</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        out = 0.0_dp</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        </div>
+<p>Derivative of the prior mean. </p>
+
+<p class="definition">Definition at line <a class="el" href="priors_8f90_source.html#l00019">19</a> of file <a class="el" href="priors_8f90_source.html">priors.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: dim</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: x <span class="comment">!param space point</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">        real</span>(dp) :: out</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        out = 0.0_dp</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="GP__surrogate__test__driver_8f90_source.html#l00001">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="GP__surrogate__test__driver_8f90_source.html#l00003">main()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacepriors_aabb4a579fe1660f8bb4f1571c4359aab_icgraph.png" border="0" usemap="#namespacepriors_aabb4a579fe1660f8bb4f1571c4359aab_icgraph" alt=""/></div>
 <map name="namespacepriors_aabb4a579fe1660f8bb4f1571c4359aab_icgraph" id="namespacepriors_aabb4a579fe1660f8bb4f1571c4359aab_icgraph">
-<area shape="rect" title=" " alt="" coords="108,5,272,32"/>
-<area shape="rect" href="GP__surrogate__test__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="5,5,60,32"/>
+<area shape="rect" title="Derivative of the prior mean." alt="" coords="108,5,272,32"/>
+<area shape="rect" href="GP__surrogate__test__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title="Driver for testing the Gaussain process surrogate." alt="" coords="5,5,60,32"/>
 </map>
 </div>
 
@@ -171,7 +182,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacepriors.html">priors</a></li>
-    <li class="footer">Generated on Wed May 26 2021 22:44:22 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Thu May 27 2021 00:25:27 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

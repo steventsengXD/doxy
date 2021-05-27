@@ -163,11 +163,10 @@ Functions/Subroutines</h2></td></tr>
 <p>Calculating the positions for input</p>
 <p>Returns the result of the electron density evaluated at one coordinate point using electron_density function.</p>
 <p>Divides the result by the results from the wave_norm_squared result defined earlier.</p>
-<p>Returns a error print statement if the number of electrons is not defined. <br  />
-</p>
+<p>Returns a error print statement if the number of electrons is not defined.</p>
 
 <p class="definition">Definition at line <a class="el" href="calc_8f90_source.html#l00018">18</a> of file <a class="el" href="calc_8f90_source.html">calc.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  </div>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">IMPLICIT NONE</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">INTEGER</span>, <span class="keywordtype">PARAMETER</span> :: dp=kind(1.0d0)</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">INTEGER</span>, <span class="keywordtype">INTENT(IN)</span> :: points, n_ele, n_MCMC_steps</div>
@@ -178,19 +177,19 @@ Functions/Subroutines</h2></td></tr>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">    real</span>(dp),<span class="keywordtype">dimension(3,2)</span> :: box_in</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">    real</span>(dp) :: wave_norm_squared</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">    REAL</span>(dp), <span class="keywordtype">DIMENSION(:)</span>, <span class="keywordtype">ALLOCATABLE</span> :: calc</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">do</span> i=1,3</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      box_in(i,:) = [-box,box]</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordflow">    end do</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    array_len = (abs(points) + abs(points) + 1)**2</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">ALLOCATE</span>(calc(array_len))</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    wave_norm_squared = wave_function_normalisation(box_in,dof,n_mcmc_steps)</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    track = 0</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">IF</span> (n_ele .eq. 1) <span class="keywordflow">THEN</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">DO</span> i = -points, points</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">DO</span> j = -points, points</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;          track = track + 1</div>
@@ -200,9 +199,9 @@ Functions/Subroutines</h2></td></tr>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keywordflow">        END DO</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordflow">      END DO</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      calc = calc/sqrt(wave_norm_squared)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">ELSE</span> <span class="keywordflow">IF</span> (n_ele .eq. 2) <span class="keywordflow">THEN</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">DO</span> i = -points, points</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">DO</span> j = -points, points</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          track = track + 1</div>
@@ -210,13 +209,13 @@ Functions/Subroutines</h2></td></tr>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;          b =  (real(j) / (abs(points) + abs(points)))*box</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;          calc(track) = electron_density([a,b,0.0d0],box_in, dof, n_mcmc_steps )</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keywordflow">        END DO</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordflow">      END DO</span>  </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keywordflow">      END DO</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      calc = calc/wave_norm_squared</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">ELSE</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      print*, <span class="stringliteral">&#39;Incorrect number of electrons in output calculation&#39;</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordflow">    END IF</span>  </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordflow">    END IF</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="electron__density_8f90_source.html#l00011">electron_density_functions::electron_density()</a>, <a class="el" href="basis__functions_8f90_source.html#l00020">basis_functions::wave_function</a>, and <a class="el" href="electron__density_8f90_source.html#l00063">electron_density_functions::wave_function_normalisation()</a>.</p>
 
@@ -249,7 +248,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecalculations.html">calculations</a></li>
-    <li class="footer">Generated on Wed May 26 2021 22:44:17 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Thu May 27 2021 00:25:24 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

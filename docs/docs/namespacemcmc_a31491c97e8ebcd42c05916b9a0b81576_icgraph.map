@@ -1,5 +1,5 @@
 <map id="mcmc::mcmc_adapt" name="mcmc::mcmc_adapt">
-<area shape="rect" id="node1" title="runs a version of mcmc_sample but every adapt_interval steps adjusts s, based on an exponetial averag..." alt="" coords="200,56,355,83"/>
+<area shape="rect" id="node1" title="Runs a version of mcmc_sample but every adapt_interval steps adjusts s, based on an exponetial averag..." alt="" coords="200,56,355,83"/>
 <area shape="rect" id="node2" href="$bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,5,152,32"/>
 <area shape="rect" id="node3" href="$Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,56,106,83"/>
 <area shape="rect" id="node4" href="$latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation using the latin_hypercube search." alt="" coords="29,107,129,133"/>

@@ -1,5 +1,5 @@
 <map id="main_driver" name="main_driver">
-<area shape="rect" id="node1" title=" " alt="" coords="5,137,105,163"/>
+<area shape="rect" id="node1" title="Driver for testing electron density function." alt="" coords="5,137,105,163"/>
 <area shape="rect" id="node2" href="$namespacebasis__functions.html#a13ef39e7df0f40c27616e9719cef10dc" title="Dinitialisation routine." alt="" coords="153,64,356,105"/>
 <area shape="rect" id="node3" href="$namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243" title="Computes electron density for 2 electron simulations Uses basic Monte Carlo Integration." alt="" coords="156,129,353,171"/>
 <area shape="rect" id="node4" href="$namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="161,195,348,236"/>

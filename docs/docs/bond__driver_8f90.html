@@ -72,6 +72,9 @@ $(document).ready(function(){initNavTree('bond__driver_8f90.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 
+<p>Driver for running multiple simulations to optimise bond length.  
+<a href="#details">More...</a></p>
+
 <p><a href="bond__driver_8f90_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -80,7 +83,11 @@ Functions/Subroutines</h2></td></tr>
 <tr class="memdesc:ad11c5dff0e05a402b470d0c824badbbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver for running multiple simulations to optimise bondlength.  <a href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc">More...</a><br /></td></tr>
 <tr class="separator:ad11c5dff0e05a402b470d0c824badbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Driver for running multiple simulations to optimise bond length. </p>
+
+<p class="definition">Definition in file <a class="el" href="bond__driver_8f90_source.html">bond_driver.f90</a>.</p>
+</div><h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="ad11c5dff0e05a402b470d0c824badbbc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad11c5dff0e05a402b470d0c824badbbc">&#9670;&nbsp;</a></span>bond_length_driver()</h2>
 
@@ -98,7 +105,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="bond__driver_8f90_source.html#l00007">7</a> of file <a class="el" href="bond__driver_8f90_source.html">bond_driver.f90</a>.</p>
 
-<p class="reference">References <a class="el" href="param__search_8f90_source.html#l00011">param_search::best_trial</a>, <a class="el" href="basis__functions_8f90_source.html#l00267">basis_functions::deinitialise_basis()</a>, <a class="el" href="basis__functions_8f90_source.html#l00052">basis_functions::dof_bounds</a>, <a class="el" href="constants_8f90_source.html#l00005">shared_constants::dp</a>, <a class="el" href="param__search_8f90_source.html#l00107">param_search::find_best_params()</a>, <a class="el" href="basis__functions_8f90_source.html#l00069">basis_functions::initialise_basis()</a>, <a class="el" href="param__search_8f90_source.html#l00055">param_search::latin_hypercube()</a>, <a class="el" href="basis__functions_8f90_source.html#l00540">basis_functions::log_density()</a>, <a class="el" href="MCMC_8f90_source.html#l00192">mcmc::mcmc_adapt()</a>, <a class="el" href="MCMC_8f90_source.html#l00109">mcmc::mcmc_sample()</a>, <a class="el" href="basis__functions_8f90_source.html#l00051">basis_functions::n_space_dims</a>, <a class="el" href="basis__functions_8f90_source.html#l00050">basis_functions::number_dofs</a>, <a class="el" href="param__search_8f90_source.html#l00121">param_search::param_wall_check()</a>, <a class="el" href="read__data_8f90_source.html#l00021">read_data::readtxt()</a>, <a class="el" href="basis__functions_8f90_source.html#l00021">basis_functions::reduced_hamiltonian</a>, and <a class="el" href="constants_8f90_source.html#l00010">shared_constants::slater_1s_code</a>.</p>
+<p class="reference">References <a class="el" href="param__search_8f90_source.html#l00011">param_search::best_trial</a>, <a class="el" href="basis__functions_8f90_source.html#l00267">basis_functions::deinitialise_basis()</a>, <a class="el" href="basis__functions_8f90_source.html#l00052">basis_functions::dof_bounds</a>, <a class="el" href="constants_8f90_source.html#l00006">shared_constants::dp</a>, <a class="el" href="param__search_8f90_source.html#l00107">param_search::find_best_params()</a>, <a class="el" href="basis__functions_8f90_source.html#l00069">basis_functions::initialise_basis()</a>, <a class="el" href="param__search_8f90_source.html#l00055">param_search::latin_hypercube()</a>, <a class="el" href="basis__functions_8f90_source.html#l00540">basis_functions::log_density()</a>, <a class="el" href="MCMC_8f90_source.html#l00194">mcmc::mcmc_adapt()</a>, <a class="el" href="MCMC_8f90_source.html#l00111">mcmc::mcmc_sample()</a>, <a class="el" href="basis__functions_8f90_source.html#l00051">basis_functions::n_space_dims</a>, <a class="el" href="basis__functions_8f90_source.html#l00050">basis_functions::number_dofs</a>, <a class="el" href="param__search_8f90_source.html#l00121">param_search::param_wall_check()</a>, <a class="el" href="read__data_8f90_source.html#l00021">read_data::readtxt()</a>, <a class="el" href="basis__functions_8f90_source.html#l00021">basis_functions::reduced_hamiltonian</a>, and <a class="el" href="constants_8f90_source.html#l00011">shared_constants::slater_1s_code</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -110,7 +117,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="208,195,395,236"/>
 <area shape="rect" href="namespaceparam__search.html#aff5115008e830ffa95e4143c6908a389" title="latin_hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercu..." alt="" coords="226,260,377,301"/>
 <area shape="rect" href="namespacebasis__functions.html#ad155a8bce0b153e59bfef25f0d7e6e1f" title="Log of the Probability Density." alt="" coords="226,325,377,367"/>
-<area shape="rect" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title="runs a version of mcmc_sample but every adapt_interval steps adjusts s, based on an exponetial averag..." alt="" coords="224,391,379,418"/>
+<area shape="rect" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title="Runs a version of mcmc_sample but every adapt_interval steps adjusts s, based on an exponetial averag..." alt="" coords="224,391,379,418"/>
 <area shape="rect" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title="The main routine for MCMC, generates (n_steps&#45;n_burned)/thinning_interval samples from a distribution..." alt="" coords="219,442,384,469"/>
 <area shape="rect" href="namespaceparam__search.html#a04262aed0a917d0a5e07a7213aba7cf0" title="param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat..." alt="" coords="219,493,383,535"/>
 <area shape="rect" href="namespaceread__data.html#a8f6dbd540e98c78b92a68b194a273daf" title="Read in data from a text file." alt="" coords="230,559,373,586"/>
@@ -141,7 +148,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_ecf6256b7f19e30d22b098c6b27f6455.html">sf_Desktop</a></li><li class="navelem"><a class="el" href="dir_e2b7542c30bf71d66199829652533b9f.html">px915_</a></li><li class="navelem"><a class="el" href="bond__driver_8f90.html">bond_driver.f90</a></li>
-    <li class="footer">Generated on Wed May 26 2021 22:44:13 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Thu May 27 2021 00:25:20 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -1,7 +1,7 @@
 <map id="stoch_grad::grad_accent" name="stoch_grad::grad_accent">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,185,134"/>
-<area shape="rect" id="node2" href="$namespacestoch__grad.html#a28cde69056950f2685d2fd404a680d7e" title=" " alt="" coords="248,78,369,105"/>
-<area shape="rect" id="node16" href="$namespacestoch__grad.html#a271534c23bc106fe6af8338d0d28ae7e" title=" " alt="" coords="233,129,384,171"/>
+<area shape="rect" id="node1" title="Performs the gradient assent for sequence length X_0 is the intial point to start the assent at seque..." alt="" coords="5,107,185,134"/>
+<area shape="rect" id="node2" href="$namespacestoch__grad.html#a28cde69056950f2685d2fd404a680d7e" title="Return an estimate for the gradient which is an average over no_samples." alt="" coords="248,78,369,105"/>
+<area shape="rect" id="node16" href="$namespacestoch__grad.html#a271534c23bc106fe6af8338d0d28ae7e" title="Returns a new point back to the search space if it leaves." alt="" coords="233,129,384,171"/>
 <area shape="rect" id="node3" href="$namespacegradient__estimator.html#af808bce2f368f26109593d194b2dff6c" title="runs the gradient estimator associated routines from one block." alt="" coords="432,71,615,112"/>
 <area shape="rect" id="node4" href="$namespacegradient__estimator.html#a86da16b770f1b1b599707ea5d4323cc5" title="performs the backward difference differentiation on the workspace F" alt="" coords="664,5,811,47"/>
 <area shape="rect" id="node5" href="$namespacegradient__estimator.html#ab9cda2e11ba3871506436af8ca0d51a1" title="combines the gradient contributions from the workspace F and those associated with the m_vector and c..." alt="" coords="663,71,812,112"/>

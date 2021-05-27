@@ -9,17 +9,17 @@
 <area shape="rect" id="node27" href="$namespacegp__surrogate.html#ac3337116f98cc4872e35579b61015e4d" title="for finding minimum of the energy and associated parameter space point, from stored data" alt="" coords="129,649,291,691"/>
 <area shape="rect" id="node28" href="$namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="117,715,303,756"/>
 <area shape="rect" id="node45" href="$namespacelog__rho__mod.html#a6559b071657182435469e9e4e6301e9c" title=" " alt="" coords="129,781,291,807"/>
-<area shape="rect" id="node46" href="$namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title="runs a version of mcmc_sample but every adapt_interval steps adjusts s, based on an exponetial averag..." alt="" coords="133,831,287,858"/>
+<area shape="rect" id="node46" href="$namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title="Runs a version of mcmc_sample but every adapt_interval steps adjusts s, based on an exponetial averag..." alt="" coords="133,831,287,858"/>
 <area shape="rect" id="node47" href="$namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title="The main routine for MCMC, generates (n_steps&#45;n_burned)/thinning_interval samples from a distribution..." alt="" coords="127,882,293,909"/>
 <area shape="rect" id="node48" href="$namespaceparam__search.html#a04262aed0a917d0a5e07a7213aba7cf0" title="param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat..." alt="" coords="128,933,292,975"/>
-<area shape="rect" id="node49" href="$namespacestoch__grad.html#ac069fd50a4e8436a473aa146fbbe0ce0" title=" " alt="" coords="108,999,312,1026"/>
+<area shape="rect" id="node49" href="$namespacestoch__grad.html#ac069fd50a4e8436a473aa146fbbe0ce0" title="deallocates state variables" alt="" coords="108,999,312,1026"/>
 <area shape="rect" id="node3" href="$namespacegp__surrogate.html#a15caf47173b2bf2567141e44f5dc6818" title="specific function for cov(x,x), see gp_k_post" alt="" coords="387,343,533,384"/>
 <area shape="rect" id="node4" href="$namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title="posterior mean" alt="" coords="1501,335,1696,362"/>
 <area shape="rect" id="node5" href="$namespacegp__surrogate.html#a0e17bf316499bd5d38f5c9f3512d4efb" title="update routine for adding data to gp" alt="" coords="369,241,551,267"/>
-<area shape="rect" id="node6" href="$namespacestoch__grad.html#a5a0cf4db08bf20519faee0b5104ceb46" title=" " alt="" coords="370,409,550,435"/>
-<area shape="rect" id="node21" href="$namespacestoch__grad.html#a4195e5f4e69a29ba2269bc6645f9e1a5" title=" " alt="" coords="360,291,560,318"/>
-<area shape="rect" id="node7" href="$namespacestoch__grad.html#a28cde69056950f2685d2fd404a680d7e" title=" " alt="" coords="639,265,760,291"/>
-<area shape="rect" id="node20" href="$namespacestoch__grad.html#a271534c23bc106fe6af8338d0d28ae7e" title=" " alt="" coords="624,397,775,439"/>
+<area shape="rect" id="node6" href="$namespacestoch__grad.html#a5a0cf4db08bf20519faee0b5104ceb46" title="Performs the gradient assent for sequence length X_0 is the intial point to start the assent at seque..." alt="" coords="370,409,550,435"/>
+<area shape="rect" id="node21" href="$namespacestoch__grad.html#a4195e5f4e69a29ba2269bc6645f9e1a5" title="Initalises module variables and sets up starts points for the restarts of the gradient assent." alt="" coords="360,291,560,318"/>
+<area shape="rect" id="node7" href="$namespacestoch__grad.html#a28cde69056950f2685d2fd404a680d7e" title="Return an estimate for the gradient which is an average over no_samples." alt="" coords="639,265,760,291"/>
+<area shape="rect" id="node20" href="$namespacestoch__grad.html#a271534c23bc106fe6af8338d0d28ae7e" title="Returns a new point back to the search space if it leaves." alt="" coords="624,397,775,439"/>
 <area shape="rect" id="node8" href="$namespacegradient__estimator.html#af808bce2f368f26109593d194b2dff6c" title="runs the gradient estimator associated routines from one block." alt="" coords="839,195,1021,236"/>
 <area shape="rect" id="node9" href="$namespacegradient__estimator.html#a86da16b770f1b1b599707ea5d4323cc5" title="performs the backward difference differentiation on the workspace F" alt="" coords="1077,67,1224,108"/>
 <area shape="rect" id="node10" href="$namespacegradient__estimator.html#ab9cda2e11ba3871506436af8ca0d51a1" title="combines the gradient contributions from the workspace F and those associated with the m_vector and c..." alt="" coords="1076,132,1225,173"/>

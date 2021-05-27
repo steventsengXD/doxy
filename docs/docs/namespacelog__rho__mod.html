@@ -71,13 +71,18 @@ $(document).ready(function(){initNavTree('namespacelog__rho__mod.html',''); init
 <div class="title">log_rho_mod Module Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Driver for testng the biased optimization routines.  
+<a href="namespacelog__rho__mod.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
 <tr class="memitem:a6559b071657182435469e9e4e6301e9c"><td class="memItemLeft" align="right" valign="top">real(dp) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelog__rho__mod.html#a6559b071657182435469e9e4e6301e9c">log_rho</a> (x, dof)</td></tr>
 <tr class="separator:a6559b071657182435469e9e4e6301e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function/Subroutine Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Driver for testng the biased optimization routines. </p>
+</div><h2 class="groupheader">Function/Subroutine Documentation</h2>
 <a id="a6559b071657182435469e9e4e6301e9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6559b071657182435469e9e4e6301e9c">&#9670;&nbsp;</a></span>log_rho()</h2>
 
@@ -104,19 +109,19 @@ Functions/Subroutines</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00009">9</a> of file <a class="el" href="Biased__Optim__example__driver_8f90_source.html">Biased_Optim_example_driver.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: x</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: dof</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">    real</span>(dp) :: retval</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    retval = 2*log(abs(wave_function(x,dof)))</div>
+<p class="definition">Definition at line <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00011">11</a> of file <a class="el" href="Biased__Optim__example__driver_8f90_source.html">Biased_Optim_example_driver.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: x</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: dof</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">    real</span>(dp) :: retval</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    retval = 2*log(abs(wave_function(x,dof)))</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="basis__functions_8f90_source.html#l00020">basis_functions::wave_function</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00023">main()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -135,7 +140,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacelog__rho__mod.html">log_rho_mod</a></li>
-    <li class="footer">Generated on Wed May 26 2021 22:44:21 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Thu May 27 2021 00:25:26 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

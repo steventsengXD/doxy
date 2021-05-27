@@ -1,5 +1,5 @@
 <map id="stoch_grad::g_t" name="stoch_grad::g_t">
-<area shape="rect" id="node1" title=" " alt="" coords="5,78,127,105"/>
+<area shape="rect" id="node1" title="Return an estimate for the gradient which is an average over no_samples." alt="" coords="5,78,127,105"/>
 <area shape="rect" id="node2" href="$namespacegradient__estimator.html#af808bce2f368f26109593d194b2dff6c" title="runs the gradient estimator associated routines from one block." alt="" coords="175,71,357,112"/>
 <area shape="rect" id="node3" href="$namespacegradient__estimator.html#a86da16b770f1b1b599707ea5d4323cc5" title="performs the backward difference differentiation on the workspace F" alt="" coords="407,5,553,47"/>
 <area shape="rect" id="node4" href="$namespacegradient__estimator.html#ab9cda2e11ba3871506436af8ca0d51a1" title="combines the gradient contributions from the workspace F and those associated with the m_vector and c..." alt="" coords="405,71,555,112"/>

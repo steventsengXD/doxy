@@ -144,10 +144,10 @@ Functions/Subroutines</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">    real</span>(dp) :: centered_gaussian</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(3)</span>, <span class="keywordtype">intent(in)</span> :: position </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: alpha    </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: alpha</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    centered_gaussian = (2.0_dp * alpha /<a class="code" href="namespaceshared__constants.html#af60d21edef3e12c6891d4193b862a4f4">pi</a>)**(0.75_dp)*exp(-alpha * dot_product(position,position))</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="constants_8f90_source.html#l00006">shared_constants::pi</a>.</p>
+<p class="reference">References <a class="el" href="constants_8f90_source.html#l00007">shared_constants::pi</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="component__functions_8f90_source.html#l00022">centered_gaussian_laplacian()</a>, and <a class="el" href="basis__functions_8f90_source.html#l00554">basis_functions::wave_function_sto3g()</a>.</p>
 <div class="dynheader">
@@ -162,7 +162,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="200,57,387,98"/>
 <area shape="rect" href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,13,152,40"/>
 <area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,64,106,91"/>
-<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title=" " alt="" coords="29,115,129,141"/>
+<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Driver for testing electron density function." alt="" coords="29,115,129,141"/>
 </map>
 </div>
 
@@ -206,9 +206,9 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="component__functions_8f90_source.html#l00022">22</a> of file <a class="el" href="component__functions_8f90_source.html">component_functions.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">    real</span>(dp) :: centered_gaussian_laplacian</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(3)</span>, <span class="keywordtype">intent(in)</span> :: position </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: alpha </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(3)</span>, <span class="keywordtype">intent(in)</span> :: position</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: alpha</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    centered_gaussian_laplacian = &amp;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    (-6.0_dp*alpha + 4.0_dp*alpha**2*dot_product(position,position))*centered_gaussian(position,alpha)</div>
 </div><!-- fragment -->
@@ -234,7 +234,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="200,49,387,90"/>
 <area shape="rect" href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,5,152,32"/>
 <area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,56,106,83"/>
-<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title=" " alt="" coords="29,107,129,133"/>
+<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Driver for testing electron density function." alt="" coords="29,107,129,133"/>
 </map>
 </div>
 
@@ -278,12 +278,12 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="component__functions_8f90_source.html#l00035">35</a> of file <a class="el" href="component__functions_8f90_source.html">component_functions.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">    real</span>(dp) :: centered_slater_1s</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(3)</span>, <span class="keywordtype">intent(in)</span> :: position </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">    real</span>(dp),<span class="keywordtype">intent(in)</span> :: zeta </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(3)</span>, <span class="keywordtype">intent(in)</span> :: position</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">    real</span>(dp),<span class="keywordtype">intent(in)</span> :: zeta</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    centered_slater_1s = ( zeta**3 /<a class="code" href="namespaceshared__constants.html#af60d21edef3e12c6891d4193b862a4f4">pi</a>)**(0.5_dp)*exp(-zeta * norm2(position))</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="constants_8f90_source.html#l00006">shared_constants::pi</a>.</p>
+<p class="reference">References <a class="el" href="constants_8f90_source.html#l00007">shared_constants::pi</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="component__functions_8f90_source.html#l00047">centered_slater_1s_laplacian()</a>, and <a class="el" href="basis__functions_8f90_source.html#l00276">basis_functions::wave_function_slater_1s()</a>.</p>
 <div class="dynheader">
@@ -298,7 +298,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="200,57,387,98"/>
 <area shape="rect" href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,13,152,40"/>
 <area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,64,106,91"/>
-<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title=" " alt="" coords="29,115,129,141"/>
+<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Driver for testing electron density function." alt="" coords="29,115,129,141"/>
 </map>
 </div>
 
@@ -340,12 +340,12 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="component__functions_8f90_source.html#l00047">47</a> of file <a class="el" href="component__functions_8f90_source.html">component_functions.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">    real</span>(dp) :: centered_slater_1s_laplacian</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(3)</span>, <span class="keywordtype">intent(in)</span> :: position </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: zeta </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(3)</span>, <span class="keywordtype">intent(in)</span> :: position</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: zeta</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    centered_slater_1s_laplacian = &amp;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    (-2.0_dp*zeta/norm2(position) + zeta**2)*centered_slater_1s(position,zeta)</div>
 </div><!-- fragment -->
@@ -371,7 +371,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="200,49,387,90"/>
 <area shape="rect" href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,5,152,32"/>
 <area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,56,106,83"/>
-<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title=" " alt="" coords="29,107,129,133"/>
+<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Driver for testing electron density function." alt="" coords="29,107,129,133"/>
 </map>
 </div>
 
@@ -441,16 +441,16 @@ Here is the caller graph for this function:</div>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="component__functions_8f90_source.html#l00105">105</a> of file <a class="el" href="component__functions_8f90_source.html">component_functions.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div>
+<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">    real</span>(dp) :: correlation_atom_term</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(3)</span>, <span class="keywordtype">intent(in)</span> :: atom_coord </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(6)</span>, <span class="keywordtype">intent(in)</span> :: electron_coords </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">intent(in)</span> :: mno_parameters </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: c </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: b </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: d </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(3)</span>, <span class="keywordtype">intent(in)</span> :: atom_coord</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(6)</span>, <span class="keywordtype">intent(in)</span> :: electron_coords</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">intent(in)</span> :: mno_parameters</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: c</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: b</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: d</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">! Internal variables</span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">    real</span>(dp) :: r_12 <span class="comment">! Distance between electrons</span></div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keywordtype">    real</span>(dp) :: r_I1 <span class="comment">! Distance from atom to electron 1</span></div>
@@ -461,7 +461,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    r_12 = correlation_range(norm2(electron_coords(1:3)-electron_coords(4:6)),d)</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    r_i1 = correlation_range(norm2(atom_coord-electron_coords(1:3)),b)</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    r_i2 = correlation_range(norm2(atom_coord-electron_coords(4:6)),b)</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">! k sum from Schmidt and Moskowitz 1990 to compute U_I12</span></div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    correlation_atom_term = 0.0_dp</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">do</span> k = 1, <span class="keyword">size</span>(mno_parameters,2)</div>
@@ -469,7 +469,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      c(k)*correlation_subterm(r_12,r_i1,r_i2,mno_parameters(1,k),mno_parameters(2,k)&amp;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        ,mno_parameters(3,k))</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keywordflow">    end do</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="component__functions_8f90_source.html#l00065">correlation_range()</a>, and <a class="el" href="component__functions_8f90_source.html#l00079">correlation_subterm()</a>.</p>
 
@@ -495,7 +495,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="200,49,387,90"/>
 <area shape="rect" href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,5,152,32"/>
 <area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,56,106,83"/>
-<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title=" " alt="" coords="29,107,129,133"/>
+<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Driver for testing electron density function." alt="" coords="29,107,129,133"/>
 </map>
 </div>
 
@@ -566,13 +566,13 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="component__functions_8f90_source.html#l00145">145</a> of file <a class="el" href="component__functions_8f90_source.html">component_functions.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keywordtype">    real</span>(dp) :: correlation_function</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">intent(in)</span> :: atom_coords </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(6)</span>, <span class="keywordtype">intent(in)</span> :: electron_coords </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">intent(in)</span> :: atom_coords</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(6)</span>, <span class="keywordtype">intent(in)</span> :: electron_coords</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">intent(in)</span> :: mno_parameters</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keywordtype">    real</span>(dp),<span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: c </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: b </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: d </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keywordtype">    real</span>(dp),<span class="keywordtype">dimension(:)</span>, <span class="keywordtype">intent(in)</span> :: c</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: b</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: d</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">integer</span> :: i <span class="comment">! Loop variable</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    correlation_function = 0.0_dp</div>
@@ -607,7 +607,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="200,49,387,90"/>
 <area shape="rect" href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,5,152,32"/>
 <area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,56,106,83"/>
-<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title=" " alt="" coords="29,107,129,133"/>
+<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Driver for testing electron density function." alt="" coords="29,107,129,133"/>
 </map>
 </div>
 
@@ -651,9 +651,9 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="component__functions_8f90_source.html#l00065">65</a> of file <a class="el" href="component__functions_8f90_source.html">component_functions.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">    real</span>(dp) :: correlation_range</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: r </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: d </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: r</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: d</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    correlation_range = d * r/(1+d*r)</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="component__functions_8f90_source.html#l00105">correlation_atom_term()</a>.</p>
@@ -669,7 +669,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="200,49,387,90"/>
 <area shape="rect" href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,5,152,32"/>
 <area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,56,106,83"/>
-<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title=" " alt="" coords="29,107,129,133"/>
+<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Driver for testing electron density function." alt="" coords="29,107,129,133"/>
 </map>
 </div>
 
@@ -741,15 +741,15 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="component__functions_8f90_source.html#l00079">79</a> of file <a class="el" href="component__functions_8f90_source.html">component_functions.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">implicit none</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">    real</span>(dp) :: correlation_subterm</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: r_12 </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: r_I1 </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: r_I2 </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">integer</span>,<span class="keywordtype">intent(in)</span> :: m, n, o </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: r_12</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: r_I1</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">intent(in)</span> :: r_I2</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">integer</span>,<span class="keywordtype">intent(in)</span> :: m, n, o</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">    real</span>(dp) :: delta <span class="comment">! coefficient to match Schmidt and Moskowitz 1990</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">! Value of delta, following Schmidt and Moskowitz 1990</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (m==n) <span class="keywordflow">then</span> </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">if</span> (m==n) <span class="keywordflow">then</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      delta = 0.5_dp</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      delta = 1.0_dp</div>
@@ -770,7 +770,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="200,49,387,90"/>
 <area shape="rect" href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,5,152,32"/>
 <area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,56,106,83"/>
-<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title=" " alt="" coords="29,107,129,133"/>
+<area shape="rect" href="ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Driver for testing electron density function." alt="" coords="29,107,129,133"/>
 </map>
 </div>
 
@@ -778,12 +778,12 @@ Here is the caller graph for this function:</div>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="anamespaceshared__constants_html_af60d21edef3e12c6891d4193b862a4f4"><div class="ttname"><a href="namespaceshared__constants.html#af60d21edef3e12c6891d4193b862a4f4">shared_constants::pi</a></div><div class="ttdeci">real(dp), parameter pi</div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00006">constants.f90:6</a></div></div>
+<div class="ttc" id="anamespaceshared__constants_html_af60d21edef3e12c6891d4193b862a4f4"><div class="ttname"><a href="namespaceshared__constants.html#af60d21edef3e12c6891d4193b862a4f4">shared_constants::pi</a></div><div class="ttdeci">real(dp), parameter pi</div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00007">constants.f90:7</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecomponent__functions.html">component_functions</a></li>
-    <li class="footer">Generated on Wed May 26 2021 22:44:17 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Thu May 27 2021 00:25:24 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
