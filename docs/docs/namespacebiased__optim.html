@@ -334,7 +334,7 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keywordflow">        end if</span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="Biased__Optim_8f90_source.html#l00072">find_restart_file()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00723">gp_surrogate::gp_restart()</a>, and <a class="el" href="Biased__Optim_8f90_source.html#l00013">gp_uptodate</a>.</p>
+<p class="reference">References <a class="el" href="Biased__Optim_8f90_source.html#l00072">find_restart_file()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00768">gp_surrogate::gp_restart()</a>, and <a class="el" href="Biased__Optim_8f90_source.html#l00013">gp_uptodate</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -342,7 +342,7 @@ Here is the call graph for this function:</div>
 <map name="namespacebiased__optim_ab04263442497cd4b840be966229bbf86_cgraph" id="namespacebiased__optim_ab04263442497cd4b840be966229bbf86_cgraph">
 <area shape="rect" title=" " alt="" coords="5,35,163,76"/>
 <area shape="rect" href="namespacebiased__optim.html#a6d62cc795a87ef46e1526dd8084dd37b" title=" " alt="" coords="230,5,373,47"/>
-<area shape="rect" href="namespacegp__surrogate.html#a7aaa3a9f661462a4533710d1796a6672" title=" " alt="" coords="211,71,392,98"/>
+<area shape="rect" href="namespacegp__surrogate.html#a7aaa3a9f661462a4533710d1796a6672" title="sets a state from inputed data, intended for use with restart files." alt="" coords="211,71,392,98"/>
 </map>
 </div>
 
@@ -470,7 +470,7 @@ Here is the call graph for this function:</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        gp_uptodate = .true.</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="GP__surrogate_8f90_source.html#l00311">gp_surrogate::gp_k_post_same_x()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00236">gp_surrogate::gp_mu_post()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00441">gp_surrogate::gp_update()</a>, <a class="el" href="Biased__Optim_8f90_source.html#l00013">gp_uptodate</a>, <a class="el" href="stoch__grad_8f90_source.html#l00058">stoch_grad::grad_accent()</a>, <a class="el" href="stoch__grad_8f90_source.html#l00012">stoch_grad::n_points</a>, and <a class="el" href="stoch__grad_8f90_source.html#l00023">stoch_grad::stoch_grad_init()</a>.</p>
+<p class="reference">References <a class="el" href="GP__surrogate_8f90_source.html#l00320">gp_surrogate::gp_k_post_same_x()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00242">gp_surrogate::gp_mu_post()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00451">gp_surrogate::gp_update()</a>, <a class="el" href="Biased__Optim_8f90_source.html#l00013">gp_uptodate</a>, <a class="el" href="stoch__grad_8f90_source.html#l00058">stoch_grad::grad_accent()</a>, <a class="el" href="stoch__grad_8f90_source.html#l00012">stoch_grad::n_points</a>, and <a class="el" href="stoch__grad_8f90_source.html#l00023">stoch_grad::stoch_grad_init()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, and <a class="el" href="main__driver_8f90_source.html#l00006">main_driver()</a>.</p>
 <div class="dynheader">
@@ -479,9 +479,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacebiased__optim_a0a768e03eee063b3d43e563a17a2f152_cgraph.png" border="0" usemap="#namespacebiased__optim_a0a768e03eee063b3d43e563a17a2f152_cgraph" alt=""/></div>
 <map name="namespacebiased__optim_a0a768e03eee063b3d43e563a17a2f152_cgraph" id="namespacebiased__optim_a0a768e03eee063b3d43e563a17a2f152_cgraph">
 <area shape="rect" title=" " alt="" coords="5,122,193,149"/>
-<area shape="rect" href="namespacegp__surrogate.html#a15caf47173b2bf2567141e44f5dc6818" title=" " alt="" coords="268,5,415,47"/>
-<area shape="rect" href="namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title=" " alt="" coords="1337,134,1532,161"/>
-<area shape="rect" href="namespacegp__surrogate.html#ac1f4d60355b47754c1815ede14b16815" title=" " alt="" coords="250,122,433,149"/>
+<area shape="rect" href="namespacegp__surrogate.html#a15caf47173b2bf2567141e44f5dc6818" title="specific function for cov(x,x), see gp_k_post" alt="" coords="268,5,415,47"/>
+<area shape="rect" href="namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title="posterior mean" alt="" coords="1337,134,1532,161"/>
+<area shape="rect" href="namespacegp__surrogate.html#a0e17bf316499bd5d38f5c9f3512d4efb" title="update routine for adding data to gp" alt="" coords="250,122,433,149"/>
 <area shape="rect" href="namespacestoch__grad.html#a5a0cf4db08bf20519faee0b5104ceb46" title=" " alt="" coords="251,173,431,199"/>
 <area shape="rect" href="namespacestoch__grad.html#a4195e5f4e69a29ba2269bc6645f9e1a5" title=" " alt="" coords="241,234,441,261"/>
 <area shape="rect" href="namespacestoch__grad.html#a28cde69056950f2685d2fd404a680d7e" title=" " alt="" coords="504,147,625,174"/>
@@ -490,9 +490,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespacegradient__estimator.html#a86da16b770f1b1b599707ea5d4323cc5" title="performs the backward difference differentiation on the workspace F" alt="" coords="920,319,1067,360"/>
 <area shape="rect" href="namespacegradient__estimator.html#ab9cda2e11ba3871506436af8ca0d51a1" title="combines the gradient contributions from the workspace F and those associated with the m_vector and c..." alt="" coords="919,449,1068,491"/>
 <area shape="rect" href="namespacegradient__estimator.html#aff319bb347b8b1675228aa9559c7f4c9" title="initialises the workspace F and Cholesky decomposition of the covariance matrix." alt="" coords="920,253,1067,295"/>
-<area shape="rect" href="namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title=" " alt="" coords="1123,515,1282,556"/>
-<area shape="rect" href="namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title=" " alt="" coords="1119,449,1286,491"/>
-<area shape="rect" href="namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title=" " alt="" coords="1355,515,1514,556"/>
+<area shape="rect" href="namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title="derivative of the posterior mean, needed for stoch_grad" alt="" coords="1123,515,1282,556"/>
+<area shape="rect" href="namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title="grad of the posterior covariance, evaluated at X of size x_dim,n_dof, needed for stoch_grad" alt="" coords="1119,449,1286,491"/>
+<area shape="rect" href="namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title="derivative of the posterior mean, wrt dimension dim" alt="" coords="1355,515,1514,556"/>
 <area shape="rect" href="namespacegradient__estimator.html#a72a27ec72360ff067eb936c2b0348ca6" title="check if the maximum found in the find_max_thread is a unique value." alt="" coords="1116,319,1289,360"/>
 <area shape="rect" href="namespacegradient__estimator.html#a7c9f5c8734a30b7aa64d0974865a3971" title="finds the location in the vector that corresponds to the maximum of &quot;m + CZ&quot;" alt="" coords="1129,384,1276,425"/>
 <area shape="rect" href="namespacegradient__estimator.html#ab53d4f39673b87ba124706fd5ee2f809" title="performs Cholesky decomposition without destroying the old array." alt="" coords="1129,123,1276,164"/>
@@ -572,7 +572,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacebiased__optim.html">biased_optim</a></li>
-    <li class="footer">Generated on Wed May 26 2021 15:13:15 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 17:36:04 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

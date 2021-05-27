@@ -15,7 +15,6 @@ var namespaces_dup =
     [ "plotting", "namespaceplotting.html", null ],
     [ "priors", "namespacepriors.html", null ],
     [ "read_data", "namespaceread__data.html", null ],
-    [ "restart_read", "namespacerestart__read.html", null ],
     [ "shared_constants", "namespaceshared__constants.html", null ],
     [ "stoch_grad", "namespacestoch__grad.html", null ],
     [ "write_file", "namespacewrite__file.html", null ]

@@ -141,7 +141,6 @@ $(document).ready(function(){initNavTree('MCMC_8f90_source.html',''); initResiza
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">end function </span>mcmc_log_prop_dist</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">subroutine </span>mcmc_accept(a,x,x_prop,log_rho,s,rho_x,rho_x_prop,dof_coefficients)</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">!computes accpect prob in [0,1]</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">implicit none</span></div>
@@ -170,7 +169,6 @@ $(document).ready(function(){initNavTree('MCMC_8f90_source.html',''); initResiza
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">!docs say this should initialise a new PRNG for each thread, </span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">!should be ok for parallelisation </span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    </div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">subroutine </span><a class="code" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee">mcmc_sample</a>(samples, log_rho, x_0, n_steps, n_burned, thinning_interval,s, e_code,&amp;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;         dof_coefficients, density_dimension, average_accept, seed)</div>
 <div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee">  109</a></span>&#160;        <span class="keywordtype">implicit none</span></div>
@@ -253,7 +251,6 @@ $(document).ready(function(){initNavTree('MCMC_8f90_source.html',''); initResiza
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keyword">end subroutine </span><a class="code" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee">mcmc_sample</a></div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    </div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keyword">subroutine </span><a class="code" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576">mcmc_adapt</a>(s_out, log_rho, x_0, n_steps, s_0, e_code,&amp;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;         s_max, s_min, memory, adapt_interval, dof_coefficients, density_dimension, seed)</div>
 <div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576">  192</a></span>&#160;        <span class="keywordtype">implicit none</span></div>
@@ -343,16 +340,16 @@ $(document).ready(function(){initNavTree('MCMC_8f90_source.html',''); initResiza
 </div><!-- doc-content -->
 <div class="ttc" id="anamespaceshared__constants_html_a0dd7b5fd793b0a608ee9409cd05314db"><div class="ttname"><a href="namespaceshared__constants.html#a0dd7b5fd793b0a608ee9409cd05314db">shared_constants::dp</a></div><div class="ttdeci">integer, parameter dp</div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00005">constants.f90:5</a></div></div>
 <div class="ttc" id="anamespacemcmc_html"><div class="ttname"><a href="namespacemcmc.html">mcmc</a></div><div class="ttdef"><b>Definition:</b> <a href="MCMC_8f90_source.html#l00001">MCMC.f90:1</a></div></div>
-<div class="ttc" id="anamespacemcmc_html_a41c389f202e2fb81f35279f940ed80ee"><div class="ttname"><a href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee">mcmc::mcmc_sample</a></div><div class="ttdeci">subroutine mcmc_sample(samples, log_rho, x_0, n_steps, n_burned, thinning_interval, s, e_code, dof_coefficients, density_dimension, average_accept, seed)</div><div class="ttdef"><b>Definition:</b> <a href="MCMC_8f90_source.html#l00109">MCMC.f90:109</a></div></div>
+<div class="ttc" id="anamespacemcmc_html_a41c389f202e2fb81f35279f940ed80ee"><div class="ttname"><a href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee">mcmc::mcmc_sample</a></div><div class="ttdeci">subroutine mcmc_sample(samples, log_rho, x_0, n_steps, n_burned, thinning_interval, s, e_code, dof_coefficients, density_dimension, average_accept, seed)</div><div class="ttdoc">The main routine for MCMC, generates (n_steps-n_burned)/thinning_interval samples from a distribution...</div><div class="ttdef"><b>Definition:</b> <a href="MCMC_8f90_source.html#l00109">MCMC.f90:109</a></div></div>
 <div class="ttc" id="anamespaceshared__constants_html_af60d21edef3e12c6891d4193b862a4f4"><div class="ttname"><a href="namespaceshared__constants.html#af60d21edef3e12c6891d4193b862a4f4">shared_constants::pi</a></div><div class="ttdeci">real(dp), parameter pi</div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00006">constants.f90:6</a></div></div>
 <div class="ttc" id="anamespaceshared__constants_html"><div class="ttname"><a href="namespaceshared__constants.html">shared_constants</a></div><div class="ttdef"><b>Definition:</b> <a href="constants_8f90_source.html#l00001">constants.f90:1</a></div></div>
 <div class="ttc" id="ainterfacemcmc_1_1log__rho__interface_html"><div class="ttname"><a href="interfacemcmc_1_1log__rho__interface.html">mcmc::log_rho_interface</a></div><div class="ttdef"><b>Definition:</b> <a href="MCMC_8f90_source.html#l00016">MCMC.f90:16</a></div></div>
-<div class="ttc" id="anamespacemcmc_html_a31491c97e8ebcd42c05916b9a0b81576"><div class="ttname"><a href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576">mcmc::mcmc_adapt</a></div><div class="ttdeci">subroutine mcmc_adapt(s_out, log_rho, x_0, n_steps, s_0, e_code, s_max, s_min, memory, adapt_interval, dof_coefficients, density_dimension, seed)</div><div class="ttdef"><b>Definition:</b> <a href="MCMC_8f90_source.html#l00192">MCMC.f90:192</a></div></div>
+<div class="ttc" id="anamespacemcmc_html_a31491c97e8ebcd42c05916b9a0b81576"><div class="ttname"><a href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576">mcmc::mcmc_adapt</a></div><div class="ttdeci">subroutine mcmc_adapt(s_out, log_rho, x_0, n_steps, s_0, e_code, s_max, s_min, memory, adapt_interval, dof_coefficients, density_dimension, seed)</div><div class="ttdoc">runs a version of mcmc_sample but every adapt_interval steps adjusts s, based on an exponetial averag...</div><div class="ttdef"><b>Definition:</b> <a href="MCMC_8f90_source.html#l00192">MCMC.f90:192</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="MCMC_8f90.html">MCMC.f90</a></li>
-    <li class="footer">Generated on Wed May 26 2021 15:13:11 for PX 915 Project Title/Name Here by
+    <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_ecf6256b7f19e30d22b098c6b27f6455.html">sf_Desktop</a></li><li class="navelem"><a class="el" href="dir_3850c8fd76647970c2a493c8355cac76.html">px915</a></li><li class="navelem"><a class="el" href="MCMC_8f90.html">MCMC.f90</a></li>
+    <li class="footer">Generated on Wed May 26 2021 17:36:01 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

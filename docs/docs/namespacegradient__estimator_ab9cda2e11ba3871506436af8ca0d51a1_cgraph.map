@@ -1,6 +1,6 @@
 <map id="gradient_estimator::combine_f_grad_k" name="gradient_estimator::combine_f_grad_k">
 <area shape="rect" id="node1" title="combines the gradient contributions from the workspace F and those associated with the m_vector and c..." alt="" coords="5,39,155,80"/>
-<area shape="rect" id="node2" href="$namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title=" " alt="" coords="207,5,365,47"/>
-<area shape="rect" id="node4" href="$namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title=" " alt="" coords="203,71,369,112"/>
-<area shape="rect" id="node3" href="$namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title=" " alt="" coords="417,5,576,47"/>
+<area shape="rect" id="node2" href="$namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title="derivative of the posterior mean, needed for stoch_grad" alt="" coords="207,5,365,47"/>
+<area shape="rect" id="node4" href="$namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title="grad of the posterior covariance, evaluated at X of size x_dim,n_dof, needed for stoch_grad" alt="" coords="203,71,369,112"/>
+<area shape="rect" id="node3" href="$namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title="derivative of the posterior mean, wrt dimension dim" alt="" coords="417,5,576,47"/>
 </map>

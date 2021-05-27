@@ -104,7 +104,7 @@ Functions/Subroutines</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="main__driver_8f90_source.html#l00006">6</a> of file <a class="el" href="main__driver_8f90_source.html">main_driver.f90</a>.</p>
 
-<p class="reference">References <a class="el" href="param__search_8f90_source.html#l00010">param_search::best_params</a>, <a class="el" href="param__search_8f90_source.html#l00011">param_search::best_trial</a>, <a class="el" href="Biased__Optim_8f90_source.html#l00155">biased_optim::bi_op_step()</a>, <a class="el" href="basis__functions_8f90_source.html#l00267">basis_functions::deinitialise_basis()</a>, <a class="el" href="basis__functions_8f90_source.html#l00052">basis_functions::dof_bounds</a>, <a class="el" href="param__search_8f90_source.html#l00107">param_search::find_best_params()</a>, <a class="el" href="basis__functions_8f90_source.html#l00069">basis_functions::initialise_basis()</a>, <a class="el" href="param__search_8f90_source.html#l00055">param_search::latin_hypercube()</a>, <a class="el" href="basis__functions_8f90_source.html#l00540">basis_functions::log_density()</a>, <a class="el" href="MCMC_8f90_source.html#l00192">mcmc::mcmc_adapt()</a>, <a class="el" href="MCMC_8f90_source.html#l00109">mcmc::mcmc_sample()</a>, <a class="el" href="basis__functions_8f90_source.html#l00051">basis_functions::n_space_dims</a>, <a class="el" href="basis__functions_8f90_source.html#l00050">basis_functions::number_dofs</a>, <a class="el" href="param__search_8f90_source.html#l00120">param_search::param_wall_check()</a>, <a class="el" href="read__data_8f90_source.html#l00021">read_data::readtxt()</a>, and <a class="el" href="basis__functions_8f90_source.html#l00021">basis_functions::reduced_hamiltonian</a>.</p>
+<p class="reference">References <a class="el" href="param__search_8f90_source.html#l00010">param_search::best_params</a>, <a class="el" href="param__search_8f90_source.html#l00011">param_search::best_trial</a>, <a class="el" href="Biased__Optim_8f90_source.html#l00155">biased_optim::bi_op_step()</a>, <a class="el" href="basis__functions_8f90_source.html#l00267">basis_functions::deinitialise_basis()</a>, <a class="el" href="basis__functions_8f90_source.html#l00052">basis_functions::dof_bounds</a>, <a class="el" href="param__search_8f90_source.html#l00107">param_search::find_best_params()</a>, <a class="el" href="basis__functions_8f90_source.html#l00069">basis_functions::initialise_basis()</a>, <a class="el" href="param__search_8f90_source.html#l00055">param_search::latin_hypercube()</a>, <a class="el" href="basis__functions_8f90_source.html#l00540">basis_functions::log_density()</a>, <a class="el" href="MCMC_8f90_source.html#l00192">mcmc::mcmc_adapt()</a>, <a class="el" href="MCMC_8f90_source.html#l00109">mcmc::mcmc_sample()</a>, <a class="el" href="basis__functions_8f90_source.html#l00051">basis_functions::n_space_dims</a>, <a class="el" href="basis__functions_8f90_source.html#l00050">basis_functions::number_dofs</a>, <a class="el" href="param__search_8f90_source.html#l00121">param_search::param_wall_check()</a>, <a class="el" href="read__data_8f90_source.html#l00021">read_data::readtxt()</a>, and <a class="el" href="basis__functions_8f90_source.html#l00021">basis_functions::reduced_hamiltonian</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -117,13 +117,13 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespaceparam__search.html#a675279a4de8b9d57fcf6ded067479a45" title="find_best_params returns the 1D array that contain the current best set of parameters found from a MC..." alt="" coords="181,600,328,641"/>
 <area shape="rect" href="namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="161,665,348,707"/>
 <area shape="rect" href="namespacebasis__functions.html#ad155a8bce0b153e59bfef25f0d7e6e1f" title="Log of the Probability Density." alt="" coords="179,731,330,772"/>
-<area shape="rect" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title=" " alt="" coords="177,797,332,823"/>
-<area shape="rect" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title=" " alt="" coords="172,847,337,874"/>
+<area shape="rect" href="namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title="runs a version of mcmc_sample but every adapt_interval steps adjusts s, based on an exponetial averag..." alt="" coords="177,797,332,823"/>
+<area shape="rect" href="namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title="The main routine for MCMC, generates (n_steps&#45;n_burned)/thinning_interval samples from a distribution..." alt="" coords="172,847,337,874"/>
 <area shape="rect" href="namespaceparam__search.html#a04262aed0a917d0a5e07a7213aba7cf0" title="param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat..." alt="" coords="173,899,337,940"/>
-<area shape="rect" href="namespaceread__data.html#af223084bb8e6fc232a5409f57dc88e52" title="Read in data from a text file." alt="" coords="183,965,326,991"/>
-<area shape="rect" href="namespacegp__surrogate.html#a15caf47173b2bf2567141e44f5dc6818" title=" " alt="" coords="431,347,577,388"/>
-<area shape="rect" href="namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title=" " alt="" coords="1545,335,1740,362"/>
-<area shape="rect" href="namespacegp__surrogate.html#ac1f4d60355b47754c1815ede14b16815" title=" " alt="" coords="413,245,595,271"/>
+<area shape="rect" href="namespaceread__data.html#a8f6dbd540e98c78b92a68b194a273daf" title="Read in data from a text file." alt="" coords="183,965,326,991"/>
+<area shape="rect" href="namespacegp__surrogate.html#a15caf47173b2bf2567141e44f5dc6818" title="specific function for cov(x,x), see gp_k_post" alt="" coords="431,347,577,388"/>
+<area shape="rect" href="namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title="posterior mean" alt="" coords="1545,335,1740,362"/>
+<area shape="rect" href="namespacegp__surrogate.html#a0e17bf316499bd5d38f5c9f3512d4efb" title="update routine for adding data to gp" alt="" coords="413,245,595,271"/>
 <area shape="rect" href="namespacestoch__grad.html#a5a0cf4db08bf20519faee0b5104ceb46" title=" " alt="" coords="414,413,594,439"/>
 <area shape="rect" href="namespacestoch__grad.html#a4195e5f4e69a29ba2269bc6645f9e1a5" title=" " alt="" coords="404,295,604,322"/>
 <area shape="rect" href="namespacestoch__grad.html#a28cde69056950f2685d2fd404a680d7e" title=" " alt="" coords="683,269,804,295"/>
@@ -132,9 +132,9 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespacegradient__estimator.html#a86da16b770f1b1b599707ea5d4323cc5" title="performs the backward difference differentiation on the workspace F" alt="" coords="1121,68,1268,109"/>
 <area shape="rect" href="namespacegradient__estimator.html#ab9cda2e11ba3871506436af8ca0d51a1" title="combines the gradient contributions from the workspace F and those associated with the m_vector and c..." alt="" coords="1120,133,1269,175"/>
 <area shape="rect" href="namespacegradient__estimator.html#aff319bb347b8b1675228aa9559c7f4c9" title="initialises the workspace F and Cholesky decomposition of the covariance matrix." alt="" coords="1121,264,1268,305"/>
-<area shape="rect" href="namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title=" " alt="" coords="1331,5,1490,47"/>
-<area shape="rect" href="namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title=" " alt="" coords="1327,71,1494,112"/>
-<area shape="rect" href="namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title=" " alt="" coords="1563,5,1722,47"/>
+<area shape="rect" href="namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title="derivative of the posterior mean, needed for stoch_grad" alt="" coords="1331,5,1490,47"/>
+<area shape="rect" href="namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title="grad of the posterior covariance, evaluated at X of size x_dim,n_dof, needed for stoch_grad" alt="" coords="1327,71,1494,112"/>
+<area shape="rect" href="namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title="derivative of the posterior mean, wrt dimension dim" alt="" coords="1563,5,1722,47"/>
 <area shape="rect" href="namespacegradient__estimator.html#a72a27ec72360ff067eb936c2b0348ca6" title="check if the maximum found in the find_max_thread is a unique value." alt="" coords="1324,332,1497,373"/>
 <area shape="rect" href="namespacegradient__estimator.html#a7c9f5c8734a30b7aa64d0974865a3971" title="finds the location in the vector that corresponds to the maximum of &quot;m + CZ&quot;" alt="" coords="1337,397,1484,439"/>
 <area shape="rect" href="namespacegradient__estimator.html#ab53d4f39673b87ba124706fd5ee2f809" title="performs Cholesky decomposition without destroying the old array." alt="" coords="1337,136,1484,177"/>
@@ -166,8 +166,8 @@ Here is the call graph for this function:</div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_0a42fc8726124b10c4aa767351bbd6be.html">sf_projets</a></li><li class="navelem"><a class="el" href="dir_c28bbf256aac01623d88ec4923e5b430.html">px915_2021_b</a></li><li class="navelem"><a class="el" href="main__driver_8f90.html">main_driver.f90</a></li>
-    <li class="footer">Generated on Wed May 26 2021 15:13:12 for PX 915 Project Title/Name Here by
+    <li class="navelem"><a class="el" href="dir_39dc0668bd5a501998f94e8b4e546c71.html">media</a></li><li class="navelem"><a class="el" href="dir_ecf6256b7f19e30d22b098c6b27f6455.html">sf_Desktop</a></li><li class="navelem"><a class="el" href="dir_3850c8fd76647970c2a493c8355cac76.html">px915</a></li><li class="navelem"><a class="el" href="main__driver_8f90.html">main_driver.f90</a></li>
+    <li class="footer">Generated on Wed May 26 2021 17:36:02 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

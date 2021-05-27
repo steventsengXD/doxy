@@ -9,6 +9,8 @@ var init__params_8py =
     [ "close", "init__params_8py.html#a7366328b11f9ad36e90220e890f9b9c3", null ],
     [ "column", "init__params_8py.html#a45b93363f6222cef8cff51efdb4fe869", null ],
     [ "dval", "init__params_8py.html#a4703195a22387132fbb51631ce2611ae", null ],
+    [ "entry5", "init__params_8py.html#a5e8fc4c67b15be11c9372fd26a1b313d", null ],
+    [ "entry7", "init__params_8py.html#a0e973f69f36ddc351289e524c03efba9", null ],
     [ "file", "init__params_8py.html#a146045a8246d5caf5c8cd1e38851979a", null ],
     [ "filename", "init__params_8py.html#ab1e7883f44d77906d1928409dcba3ad0", null ],
     [ "i", "init__params_8py.html#acb28083def052ba75fac4a1d6956d3f2", null ],

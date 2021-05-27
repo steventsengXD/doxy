@@ -344,7 +344,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="comment">!deallocate(F_ij, L_ij)</span></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="gradient__estimator_8f90_source.html#l00011">f_ij</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00281">gp_surrogate::gp_mu_post_grad()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00408">gp_surrogate::gp_post_k_grad()</a>, and <a class="el" href="gradient__estimator_8f90_source.html#l00011">gradient_matrix</a>.</p>
+<p class="reference">References <a class="el" href="gradient__estimator_8f90_source.html#l00011">f_ij</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00289">gp_surrogate::gp_mu_post_grad()</a>, <a class="el" href="GP__surrogate_8f90_source.html#l00420">gp_surrogate::gp_post_k_grad()</a>, and <a class="el" href="gradient__estimator_8f90_source.html#l00011">gradient_matrix</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="gradient__estimator_8f90_source.html#l00240">run_gradient_estimator()</a>.</p>
 <div class="dynheader">
@@ -353,9 +353,9 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacegradient__estimator_ab9cda2e11ba3871506436af8ca0d51a1_cgraph.png" border="0" usemap="#namespacegradient__estimator_ab9cda2e11ba3871506436af8ca0d51a1_cgraph" alt=""/></div>
 <map name="namespacegradient__estimator_ab9cda2e11ba3871506436af8ca0d51a1_cgraph" id="namespacegradient__estimator_ab9cda2e11ba3871506436af8ca0d51a1_cgraph">
 <area shape="rect" title="combines the gradient contributions from the workspace F and those associated with the m_vector and c..." alt="" coords="5,39,155,80"/>
-<area shape="rect" href="namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title=" " alt="" coords="207,5,365,47"/>
-<area shape="rect" href="namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title=" " alt="" coords="203,71,369,112"/>
-<area shape="rect" href="namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title=" " alt="" coords="417,5,576,47"/>
+<area shape="rect" href="namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title="derivative of the posterior mean, needed for stoch_grad" alt="" coords="207,5,365,47"/>
+<area shape="rect" href="namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title="grad of the posterior covariance, evaluated at X of size x_dim,n_dof, needed for stoch_grad" alt="" coords="203,71,369,112"/>
+<area shape="rect" href="namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title="derivative of the posterior mean, wrt dimension dim" alt="" coords="417,5,576,47"/>
 </map>
 </div>
 <div class="dynheader">
@@ -608,7 +608,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespacegradient__estimator.html#ab53d4f39673b87ba124706fd5ee2f809" title="performs Cholesky decomposition without destroying the old array." alt="" coords="213,136,360,177"/>
 <area shape="rect" href="namespacegradient__estimator.html#a01db3e2a30eb6add20ec4c01fa8fcc92" title="builds the &quot;m_vector&quot; as described in: arXiv:1602.05149v4 [stat.ML] 5 May 2019 contains the differenc..." alt="" coords="213,201,360,243"/>
 <area shape="rect" href="namespacegradient__estimator.html#a7895f082a080ec52b33806f7b4103aec" title="build the &quot;z_vector&quot; as described in: arXiv:1602.05149v4 [stat.ML] 5 May 2019" alt="" coords="213,267,360,308"/>
-<area shape="rect" href="namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title=" " alt="" coords="421,209,616,235"/>
+<area shape="rect" href="namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title="posterior mean" alt="" coords="421,209,616,235"/>
 </map>
 </div>
 <div class="dynheader">
@@ -675,7 +675,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  m_vector(0) = 0.0_dp</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  m_vector(1:shape_arr(1))=pbest_arr - gp_mu_post(x, shape_arr(1))</div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="GP__surrogate_8f90_source.html#l00236">gp_surrogate::gp_mu_post()</a>.</p>
+<p class="reference">References <a class="el" href="GP__surrogate_8f90_source.html#l00242">gp_surrogate::gp_mu_post()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="gradient__estimator_8f90_source.html#l00112">init_diff_f()</a>.</p>
 <div class="dynheader">
@@ -684,7 +684,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="namespacegradient__estimator_a01db3e2a30eb6add20ec4c01fa8fcc92_cgraph.png" border="0" usemap="#namespacegradient__estimator_a01db3e2a30eb6add20ec4c01fa8fcc92_cgraph" alt=""/></div>
 <map name="namespacegradient__estimator_a01db3e2a30eb6add20ec4c01fa8fcc92_cgraph" id="namespacegradient__estimator_a01db3e2a30eb6add20ec4c01fa8fcc92_cgraph">
 <area shape="rect" title="builds the &quot;m_vector&quot; as described in: arXiv:1602.05149v4 [stat.ML] 5 May 2019 contains the differenc..." alt="" coords="5,5,152,47"/>
-<area shape="rect" href="namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title=" " alt="" coords="200,13,395,39"/>
+<area shape="rect" href="namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title="posterior mean" alt="" coords="200,13,395,39"/>
 </map>
 </div>
 <div class="dynheader">
@@ -783,15 +783,15 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespacegradient__estimator.html#a86da16b770f1b1b599707ea5d4323cc5" title="performs the backward difference differentiation on the workspace F" alt="" coords="237,5,384,47"/>
 <area shape="rect" href="namespacegradient__estimator.html#ab9cda2e11ba3871506436af8ca0d51a1" title="combines the gradient contributions from the workspace F and those associated with the m_vector and c..." alt="" coords="236,71,385,112"/>
 <area shape="rect" href="namespacegradient__estimator.html#aff319bb347b8b1675228aa9559c7f4c9" title="initialises the workspace F and Cholesky decomposition of the covariance matrix." alt="" coords="237,233,384,275"/>
-<area shape="rect" href="namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title=" " alt="" coords="441,5,599,47"/>
-<area shape="rect" href="namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title=" " alt="" coords="437,71,603,112"/>
-<area shape="rect" href="namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title=" " alt="" coords="673,5,831,47"/>
+<area shape="rect" href="namespacegp__surrogate.html#ac886420977e0f68753966a9b72f4f047" title="derivative of the posterior mean, needed for stoch_grad" alt="" coords="441,5,599,47"/>
+<area shape="rect" href="namespacegp__surrogate.html#a9940ed211173497561480e7b7bbae5bd" title="grad of the posterior covariance, evaluated at X of size x_dim,n_dof, needed for stoch_grad" alt="" coords="437,71,603,112"/>
+<area shape="rect" href="namespacegp__surrogate.html#a0e14bb8083db57385c53f0ff771de4a7" title="derivative of the posterior mean, wrt dimension dim" alt="" coords="673,5,831,47"/>
 <area shape="rect" href="namespacegradient__estimator.html#a72a27ec72360ff067eb936c2b0348ca6" title="check if the maximum found in the find_max_thread is a unique value." alt="" coords="433,136,607,177"/>
 <area shape="rect" href="namespacegradient__estimator.html#a7c9f5c8734a30b7aa64d0974865a3971" title="finds the location in the vector that corresponds to the maximum of &quot;m + CZ&quot;" alt="" coords="447,201,593,243"/>
 <area shape="rect" href="namespacegradient__estimator.html#ab53d4f39673b87ba124706fd5ee2f809" title="performs Cholesky decomposition without destroying the old array." alt="" coords="447,267,593,308"/>
 <area shape="rect" href="namespacegradient__estimator.html#a01db3e2a30eb6add20ec4c01fa8fcc92" title="builds the &quot;m_vector&quot; as described in: arXiv:1602.05149v4 [stat.ML] 5 May 2019 contains the differenc..." alt="" coords="447,332,593,373"/>
 <area shape="rect" href="namespacegradient__estimator.html#a7895f082a080ec52b33806f7b4103aec" title="build the &quot;z_vector&quot; as described in: arXiv:1602.05149v4 [stat.ML] 5 May 2019" alt="" coords="447,397,593,439"/>
-<area shape="rect" href="namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title=" " alt="" coords="655,339,849,366"/>
+<area shape="rect" href="namespacegp__surrogate.html#a374d92383432a8841756165fe7dd69b8" title="posterior mean" alt="" coords="655,339,849,366"/>
 </map>
 </div>
 <div class="dynheader">
@@ -943,7 +943,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacegradient__estimator.html">gradient_estimator</a></li>
-    <li class="footer">Generated on Wed May 26 2021 15:13:19 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 17:36:06 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

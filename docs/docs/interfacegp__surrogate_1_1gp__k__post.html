@@ -72,17 +72,23 @@ $(document).ready(function(){initNavTree('interfacegp__surrogate_1_1gp__k__post.
 <div class="title">gp_surrogate::gp_k_post Interface Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>function for postieror covairance kernal use in format x_1, x_2, x1_dim, x2_dim for cov(x_1,x_2) use in format x, x_dim for cov(x,x)  
+ <a href="interfacegp__surrogate_1_1gp__k__post.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4dfdbfbc307bb5129e307d86bcb41212"><td class="memItemLeft" align="right" valign="top">real(dp) function, dimension(x1_dim, x2_dim)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacegp__surrogate_1_1gp__k__post.html#a4dfdbfbc307bb5129e307d86bcb41212">gp_k_post_diff_x</a> (x1, x2, x1_dim, x2_dim)</td></tr>
+<tr class="memdesc:a4dfdbfbc307bb5129e307d86bcb41212"><td class="mdescLeft">&#160;</td><td class="mdescRight">specific function for cov(x_1,x_2), see <a class="el" href="interfacegp__surrogate_1_1gp__k__post.html" title="function for postieror covairance kernal use in format x_1, x_2, x1_dim, x2_dim for cov(x_1,...">gp_k_post</a>  <a href="interfacegp__surrogate_1_1gp__k__post.html#a4dfdbfbc307bb5129e307d86bcb41212">More...</a><br /></td></tr>
 <tr class="separator:a4dfdbfbc307bb5129e307d86bcb41212"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a391d56e9537c6db70b39c7b4753edcb0"><td class="memItemLeft" align="right" valign="top">real(dp) function, dimension(x_dim, x_dim)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacegp__surrogate_1_1gp__k__post.html#a391d56e9537c6db70b39c7b4753edcb0">gp_k_post_same_x</a> (x, x_dim)</td></tr>
+<tr class="memdesc:a391d56e9537c6db70b39c7b4753edcb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">specific function for cov(x,x), see <a class="el" href="interfacegp__surrogate_1_1gp__k__post.html" title="function for postieror covairance kernal use in format x_1, x_2, x1_dim, x2_dim for cov(x_1,...">gp_k_post</a>  <a href="interfacegp__surrogate_1_1gp__k__post.html#a391d56e9537c6db70b39c7b4753edcb0">More...</a><br /></td></tr>
 <tr class="separator:a391d56e9537c6db70b39c7b4753edcb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="GP__surrogate_8f90_source.html#l00076">76</a> of file <a class="el" href="GP__surrogate_8f90_source.html">GP_surrogate.f90</a>.</p>
+<div class="textblock"><p>function for postieror covairance kernal use in format x_1, x_2, x1_dim, x2_dim for cov(x_1,x_2) use in format x, x_dim for cov(x,x) </p>
+
+<p class="definition">Definition at line <a class="el" href="GP__surrogate_8f90_source.html#l00079">79</a> of file <a class="el" href="GP__surrogate_8f90_source.html">GP_surrogate.f90</a>.</p>
 </div><h2 class="groupheader">Member Function/Subroutine Documentation</h2>
 <a id="a4dfdbfbc307bb5129e307d86bcb41212"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4dfdbfbc307bb5129e307d86bcb41212">&#9670;&nbsp;</a></span>gp_k_post_diff_x()</h2>
@@ -122,41 +128,43 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GP__surrogate_8f90_source.html#l00344">344</a> of file <a class="el" href="GP__surrogate_8f90_source.html">GP_surrogate.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: x1_dim, x2_dim</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x1_dim,n_dof)</span>, <span class="keywordtype">intent(in)</span> :: x1 <span class="comment">!param space point</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x2_dim,n_dof)</span>, <span class="keywordtype">intent(in)</span> :: x2 <span class="comment">!param space point</span></div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x1_dim,x2_dim)</span> :: out, x1_cov_x2</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_data,x2_dim)</span> :: data_cov_x2</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x1_dim,n_data)</span> :: x1_cov_data</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordtype">integer</span> :: i,j</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordflow">if</span> (.not. init) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            print*,<span class="stringliteral">&#39;not intialised&#39;</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            stop</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="keywordflow">        end if</span></div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keywordflow">do</span> i=1,x2_dim</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            <span class="keywordflow">do</span> j=1,n_data</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                data_cov_x2(j,i) = k_prior(x2(i,:), param_data(j,:))</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keywordflow">            end do</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="keywordflow">        end do</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">do</span> i=1,x1_dim</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            <span class="keywordflow">do</span> j=1,n_data</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                x1_cov_data(i,j) = k_prior(param_data(j,:),x1(i,:))</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="keywordflow">            end do</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="keywordflow">        end do</span></div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keywordflow">do</span> i=1,x1_dim</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;            <span class="keywordflow">do</span> j=1,x2_dim</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                x1_cov_x2(i,j) = k_prior(x1(i,:), x2(j,:))</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="keywordflow">            end do</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="keywordflow">        end do</span></div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;       out = x1_cov_x2 + matmul(matmul(x1_cov_data,param_pres),data_cov_x2)</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        </div>
+<p>specific function for cov(x_1,x_2), see <a class="el" href="interfacegp__surrogate_1_1gp__k__post.html" title="function for postieror covairance kernal use in format x_1, x_2, x1_dim, x2_dim for cov(x_1,...">gp_k_post</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="GP__surrogate_8f90_source.html#l00354">354</a> of file <a class="el" href="GP__surrogate_8f90_source.html">GP_surrogate.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: x1_dim, x2_dim</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x1_dim,n_dof)</span>, <span class="keywordtype">intent(in)</span> :: x1 <span class="comment">!param space point</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x2_dim,n_dof)</span>, <span class="keywordtype">intent(in)</span> :: x2 <span class="comment">!param space point</span></div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x1_dim,x2_dim)</span> :: out, x1_cov_x2</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_data,x2_dim)</span> :: data_cov_x2</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x1_dim,n_data)</span> :: x1_cov_data</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordtype">integer</span> :: i,j</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordflow">if</span> (.not. init) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            print*,<span class="stringliteral">&#39;not intialised&#39;</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            stop</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="keywordflow">        end if</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        <span class="keywordflow">do</span> i=1,x2_dim</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            <span class="keywordflow">do</span> j=1,n_data</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                data_cov_x2(j,i) = k_prior(x2(i,:), param_data(j,:))</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="keywordflow">            end do</span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="keywordflow">        end do</span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">do</span> i=1,x1_dim</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            <span class="keywordflow">do</span> j=1,n_data</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                x1_cov_data(i,j) = k_prior(param_data(j,:),x1(i,:))</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="keywordflow">            end do</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="keywordflow">        end do</span></div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">do</span> i=1,x1_dim</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            <span class="keywordflow">do</span> j=1,x2_dim</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                x1_cov_x2(i,j) = k_prior(x1(i,:), x2(j,:))</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="keywordflow">            end do</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="keywordflow">        end do</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;       out = x1_cov_x2 + matmul(matmul(x1_cov_data,param_pres),data_cov_x2)</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -186,37 +194,39 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="GP__surrogate_8f90_source.html#l00311">311</a> of file <a class="el" href="GP__surrogate_8f90_source.html">GP_surrogate.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordtype">implicit none</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: x_dim</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x_dim,n_dof)</span>, <span class="keywordtype">intent(in)</span> :: x <span class="comment">!param space point</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x_dim,x_dim)</span> :: out, x_cov_x</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x_dim,n_data)</span> :: x_cov_data</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_data,x_dim)</span> :: data_cov_x</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordtype">integer</span> :: i,j</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">if</span> (.not. init) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            print*,<span class="stringliteral">&#39;not intialised&#39;</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            stop</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="keywordflow">        end if</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">do</span> i=1,x_dim</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="keywordflow">do</span> j=1,n_data</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                data_cov_x(j,i) = k_prior(param_data(j,:), x(i,:))</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="keywordflow">            end do</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="keywordflow">        end do</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        x_cov_data = transpose(data_cov_x)</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">do</span> i=1,x_dim</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">do</span> j=1,i</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                <span class="comment">!is symmteric, this reduces calls</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                x_cov_x(i,j) = k_prior(x(i,:), x(j,:))</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                x_cov_x(j,i) = x_cov_x(i,j)</div>
+<p>specific function for cov(x,x), see <a class="el" href="interfacegp__surrogate_1_1gp__k__post.html" title="function for postieror covairance kernal use in format x_1, x_2, x1_dim, x2_dim for cov(x_1,...">gp_k_post</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="GP__surrogate_8f90_source.html#l00320">320</a> of file <a class="el" href="GP__surrogate_8f90_source.html">GP_surrogate.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        <span class="keywordtype">implicit none</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        <span class="keywordtype">integer</span>, <span class="keywordtype">intent(in)</span> :: x_dim</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x_dim,n_dof)</span>, <span class="keywordtype">intent(in)</span> :: x <span class="comment">!param space point</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x_dim,x_dim)</span> :: out, x_cov_x</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(x_dim,n_data)</span> :: x_cov_data</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="keywordtype">        real</span>(dp), <span class="keywordtype">dimension(n_data,x_dim)</span> :: data_cov_x</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordtype">integer</span> :: i,j</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        <span class="keywordflow">if</span> (.not. init) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            print*,<span class="stringliteral">&#39;not intialised&#39;</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            stop</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keywordflow">        end if</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keywordflow">do</span> i=1,x_dim</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            <span class="keywordflow">do</span> j=1,n_data</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                data_cov_x(j,i) = k_prior(param_data(j,:), x(i,:))</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;<span class="keywordflow">            end do</span></div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="keywordflow">        end do</span></div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;       out = x_cov_x + matmul(matmul(x_cov_data,param_pres),data_cov_x)</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        </div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        x_cov_data = transpose(data_cov_x)</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">do</span> i=1,x_dim</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <span class="keywordflow">do</span> j=1,i</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                <span class="comment">!is symmteric, this reduces calls</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                x_cov_x(i,j) = k_prior(x(i,:), x(j,:))</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                x_cov_x(j,i) = x_cov_x(i,j)</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="keywordflow">            end do</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="keywordflow">        end do</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;       out = x_cov_x + matmul(matmul(x_cov_data,param_pres),data_cov_x)</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -229,7 +239,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacegp__surrogate.html">gp_surrogate</a></li><li class="navelem"><a class="el" href="interfacegp__surrogate_1_1gp__k__post.html">gp_k_post</a></li>
-    <li class="footer">Generated on Wed May 26 2021 15:13:18 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 17:36:05 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

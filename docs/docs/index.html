@@ -69,10 +69,17 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title">Introduction </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This software will compute and visualise the ground state energy of the \(H_{2}^{+}\) ion and \(H_{2}\) molecule using the variational quantum Monte Carlo (VQMC) method. The main output result will be the minimum energy of the system and the resulting wavefunction.</p>
+<div class="textblock"><p>This software will compute and visualise the ground state energy of: \(H\), \(H^{-1}\), \(H_{2}^{+}\), \(H_{2}\), \(He^{+1}\) and \(He\). This will be done through the use of the variational quantum Monte Carlo (VQMC) method. The main output result will be the minimum energy of the system and the resulting wavefunction.</p>
+<p>The expected groundstates are:</p>
+<p>\(H\) = -13.60 eV ref: <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/hyde.html">http://hyperphysics.phy-astr.gsu.edu/hbase/hyde.html</a></p>
+<p>\(H^{-1}\) = −14.36 eV ref: <a href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.43.6104">https://journals.aps.org/pra/abstract/10.1103/PhysRevA.43.6104</a></p>
+<p>\(H_{2}^{+}\) = -16.25 eV ref: <a href="https://doi.org/10.1016/S0009-2614(97)00571-X">https://doi.org/10.1016/S0009-2614(97)00571-X</a></p>
+<p>\(H_{2}\) = -31.72 eV ref: <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/molecule/hmol.html">http://hyperphysics.phy-astr.gsu.edu/hbase/molecule/hmol.html</a></p>
+<p>\(He^{+1}\) = -54.42 eV ref: <a href="http://www.umich.edu/~chem461/QMChap8.pdf">http://www.umich.edu/~chem461/QMChap8.pdf</a></p>
+<p>\(He\) = -79.02 eV ref: <a href="http://www.umich.edu/~chem461/QMChap8.pdf">http://www.umich.edu/~chem461/QMChap8.pdf</a></p>
 <p>With the exception of user input and plotting the results, the code is written entirely in Fortran. For efficiency, parallelization has been implemented through OpenMP to ... .</p>
 <p><a class="el" href="vqmc.html">Variational Quantum Monte Carlo</a> <br  />
-<a class="el" href="tutorial_page.html">Tutorial</a> <br  />
+tutorial_page <br  />
 <a class="el" href="acknowledgments.html">Acknowledgements</a> <br  />
  </p>
 <h3><a class="anchor" id="author"></a>
@@ -94,7 +101,7 @@ Github Repository</h3>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 26 2021 15:13:21 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 17:36:07 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

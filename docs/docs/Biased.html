@@ -71,7 +71,7 @@ $(document).ready(function(){initNavTree('Biased.html',''); initResizable(); });
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="intro"></a>
 Gaussian Process</h1>
-<p>Given that MCMC evaluations for a given set of points in parameter space can quickly become expensive, we are motivated to use a surrogate model that can be used when searching for the best possible set of parameters to trial. Here we present an approach, as detailed by Wang et al <a class="el" href="citelist.html#CITEREF_wang2019">[5]</a>, used to perform a Bayesian global optimisation.</p>
+<p>Given that MCMC evaluations for a given set of points in parameter space can quickly become expensive, we are motivated to use a surrogate model that can be used when searching for the best possible set of parameters to trial. Here we present an approach, as detailed by Wang et al <a class="el" href="citelist.html#CITEREF_wang2019">[7]</a>, used to perform a Bayesian global optimisation.</p>
 <p>We start by defining our prior distribution on our ground state calculation (as found using MCMC) as a Gaussian process:</p>
 <p class="formulaDsp">
 \begin{equation}\tag {1} f(\boldsymbol{X}) \sim \mathcal{G} \mathcal{P} (\boldsymbol{\mu}^{(0)}, \boldsymbol{\Sigma}^{(0)}) \end{equation}
@@ -98,7 +98,7 @@ Optimisation of parameters</h1>
 <p class="formulaDsp">
 \begin{equation}\tag {6} h(\boldsymbol{X}, \boldsymbol{Z}) = \max_{i=0,... q} \boldsymbol{e}_i [\boldsymbol{m}(\boldsymbol{X}) + \boldsymbol{C}(\boldsymbol{X})\boldsymbol{Z}] \end{equation}
 </p>
-<p> Following the algorithms outlined by S. P. Smith <a class="el" href="citelist.html#CITEREF_smith1995">[4]</a> on the backward differentiation of Cholesky dependent functions one may find the derivatives to \( \boldsymbol{C}(\boldsymbol{X}) \) in the above with respect to each parameter. Differentiation over each parameter also needs to be computed for \( \boldsymbol{m}(\boldsymbol{X}) \) seperately and added into get the stochastic gradient estimator. From this we may evaluate a gradient estimate at point \( \boldsymbol{X}_t \) as:</p>
+<p> Following the algorithms outlined by S. P. Smith <a class="el" href="citelist.html#CITEREF_smith1995">[6]</a> on the backward differentiation of Cholesky dependent functions one may find the derivatives to \( \boldsymbol{C}(\boldsymbol{X}) \) in the above with respect to each parameter. Differentiation over each parameter also needs to be computed for \( \boldsymbol{m}(\boldsymbol{X}) \) seperately and added into get the stochastic gradient estimator. From this we may evaluate a gradient estimate at point \( \boldsymbol{X}_t \) as:</p>
 <p class="formulaDsp">
 \begin{equation}\tag {7} \boldsymbol{G}( \boldsymbol{X}_t) = \frac{1}{M} \sum_{m=1}^{M} \boldsymbol{g}(\boldsymbol{X}_t, \boldsymbol{Z}_{t,m}) \end{equation}
 </p>
@@ -113,7 +113,7 @@ Optimisation of parameters</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed May 26 2021 15:13:13 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 17:36:03 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

@@ -141,21 +141,23 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span>, <span class="keywordtype">intent(in)</span> :: trial_energies</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(1)</span> :: arr_shape</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    arr_shape = shape(trials(1,:))</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">allocate</span>(best_params(arr_shape(1)))</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    best_trial = minloc(trial_energies) <span class="comment">!index corresponding to the most negative, &quot;best&quot;, energy.</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    best_params = trials(best_trial(1),:)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordflow">if</span>(<span class="keyword">allocated</span>(best_params)) <span class="keyword">deallocate</span>(best_params)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">allocate</span>(best_params(arr_shape(1)))</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    best_trial = minloc(trial_energies) <span class="comment">!index corresponding to the most negative, &quot;best&quot;, energy.</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    best_params = trials(best_trial(1),:)</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="param__search_8f90_source.html#l00010">best_params</a>, and <a class="el" href="param__search_8f90_source.html#l00011">best_trial</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00007">main_driver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bond__driver_8f90_source.html#l00007">bond_length_driver()</a>, <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00007">main_driver()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceparam__search_a675279a4de8b9d57fcf6ded067479a45_icgraph.png" border="0" usemap="#namespaceparam__search_a675279a4de8b9d57fcf6ded067479a45_icgraph" alt=""/></div>
 <map name="namespaceparam__search_a675279a4de8b9d57fcf6ded067479a45_icgraph" id="namespaceparam__search_a675279a4de8b9d57fcf6ded067479a45_icgraph">
-<area shape="rect" title="find_best_params returns the 1D array that contain the current best set of parameters found from a MC..." alt="" coords="153,23,300,65"/>
-<area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="28,5,83,32"/>
-<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation using the latin_hypercube search." alt="" coords="5,56,105,83"/>
+<area shape="rect" title="find_best_params returns the 1D array that contain the current best set of parameters found from a MC..." alt="" coords="200,49,347,90"/>
+<area shape="rect" href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,5,152,32"/>
+<area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,56,106,83"/>
+<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation using the latin_hypercube search." alt="" coords="29,107,129,133"/>
 </map>
 </div>
 
@@ -254,18 +256,19 @@ Here is the caller graph for this function:</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">deallocate</span>(zero_to_one,seed)</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, <a class="el" href="latin__driver_8f90_source.html#l00007">main_driver()</a>, and <a class="el" href="stoch__grad_8f90_source.html#l00023">stoch_grad::stoch_grad_init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bond__driver_8f90_source.html#l00007">bond_length_driver()</a>, <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, <a class="el" href="latin__driver_8f90_source.html#l00007">main_driver()</a>, and <a class="el" href="stoch__grad_8f90_source.html#l00023">stoch_grad::stoch_grad_init()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceparam__search_aff5115008e830ffa95e4143c6908a389_icgraph.png" border="0" usemap="#namespaceparam__search_aff5115008e830ffa95e4143c6908a389_icgraph" alt=""/></div>
 <map name="namespaceparam__search_aff5115008e830ffa95e4143c6908a389_icgraph" id="namespaceparam__search_aff5115008e830ffa95e4143c6908a389_icgraph">
-<area shape="rect" title="latin_hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercu..." alt="" coords="637,37,788,78"/>
-<area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="28,5,83,32"/>
-<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation using the latin_hypercube search." alt="" coords="439,44,539,71"/>
-<area shape="rect" href="namespacestoch__grad.html#a4195e5f4e69a29ba2269bc6645f9e1a5" title=" " alt="" coords="389,95,589,121"/>
-<area shape="rect" href="namespacebiased__optim.html#a0a768e03eee063b3d43e563a17a2f152" title=" " alt="" coords="153,81,341,108"/>
-<area shape="rect" href="main__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,81,105,108"/>
+<area shape="rect" title="latin_hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercu..." alt="" coords="637,74,788,115"/>
+<area shape="rect" href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="416,5,563,32"/>
+<area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="28,68,83,95"/>
+<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation using the latin_hypercube search." alt="" coords="439,107,539,133"/>
+<area shape="rect" href="namespacestoch__grad.html#a4195e5f4e69a29ba2269bc6645f9e1a5" title=" " alt="" coords="389,157,589,184"/>
+<area shape="rect" href="namespacebiased__optim.html#a0a768e03eee063b3d43e563a17a2f152" title=" " alt="" coords="153,144,341,171"/>
+<area shape="rect" href="main__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation." alt="" coords="5,144,105,171"/>
 </map>
 </div>
 
@@ -295,33 +298,34 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="param__search_8f90_source.html#l00120">120</a> of file <a class="el" href="param__search_8f90_source.html">param_search.f90</a>.</p>
-<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> ,<span class="keywordtype">intent(in)</span> :: param_bounds</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">parameter</span> :: tol = 0.05_dp <span class="comment">!percentage tol as determined by the min and max bounds.</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">    real</span>(dp) :: bound_gap </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">integer</span> :: i  </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(best_params)</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      bound_gap = abs(param_bounds(i,1) - param_bounds(i,2))</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">if</span> ( abs(best_params(i) - param_bounds(i,1))/bound_gap &lt; tol &amp;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      .or. abs(best_params(i) - param_bounds(i,2))/bound_gap &lt; tol ) <span class="keywordflow">then</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        print*, <span class="stringliteral">&quot;parameter &quot;</span>, i,  <span class="stringliteral">&quot; is close to wall&quot;</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="comment">!for later: might want to instead store i in and array of potential problem parameters.</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="comment">!As oppsed to just printing out the problem. </span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keywordflow">      end if</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keywordflow">    end do</span> </div>
+<p class="definition">Definition at line <a class="el" href="param__search_8f90_source.html#l00121">121</a> of file <a class="el" href="param__search_8f90_source.html">param_search.f90</a>.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">dimension(:,:)</span>, <span class="keywordtype">allocatable</span> ,<span class="keywordtype">intent(in)</span> :: param_bounds</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">    real</span>(dp), <span class="keywordtype">parameter</span> :: tol = 0.05_dp <span class="comment">!percentage tol as determined by the min and max bounds.</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keywordtype">    real</span>(dp) :: bound_gap </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">integer</span> :: i  </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">do</span> i = 1, <span class="keyword">size</span>(best_params)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      bound_gap = abs(param_bounds(i,1) - param_bounds(i,2))</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordflow">if</span> ( abs(best_params(i) - param_bounds(i,1))/bound_gap &lt; tol &amp;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      .or. abs(best_params(i) - param_bounds(i,2))/bound_gap &lt; tol ) <span class="keywordflow">then</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        print*, <span class="stringliteral">&quot;parameter &quot;</span>, i,  <span class="stringliteral">&quot; is close to wall&quot;</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="comment">!for later: might want to instead store i in and array of potential problem parameters.</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="comment">!As oppsed to just printing out the problem. </span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keywordflow">      end if</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="keywordflow">    end do</span> </div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="param__search_8f90_source.html#l00010">best_params</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00007">main_driver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bond__driver_8f90_source.html#l00007">bond_length_driver()</a>, <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00007">main_driver()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceparam__search_a04262aed0a917d0a5e07a7213aba7cf0_icgraph.png" border="0" usemap="#namespaceparam__search_a04262aed0a917d0a5e07a7213aba7cf0_icgraph" alt=""/></div>
 <map name="namespaceparam__search_a04262aed0a917d0a5e07a7213aba7cf0_icgraph" id="namespaceparam__search_a04262aed0a917d0a5e07a7213aba7cf0_icgraph">
-<area shape="rect" title="param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat..." alt="" coords="153,23,317,65"/>
-<area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="28,5,83,32"/>
-<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation using the latin_hypercube search." alt="" coords="5,56,105,83"/>
+<area shape="rect" title="param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat..." alt="" coords="200,49,364,90"/>
+<area shape="rect" href="bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,5,152,32"/>
+<area shape="rect" href="Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,56,106,83"/>
+<area shape="rect" href="latin__driver_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Main driver for simulation using the latin_hypercube search." alt="" coords="29,107,129,133"/>
 </map>
 </div>
 
@@ -420,7 +424,7 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="param__search_8f90_source.html#l00010">10</a> of file <a class="el" href="param__search_8f90_source.html">param_search.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">  real</span>(dp), <span class="keywordtype">dimension(:)</span>, <span class="keywordtype">allocatable</span>, <span class="keywordtype">protected</span> :: best_params</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="param__search_8f90_source.html#l00107">find_best_params()</a>, <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, <a class="el" href="latin__driver_8f90_source.html#l00007">main_driver()</a>, and <a class="el" href="param__search_8f90_source.html#l00120">param_wall_check()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="param__search_8f90_source.html#l00107">find_best_params()</a>, <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, <a class="el" href="latin__driver_8f90_source.html#l00007">main_driver()</a>, and <a class="el" href="param__search_8f90_source.html#l00121">param_wall_check()</a>.</p>
 
 </div>
 </div>
@@ -439,7 +443,7 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="param__search_8f90_source.html#l00011">11</a> of file <a class="el" href="param__search_8f90_source.html">param_search.f90</a>.</p>
 <div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keywordtype">integer</span>, <span class="keywordtype">dimension(1)</span>, <span class="keywordtype">protected</span> :: best_trial</div>
 </div><!-- fragment -->
-<p class="reference">Referenced by <a class="el" href="param__search_8f90_source.html#l00107">find_best_params()</a>, <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00007">main_driver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="bond__driver_8f90_source.html#l00007">bond_length_driver()</a>, <a class="el" href="param__search_8f90_source.html#l00107">find_best_params()</a>, <a class="el" href="Biased__Optim__example__driver_8f90_source.html#l00021">main()</a>, and <a class="el" href="latin__driver_8f90_source.html#l00007">main_driver()</a>.</p>
 
 </div>
 </div>
@@ -450,7 +454,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceparam__search.html">param_search</a></li>
-    <li class="footer">Generated on Wed May 26 2021 15:13:20 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Wed May 26 2021 17:36:06 for PX 915 Project Title/Name Here by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

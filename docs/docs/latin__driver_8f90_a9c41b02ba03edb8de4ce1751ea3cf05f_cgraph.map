@@ -6,10 +6,10 @@
 <area shape="rect" id="node7" href="$namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="161,296,348,337"/>
 <area shape="rect" id="node24" href="$namespaceparam__search.html#aff5115008e830ffa95e4143c6908a389" title="latin_hypercube returns MxN grid of test points for M free parameters and N trials on a latin hypercu..." alt="" coords="179,361,330,403"/>
 <area shape="rect" id="node25" href="$namespacebasis__functions.html#ad155a8bce0b153e59bfef25f0d7e6e1f" title="Log of the Probability Density." alt="" coords="179,427,330,468"/>
-<area shape="rect" id="node26" href="$namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title=" " alt="" coords="177,493,332,519"/>
-<area shape="rect" id="node27" href="$namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title=" " alt="" coords="172,543,337,570"/>
+<area shape="rect" id="node26" href="$namespacemcmc.html#a31491c97e8ebcd42c05916b9a0b81576" title="runs a version of mcmc_sample but every adapt_interval steps adjusts s, based on an exponetial averag..." alt="" coords="177,493,332,519"/>
+<area shape="rect" id="node27" href="$namespacemcmc.html#a41c389f202e2fb81f35279f940ed80ee" title="The main routine for MCMC, generates (n_steps&#45;n_burned)/thinning_interval samples from a distribution..." alt="" coords="172,543,337,570"/>
 <area shape="rect" id="node28" href="$namespaceparam__search.html#a04262aed0a917d0a5e07a7213aba7cf0" title="param_wall_check evaluates if the best parameter set is close to the parameter bounds used to generat..." alt="" coords="173,595,337,636"/>
-<area shape="rect" id="node29" href="$namespaceread__data.html#af223084bb8e6fc232a5409f57dc88e52" title="Read in data from a text file." alt="" coords="183,661,326,687"/>
+<area shape="rect" id="node29" href="$namespaceread__data.html#a8f6dbd540e98c78b92a68b194a273daf" title="Read in data from a text file." alt="" coords="183,661,326,687"/>
 <area shape="rect" id="node30" href="$namespacewrite__file.html#a3456d4f27de6570b87711fb5cd6fef76" title=" " alt="" coords="191,712,319,753"/>
 <area shape="rect" id="node32" href="$namespacewrite__file.html#a988eccddc1dfeda968686c7155ce133a" title=" " alt="" coords="185,778,324,805"/>
 <area shape="rect" id="node3" href="$namespaceelectron__density__functions.html#a6a7ccc97d4e245b3179b8a4482035243" title="Computes electron density for 2 electron simulations Uses basic Monte Carlo Integration." alt="" coords="417,5,614,47"/>

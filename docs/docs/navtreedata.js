@@ -24,15 +24,7 @@ var NAVTREE =
 [
   [ "PX 915 Project Title/Name Here", "index.html", [
     [ "Introduction", "index.html", null ],
-    [ "Variational Quantum Monte Carlo", "vqmc.html", [
-      [ "VQMC in a Nutshell", "vqmc.html#introduction", null ],
-      [ "Software Specific Details", "vqmc.html#software", [
-        [ "Basis Set Construction", "vqmc.html#basis", null ],
-        [ "Jastrow Factor", "vqmc.html#jastrow", null ],
-        [ "Markov Chain Monte Carlo", "vqmc.html#mcmc", null ]
-      ] ]
-    ] ],
-    [ "Tutorial", "tutorial_page.html", "tutorial_page" ],
+    [ "Variational Quantum Monte Carlo", "vqmc.html", "vqmc" ],
     [ "Acknowledgements", "acknowledgments.html", null ],
     [ "Optimisation for large a parameter search-space", "Biased.html", [
       [ "Gaussian Process", "Biased.html#intro", null ],
@@ -68,7 +60,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Biased.html",
-"namespaceplotting.html"
+"namespacemcmc.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

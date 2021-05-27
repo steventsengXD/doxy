@@ -1,5 +1,5 @@
 <map id="gp_surrogate::gp_mu_post_grad" name="gp_surrogate::gp_mu_post_grad">
-<area shape="rect" id="node1" title=" " alt="" coords="1215,53,1373,94"/>
+<area shape="rect" id="node1" title="derivative of the posterior mean, needed for stoch_grad" alt="" coords="1215,53,1373,94"/>
 <area shape="rect" id="node2" href="$namespacegradient__estimator.html#ab9cda2e11ba3871506436af8ca0d51a1" title="combines the gradient contributions from the workspace F and those associated with the m_vector and c..." alt="" coords="1017,23,1167,65"/>
 <area shape="rect" id="node9" href="$GP__surrogate__test__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="1065,89,1119,116"/>
 <area shape="rect" id="node3" href="$namespacegradient__estimator.html#af808bce2f368f26109593d194b2dff6c" title="runs the gradient estimator associated routines from one block." alt="" coords="787,23,969,65"/>
