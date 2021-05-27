@@ -1,4 +1,0 @@
-<map id="basis_functions::reduced_hamiltonian_2_electrons" name="basis_functions::reduced_hamiltonian_2_electrons">
-<area shape="rect" id="node1" title="Reduced Hamiltonian for 2 electrons." alt="" coords="5,5,195,47"/>
-<area shape="rect" id="node2" href="$namespacebasis__functions.html#a3aa2ed47c325e9955b40da5b344fd31a" title="Finite Difference Reduced Laplacian Computes finite difference approximation to the reduced laplacian..." alt="" coords="243,5,425,47"/>
-</map>

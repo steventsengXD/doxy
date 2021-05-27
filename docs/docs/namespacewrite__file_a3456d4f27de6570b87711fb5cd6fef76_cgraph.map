@@ -1,4 +1,0 @@
-<map id="write_file::result_netcdf" name="write_file::result_netcdf">
-<area shape="rect" id="node1" title="Main results writing to NetCDF file." alt="" coords="5,5,133,47"/>
-<area shape="rect" id="node2" href="$namespacewrite__file.html#a7bee3284ae2e7b54b1a499095dfee1ee" title="Handles the NetCDF errors and print statements." alt="" coords="181,13,341,39"/>
-</map>

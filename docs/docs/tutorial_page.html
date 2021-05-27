@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PX 915 Project Title/Name Here: Tutorial</title>
+<title>PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN: Tutorial</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PX 915 Project Title/Name Here
+   <div id="projectname">PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN
    </div>
   </td>
  </tr>
@@ -69,38 +69,80 @@ $(document).ready(function(){initNavTree('tutorial_page.html',''); initResizable
 <div class="title">Tutorial </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Tutorial will appear here</p>
+<div class="textblock"><p>This section describes everything needed to set up the code and run the code for simple systems contained in the tutorial.</p>
 <div class="image">
 <img src="image4.jpeg" alt="" width="50%"/>
 </div>
 <ul>
 <li><a class="el" href="tutorial_page.html#startup">Installing/Running the code</a></li>
+<li><a class="el" href="tutorial_page.html#problem1">Problem 1: Single atom and electron using Slater-type Orbitals</a></li>
+<li><a class="el" href="tutorial_page.html#problem2">Problem 2: Single atom and electron using Gaussian-type Orbitals</a></li>
+<li><a class="el" href="tutorial_page.html#problem3">Problem 3: Two atoms and a single electron</a></li>
 <li><a class="el" href="tutorial_page.html#output">Analyzing the results</a></li>
-<li><a class="el" href="tutorial_page.html#options">User Options</a></li>
+<li><a class="el" href="tutorial_page.html#options">User options beyond the tutorial</a></li>
 <li><a class="el" href="tutorial_page.html#future">Future extensions</a></li>
 </ul>
 <h1><a class="anchor" id="startup"></a>
 Installing/Running the code</h1>
-<p>Build the code by running the bash script:</p>
+<p>This code is compiled and ran in the terminal. YOu can build the code by running the following command for the bash script:</p>
 <p>./build_latin_driver.sh</p>
-<p>To now run the code execute the bash program:</p>
+<p>After that has successfully compiled, you can now run the following command code to execute the bash program:</p>
 <p>./run_latin_driver.sh</p>
-<p>This will prompt you to enter various parameters to specify the problem you would like to investigate.</p>
-<p>Once you are happy with the problem specified, click close and the program should run.</p>
-<p>If code fails to run, do not panic, please remain calm </p><div class="image">
-<img src="kale.jpeg" alt=""/>
-</div>
+<p>Then the following interface will appear as shown in the figure below. This interface contains all of the variables which the user can change to define the system they want to look at. The interface already contains default values for the variables which the user can keep or change if they wish. <br  />
+</p>
+<p>@ image html guey_image.png width=70%</p>
+<p>In order to then run the code, the user just needs to change the varibales they wish to change and then click close. This will start running the code with the progress and results displayed in the terminal. When the code has finished running, the output plots will automatically be generated and show each plot in a different pop-up window.</p>
+<p>To complete another run of the code, make sure that all the ouputting windows containing the plots are closed, and then re-run the ./run_latin_driver.sh command. There is no need to recompile the code.</p>
+<p>In the case that the code fails to run or has crashed after this step, you can easily exit the software by either closing the terminal or using Ctrl+c.</p>
+<p>In order to demonstrate the varying functionality of the code, 4 problems have been defined in the subsections below for the user to try.</p>
+<h2><a class="anchor" id="problem1"></a>
+Problem 1: Single atom and electron using Slater-type Orbitals</h2>
+<p>This part of the tutorial contains the most basic system consisting of 1 atom (nuclei) and 1 electron which represents a Hydrogen atom, and is described using Slater-type orbitals. In this example, the Slater-type orbitals provides the analytical result.</p>
+<p>All the user has to do is close the user input window as this simulation run uses the default values already provided.</p>
+<p>Once the user input window has been closed, the following outputs are printed in the terminal:</p><ul>
+<li>The user defined input values are printed for reference</li>
+<li>Each latin hypercube trial and its corresponding energy result is printed</li>
+</ul>
+<p>If the code has ran with no errors or crashes, the following will be printed everytime:</p>
+<ul>
+<li>The best latin hypercube trial</li>
+<li>The minimum energy found in both Hartree and eV units</li>
+<li>The best parameters (this is the optimal degrees of freedom found)</li>
+<li>Comparison of output density statement</li>
+<li>Success in writing output files results.nc4 and xyz.txt</li>
+<li>Total cpu runtime</li>
+<li>Total real runtime</li>
+<li>Upload of result.nc4 successfully</li>
+<li>Print of what is contained in the result.nc4 file</li>
+<li>The number of electrons, atoms</li>
+</ul>
+<p>The output plotting script will automatically run, producing the following contour plot of the electron probability density.</p>
+<p>@ image html problem1.png</p>
+<p>The minimum energy obtained for this system is -13.6 eV and -0.499 Hartree energy. The optimal degrees of freedom obtained is -1.42 and 0.997.</p>
+<p>The code should take no longer than 3 seconds to run and complete.</p>
+<h2><a class="anchor" id="problem2"></a>
+Problem 2: Single atom and electron using Gaussian-type Orbitals</h2>
+<p>This problem is the same set up as the previous problem, however the user instead chooses Gaussian-type orbitals instead of Slater-type orbitals to describe the Hydrogen atom.</p>
+<h2><a class="anchor" id="problem3"></a>
+Problem 3: Two atoms and a single electron</h2>
+<p>The output of this system not only produces a contour plot of the electron probability density, but also allows for the evaluation</p>
+<p>In order to obtain the bond length against energy plot, the user must run the</p>
 <h2><a class="anchor" id="options"></a>
-User Options</h2>
+User options beyond the tutorial</h2>
+<p>The user can change the following variables if they want to look at 1 atom only:</p>
 <ul>
 <li>Number of electrons</li>
 <li>Number of atoms</li>
+<li>Number of trials for latin hypercube search</li>
 <li>Number of MCMC steps</li>
+<li>Optional user inputs (either Slater-type or Gaussian-type orbitals)</li>
 </ul>
+<p>To investigate 2 atoms, all of the variables</p>
 <h2><a class="anchor" id="plotting"></a>
 Plotting Options</h2>
+<p>These variables allow the user to change aspects of the resulting output such as the domain size and the resolution.</p>
 <ul>
-<li>Amount of distance from electron</li>
+<li>Amount of distance away from atoms to plot</li>
 <li>Number of points in each direction</li>
 </ul>
 <h1><a class="anchor" id="output"></a>
@@ -117,6 +159,7 @@ How to add a basis set</h2>
 <p>An integer code for the basis must be added to <a class="el" href="constants_8f90.html">constants.f90</a>. A corresponding check must be added to the case selection on <a class="el" href="namespacebasis__functions.html#a9c148eb124b16f4ce8a5c822b7ef30f4">basis_functions::basis_type</a> in the initialisation routine (currently line 198 in <a class="el" href="basis__functions_8f90.html">basis_functions.f90</a>). This must point the function pointers <code>wave_function_single</code> and <code>reduced_hamiltonian</code> to the new functions.</p>
 <h1><a class="anchor" id="future"></a>
 Future extensions</h1>
+<p>The following additions and extensions may be added to the code.</p>
 <ul>
 <li>Diffusion Monte Carlo</li>
 <li>Other elements </li>
@@ -127,7 +170,7 @@ Future extensions</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu May 27 2021 00:25:22 for PX 915 Project Title/Name Here by
+    <li class="footer">Generated on Thu May 27 2021 02:14:29 for PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

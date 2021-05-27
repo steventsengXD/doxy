@@ -1,7 +1,0 @@
-<map id="basis_functions::reduced_hamiltonian_sto3g" name="basis_functions::reduced_hamiltonian_sto3g">
-<area shape="rect" id="node1" title="Single Electron Reduced Hamiltonian: gaussian sto3g basis." alt="" coords="435,49,617,90"/>
-<area shape="rect" id="node2" href="$namespacebasis__functions.html#a2b1743e80170bccff87171f1695bf9a3" title="Initialisation routine." alt="" coords="200,49,387,90"/>
-<area shape="rect" id="node3" href="$bond__driver_8f90.html#ad11c5dff0e05a402b470d0c824badbbc" title="Driver for running multiple simulations to optimise bondlength." alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node4" href="$Biased__Optim__example__driver_8f90.html#a8ec2266d83cd6c0b762cbcbc92c0af3d" title=" " alt="" coords="51,56,106,83"/>
-<area shape="rect" id="node5" href="$ed__test_8f90.html#a9c41b02ba03edb8de4ce1751ea3cf05f" title="Driver for testing electron density function." alt="" coords="29,107,129,133"/>
-</map>
