@@ -91,6 +91,7 @@ var NAVTREEINDEX1 =
 "tutorial_page.html#problem3":[1,0,4],
 "tutorial_page.html#problem4":[1,0,5],
 "tutorial_page.html#startup":[1,0],
+"tutorial_page.html#warnings":[1,1,0],
 "vqmc.html":[2],
 "vqmc.html#basis":[2,1,0],
 "vqmc.html#introduction":[2,0],

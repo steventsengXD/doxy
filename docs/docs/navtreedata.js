@@ -22,7 +22,7 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN", "index.html", [
+  [ "PX 915: Variational Quantum Monte Carlo - LATIN", "index.html", [
     [ "Introduction", "index.html", null ],
     [ "Tutorial", "tutorial_page.html", [
       [ "Installing/Running the code", "tutorial_page.html#startup", [
@@ -34,11 +34,13 @@ var NAVTREE =
         [ "Problem 1: Single atom and electron using Slater-type Orbitals", "tutorial_page.html#problem1", null ],
         [ "Problem 2: Single atom and electron using Gaussian-type Orbitals", "tutorial_page.html#problem2", null ],
         [ "Problem 3: Two atoms and a single electron", "tutorial_page.html#problem3", null ],
-        [ "Problem 4: Helium+ ion", "tutorial_page.html#problem4", null ],
+        [ "Problem 4: Helium+ ion and Helium atom", "tutorial_page.html#problem4", null ],
         [ "User options beyond the tutorial", "tutorial_page.html#options", null ],
         [ "Plotting Options", "tutorial_page.html#plotting", null ]
       ] ],
-      [ "Analyzing the results", "tutorial_page.html#output", null ],
+      [ "Analyzing the results", "tutorial_page.html#output", [
+        [ "Warnings", "tutorial_page.html#warnings", null ]
+      ] ],
       [ "Advanced Options", "tutorial_page.html#advopts", [
         [ "How to add a basis set", "tutorial_page.html#add_basis", null ]
       ] ],

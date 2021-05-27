@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN: Variational Quantum Monte Carlo</title>
+<title>PX 915: Variational Quantum Monte Carlo - LATIN: Variational Quantum Monte Carlo</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN
+   <div id="projectname">PX 915: Variational Quantum Monte Carlo - LATIN
+   &#160;<span id="projectnumber">GroupB</span>
    </div>
   </td>
  </tr>
@@ -102,7 +103,29 @@ Basis Set Construction</h2>
 \begin{equation}\{\varphi_k(\textbf{r})\}_{k=1}^{N_nM} = \bigcup_I\{\phi_k^I(\textbf{r})\}. \end{equation}
 </p>
 <p>In the software, M is the parameter n_basis_functions_per_atom. For both slater-type basis functions and Gaussians there are 2 parameters per basis function, a linear multiplier and a length scale.</p>
-<p>The basis sets in the code have the form, for an atom at the origin, with \(r\) the radial distance, $\f \alpha\f$ the length scale parameter and $\f c \( the linear parameter: Slater-1s: \f{equation}{\phi(\textbf{r}) =c ( \zeta^3 /\pi)^{1/2}\exp(-\zeta r) \f} Sto-3g: \f{equation}{\phi(\textbf{r}) =c(2 \alpha /\pi)^{3/4}\exp(-\alpha r^2)\f} Single electron wave functions are obtained through summing the basis set in its entirety \f{equation}{ \psi_i(\textbf{r})=\sum_{k=1}^{N_IM}c_{ik}\varphi_k(\textbf{r}). \f} Using this as the trial wave function, i.e., \) \Psi=\psi_1 *N_n\times M \( degrees of freedom. As this is also a linear combination, the linearity of \)\hat{H} \( and analytic derivatives of the basis set may be used to speed up the calculation of \f{equation}{ H\psi_1(\textbf{r})=\sum_kc_{ik}H\varphi_k(\textbf{r}),\f} where \)@_fakenlH\varphi_k(\textbf{r}) \( can be analytically precomputed for hydrogen-like orbitals or Gaussians. For systems with more than one electron (\)@_fakenlN &gt; 1 \( ), the Slater determinant with Jastrow factor will be taken: \f{equation}{ \Psi(\{\textbf{r}_i\})=e^{J(\{\textbf{r}_i\})}D(\{\psi_i\},\{\textbf{r}_i\}), \f} \f{equation}{ D(\{\psi_i\},\{\textbf{r}_i\})=\begin{vmatrix} \psi_1(\textbf{r}_1) &amp;\psi_2(\textbf{r}_1) &amp;\cdots&amp; \psi_N(\textbf{r}_1) \\ \psi_1(\textbf{r}_2) &amp;\psi_2(\textbf{r}_2) &amp;\cdots&amp; \psi_N(\textbf{r}_2) \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots \\ \psi_1(\textbf{r}_N) &amp;\psi_2(\textbf{r}_N) &amp;\cdots&amp; \psi_N(\textbf{r}_N) \\ \end{vmatrix}. \f} When utilized in full, the number of degrees of freedom (DOF) would be \)@_fakenl2*M\times N_n\times N+N_J \( where \) N_J \( is the DOF in \)J \(. However, this can be significantly reduced by assuming that a single electron state \)\psi_i\} \( is sufficient for the calculation, assuming the first 2 electron states differ only by spin: \)\psi_1(\textbf{r},\uparrow)=\psi_1(\textbf{r})|{\uparrow}\rangle\f$, and \(\psi_2=\psi_1|{\downarrow}\rangle \). Then this gives for 2 electrons: </p><p class="formulaDsp">
+<p>The basis sets in the code have the form, for an atom at the origin, with \( r \) the radial distance, \( \alpha \) the length scale parameter and \( c \) the linear parameter:</p>
+<p>Slater-1s:</p>
+<p class="formulaDsp">
+\begin{equation}\phi(\textbf{r}) =c ( \zeta^3 /\pi)^{1/2}\exp(-\zeta r) \end{equation}
+</p>
+<p>Sto-3g:</p>
+<p class="formulaDsp">
+\begin{equation}\phi(\textbf{r}) =c(2 \alpha /\pi)^{3/4}\exp(-\alpha r^2)\end{equation}
+</p>
+<p>Single electron wave functions are obtained through summing the basis set in its entirety </p><p class="formulaDsp">
+\begin{equation} \psi_i(\textbf{r})=\sum_{k=1}^{N_IM}c_{ik}\varphi_k(\textbf{r}). \end{equation}
+</p>
+<p>Using this as the trial wave function, i.e., \( \Psi=\psi_1 \), with MCMC algorithms and optimization schemes results in \(2*N_n\times M \) degrees of freedom. As this is also a linear combination, the linearity of \(\hat{H}\) and analytic derivatives of the basis set may be used to speed up the calculation of </p><p class="formulaDsp">
+\begin{equation} H\psi_1(\textbf{r})=\sum_kc_{ik}H\varphi_k(\textbf{r}),\end{equation}
+</p>
+<p> where \(H\varphi_k(\textbf{r})\) can be analytically precomputed for hydrogen-like orbitals or Gaussians.</p>
+<p>For systems with more than one electron ( \(N &gt; 1\) ), the Slater determinant with Jastrow factor will be taken: </p><p class="formulaDsp">
+\begin{equation} \Psi(\{\textbf{r}_i\})=e^{J(\{\textbf{r}_i\})}D(\{\psi_i\},\{\textbf{r}_i\}), \end{equation}
+</p>
+<p class="formulaDsp">
+\begin{equation} D(\{\psi_i\},\{\textbf{r}_i\})=\begin{vmatrix} \psi_1(\textbf{r}_1) &amp;\psi_2(\textbf{r}_1) &amp;\cdots&amp; \psi_N(\textbf{r}_1) \\ \psi_1(\textbf{r}_2) &amp;\psi_2(\textbf{r}_2) &amp;\cdots&amp; \psi_N(\textbf{r}_2) \\ \vdots &amp;\vdots &amp;\ddots&amp;\vdots \\ \psi_1(\textbf{r}_N) &amp;\psi_2(\textbf{r}_N) &amp;\cdots&amp; \psi_N(\textbf{r}_N) \\ \end{vmatrix}. \end{equation}
+</p>
+<p>When utilized in full, the number of degrees of freedom (DOF) would be \(2*M\times N_n\times N+N_J\) where \( N_J \) is the DOF in \(J\). However, this can be significantly reduced by assuming that a single electron state \(\{\psi_i\}\) is sufficient for the calculation, assuming the first 2 electron states differ only by spin: \(\psi_1(\textbf{r},\uparrow)=\psi_1(\textbf{r})|{\uparrow}\rangle\), and \(\psi_2=\psi_1|{\downarrow}\rangle \). Then this gives for 2 electrons: </p><p class="formulaDsp">
 \begin{equation} D(\{\psi_i\},\{\textbf{r}_i\})=\psi_1(\textbf{r}_1)\psi_2(\textbf{r}_2)-\psi_1(\textbf{r}_2)\psi_2(\textbf{r}_1)=\psi_1(\textbf{r}_1)\psi_1(\textbf{r}_2)(|{\uparrow}\rangle|{\downarrow}\rangle-|{\downarrow}\rangle|{\uparrow}\rangle)=\psi_1(\textbf{r}_1)\psi_1(\textbf{r}_2).\end{equation}
 </p>
 <p>.</p>
@@ -132,7 +155,7 @@ Jastrow Factor</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu May 27 2021 02:41:35 for PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN by
+    <li class="footer">Generated on Thu May 27 2021 03:11:46 for PX 915: Variational Quantum Monte Carlo - LATIN by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>

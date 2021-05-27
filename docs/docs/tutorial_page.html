@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN: Tutorial</title>
+<title>PX 915: Variational Quantum Monte Carlo - LATIN: Tutorial</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,8 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN
+   <div id="projectname">PX 915: Variational Quantum Monte Carlo - LATIN
+   &#160;<span id="projectnumber">GroupB</span>
    </div>
   </td>
  </tr>
@@ -70,9 +71,6 @@ $(document).ready(function(){initNavTree('tutorial_page.html',''); initResizable
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>This section describes everything needed to set up the code and run the code for simple systems contained in the tutorial.</p>
-<div class="image">
-<img src="image4.jpeg" alt="" width="50%"/>
-</div>
 <ul>
 <li><a class="el" href="tutorial_page.html#startup">Installing/Running the code</a></li>
 <li><a class="el" href="tutorial_page.html#problem1">Problem 1: Single atom and electron using Slater-type Orbitals</a></li>
@@ -96,7 +94,8 @@ Installing/Running the code</h1>
 <p>In order to then run the code, the user just needs to change the varibales they wish to change and then click close. This will start running the code with the progress and results displayed in the terminal. When the code has finished running, the output plots will automatically be generated and show each plot in a different pop-up window.</p>
 <p>To complete another run of the code, make sure that all the ouputting windows containing the plots are closed, and then re-run the ./run_latin_driver.sh command. There is no need to recompile the code.</p>
 <p>In the case that the code fails to run or has crashed after this step, you can easily exit the software by either closing the terminal or using Ctrl+c.</p>
-<p>In order to demonstrate the varying functionality of the code, 4 problems have been defined in the subsections below for the user to try.</p>
+<p>In order to demonstrate the varying functionality of the code, 4 problems have been defined in the subsections below for the user to try. There maybe slight differences in the quoted results due to the sampling and approximate numerical nature of the code, but none of the examples should obtain results which stray far from the results quoted here.</p>
+<p>To Improve the accuracy of any the simulations, try increasing the number of trials and the number of steps in the MCMC runs. For 2 electron problems try increasing the number of Jastrow terms from 7 to 9.</p>
 <h2><a class="anchor" id="problem1"></a>
 Problem 1: Single atom and electron using Slater-type Orbitals</h2>
 <p>This part of the tutorial contains the most basic system consisting of 1 atom (nuclei) and 1 electron which represents a Hydrogen atom, and is described using Slater-type orbitals. In this example, the Slater-type orbitals provides the analytical result.</p>
@@ -136,17 +135,18 @@ Problem 2: Single atom and electron using Gaussian-type Orbitals</h2>
 <p>Due to the higher number of MCMC steps defined, this code will take slightly longer than the run completed in Problem 1. The code should not take longer 30 seconds.</p>
 <h2><a class="anchor" id="problem3"></a>
 Problem 3: Two atoms and a single electron</h2>
+<p>This problem investigates two atoms (or nuclei) and a single electron system. This corresponds to the H2+ ion.</p>
 <p>The output of this system not only produces a contour plot of the electron probability density, but also allows for the evaluation of energy for varying bond lengths.</p>
 <p>To first obtain the contour plot, the user uses the same procedure as previously defined in running the scripts, keeping all of the defualt values except the number of atoms is being changed from 1 to 2. Slater-type orbitals are used. The following contour plot should be obtained.</p>
 <div class="image">
 <img src="problem3.png" alt=""/>
 </div>
-<p>Energy results here</p>
-<p>This code run should take no more than</p>
+<p>The minimum energy found for this system should be approximately -0.55 Hartree or -15.2 eV.</p>
+<p>This code run should take no more than 5 seconds to run.</p>
 <p>In order to obtain the energy against varying bond length plot, the user must run the following commands in the terminal:</p>
-<p>./build_bond_driver</p>
+<p>./build_bond_driver.sh</p>
 <p>Then run</p>
-<p>./run_bond_driver</p>
+<p>./run_bond_driver.sh</p>
 <p>Which will present the user input interface used previously. The only thing the user needs to change is the number of atoms from 1 to 2. The difference with this run is that the contour plot will not be outputted, only the energy against varying bond length will be plotted. The resulting output plot is shown in the figure below.</p>
 <div class="image">
 <img src="problem3b.png" alt=""/>
@@ -154,8 +154,21 @@ Problem 3: Two atoms and a single electron</h2>
 <p>In the terminal, when the code has finished running, the minimum energy and its corresponding bond length is outputted. For this example, the bond length with the minimum energy was found to be 2.09 atomic units, with -0.586 Hartree energy.</p>
 <p>The bond length driver is currently a proof-of-concept. The parameters for the search over bond length are hardcoded, but can be changed on lines 168-170 of <a class="el" href="bond__driver_8f90.html" title="Driver for running multiple simulations to optimise bond length.">bond_driver.f90</a> file.</p>
 <p>This code run should take no more than 75 seconds to fully run.</p>
+<p>If the user wants to revert back to obtaining the contour plots, they will need to repeat the following commands in the terminal:</p>
+<p>./build_latin_driver.sh</p>
+<p>./run_latin_driver.sh</p>
 <h2><a class="anchor" id="problem4"></a>
-Problem 4: Helium+ ion</h2>
+Problem 4: Helium+ ion and Helium atom</h2>
+<p>To simulate a Helium+ ion, 1 atom and 1 electron is simulated but the proton number is changed from 1 to 2, keeping all of the default variables the same for this case.</p>
+<p>This results in the following contour plot for the electron density:</p>
+<div class="image">
+<img src="problem4.png" alt=""/>
+</div>
+<p>The minimum energy obtained is -1.87 Hartree energy or -50.9 eV. This is a good result when compared to expected value of -54.42 eV as the Slater-type orbitals uses hydrogen-like solutions. When using Gaussian-like orbitals, the resulting minimum energy found is -11.6 eV which does not agree well with the expected value.</p>
+<p>For the Helium atom, the same procedure is done however the number of electrons is changed from 1 to 2 and the number of protons is changed from 1 to 2 from the default values.</p>
+<p>The resulting minimum energy for the Helium atom for Slater-type orbitals was found to be -77.9 eV which is close to the expected value of -79.02 eV. When using Gaussian-like orbtials, the resulting minimum energy was found to be -69.5 eV which is slightly below the expected value, however as it only gives an approximate result, increasing the number of MCMC steps and latin hypercube trials should improve its accuracy.</p>
+<p>For the 2 electron case, the contour plot for the resulting electron probability density will be outputted, however the results are wrong and should be ignored.</p>
+<p>Using the default number of MCMC steps and latin hypercube trials, the runs should take no more 30 seconds to run each.</p>
 <h2><a class="anchor" id="options"></a>
 User options beyond the tutorial</h2>
 <p>The user can change the following variables if they want to look at 1 atom only:</p>
@@ -166,7 +179,7 @@ User options beyond the tutorial</h2>
 <li>Number of MCMC steps</li>
 <li>Optional user inputs (either Slater-type or Gaussian-type orbitals)</li>
 </ul>
-<p>To investigate 2 atoms, all of the variables</p>
+<p>To investigate 2 atoms, all of the variables defined in the user input interface are relevant.</p>
 <h2><a class="anchor" id="plotting"></a>
 Plotting Options</h2>
 <p>These variables allow the user to change aspects of the resulting output such as the domain size and the resolution.</p>
@@ -174,12 +187,15 @@ Plotting Options</h2>
 <li>Amount of distance away from atoms to plot</li>
 <li>Number of points in each direction</li>
 </ul>
+<p>Increasing these options will cause the code to take slightly longer to run but will obtain better resolution images as a result.</p>
 <h1><a class="anchor" id="output"></a>
 Analyzing the results</h1>
-<p>Results are saved using the subroutine <a href="namespacewrite__file.html">create_netcdf</a></p>
-<p><br  />
-Python is used to plot the wave function, you will be amazed</p>
-<dl class="section see"><dt>See also</dt><dd>write_file.create_netcdf</dd></dl>
+<p>Results are saved using the subroutine <a href="namespacewrite__file.html">create_netcdf</a> and are automatically plotted using either the <a class="el" href="plotting_8py.html" title="Python plotting scripts which output the contour plots for the wave function or electron probability ...">plotting.py</a> script or the <a class="el" href="energy__plotting_8py.html" title="Script to output the energy against the bond length.">energy_plotting.py</a> script.</p>
+<p>Note the user does not actually need to have python or a python IDE open in order for the plotting to appear as it does so automatically through a pop up window. The user also has the option to save the resulting image by clicking the save button with is the button on the far right at the bottom of the window.</p>
+<h2><a class="anchor" id="warnings"></a>
+Warnings</h2>
+<p>If the following warning has appeared in the print statements in the terminal: WARNING: Acceptance rate 0 at: 1</p>
+<p>The user can ignore this as the code will still run and produce an output. This error relates to an unsuitable initial condition, but unless this error appears later than step 1 then there is no problem, and the MCMC has corrected itself.</p>
 <h1><a class="anchor" id="advopts"></a>
 Advanced Options</h1>
 <h2><a class="anchor" id="add_basis"></a>
@@ -199,7 +215,7 @@ Future extensions</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu May 27 2021 02:41:35 for PX 915 Group B Project: Variational Quantum Monte Carlo Simulation - LATIN by
+    <li class="footer">Generated on Thu May 27 2021 03:11:46 for PX 915: Variational Quantum Monte Carlo - LATIN by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
